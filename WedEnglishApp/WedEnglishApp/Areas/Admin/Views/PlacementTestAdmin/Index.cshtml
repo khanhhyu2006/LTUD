@@ -1,0 +1,9 @@
+@model List<WedEnglishApp.Models.ExamSession>
+@{ ViewData["Title"] = "Phòng thi xếp lớp"; var waiting = ViewBag.Waiting as List<WedEnglishApp.Models.PlacementTest> ?? new(); }
+<div class="d-flex justify-content-between align-items-center mb-4"><div><h3>Phòng thi và lớp thi xếp lớp</h3><p class="text-muted mb-0">Tạo ca thi, xếp học viên đăng ký vào phòng và phân công giáo viên chấm cả ca.</p></div><a asp-action="Create" class="btn btn-primary">Tạo lớp thi / phòng thi</a></div>
+<div class="admin-card p-3 mb-4"><h5>Đăng ký đang chờ xếp phòng: @waiting.Count</h5><p class="small text-muted mb-0">Mở lớp thi phù hợp để chọn nhiều học viên và xác nhận xếp phòng.</p>
+@if(waiting.Any()) { <div class="table-responsive mt-3"><table class="table small"><thead><tr><th>Học viên</th><th>Ngày mong muốn</th><th>Giờ mong muốn</th></tr></thead><tbody>@foreach(var test in waiting) { <tr><td>@test.Student.UserAccount.FullName</td><td>@((test.RequestedDate ?? test.TestDate).ToString("dd/MM/yyyy"))</td><td>@(test.RequestedTime ?? test.TestTime)</td></tr> }</tbody></table></div> }
+</div>
+<div class="admin-card"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Lớp thi / Phòng</th><th>Lịch thi</th><th>Sĩ số</th><th>Giáo viên chấm</th><th>Tiến độ</th><th>Thao tác</th></tr></thead><tbody>
+@foreach(var session in Model) { <tr><td><strong>@session.Name</strong><div>@session.Room</div></td><td>@session.ExamDate.ToString("dd/MM/yyyy")<div>@session.StartTime.ToString(@"hh\:mm")–@session.EndTime.ToString(@"hh\:mm")</div></td><td>@session.Tests.Count / @session.Capacity</td><td>@(session.Teacher?.UserAccount.FullName ?? "Chưa phân công")</td><td>@session.Tests.Count(t=>t.Status=="Completed") / @session.Tests.Count bài đã chấm</td><td><a asp-action="Details" asp-route-id="@session.ExamSessionId" class="btn btn-sm btn-primary">Xếp phòng / Phân công</a></td></tr> }
+</tbody></table></div></div>

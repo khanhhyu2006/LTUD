@@ -1,0 +1,100 @@
+377: Heading 1: CHƯƠNG 3. PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+378: Heading 2: 3.1 Biểu đồ Use Case tổng quan hệ thống
+379: Normal: 
+380: HITCFigureCaption: Hình 3. Sơ đồ use case tổng quát hệ thống NHK English times
+381: Heading 3: 3.1.1 Phân tích và mô tả logic cấu trúc Use Case
+382: Normal: Hệ thống gồm 4 tác nhân chính: Khách (Guest), Học viên (Student), Giáo viên (Teacher) và Quản trị viên (Admin).
+383: Normal: Học viên sử dụng được các chức năng công khai của khách như tra cứu chương trình và thông tin liên hệ, đồng thời có thêm hồ sơ, đăng ký khóa học, lịch học và học phí cá nhân. Sơ đồ hiện tại thể hiện các mục tiêu theo từng tác nhân; quyền công khai không phụ thuộc việc có phiên đăng nhập.
+384: Normal: Đăng nhập là điều kiện trước của các nghiệp vụ được bảo vệ như đăng ký khóa học, theo dõi học phí và nhập điểm. Quan hệ include chỉ dùng khi có hành vi bắt buộc dùng lại; không dùng để thay cho mọi điều kiện phân quyền hoặc để mô tả thứ tự mở các màn hình.
+385: Normal: Đăng ký khóa học, xem hướng dẫn đóng học phí và in biên lai có liên hệ về dữ liệu. Xếp lớp và xác nhận thu là hai nghiệp vụ độc lập; biên lai chỉ phản ánh khoản thu hợp lệ. Không mặc định dùng quan hệ extend chỉ vì các chức năng xuất hiện sau bước ghi danh.
+386: Heading 3: 3.1.2 Phân rã các nhóm chức năng
+387: Normal: Các nhóm chức năng được phân rã theo bốn tác nhân: Khách, Học viên, Giáo viên và Admin. Các sơ đồ ở mục 3.2 làm rõ mục tiêu của từng nhóm; đặc tả ở mục 3.3 trình bày điều kiện, luồng xử lý và kết quả của các nghiệp vụ chính.
+388: Heading 2: 3.2 Phân rã use case theo từng tác nhân
+389: Normal: Các sơ đồ phân rã bổ sung làm rõ những mục tiêu sử dụng của từng nhóm. Website có bốn tác nhân nhưng chỉ có ba vai trò tài khoản được lưu trong UserAccount là Student, Teacher và Admin. Khách là người chưa đăng nhập. Mỗi sơ đồ sử dụng khung hệ thống, tác nhân và các use case tương ứng; các chức năng công khai vẫn có thể được truy cập khi người dùng đã đăng nhập.
+390: Heading 3: 3.2.1 Tác nhân khách
+391: Normal: Khách xem trang chủ, tìm kiếm và lọc chương trình, tra cứu học phí và lớp tham khảo. Khách có thể gửi yêu cầu tư vấn, tiếp tục trao đổi với Admin trong cuộc hội thoại riêng và đăng ký tài khoản Student. Liên kết riêng và cookie truy cập giúp khách xem lại tư vấn trên trình duyệt mà không phải có tài khoản.
+392: Normal: 
+393: HITCFigureCaption: Hình 4. Sơ đồ use case khách chưa đăng nhập
+394: Heading 3: 3.2.2 Tài khoản học viên
+395: Normal: Học viên đăng ký khóa học, không chọn lớp hoặc giáo viên. Biểu mẫu lưu ngày có thể bắt đầu, buổi học, nhóm 2–4–6 hoặc 3–5–7 và ghi chú. Sau đó học viên theo dõi đơn chờ xếp, lớp được Admin xác nhận, học phí, biên lai, lịch học và lịch thi. Học viên còn đăng ký kiểm tra đầu vào, xem điểm, gửi đánh giá và trao đổi tư vấn theo tài khoản.
+396: Normal: 
+397: HITCFigureCaption: Hình 5. Sơ đồ use case tài khoản học viên
+398: Heading 3: 3.2.3 Tài khoản giáo viên
+399: Normal: Giáo viên theo dõi lớp phụ trách, danh sách học viên, lịch dạy và tài liệu. Đối với kiểm tra đầu vào, giáo viên mở lớp thi được phân công, xem danh sách thí sinh và nhập điểm cùng cấp độ đề xuất. Giáo viên có thể xem phản hồi của các lớp liên quan và bảng lương cá nhân. Giao diện điểm danh hiện chưa lưu chuyên cần theo buổi.
+400: Normal: 
+401: HITCFigureCaption: Hình 6. Sơ đồ use case tài khoản giáo viên
+402: Heading 3: 3.2.4 Tài khoản quản trị viên
+403: Normal: Admin quản lý chương trình, lớp học, lịch trong tuần, giáo viên và học viên. Admin tiếp nhận đơn đăng ký theo nguyện vọng, xếp lớp, đối soát học phí; tạo phòng thi, xếp nhiều thí sinh và phân công giáo viên chấm cả lớp thi. Các nhóm chức năng khác gồm trả lời tư vấn, quản lý lương, thống kê, banner và thùng rác.
+404: Normal: 
+405: HITCFigureCaption: Hình 7. Sơ đồ use case tài khoản quản trị viên
+406: Heading 2: 3.3 Đặc tả các use case tiêu biểu
+407: Heading 3: 3.3.1 Đăng ký tài khoản và đăng nhập
+408: Normal: Tác nhân: Khách hoặc người dùng có tài khoản.
+409: Normal: Điều kiện trước: Email chưa được sử dụng khi đăng ký; tài khoản phải hoạt động khi đăng nhập.
+410: Normal: Luồng xử lý: Người dùng nhập thông tin biểu mẫu. Hệ thống kiểm tra tính hợp lệ, kiểm tra email và băm mật khẩu khi đăng ký. Khi đăng nhập, mật khẩu được đối chiếu bằng BCrypt; thông tin định danh và vai trò được lưu trong phiên cookie.
+411: Normal: Kết quả: Đăng ký tạo UserAccount và Student. Đăng nhập thành công điều hướng đến khu vực tương ứng; thông tin không hợp lệ được thông báo trên biểu mẫu.
+412: Heading 3: 3.3.2 Đăng ký khóa học và gửi nguyện vọng
+413: Normal: Tác nhân: Học viên.
+414: Normal: Điều kiện trước: Có phiên Student hợp lệ và chương trình đang tuyển sinh. Ngày có thể bắt đầu không trước ngày hiện tại; chọn buổi, nhóm lịch 246 hoặc 357 và cách đóng học phí hợp lệ.
+415: Normal: Luồng xử lý: Học viên điền ngày bắt đầu, buổi, nhóm thứ và ghi chú; ảnh hồ sơ là tùy chọn. Máy chủ lấy học phí từ chương trình, kiểm tra đơn trùng và tạo Registration cùng Payment trong một giao dịch. Đơn mới Pending, ProgramId được lưu và ClassId để trống; học viên được chuyển tới hướng dẫn đóng học phí.
+416: Normal: Kết quả và ngoại lệ: Đơn được hiển thị ở khu vực chờ xếp lớp. Dữ liệu sai hoặc đăng ký trùng khóa học đang hoạt động bị từ chối. Thanh toán và xếp lớp không tự động xác nhận lẫn nhau; Admin thực hiện từng nghiệp vụ sau khi kiểm tra.
+417: Heading 3: 3.3.3 Xếp lớp theo đơn đăng ký
+418: Normal: Tác nhân chính là Admin. Hệ thống đối chiếu chương trình, ngày khai giảng, sĩ số và lịch của học viên trước khi gán ClassId. Ngày khai giảng bằng hoặc sau ngày học viên có thể bắt đầu là phù hợp. Buổi và thứ được hiển thị để Admin trao đổi, cân nhắc; chúng không tự động loại lớp chưa có thời khóa biểu. Sau khi lưu, đơn chuyển Confirmed và lớp xuất hiện trong tài khoản học viên.
+419: Heading 3: 3.3.4 Xác nhận học phí
+420: Normal: Tác nhân: Quản trị viên.
+421: Normal: Điều kiện trước: Có phiên Admin; bản ghi học phí tồn tại và đã được kiểm tra chứng từ thu tiền.
+422: Normal: Luồng xử lý: Admin kiểm tra số tiền, mã đơn và chứng từ rồi xác nhận Payment Paid. Hệ thống giữ trạng thái xếp lớp độc lập: đơn chưa được bố trí lớp vẫn Pending. Học viên xem học phí và biên lai theo quyền sở hữu tài khoản.
+423: Normal: Kết quả: Học phí được ghi nhận Paid; thông tin được sử dụng để xem hoặc in biên lai nội bộ.
+424: Heading 3: 3.3.5 Đặt lịch và chấm kiểm tra xếp lớp
+425: Normal: Tác nhân: Học viên, Admin và giáo viên.
+426: Normal: Điều kiện trước: Học viên có tài khoản và chưa có yêu cầu kiểm tra đang chờ xử lý. Ngày mong muốn từ ngày mai trở đi; Admin cần tạo ca thi với phòng, thời gian, sức chứa trước khi xếp thí sinh.
+427: Normal: Luồng xử lý: Học viên gửi ngày và giờ mong muốn. Admin tạo ExamSession, chọn nhiều yêu cầu để xếp vào phòng và phân công một giáo viên chấm cả ca. Hệ thống kiểm tra sức chứa, ngày yêu cầu, lịch phòng, giáo viên và lịch học viên. Giáo viên mở ca được giao, nhập điểm từ 0 đến 10 và cấp độ đề xuất cho từng bài.
+428: Normal: Kết quả: Lịch thi chính thức xuất hiện sau khi xếp phòng. Từng PlacementTest chuyển Completed khi chấm; ca thi hoàn tất khi tất cả bài được chấm. Không đổi người chấm khi ca đã có điểm và không đưa bài đã chấm về danh sách chờ.
+429: Heading 3: 3.3.6 Quản lý tài liệu lớp học
+430: Normal: Tác nhân: Giáo viên.
+431: Normal: Điều kiện trước: Có phiên Teacher; xác định lớp, tiêu đề và tệp tài liệu.
+432: Normal: Luồng xử lý: Giáo viên mở phân hệ tài liệu, chọn lớp và tải tệp lên. Tệp được lưu trong thư mục uploads/documents và đường dẫn được ghi vào ClassDocument. Danh sách cung cấp liên kết tải về và thao tác xóa.
+433: Normal: Kết quả: Tài liệu gắn với lớp được lưu để quản lý; quyền sở hữu lớp và tệp cần được kiểm tra ở mọi thao tác thay đổi.
+434: Heading 3: 3.3.7 Xóa mềm và khôi phục dữ liệu
+435: Normal: Tác nhân: Quản trị viên.
+436: Normal: Điều kiện trước: Có phiên Admin; đối tượng thuộc nhóm dữ liệu hỗ trợ xóa mềm.
+437: Normal: Luồng xử lý: Thao tác xóa mềm cập nhật IsDeleted và DeletedAt. Admin xem mục đã xóa trong thùng rác, chọn khôi phục hoặc xóa vĩnh viễn. Việc xóa vĩnh viễn cần kiểm tra các liên kết còn phụ thuộc.
+438: Normal: Kết quả: Khôi phục đưa bản ghi trở lại danh sách. Xóa vĩnh viễn loại bỏ bản ghi và không có thao tác khôi phục thông thường.
+439: Heading 3: 3.3.8 Tư vấn trực tiếp với khách và học viên
+440: Normal: Người dùng gửi thông tin liên hệ và câu hỏi để mở cuộc tư vấn. Học viên được nhận diện theo tài khoản; khách được cấp quyền bằng cookie và liên kết riêng, không dựa vào email tự khai. Admin mở hộp thư và gửi trả lời. Mỗi tin nhắn được lưu riêng; giao diện lấy phần phát sinh định kỳ mà không tải lại toàn bộ trang.
+441: Normal: Nội dung được giới hạn 2000 ký tự và hiển thị dưới dạng văn bản. Khi Admin kết thúc, máy chủ từ chối tin gửi tiếp cho đến khi mở lại. Yêu cầu xem, gửi và đánh dấu đã đọc phải được kiểm tra quyền; liên kết không hợp lệ không được tiết lộ lịch sử.
+442: Heading 2: 3.4 Thiết kế cơ sở dữ liệu
+443: Normal: Mô hình hiện tại có 16 bảng nghiệp vụ: tài khoản, học viên, giáo viên, chương trình, lớp, ghi danh, học phí, lịch học, tài liệu, phòng thi, bài kiểm tra, phản hồi, lương, tư vấn, tin nhắn và banner. Hai hình sau tách nhóm đào tạo khỏi nhóm hỗ trợ để giữ chữ dễ đọc; các quan hệ chi tiết được đối chiếu trong từ điển dữ liệu.
+444: Normal: 
+445: HITCFigureCaption: Hình 8. Lược đồ nhóm tài khoản đào tạo và học phí
+446: Normal: 
+447: HITCFigureCaption: Hình 9. Lược đồ nhóm kiểm tra tư vấn và hỗ trợ
+448: Heading 3: 3.4.1 Nhóm tài khoản và hồ sơ
+449: Normal: UserAccount lưu AccountId, họ tên, email, mật khẩu băm, vai trò và trạng thái tài khoản. Student và Teacher có khóa chính riêng và liên kết tới tài khoản bằng AccountId. Email có chỉ mục duy nhất. Student bổ sung thông tin liên hệ, ngày sinh và ảnh hồ sơ; Teacher bổ sung chuyên môn, bằng cấp, tiểu sử và ảnh. Quan hệ tài khoản–hồ sơ là quan hệ dữ liệu một–một tùy chọn theo vai trò.
+450: Heading 3: 3.4.2 Nhóm đào tạo và ghi danh
+451: Normal: Programs liên kết một–nhiều với Classes và Registrations. Đơn đăng ký bắt buộc có ProgramId nhưng ClassId có thể trống trong thời gian chờ xếp. EarliestStartDate, PreferredSession và PreferredDays lưu nguyện vọng. Lớp có lịch tại ClassSchedules; Payment có RegistrationId duy nhất. DesiredTeacherId được giữ cho dữ liệu cũ, không còn là lựa chọn ở biểu mẫu mới.
+452: Heading 3: 3.4.3 Nhóm hỗ trợ và quản trị
+453: Normal: ExamSessions lưu lớp thi, phòng, ngày giờ, sức chứa và giáo viên được phân công; PlacementTests gắn yêu cầu và kết quả của từng học viên với ca thi. Consultations lưu chủ cuộc tư vấn và trạng thái; ConsultationMessages lưu người gửi, nội dung và thời điểm. Các bảng phản hồi, lương, tài liệu và banner phục vụ vận hành, không thay thế dữ liệu ghi danh hoặc học phí.
+454: Heading 3: 3.4.4 Từ điển dữ liệu chính
+455: Normal: Bảng sau tập trung các trường dùng để nhận diện và liên kết nghiệp vụ. PK là khóa chính; FK là khóa ngoại. Trường có thể để trống được nêu tại cột ràng buộc để phân biệt dữ liệu bắt buộc với thông tin chờ phân công.
+456: Heading 3: 3.4.5 Các quan hệ và hành vi khi xóa
+457: Normal: Xóa mềm: IsDeleted và DeletedAt giữ thông tin đối tượng để phục hồi; đây là thao tác nghiệp vụ, khác với hành vi khóa ngoại khi xóa vật lý.
+458: Normal: Nhất quán: Các thao tác liên quan nhiều bảng cần được xử lý trong transaction và có thông báo rõ khi ràng buộc không cho phép thực hiện.
+459: Heading 2: 3.5 Ràng buộc và luồng dữ liệu
+460: Normal: Khóa ngoại bảo đảm đơn thuộc đúng học viên và chương trình. ClassId có thể trống nhưng khi được gán phải thuộc ProgramId của đơn. Payment liên kết duy nhất với Registration. Các ràng buộc trạng thái, mức phí, sĩ số và giờ học ngăn dữ liệu ngoài phạm vi cho phép. Xóa mềm và xóa vật lý được xử lý riêng theo quan hệ.
+461: Normal: Luồng ghi danh gồm tra cứu chương trình, gửi nguyện vọng, tạo đơn và học phí, Admin xếp lớp và đối soát thu tiền. Luồng thi gồm đăng ký, tạo ca, xếp thí sinh, phân công và nhập điểm. Luồng tư vấn gồm mở cuộc hội thoại, trao đổi, đánh dấu đã đọc, kết thúc hoặc mở lại. Lương giáo viên là nghiệp vụ riêng với thu học phí.
+462: Normal: 
+463: HITCFigureCaption: Hình 10. Luồng đăng ký xếp lớp và xác nhận học phí độc lập
+464: Heading 3: 3.5.1 Trạng thái và điều kiện chuyển bước
+465: Normal: Tạo đơn và học phí: Lưu trong một transaction, bảo đảm cùng thành công hoặc cùng hoàn tác. Đơn mới bắt đầu Pending và chưa có ClassId; không tin học phí hoặc trạng thái do biểu mẫu tự gửi lên.
+466: Normal: Xác nhận thu: Admin đối soát trước khi chuyển Paid. Các đơn và biên lai đã thanh toán từ trước được giữ nguyên để đối chiếu, kể cả một số ghi danh trùng trong lịch sử; quy tắc chống trùng áp dụng cho thao tác mới.
+467: Normal: Xếp lớp: Kiểm tra đúng khóa học, trạng thái lớp, sĩ số còn trống và ngày khai giảng từ EarliestStartDate trở đi. Buổi và nhóm thứ là nguyện vọng để Admin cân nhắc; lớp chưa có lịch chi tiết vẫn có thể được xếp. Khi lịch đã có, kiểm tra xung đột với lớp đã xác nhận của học viên.
+468: Normal: Dữ liệu đã xóa: Kiểm tra trạng thái đối tượng được tham chiếu trước khi khôi phục, sửa hoặc tạo quan hệ mới.
+469: Heading 3: 3.5.2 Phân quyền theo vai trò và từng bản ghi
+470: Normal: Hai lớp kiểm tra: Authorize giới hạn vai trò; truy vấn có điều kiện sở hữu giới hạn bản ghi. Có quyền vào màn hình chưa đủ để sửa mọi ID.
+471: Normal: Tệp tải lên: Kiểm tra loại, kích thước, tên lưu và quyền đối với lớp; tránh dùng tên tệp người gửi làm định danh tin cậy.
+472: Normal: Dữ liệu biểu mẫu: Kiểm tra ModelState, khoảng điểm, mức phí, ngày và tham chiếu hợp lệ trước khi SaveChanges.
+473: Normal: Theo dõi vận hành: Cần nhật ký thao tác, sao lưu và quy trình phục hồi; không suy ra mức độ an toàn chỉ từ việc có cookie hoặc BCrypt.
+474: Normal: Phạm vi đánh giá: Quy tắc ghi danh, xếp lớp, lịch học, phòng thi và tư vấn đã được bổ sung ở các dịch vụ tương ứng. Những hạng mục chưa hoàn thiện như điểm danh theo buổi, gửi email và đối soát ngân hàng tự động được phân biệt với chức năng đã triển khai.
+475: Heading 2: 3.6 Đối chiếu thiết kế với phạm vi hiện thực
+476: Normal: Phiên bản hiện tại đã tách đăng ký khóa học khỏi xếp lớp, bổ sung lịch học theo hai nhóm thứ, phòng thi và trao đổi tư vấn hai chiều. PlacementTest vẫn là yêu cầu kiểm tra và kết quả do giáo viên nhập, chưa có bộ đề trực tuyến tự chấm. Checkbox điểm danh chưa tạo bản ghi chuyên cần theo ngày hoặc buổi.

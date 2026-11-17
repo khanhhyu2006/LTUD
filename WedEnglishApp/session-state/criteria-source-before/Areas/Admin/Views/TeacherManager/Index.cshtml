@@ -1,0 +1,64 @@
+@model List<WedEnglishApp.Models.Teacher>
+@{
+    ViewData["Title"] = "Quản Lý Giáo Viên";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h3 class="fw-bold mb-1">Quản Lý Đội Ngũ Giảng Viên</h3>
+        <p class="text-muted small mb-0">Danh sách các thầy cô, chuyên môn giảng dạy và phân quyền</p>
+    </div>
+    <a asp-action="Create" class="btn btn-primary fw-semibold">
+        <i class="fa-solid fa-user-plus me-1"></i> Thêm Giáo Viên Mới
+    </a>
+</div>
+
+<div class="admin-card overflow-hidden">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0 table-people">
+            <thead class="table-light">
+                <tr>
+                    <th class="ps-4">Ảnh / Họ và Tên</th>
+                    <th>Email Liên Hệ</th>
+                    <th>Học Vị / Bằng Cấp</th>
+                    <th>Chuyên Môn</th>
+                    <th>Số Lớp Dạy</th>
+                    <th class="text-end pe-4">Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var t in Model)
+                {
+                    <tr>
+                        <td class="ps-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="@(t.PhotoUrl ?? t.UserAccount.AvatarUrl ?? "/images/default-avatar.png")" alt="Ảnh @t.UserAccount.FullName" class="rounded-circle border" style="width: 44px; height: 44px; object-fit: cover;" />
+                                <div>
+                                    <div class="fw-bold text-dark">@t.UserAccount.FullName</div>
+                                    <div class="small text-muted">ID: #TEA-@t.TeacherId</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>@t.UserAccount.Email</td>
+                        <td><span class="badge bg-light text-dark border">@t.Degree</span></td>
+                        <td><span class="badge bg-info-subtle text-info border border-info-subtle">@t.Specialization</span></td>
+                        <td>
+                            <span class="badge bg-secondary">@t.Classes.Count lớp</span>
+                        </td>
+                        <td class="text-end pe-4">
+                            <a asp-action="Edit" asp-route-id="@t.TeacherId" class="btn btn-sm btn-outline-primary me-1" title="Chỉnh sửa thông tin">
+                                <i class="fa-solid fa-pen-to-square"></i> Sửa
+                            </a>
+                            <form asp-action="Delete" asp-route-id="@t.TeacherId" method="post" class="d-inline" onsubmit="return confirm('Chuyển tài khoản giảng viên này vào thùng rác? Bạn có thể khôi phục sau.');">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="btn btn-sm btn-outline-danger">
+                                    <i class="fa-solid fa-trash-can me-1"></i> Xóa tài khoản
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

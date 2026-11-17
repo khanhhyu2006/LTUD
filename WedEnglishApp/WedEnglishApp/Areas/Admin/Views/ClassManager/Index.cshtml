@@ -1,0 +1,162 @@
+@model List<WedEnglishApp.Models.CourseClass>
+@{
+    ViewData["Title"] = "Quản Lý Lớp Học & Phân Công";
+    var teachers = ViewBag.Teachers as List<WedEnglishApp.Models.Teacher> ?? new();
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h3 class="fw-bold mb-1"><i class="fa-solid fa-chalkboard-user text-primary me-2"></i> Quản Lý Lớp Mở & Phân Công GVCN</h3>
+        <p class="text-muted small mb-0">Quản lý các lớp mở theo khóa học, chọn giáo viên chủ nhiệm và xếp học viên vào lớp đúng nguyện vọng</p>
+    </div>
+    <a asp-action="Create" class="btn btn-primary fw-semibold">
+        <i class="fa-solid fa-plus me-1"></i> Mở Lớp Học Mới
+    </a>
+</div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert">
+        <i class="fa-solid fa-circle-check me-2"></i> @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show rounded-3 shadow-sm mb-4" role="alert">
+        <i class="fa-solid fa-circle-exclamation me-2"></i> @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="admin-card overflow-hidden">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th class="ps-4">Tên Lớp</th>
+                    <th>Chương Trình Học</th>
+                    <th>Phòng Học</th>
+                    <th>Sĩ Số ĐK</th>
+                    <th>Thời Gian</th>
+                    <th>Giáo Viên Chủ Nhiệm (GVCN)</th>
+                    <th>Trạng Thái</th>
+                    <th class="text-end pe-4">Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model)
+                {
+                    <tr>
+                        <td class="ps-4">
+                            <span class="fw-bold text-dark fs-6">@c.ClassName</span>
+                        </td>
+                        <td>
+                            <span class="badge bg-light text-primary border fw-semibold">@c.Program.ProgramName</span>
+                        </td>
+                        <td><span class="badge bg-light text-dark border">@c.Room</span></td>
+                        <td>
+                            <span class="fw-bold @(c.Registrations.Count >= c.MaxStudents ? "text-danger" : "text-success")">
+                                @c.Registrations.Count / @c.MaxStudents
+                            </span>
+                        </td>
+                        <td class="small text-muted">
+                            @c.StartDate.ToString("dd/MM") - @c.EndDate.ToString("dd/MM/yyyy")
+                        </td>
+                        <td>
+                            @if (c.Teacher != null)
+                            {
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1">
+                                        <i class="fa-solid fa-user-tie me-1"></i> @c.Teacher.UserAccount.FullName
+                                    </span>
+                                    <button type="button" class="btn btn-sm btn-link text-muted p-0 ms-1" title="Đổi GVCN" onclick="openAssignTeacherModal('@c.ClassId', '@c.ClassName', '@c.TeacherId')">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </div>
+                            }
+                            else
+                            {
+                                <button type="button" class="btn btn-sm btn-outline-warning py-1 px-2 fw-semibold rounded-pill" style="font-size: 0.8rem;" onclick="openAssignTeacherModal('@c.ClassId', '@c.ClassName', '')">
+                                    <i class="fa-solid fa-user-plus me-1"></i> Chọn GVCN
+                                </button>
+                            }
+                        </td>
+                        <td>
+                            <span class="badge @(c.Status == "Planning" ? "bg-warning text-dark" : c.Status == "InProgress" ? "bg-success" : c.Status == "Completed" ? "bg-secondary" : "bg-danger")">
+                                @c.Status
+                            </span>
+                        </td>
+                        <td class="text-end pe-4">
+                            <div class="btn-group">
+                                <a asp-action="Details" asp-route-id="@c.ClassId" class="btn btn-sm btn-primary fw-semibold" title="Xem danh sách & Xếp học viên vào lớp">
+                                    <i class="fa-solid fa-users-gear me-1"></i> Xếp HV (@c.Registrations.Count)
+                                </a>
+                                <a asp-action="Edit" asp-route-id="@c.ClassId" class="btn btn-sm btn-outline-secondary" title="Chỉnh sửa thông tin">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                                <form asp-action="Delete" asp-route-id="@c.ClassId" method="post" class="d-inline" onsubmit="return confirm('Bạn có chắc muốn chuyển lớp này vào thùng rác?');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Xóa">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Chọn / Đổi Giáo Viên Chủ Nhiệm -->
+<div class="modal fade" id="assignTeacherModal" tabindex="-1" aria-labelledby="assignTeacherModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header bg-light rounded-top-4">
+                <h5 class="modal-title fw-bold text-primary" id="assignTeacherModalLabel">
+                    <i class="fa-solid fa-user-tie me-2"></i> Chọn Giáo Viên Chủ Nhiệm
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="AssignTeacher" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body p-4">
+                    <input type="hidden" name="classId" id="modalClassId" />
+                    <div class="mb-3">
+                        <label class="form-label text-muted small fw-semibold">Lớp học đang chọn:</label>
+                        <div class="fw-bold fs-6 text-dark p-2 bg-light rounded border" id="modalClassName"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Chọn Giáo viên Chủ nhiệm cho lớp:</label>
+                        <select name="teacherId" id="modalTeacherId" class="form-select">
+                            <option value="">-- Để trống (Chưa có GVCN / Phân bổ sau) --</option>
+                            @foreach (var t in teachers)
+                            {
+                                <option value="@t.TeacherId">@t.UserAccount.FullName (@t.Specialization - @t.Degree)</option>
+                            }
+                        </select>
+                        <div class="form-text small">Admin có thể phân bổ GVCN ngay hoặc để trống và bổ nhiệm sau.</div>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light rounded-bottom-4">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary fw-bold px-4">Lưu Phân Công GVCN</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function openAssignTeacherModal(classId, className, currentTeacherId) {
+            document.getElementById('modalClassId').value = classId;
+            document.getElementById('modalClassName').innerText = className;
+            document.getElementById('modalTeacherId').value = currentTeacherId || '';
+            var modal = new bootstrap.Modal(document.getElementById('assignTeacherModal'));
+            modal.show();
+        }
+    </script>
+}

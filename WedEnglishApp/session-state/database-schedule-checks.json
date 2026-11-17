@@ -1,0 +1,27 @@
+{
+  "regId": 1009,
+  "checks": [
+    "Assignment screen has weekly schedule editor",
+    "HTTP /Admin/ClassManager/SaveSchedule",
+    "Save 246 schedule",
+    "HTTP /Admin/ClassManager/SaveSchedule",
+    "Save 357 schedule",
+    "HTTP /Admin/ClassManager/SaveSchedule",
+    "Reject overlapping room schedule",
+    "HTTP /Admin/ClassManager/SaveSchedule",
+    "Reject reversed time range",
+    "HTTP /Enrollment/Confirm?authRole=Student",
+    "EF inserts registration/payment with database triggers",
+    "New request ID generated",
+    "HTTP /Admin/PaymentAdmin/ConfirmPayment/1009",
+    "EF confirms payment with triggers",
+    "HTTP /Admin/ClassManager/AddStudentToClass",
+    "Assign student after schedule saved",
+    "Student timetable contains assigned class and time",
+    "HTTP /Admin/ClassManager/AssignTeacher",
+    "Teacher assignment supported",
+    "Teacher timetable contains same weekly class",
+    "HTTP /Admin/ClassManager/Create",
+    "Create class and schedules together"
+  ]
+}

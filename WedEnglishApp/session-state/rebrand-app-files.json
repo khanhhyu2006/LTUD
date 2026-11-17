@@ -1,0 +1,9 @@
+[
+  "WedEnglishApp\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+  "WedEnglishApp\\Areas\\Teacher\\Views\\Shared\\_TeacherLayout.cshtml",
+  "WedEnglishApp\\Views\\Home\\Contact.cshtml",
+  "WedEnglishApp\\Views\\Home\\Index.cshtml",
+  "WedEnglishApp\\Views\\Shared\\_Layout.cshtml",
+  "WedEnglishApp\\Views\\Shared\\_RegistrationPayment.cshtml",
+  "WedEnglishApp\\Views\\Student\\PrintReceipt.cshtml"
+]

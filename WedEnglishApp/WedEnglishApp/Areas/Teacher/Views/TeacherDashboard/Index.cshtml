@@ -1,0 +1,123 @@
+@model WedEnglishApp.Models.Teacher
+@{
+    ViewData["Title"] = "Bảng Điều Khiển Giáo Viên";
+    var activities = ViewBag.RecentActivities as List<WedEnglishApp.Models.TeacherActivity> ?? new();
+}
+
+<div class="teacher-card p-4 mb-4 d-flex flex-wrap align-items-center gap-4">
+    <img src="@(Model?.PhotoUrl ?? Model?.UserAccount?.AvatarUrl ?? "/images/default-avatar.png")" alt="Ảnh hồ sơ giáo viên" class="rounded-circle border" style="width: 96px; height: 96px; object-fit: cover;" />
+    <div class="flex-grow-1">
+        <h3 class="fw-bold mb-1">Chào mừng, @(Model?.UserAccount?.FullName ?? "Giáo viên")</h3>
+        <p class="text-muted small mb-3">Chuyên môn: <span class="badge bg-success-subtle text-success border border-success-subtle">@(Model?.Specialization ?? "Tiếng Anh")</span> | @(Model?.Degree ?? "")</p>
+        <form asp-area="Teacher" asp-controller="TeacherDashboard" asp-action="UploadPhoto" method="post" enctype="multipart/form-data" class="d-flex flex-wrap gap-2 align-items-center">
+            @Html.AntiForgeryToken()
+            <input type="file" name="photo" class="form-control form-control-sm" accept=".jpg,.jpeg,.png,.webp" required style="max-width: 320px;" />
+            <button type="submit" class="btn btn-sm btn-outline-success">Tải ảnh lên</button>
+            <span class="form-text">JPG, PNG hoặc WEBP, tối đa 5 MB.</span>
+        </form>
+    </div>
+</div>
+
+<!-- 3 Stat Cards -->
+<div class="row g-4 mb-4">
+    <div class="col-md-4">
+        <div class="teacher-card p-4 d-flex align-items-center gap-3">
+            <div class="rounded-circle bg-success bg-opacity-10 text-success p-3 fs-3">
+                <i class="fa-solid fa-chalkboard"></i>
+            </div>
+            <div>
+                <span class="text-muted small fw-semibold">Tổng Số Lớp Phụ Trách</span>
+                <h3 class="fw-bold mb-0">@ViewBag.TotalClasses</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="teacher-card p-4 d-flex align-items-center gap-3">
+            <div class="rounded-circle bg-primary bg-opacity-10 text-primary p-3 fs-3">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <div>
+                <span class="text-muted small fw-semibold">Tổng Số Học Viên</span>
+                <h3 class="fw-bold mb-0">@ViewBag.TotalStudents</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="teacher-card p-4 d-flex align-items-center gap-3">
+            <div class="rounded-circle bg-warning bg-opacity-10 text-warning p-3 fs-3">
+                <i class="fa-solid fa-clipboard-question"></i>
+            </div>
+            <div>
+                <span class="text-muted small fw-semibold">Bài Test Cần Chấm</span>
+                <h3 class="fw-bold mb-0">@ViewBag.PendingTests</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Lịch Giảng Dạy & Các Lớp Đang Dạy -->
+<div class="teacher-card p-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="fw-bold mb-0"><i class="fa-solid fa-calendar-days me-2 text-success"></i> Các Lớp Giảng Dạy Của Bạn</h5>
+        <a asp-area="Teacher" asp-controller="TeachingClass" asp-action="Index" class="btn btn-sm btn-outline-success">Xem chi tiết lớp</a>
+    </div>
+
+    @if (Model?.Classes == null || !Model.Classes.Any())
+    {
+        <div class="alert alert-info">Hiện tại bạn chưa được phân công lớp học nào.</div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover align-middle small mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tên Lớp</th>
+                        <th>Khóa Học</th>
+                        <th>Phòng Học</th>
+                        <th>Lịch Học</th>
+                        <th>Sĩ Số</th>
+                        <th>Thời Gian</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var c in Model.Classes)
+                    {
+                        <tr>
+                            <td class="fw-bold text-dark">@c.ClassName</td>
+                            <td>@c.Program.ProgramName</td>
+                            <td><span class="badge bg-light text-dark border">@c.Room</span></td>
+                            <td>
+                                @if (c.Schedules.Any())
+                                {
+                                    <span class="badge bg-secondary-subtle text-dark">
+                                        @string.Join(", ", c.Schedules.Select(s => $"T{(s.DayOfWeek == 8 ? "CN" : s.DayOfWeek.ToString())} ({s.StartTime:hh\\:mm}-{s.EndTime:hh\\:mm})"))
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">Chưa có lịch</span>
+                                }
+                            </td>
+                            <td>
+                                <span class="badge bg-success">@c.Registrations.Count học viên</span>
+                            </td>
+                            <td class="text-muted">@c.StartDate.ToString("dd/MM") - @c.EndDate.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                <a asp-area="Teacher" asp-controller="TeachingClass" asp-action="Students" asp-route-id="@c.ClassId" class="btn btn-sm btn-success">
+                                    <i class="fa-solid fa-users me-1"></i> Danh sách HV
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+<div class="teacher-card p-4 mt-4"><div class="d-flex flex-wrap justify-content-between gap-2 mb-3"><h5>Hoạt động gần đây</h5><a asp-controller="Report" asp-action="Index" class="btn btn-sm btn-outline-success">Xem báo cáo</a></div>
+@if (!activities.Any()) { <p class="text-muted mb-0">Chưa có hoạt động được ghi nhận. Các thao tác mới về tài liệu, chấm thi và ảnh hồ sơ sẽ xuất hiện tại đây.</p> }
+else { <ul class="list-group list-group-flush">@foreach(var a in activities){<li class="list-group-item d-flex flex-wrap justify-content-between gap-2"><span>@a.Description</span><time class="small text-muted">@a.OccurredAt.ToString("dd/MM/yyyy HH:mm:ss")</time></li>}</ul> }
+</div>

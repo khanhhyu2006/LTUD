@@ -1,0 +1,10 @@
+@model WedEnglishApp.Models.Registration
+@if (Model.Payment != null) {
+@if (Model.Status != "Cancelled" && Model.Payment.Status != "Paid" && ViewContext.RouteData.Values["action"]?.ToString() != "Payment") {
+<a asp-controller="Enrollment" asp-action="Payment" asp-route-registrationId="@Model.RegistrationId" asp-route-authRole="Student" class="btn btn-sm btn-outline-primary mb-2">Xem hướng dẫn đóng học phí</a>
+}
+<p class="small">Học phí: <strong>@Model.Payment.Amount.ToString("N0") VNĐ</strong> · @(Model.Payment.Status == "Paid" ? "Đã thanh toán" : "Chờ trung tâm xác nhận thanh toán")</p>
+@if (Model.Status != "Cancelled" && Model.Payment.Status != "Paid" && Model.Payment.PaymentMethod == "VietQR") {
+<div class="text-center border rounded p-3 mt-2"><p>Chuyển khoản với nội dung <strong>@Model.Payment.TransactionCode</strong></p><img src="https://img.vietqr.io/image/vietinbank-113366668888-compact2.png?amount=@((long)Model.Payment.Amount)&amp;addInfo=@Uri.EscapeDataString(Model.Payment.TransactionCode ?? $"HPREG{Model.RegistrationId}")&amp;accountName=@Uri.EscapeDataString(WedEnglishApp.Services.SiteBrand.PaymentAccountName)" alt="Mã VietQR cho đơn đăng ký" class="img-fluid" style="max-width:240px" /><p class="small mb-0">VietinBank · 113366668888 · @WedEnglishApp.Services.SiteBrand.PaymentAccountName</p></div>
+}
+}

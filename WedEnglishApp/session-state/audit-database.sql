@@ -1,0 +1,15 @@
+SET NOCOUNT ON;
+SELECT 'Tables' AS Audit;
+SELECT t.name,SUM(p.rows) AS RowsCount FROM sys.tables t JOIN sys.partitions p ON t.object_id=p.object_id AND p.index_id IN(0,1) GROUP BY t.name ORDER BY t.name;
+SELECT 'Registrations' AS Audit;
+SELECT r.RegistrationId,r.StudentId,r.ProgramId,r.ClassId,r.Status,r.EarliestStartDate,r.PreferredSession,r.PreferredDays,r.DesiredTeacherId,r.IsDeleted,p.PaymentId,p.Status AS PaymentStatus,p.PaymentMethod,p.Amount,c.ProgramId AS ClassProgramId,c.ClassName FROM Registrations r LEFT JOIN Payments p ON r.RegistrationId=p.RegistrationId LEFT JOIN Classes c ON r.ClassId=c.ClassId ORDER BY r.RegistrationId;
+SELECT 'Classes' AS Audit;
+SELECT c.ClassId,c.ProgramId,c.ClassName,c.StartDate,c.EndDate,c.Status,c.IsDeleted,c.MaxStudents,COUNT(s.ScheduleId) AS ScheduleCount FROM Classes c LEFT JOIN ClassSchedules s ON c.ClassId=s.ClassId GROUP BY c.ClassId,c.ProgramId,c.ClassName,c.StartDate,c.EndDate,c.Status,c.IsDeleted,c.MaxStudents ORDER BY c.ClassId;
+SELECT 'Duplicates' AS Audit;
+SELECT StudentId,ProgramId,COUNT(*) AS ActiveCount FROM Registrations WHERE IsDeleted=0 AND Status<>'Cancelled' GROUP BY StudentId,ProgramId HAVING COUNT(*)>1;
+SELECT 'Checks' AS Audit;
+SELECT name,is_disabled,is_not_trusted FROM sys.check_constraints;
+SELECT 'Schedules' AS Audit;
+SELECT ClassId,DayOfWeek,StartTime,EndTime FROM ClassSchedules ORDER BY ClassId,DayOfWeek;
+SELECT 'Payments' AS Audit;
+SELECT PaymentMethod,Status,COUNT(*) AS Records,SUM(Amount) AS Total FROM Payments GROUP BY PaymentMethod,Status;

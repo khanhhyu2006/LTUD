@@ -1,0 +1,1 @@
+const fs=require('fs'),sharp=require('sharp');(async()=>{await sharp(Buffer.from(fs.readFileSync('docs/diagrams-clear/sequence-payment-criteria.svg','utf8')),{density:145}).png().toFile('docs/diagrams-clear/sequence-payment-criteria.png');})();

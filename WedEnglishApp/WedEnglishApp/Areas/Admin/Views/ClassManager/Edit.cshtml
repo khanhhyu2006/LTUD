@@ -1,0 +1,77 @@
+@model WedEnglishApp.Models.CourseClass
+@{
+    ViewData["Title"] = "Chỉnh Sửa Lớp Học";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="admin-card p-4">
+            <h4 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-pen-to-square me-2"></i> Chỉnh Sửa Thông Tin Lớp Học</h4>
+            <form asp-action="Edit" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="ClassId" />
+
+                <div asp-validation-summary="All" class="text-danger small mb-3"></div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="ClassName" class="form-label fw-semibold">Mã / Tên Lớp Học <span class="text-danger">*</span></label>
+                        <input asp-for="ClassName" class="form-control" />
+                        <span asp-validation-for="ClassName" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="ProgramId" class="form-label fw-semibold">Chương Trình Học <span class="text-danger">*</span></label>
+                        <select asp-for="ProgramId" asp-items="ViewBag.Programs" class="form-select"></select>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="Room" class="form-label fw-semibold">Phòng Học</label>
+                        <input asp-for="Room" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="MaxStudents" class="form-label fw-semibold">Sĩ Số Tối Đa</label>
+                        <input asp-for="MaxStudents" type="number" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TeacherId" class="form-label fw-semibold">Phân Bổ Giáo Viên Giảng Dạy (Tùy chọn)</label>
+                    <select asp-for="TeacherId" asp-items="ViewBag.Teachers" class="form-select">
+                        <option value="">-- Không có giáo viên cụ thể (Chưa chỉ định / Phân bổ sau) --</option>
+                    </select>
+                    <div class="form-text small">Lớp học không bắt buộc phải có giáo viên cụ thể chịu trách nhiệm. Ban Quản Trị có thể phân bổ giáo viên sau khi đã có học viên đăng ký hoặc theo nguyện vọng xếp lớp.</div>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="StartDate" class="form-label fw-semibold">Ngày Khai Giảng</label>
+                        <input asp-for="StartDate" type="date" class="form-control" />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="EndDate" class="form-label fw-semibold">Ngày Bế Giảng</label>
+                        <input asp-for="EndDate" type="date" class="form-control" />
+                    </div>
+                </div>
+
+                @await Html.PartialAsync("_ClassScheduleForm", (WedEnglishApp.ViewModels.Admin.ClassScheduleInput)ViewBag.ScheduleForm)
+
+                <div class="mb-4">
+                    <label asp-for="Status" class="form-label fw-semibold">Trạng Thái Lớp</label>
+                    <select asp-for="Status" class="form-select">
+                        <option value="Planning">Planning (Sắp khai giảng / Đang tuyển sinh)</option>
+                        <option value="InProgress">InProgress (Đang học)</option>
+                        <option value="Completed">Completed (Đã kết thúc)</option>
+                        <option value="Cancelled">Cancelled (Hủy lớp)</option>
+                    </select>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-outline-secondary">Hủy bỏ</a>
+                    <button type="submit" class="btn btn-primary px-4 fw-bold">Cập Nhật Lớp</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

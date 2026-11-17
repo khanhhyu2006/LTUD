@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Guest Admin access",
+    "url": "http://127.0.0.1:5270/Account/Login?ReturnUrl=%2FAdmin%2FDashboard",
+    "result": "Redirect login"
+  },
+  {
+    "name": "Student Admin access",
+    "url": "http://127.0.0.1:5270/Account/Login?ReturnUrl=%2FAdmin%2FDashboard",
+    "result": "Redirect Admin login"
+  }
+]

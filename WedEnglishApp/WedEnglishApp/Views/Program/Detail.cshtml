@@ -1,0 +1,89 @@
+@model WedEnglishApp.Models.CourseProgram
+@{
+    ViewData["Title"] = Model.ProgramName;
+    var authRole = Context.Request.Query["authRole"].ToString();
+}
+
+<div class="bg-primary text-white py-5 mb-5" style="background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold mb-3">@Model.Level</span>
+                <h1 class="display-5 fw-bold mb-3">@Model.ProgramName</h1>
+                <p class="lead opacity-90 mb-4">@Model.Description</p>
+                <div class="d-flex flex-wrap gap-4 text-light">
+                    <div><i class="fa-regular fa-clock me-1 text-warning"></i> Thời lượng: <strong>@Model.DurationWeeks tuần</strong></div>
+                    <div><i class="fa-solid fa-money-bill-wave me-1 text-warning"></i> Học phí: <strong>@Model.TuitionFee.ToString("N0") VNĐ</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row g-4 g-lg-5">
+        <div class="col-lg-8">
+            <!-- Thông báo cơ chế khóa học & phân bổ giảng viên -->
+            <div class="alert alert-primary-subtle border border-primary-subtle rounded-4 p-3 mb-4 shadow-sm">
+                <div class="d-flex gap-3">
+                    <i class="fa-solid fa-circle-info text-primary fs-4 mt-1"></i>
+                    <div>
+                        <strong class="text-primary d-block mb-1">Cơ chế Phân bổ Giảng viên & Quản lý Lớp học:</strong>
+                        <p class="small text-muted mb-0">
+                            Khóa học được xây dựng theo chuẩn chương trình học thuật thống nhất. Giảng viên phụ trách từng lớp học sẽ do <strong>Ban Quản Trị (Admin) trực tiếp phân bổ và điều phối</strong> hoặc sắp xếp linh hoạt dựa trên <strong>nguyện vọng của học viên</strong> khi đăng ký ghi danh.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chuẩn đầu ra -->
+            <div class="card card-custom p-4 border-0 bg-white mb-4">
+                <h4 class="fw-bold text-primary mb-3">
+                    <i class="fa-solid fa-bullseye me-2"></i> Chuẩn Đầu Ra & Mục Tiêu Khóa Học
+                </h4>
+                <div class="p-3 bg-light rounded-3 text-secondary">
+                    @(Model.LearningOutcomes ?? "Cam kết học viên nắm vững kiến thức và bứt phá điểm số sau khi hoàn thành khóa học.")
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h4 class="fw-bold">Lịch lớp tham khảo</h4>
+                <p class="text-muted">Các lớp của khóa học này. Lớp chính thức của bạn được trung tâm xác nhận sau khi tiếp nhận nguyện vọng.</p>
+                @await Html.PartialAsync("_AvailableClasses", Model.Classes)
+            </div>
+            <div class="card card-custom p-4 border-0 bg-white">
+                <h4 class="fw-bold text-primary">Đăng ký và chọn lịch học mong muốn</h4>
+                <p>Bạn chọn ngày có thể bắt đầu, buổi học và các thứ trong tuần. Trung tâm sẽ xếp lớp phù hợp và thông báo trong tài khoản học viên.</p>
+                <a asp-controller="Enrollment" asp-action="Checkout" asp-route-programId="@Model.ProgramId" asp-route-authRole="Student" class="btn btn-primary">Đăng ký khóa học</a>
+            </div>
+        </div>
+
+        <!-- Sidebar tóm tắt & tư vấn -->
+        <div class="col-lg-4">
+            <div class="card card-custom p-4 border-0 bg-white sticky-top" style="top: 100px;">
+                <h5 class="fw-bold mb-3">Tóm tắt khóa học</h5>
+                <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+                    <li class="d-flex justify-content-between">
+                        <span class="text-muted"><i class="fa-solid fa-layer-group me-2"></i> Trình độ:</span>
+                        <strong class="text-primary">@Model.Level</strong>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                        <span class="text-muted"><i class="fa-regular fa-clock me-2"></i> Thời gian:</span>
+                        <strong>@Model.DurationWeeks tuần</strong>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                        <span class="text-muted"><i class="fa-solid fa-money-bill me-2"></i> Học phí gốc:</span>
+                        <strong class="text-danger fs-5">@Model.TuitionFee.ToString("N0") VNĐ</strong>
+                    </li>
+                </ul>
+
+                <hr class="my-3" />
+                <h6 class="fw-bold mb-2">Cần tư vấn thêm?</h6>
+                <p class="small text-muted mb-3">Để lại thông tin hoặc gọi điện trực tiếp để được tư vấn xếp lớp miễn phí.</p>
+                <a asp-controller="Home" asp-action="Contact" asp-route-authRole="@authRole" class="btn btn-outline-primary w-100 fw-semibold">
+                    <i class="fa-solid fa-phone me-1"></i> Liên Hệ Trung Tâm
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

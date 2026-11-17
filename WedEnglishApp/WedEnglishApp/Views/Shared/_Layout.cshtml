@@ -1,0 +1,235 @@
+@{
+    var currentAuthRole = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Trung tâm ngoại ngữ @WedEnglishApp.Services.SiteBrand.Name</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #2b3445;
+            background-color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar-brand {
+            font-weight: 800;
+            color: #1e3a8a !important;
+            letter-spacing: -0.5px;
+        }
+        .navbar-brand span {
+            color: #0284c7;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: #475569;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #0284c7 !important;
+        }
+        .btn-primary-custom {
+            background-color: #0284c7;
+            border-color: #0284c7;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .btn-primary-custom:hover {
+            background-color: #0369a1;
+            color: #fff;
+            transform: translateY(-1px);
+        }
+        .card-custom {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card-custom:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: auto;
+            background-color: #0f172a;
+            color: #94a3b8;
+        }
+    </style>
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" asp-controller="Home" asp-action="Index" asp-route-authRole="@currentAuthRole">
+                <i class="fa-solid fa-graduation-cap text-primary fa-lg"></i>
+                @WedEnglishApp.Services.SiteBrand.Name
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index" asp-route-authRole="@currentAuthRole"><i class="fa-solid fa-house me-1"></i> Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Program" asp-action="Index" asp-route-authRole="@currentAuthRole"><i class="fa-solid fa-book-open me-1"></i> Khóa học</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="PlacementTest" asp-action="BookTest" asp-route-authRole="@currentAuthRole"><i class="fa-solid fa-clipboard-check me-1"></i> Thi xếp lớp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Contact" asp-route-authRole="@currentAuthRole"><i class="fa-solid fa-phone me-1"></i> Tư vấn & Liên hệ</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a class="btn btn-outline-danger btn-sm me-2 fw-bold" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
+                                <i class="fa-solid fa-shield-halved me-1"></i> Trang Quản Trị
+                            </a>
+                        }
+                        else if (User.IsInRole("Teacher"))
+                        {
+                            <a class="btn btn-outline-success btn-sm me-2 fw-bold" asp-area="Teacher" asp-controller="TeacherDashboard" asp-action="Index">
+                                <i class="fa-solid fa-chalkboard-user me-1"></i> Cổng Giáo Viên
+                            </a>
+                        }
+
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle d-flex align-items-center gap-2 rounded-pill px-3 border" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-circle-user fa-lg text-primary"></i>
+                                <span class="fw-semibold">@User.Identity.Name</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2">
+                                @if (User.IsInRole("Student"))
+                                {
+                                    <li><h6 class="dropdown-header text-uppercase">Tài khoản học viên</h6></li>
+                                    <li><a class="dropdown-item py-2" asp-area="" asp-controller="Consultation" asp-action="Mine"><i class="fa-solid fa-comments me-2 text-primary"></i> Tư vấn của tôi</a></li>
+                                    <li><a class="dropdown-item py-2" asp-area="" asp-controller="Student" asp-action="Profile" asp-route-authRole="Student"><i class="fa-solid fa-user-gear me-2 text-muted"></i> Hồ sơ của tôi</a></li>
+                                    <li><a class="dropdown-item py-2" asp-area="" asp-controller="Student" asp-action="MyClasses" asp-route-authRole="Student"><i class="fa-solid fa-chalkboard me-2 text-muted"></i> Lớp học của tôi</a></li>
+                                    <li><a class="dropdown-item py-2" asp-area="" asp-controller="Student" asp-action="Schedule" asp-route-authRole="Student"><i class="fa-solid fa-calendar-week me-2 text-primary"></i> Lịch học & TKB</a></li>
+                                    <li><a class="dropdown-item py-2" asp-area="" asp-controller="Student" asp-action="MyPayments" asp-route-authRole="Student"><i class="fa-solid fa-receipt me-2 text-muted"></i> Lịch sử học phí</a></li>
+                                }
+                                <li><a class="dropdown-item py-2" asp-area="" asp-controller="Account" asp-action="ChangePassword" asp-route-authRole="@currentAuthRole"><i class="fa-solid fa-key me-2 text-muted"></i> Đổi mật khẩu</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item py-2 text-danger" asp-area="" asp-controller="Account" asp-action="Logout" asp-route-authRole="@currentAuthRole"><i class="fa-solid fa-right-from-bracket me-2"></i> Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                    }
+                    else
+                    {
+                        <a class="btn btn-outline-secondary px-3" asp-area="" asp-controller="Account" asp-action="Login">
+                            <i class="fa-solid fa-right-to-bracket me-1"></i> Đăng nhập
+                        </a>
+                        <a class="btn btn-primary-custom px-3" asp-area="" asp-controller="Account" asp-action="Register">
+                            <i class="fa-solid fa-user-plus me-1"></i> Đăng ký
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thông báo Alert TempData -->
+    <div class="container mt-3">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show d-flex align-items-center shadow-sm" role="alert">
+                <i class="fa-solid fa-circle-check fs-5 me-2"></i>
+                <div>@TempData["SuccessMessage"]</div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center shadow-sm" role="alert">
+                <i class="fa-solid fa-triangle-exclamation fs-5 me-2"></i>
+                <div>@TempData["ErrorMessage"]</div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+    </div>
+
+    <!-- Main Content Body -->
+    <main class="mb-5">
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold text-white mb-3 d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap text-primary"></i> @WedEnglishApp.Services.SiteBrand.Name
+                    </h5>
+                    <p class="small text-secondary">
+                     Hệ thống đào tạo Anh ngữ chuẩn quốc tế với cam kết chuẩn đầu ra IELTS, TOEIC, Giao tiếp phản xạ.
+                    </p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="text-secondary fs-5"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold text-white mb-3">Chương trình học</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 text-secondary">
+                        <li><a href="/Program?level=Advanced" class="text-decoration-none text-secondary">Luyện thi IELTS</a></li>
+                        <li><a href="/Program?level=Intermediate" class="text-decoration-none text-secondary">Luyện thi TOEIC</a></li>
+                        <li><a href="/Program?level=Beginner" class="text-decoration-none text-secondary">Tiếng Anh Giao Tiếp</a></li>
+                        <li><a href="/PlacementTest/BookTest" class="text-decoration-none text-secondary">Kiểm tra xếp lớp</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-white mb-3">Hỗ trợ học viên</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 text-secondary">
+                        <li><a href="/Home/Contact" class="text-decoration-none text-secondary">Quy chế tuyển sinh</a></li>
+                        <li><a href="/Home/Contact" class="text-decoration-none text-secondary">Chính sách hoàn phí</a></li>
+                        <li><a href="/Home/Contact" class="text-decoration-none text-secondary">Lịch thi kiểm tra trình độ</a></li>
+                        <li><a href="/Home/Contact" class="text-decoration-none text-secondary">Hỏi đáp tư vấn</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="fw-bold text-white mb-3">Liên hệ trung tâm</h6>
+                    <ul class="list-unstyled small d-flex flex-column gap-2 text-secondary">
+                        <li><i class="fa-solid fa-location-dot me-2 text-primary"></i> 20 Tăng Nhơn Phú, P. Phước Long B, TP. Thủ Đức, TP.HCM</li>
+                        <li><i class="fa-solid fa-phone me-2 text-primary"></i> 028 3731 2370</li>
+                        <li><i class="fa-solid fa-envelope me-2 text-primary"></i> @WedEnglishApp.Services.SiteBrand.ContactEmail</li>
+                        <li><i class="fa-solid fa-clock me-2 text-primary"></i> 08:00 - 21:00 (Thứ 2 - Thứ 7)</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary my-4" />
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+                <p class="mb-0">© 2026 @WedEnglishApp.Services.SiteBrand.Name. Trường Cao đẳng Công Thương TP.HCM.</p>
+                <p class="mb-0">Đồ án Lập trình Ứng dụng - Ngành Công nghệ Phần mềm</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

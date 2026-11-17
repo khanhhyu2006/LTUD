@@ -1,0 +1,279 @@
+@model WedEnglishApp.ViewModels.Home.HomeViewModel
+@{
+    ViewData["Title"] = "Trang Chủ";
+}
+
+<!-- ========================================================================================= -->
+<!-- 1. HERO BANNER SECTION (Thiết kế bo góc hiện đại, tự động slide)                          -->
+<!-- ========================================================================================= -->
+@if (Model.Banners != null && Model.Banners.Any())
+{
+    <section class="banner-hero-section py-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    
+                    <!-- Khung Carousel Bo Góc + Đổ Bóng Mềm -->
+                    <div id="homeHeroCarousel" class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-sm border border-0" data-bs-ride="carousel" data-bs-interval="4000">
+                        
+                        @if (Model.Banners.Count > 1)
+                        {
+                            <div class="carousel-indicators mb-3">
+                                @for (int i = 0; i < Model.Banners.Count; i++)
+                                {
+                                    <button type="button" data-bs-target="#homeHeroCarousel" data-bs-slide-to="@i" class="@(i == 0 ? "active" : "") rounded-circle" style="width: 8px; height: 8px; margin: 0 4px;" aria-label="Slide @(i + 1)"></button>
+                                }
+                            </div>
+                        }
+
+                        <div class="carousel-inner">
+                            @for (int i = 0; i < Model.Banners.Count; i++)
+                            {
+                                var banner = Model.Banners[i];
+                                <div class="carousel-item @(i == 0 ? "active" : "")">
+                                    <a href="@banner.LinkUrl" class="d-block w-100 position-relative text-decoration-none">
+                                        <div class="ratio ratio-21x9 bg-secondary-subtle">
+                                            <img src="@banner.ImageUrl" alt="@banner.Title" class="object-fit-cover w-100 h-100" />
+                                        </div>
+                                    </a>
+                                </div>
+                            }
+                        </div>
+
+                        @if (Model.Banners.Count > 1)
+                        {
+                            <button class="carousel-control-prev" type="button" data-bs-target="#homeHeroCarousel" data-bs-slide="prev" style="width: 4%;">
+                                <span class="carousel-control-prev-icon p-3 bg-dark bg-opacity-25 rounded-circle" aria-hidden="true"></span>
+                                <span class="visually-hidden">Trước</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#homeHeroCarousel" data-bs-slide="next" style="width: 4%;">
+                                <span class="carousel-control-next-icon p-3 bg-dark bg-opacity-25 rounded-circle" aria-hidden="true"></span>
+                                <span class="visually-hidden">Sau</span>
+                            </button>
+                        }
+                    </div>
+
+                    <!-- Thanh Thao Tác Tinh Tế Nằm Ngay Dưới Banner -->
+                    <div class="card border-0 shadow-sm rounded-4 mt-3 bg-white">
+                        <div class="card-body py-3 px-4">
+                            <div class="row align-items-center g-3">
+                                <div class="col-md-6 text-center text-md-start">
+                                    <div class="d-inline-flex align-items-center gap-2">
+                                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill fw-bold small">
+                                            <i class="fa-solid fa-sparkles me-1"></i> @WedEnglishApp.Services.SiteBrand.Name
+                                        </span>
+                                        <span class="fw-semibold text-secondary small">Đăng ký khóa học theo lịch phù hợp</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 text-center text-md-end">
+                                    <div class="d-flex flex-wrap justify-content-center justify-content-md-end gap-2">
+                                        <a asp-controller="Program" asp-action="Index" asp-route-authRole="@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value" class="btn btn-primary fw-bold px-3 py-2 btn-sm rounded-3">
+                                            <i class="fa-solid fa-compass me-1"></i> Khám phá khóa học
+                                        </a>
+                                        <a asp-controller="PlacementTest" asp-action="BookTest" asp-route-authRole="@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value" class="btn btn-outline-primary fw-semibold px-3 py-2 btn-sm rounded-3">
+                                            <i class="fa-solid fa-pen-ruler me-1"></i> Thi xếp lớp miễn phí
+                                        </a>
+                                        <a asp-controller="Home" asp-action="Contact" class="btn btn-light border fw-semibold px-3 py-2 btn-sm rounded-3 text-dark"><i class="fa-solid fa-comments me-1 text-primary"></i> Nhắn tin tư vấn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<!-- ========================================================================================= -->
+<!-- 2. STATS SECTION (Hiển thị chỉ số dạng phẳng hiện đại)                                    -->
+<!-- ========================================================================================= -->
+<section class="py-4 bg-white border-bottom">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-6 col-md-3">
+                <div class="p-2">
+                    <div class="h2 fw-bold text-dark mb-1">@Model.TotalPrograms<span class="text-primary">+</span></div>
+                    <div class="text-muted small fw-medium">Chương Trình Đào Tạo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-2">
+                    <div class="h2 fw-bold text-dark mb-1">@Model.TotalClasses<span class="text-primary">+</span></div>
+                    <div class="text-muted small fw-medium">Lớp Học Đang Mở</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-2">
+                    <div class="h2 fw-bold text-dark mb-1">@Model.TotalTeachers<span class="text-primary">+</span></div>
+                    <div class="text-muted small fw-medium">Giảng Viên Chuyên Nghiệp</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-2">
+                    <div class="h2 fw-bold text-dark mb-1">@Model.TotalStudents<span class="text-primary">+</span></div>
+                    <div class="text-muted small fw-medium">Học Viên Đồng Hành</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- 3. FEATURED PROGRAMS SECTION (Thẻ khóa học thiết kế sạch sẽ, rõ ràng)                    -->
+<!-- ========================================================================================= -->
+<section class="py-5 bg-light-subtle">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+                <span class="text-primary fw-bold text-uppercase small tracking-wider">Lộ trình bứt phá</span>
+                <h3 class="fw-bold text-dark mb-0">Chương Trình Học Nổi Bật</h3>
+            </div>
+            <a asp-controller="Program" asp-action="Index" asp-route-authRole="@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value" class="text-decoration-none text-primary fw-semibold small">
+                Xem tất cả khóa học <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+        </div>
+
+        <div class="row g-4">
+            @foreach (var prog in Model.FeaturedPrograms)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 bg-white overflow-hidden hover-top">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-1 rounded-pill small fw-bold">
+                                    @prog.Level
+                                </span>
+                                <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> @prog.DurationWeeks tuần</span>
+                            </div>
+                            
+                            <h5 class="card-title fw-bold text-dark mb-2">@prog.ProgramName</h5>
+                            <p class="card-text text-secondary small flex-grow-1 lh-base">@prog.Description</p>
+                            
+                            <div class="pt-3 border-top mt-3 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="d-block text-muted x-small">Học phí trọn gói</span>
+                                    <span class="fw-bold text-primary fs-5">@prog.TuitionFee.ToString("N0") VNĐ</span>
+                                </div>
+                                <a asp-controller="Program" asp-action="Detail" asp-route-id="@prog.ProgramId" asp-route-authRole="@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value" class="btn btn-outline-primary btn-sm rounded-3 fw-semibold px-3">
+                                    Chi tiết
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- 4. TOP STUDENTS / PLACEMENT TEST HIGHLIGHTS (Khối Học Viên Tiêu Biểu Điểm Cao)             -->
+<!-- ========================================================================================= -->
+@if (Model.TopTestStudents != null && Model.TopTestStudents.Any())
+{
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-primary fw-bold text-uppercase small tracking-wider">Thành quả đào tạo</span>
+                <h3 class="fw-bold text-dark mb-2">Gương Mặt Học Viên Tiêu Biểu</h3>
+                <p class="text-muted small">Học viên xuất sắc đạt thành tích cao trong các kỳ thi đánh giá năng lực &amp; thi xếp lớp</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                @foreach (var student in Model.TopTestStudents)
+                {
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card border border-light-subtle shadow-sm rounded-4 p-3 text-center h-100 bg-body-tertiary position-relative overflow-hidden">
+                            <!-- Badge điểm thi nổi bật -->
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-warning text-dark font-monospace fw-bold px-2 py-1 rounded-2 shadow-sm">
+                                    <i class="fa-solid fa-trophy text-danger me-1"></i> @student.Score Điểm
+                                </span>
+                            </div>
+
+                            <div class="my-3">
+                                @if (!string.IsNullOrEmpty(student.AvatarUrl))
+                                {
+                                    <img src="@student.AvatarUrl" alt="@student.StudentName" class="rounded-circle img-thumbnail shadow-sm" style="width: 80px; height: 80px; object-fit: cover;" />
+                                }
+                                else
+                                {
+                                    <div class="rounded-circle bg-primary-subtle text-primary d-inline-flex align-items-center justify-content-center shadow-sm" style="width: 80px; height: 80px;">
+                                        <i class="fa-solid fa-user-graduate fs-2"></i>
+                                    </div>
+                                }
+                            </div>
+
+                            <h6 class="fw-bold text-dark mb-1">@student.StudentName</h6>
+                            <p class="small text-muted mb-2">Bài thi: <span class="fw-semibold text-dark">@student.TestName</span></p>
+                            
+                            @if (!string.IsNullOrEmpty(student.TargetCourse))
+                            {
+                                <div class="mt-auto pt-2 border-top">
+                                    <span class="x-small text-muted">Khóa học đăng ký:</span>
+                                    <div class="small fw-semibold text-primary">@student.TargetCourse</div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+}
+
+<section class="py-5 bg-light" id="class-schedule">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">
+            <div>
+                <h3 class="fw-bold mb-2">Lịch lớp tại trung tâm</h3>
+                <p class="text-muted mb-0">Tham khảo các lớp sắp khai giảng và đang học.</p>
+            </div>
+            <a asp-controller="Program" asp-action="Index" class="btn btn-primary">Chọn khóa học</a>
+        </div>
+        @await Html.PartialAsync("_AvailableClasses", Model.UpcomingClasses)
+        <p class="small text-muted mt-4 mb-0">Bạn đăng ký khóa học và gửi thời gian có thể học. Trung tâm sẽ liên hệ, xếp lớp phù hợp và xác nhận lịch học chính thức.</p>
+    </div>
+</section>
+
+<!-- ========================================================================================= -->
+<!-- 6. TEACHERS SECTION (Đội ngũ giảng viên tinh gọn)                                         -->
+<!-- ========================================================================================= -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="text-primary fw-bold text-uppercase small tracking-wider">Đội ngũ chuyên môn</span>
+            <h3 class="fw-bold text-dark mb-2">Giảng Viên Tiêu Biểu</h3>
+            <p class="text-muted small">Đội ngũ giảng viên giàu kinh nghiệm (CELTA, TESOL) do Ban Quản Trị điều phối, phân bổ theo lớp học hoặc theo nguyện vọng học viên</p>
+        </div>
+
+        <div class="row g-4">
+            @foreach (var teacher in Model.FeaturedTeachers)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border border-light-subtle shadow-sm rounded-4 text-center p-4 bg-white h-100">
+                        <div class="mb-3">
+                            @if (!string.IsNullOrEmpty(teacher.UserAccount?.AvatarUrl))
+                            {
+                                <img src="@(teacher.PhotoUrl ?? teacher.UserAccount?.AvatarUrl)" alt="@(teacher.UserAccount?.FullName ?? "Giáo viên")" class="rounded-circle img-thumbnail shadow-sm" style="width: 90px; height: 90px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <div class="rounded-circle bg-primary-subtle text-primary d-inline-flex align-items-center justify-content-center shadow-sm" style="width: 90px; height: 90px;">
+                                    <i class="fa-solid fa-user-graduate fs-1"></i>
+                                </div>
+                            }
+                        </div>
+                        <h6 class="fw-bold text-dark mb-1">@(teacher.UserAccount?.FullName ?? "Giáo viên")</h6>
+                        <p class="text-primary small fw-semibold mb-2">@teacher.Degree</p>
+                        <span class="badge bg-light text-secondary border align-self-center px-3 py-1 rounded-pill small mb-2">@teacher.Specialization</span>
+                        <p class="text-muted small mb-0 lh-base">@teacher.Bio</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+

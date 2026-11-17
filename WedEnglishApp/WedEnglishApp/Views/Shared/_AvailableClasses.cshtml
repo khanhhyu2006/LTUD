@@ -1,0 +1,49 @@
+@model IEnumerable<WedEnglishApp.Models.CourseClass>
+@{
+    var today = DateTime.Today;
+    var current = Model.Where(c => !c.IsDeleted && c.EndDate.Date >= today && c.EndDate >= c.StartDate
+        && (c.Status == "Planning" || c.Status == "InProgress")).ToList();
+}
+@if (!current.Any())
+{
+    <p class="text-muted py-3 mb-0">Lịch lớp đang được cập nhật. Bạn vẫn có thể đăng ký khóa học và gửi thời gian mong muốn.</p>
+}
+<div class="row g-3">
+    @foreach (var cls in current.OrderBy(c => c.StartDate.Date < today).ThenBy(c => c.StartDate))
+    {
+        var isUpcoming = cls.StartDate.Date >= today;
+                <div class="col-lg-6">
+                    <article class="card border-0 shadow-sm p-4 h-100">
+                        <div class="mb-3">
+                            <span class="badge @(isUpcoming ? "bg-primary-subtle text-primary" : "bg-success-subtle text-success") mb-2">
+                                @(isUpcoming ? "Sắp khai giảng" : "Đang học")
+                            </span>
+                            <h6 class="fw-bold mb-1">
+                                <a asp-controller="Program" asp-action="Detail" asp-route-id="@cls.ProgramId" class="text-decoration-none">@cls.Program.ProgramName</a>
+                            </h6>
+                            <div class="small text-muted">Mã lớp: @cls.ClassName</div>
+                        </div>
+                        <div class="small mb-2">
+                            <i class="fa-regular fa-calendar me-2 text-primary" aria-hidden="true"></i>
+                            @(isUpcoming ? "Khai giảng" : "Đã bắt đầu"): <strong>@cls.StartDate.ToString("dd/MM/yyyy")</strong>
+                            <span class="text-muted">· Kết thúc @cls.EndDate.ToString("dd/MM/yyyy")</span>
+                        </div>
+                        <div class="small mb-2">
+                            <i class="fa-regular fa-clock me-2 text-primary" aria-hidden="true"></i>
+                            @if (cls.Schedules.Any())
+                            {
+                                @string.Join(" · ", cls.Schedules.OrderBy(s => s.DayOfWeek).Select(s => $"{(s.DayOfWeek == 8 ? "CN" : $"Thứ {s.DayOfWeek}")}: {s.StartTime:hh\\:mm}–{s.EndTime:hh\\:mm}"))
+                            }
+                            else
+                            {
+                                <span class="text-muted">Giờ học đang được cập nhật</span>
+                            }
+                        </div>
+                        @if (!string.IsNullOrWhiteSpace(cls.Room))
+                        {
+                            <div class="small text-muted"><i class="fa-solid fa-location-dot me-2" aria-hidden="true"></i>Địa điểm: @cls.Room</div>
+                        }
+                    </article>
+                </div>
+    }
+</div>

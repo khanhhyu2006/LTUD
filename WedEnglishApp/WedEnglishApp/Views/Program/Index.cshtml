@@ -1,0 +1,129 @@
+@model WedEnglishApp.ViewModels.Program.ProgramListViewModel
+@{
+    ViewData["Title"] = "Danh Sách Khóa Học";
+    var authRole = Context.Request.Query["authRole"].ToString();
+}
+
+<div class="bg-light py-4 border-bottom mb-4">
+    <div class="container">
+        <h2 class="fw-bold mb-1">Chương Trình Đào Tạo Anh Ngữ</h2>
+        <p class="text-muted mb-0">Tìm kiếm khóa học phù hợp với mục tiêu và trình độ của bạn</p>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row g-4">
+        <!-- Sidebar Bộ lọc tìm kiếm -->
+        <div class="col-lg-3">
+            <div class="card card-custom p-4 border-0 bg-white">
+                <h5 class="fw-bold mb-3"><i class="fa-solid fa-filter me-2 text-primary"></i> Bộ Lọc Tìm Kiếm</h5>
+                <form method="get" asp-action="Index" asp-route-authRole="@authRole">
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold">Từ khóa tìm kiếm</label>
+                        <input type="text" name="search" value="@Model.SearchTerm" class="form-control" placeholder="Tên khóa, IELTS, TOEIC..." />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold">Cấp độ (Level)</label>
+                        <select name="level" class="form-select">
+                            <option value="">-- Tất cả cấp độ --</option>
+                            <option value="Beginner" selected="@(Model.SelectedLevel == "Beginner")">Beginner (Cơ bản)</option>
+                            <option value="Intermediate" selected="@(Model.SelectedLevel == "Intermediate")">Intermediate (Trung cấp)</option>
+                            <option value="Advanced" selected="@(Model.SelectedLevel == "Advanced")">Advanced (Nâng cao)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label small fw-semibold">Khoảng học phí (VNĐ)</label>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <input type="number" name="minFee" value="@Model.MinFee" class="form-control form-control-sm" placeholder="Từ" />
+                            </div>
+                            <div class="col-6">
+                                <input type="number" name="maxFee" value="@Model.MaxFee" class="form-control form-control-sm" placeholder="Đến" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary-custom w-100 py-2 fw-semibold">
+                        <i class="fa-solid fa-magnifying-glass me-1"></i> Áp Dụng Lọc
+                    </button>
+                    @if (!string.IsNullOrEmpty(Model.SearchTerm) || !string.IsNullOrEmpty(Model.SelectedLevel) || Model.MinFee.HasValue || Model.MaxFee.HasValue)
+                    {
+                        <a asp-action="Index" asp-route-authRole="@authRole" class="btn btn-outline-secondary w-100 py-2 mt-2 small">
+                            Xóa bộ lọc
+                        </a>
+                    }
+                </form>
+            </div>
+        </div>
+
+        <!-- Danh sách khóa học -->
+        <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted small">Tìm thấy <strong>@Model.TotalItems</strong> chương trình học</span>
+            </div>
+
+            @if (Model.Programs.Count == 0)
+            {
+                <div class="alert alert-warning text-center py-5">
+                    <i class="fa-solid fa-magnifying-glass fs-1 mb-3 text-warning"></i>
+                    <h5>Không tìm thấy chương trình học phù hợp!</h5>
+                    <p class="text-muted">Vui lòng thử tìm với từ khóa hoặc khoảng học phí khác.</p>
+                </div>
+            }
+            else
+            {
+                <div class="row g-4">
+                    @foreach (var prog in Model.Programs)
+                    {
+                        <div class="col-md-6">
+                            <div class="card h-100 card-custom border-0 bg-white">
+                                <div class="position-relative bg-light text-center py-4 border-bottom rounded-top">
+                                    <i class="fa-solid fa-graduation-cap text-primary" style="font-size: 3.5rem;"></i>
+                                    <span class="position-absolute top-0 end-0 m-3 badge bg-primary px-3 py-2 rounded-pill">
+                                        @prog.Level
+                                    </span>
+                                </div>
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <h5 class="card-title fw-bold mb-2">@prog.ProgramName</h5>
+                                    <p class="card-text text-muted small flex-grow-1">@prog.Description</p>
+                                    
+                                    <div class="d-flex justify-content-between align-items-center py-2 border-top border-bottom my-3">
+                                        <span class="small text-muted"><i class="fa-regular fa-clock me-1"></i> @prog.DurationWeeks tuần</span>
+                                        <span class="fw-bold text-danger fs-5">@prog.TuitionFee.ToString("N0") VNĐ</span>
+                                    </div>
+
+                                    <a asp-action="Detail" asp-route-id="@prog.ProgramId" asp-route-authRole="@authRole" class="btn btn-primary-custom w-100">
+                                        Xem khóa học và đăng ký
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Phân trang -->
+                @if (Model.TotalPages > 1)
+                {
+                    <nav class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            @for (int p = 1; p <= Model.TotalPages; p++)
+                            {
+                                <li class="page-item @(p == Model.CurrentPage ? "active" : "")">
+                                    <a class="page-link" asp-action="Index" 
+                                       asp-route-page="@p" 
+                                       asp-route-search="@Model.SearchTerm" 
+                                       asp-route-level="@Model.SelectedLevel"
+                                       asp-route-minFee="@Model.MinFee"
+                                       asp-route-maxFee="@Model.MaxFee"
+                                       asp-route-authRole="@authRole">@p</a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                }
+            }
+        </div>
+    </div>
+</div>

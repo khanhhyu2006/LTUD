@@ -1,0 +1,11 @@
+@model List<WedEnglishApp.Models.Consultation>
+@{ ViewData["Title"]="Hộp thư tư vấn"; }
+@section Styles { <link rel="stylesheet" href="~/css/consultation-chat.css" asp-append-version="true" /> }
+<div class="d-flex flex-wrap justify-content-between gap-2 mb-4"><div><h3>Tư vấn trực tiếp với học viên và khách</h3><p class="text-muted mb-0">Mở cuộc trao đổi để trả lời. Danh sách tự cập nhật khi có tin nhắn mới.</p></div><span class="badge bg-primary align-self-start">@Model.Count(c=>c.Status=="Pending") cuộc chờ phản hồi</span></div>
+<div class="admin-card consultation-inbox"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Người liên hệ</th><th>Tin nhắn gần nhất</th><th>Cập nhật</th><th>Trạng thái</th><th>Thao tác</th></tr></thead><tbody>
+@foreach(var c in Model) { var last=c.Messages.OrderByDescending(m=>m.MessageId).FirstOrDefault();var unread=c.Messages.Count(m=>m.SenderRole=="Customer"&&m.MessageId>c.AdminLastReadMessageId);<tr><td><strong>@c.ContactName</strong><div class="small">@(c.OwnerAccountId.HasValue?"Học viên":"Khách tư vấn")</div><div class="small">@c.ContactEmail</div><div class="small">@c.PhoneNumber</div></td><td><div class="message-preview">@(last?.Body??c.Question)</div>@if(unread>0){<span class="badge bg-danger mt-2">@unread tin chưa đọc</span>}</td><td class="small">@c.LastMessageAt.ToString("HH:mm dd/MM/yyyy")</td><td><span class="badge @(c.Status=="Closed"?"bg-secondary":c.Status=="Replied"?"bg-success":"bg-warning text-dark")">@(c.Status=="Closed"?"Đã kết thúc":c.Status=="Replied"?"Đã phản hồi":"Chờ phản hồi")</span></td><td><a asp-action="Details" asp-route-id="@c.ConsultationId" class="btn btn-primary btn-sm">Mở và trả lời</a></td></tr> }
+@if(!Model.Any()){<tr><td colspan="5" class="text-muted text-center py-4">Chưa có cuộc tư vấn.</td></tr>}
+</tbody></table></div></div>
+@section Scripts { <script>
+(()=>{let signature=null,busy=false;async function refresh(){if(busy||document.hidden)return;busy=true;try{const r=await fetch('@Url.Action("InboxUpdates")',{cache:'no-store'});if(!r.ok)return;const data=await r.json();if(signature!==null&&signature!==data.signature)location.reload();signature=data.signature;}catch{}finally{busy=false;}}refresh();setInterval(refresh,5000);})();
+</script> }

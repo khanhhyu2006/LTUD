@@ -1,0 +1,2072 @@
+
+### PAGE 1
+TRƯỜNG CAO ĐẲNG CÔNG THƯƠNG TP HỒ CHÍ MINH
+KHOA CÔNG NGHỆ THÔNG TIN
+BÁO CÁO ĐỒ ÁN KẾT THÚC MÔN
+LẬP TRÌNH ỨNG DỤNG
+XÂY DỰNG WEBSITE QUẢN LÝ
+TRUNG TÂM NGOẠI NGỮHITC ENGLISH
+Sinh viên thực hiện Nguyễn Khánh Huy
+MSSV 2124110269
+Lớp ................................
+Giảng viên hướng dẫn Nguyễn Minh Nhứt
+TP Hồ Chí Minh tháng 11 năm 2026
+### PAGE 2
+i
+MỤC LỤC
+MỞ ĐẦU .........................................................................................................................1
+1. Lý do chọn đề tài .....................................................................................................1
+2. Mục đích nghiên cứu ...............................................................................................1
+2.1 Đối với Khách vãng lai (Guest) .........................................................................2
+2.2 Đối với Học viên (Student)................................................................................2
+2.3 Đối với Giáo viên (Teacher)...............................................................................2
+2.4 Đối với Quản trị viên (Admin)...........................................................................3
+3. Đối tượng và phạm vi nghiên cứu ...........................................................................3
+3.1 Đối tượng nghiên cứu ........................................................................................3
+3.2 Phạm vi nghiên cứu............................................................................................4
+4. Phương pháp nghiên cứu .........................................................................................5
+4.1 Phương pháp nghiên cứu lý thuyết ....................................................................5
+4.2 Phương pháp khảo sát và phân tích hệ thống.....................................................5
+4.3 Phương pháp thực nghiệm .................................................................................5
+CHƯƠNG 1. TỔNG QUAN VỀ WEBSITE TRUNG TÂM NGOẠI NGỮ ..................6
+1.1 Các khái niệm cơ bản về hệ thống quản lý và đăng ký khóa học trực tuyến ........6
+Chuyển dịch mô hình quản lý trung tâm ngoại ngữ truyền thống sang nền tảng số6
+Cơ chế đồng bộ dữ liệu và kiểm soát sĩ số lớp học..................................................6
+Kiến trúc phân quyền đa cấp bậc trong hệ thống.....................................................7
+Khảo sát và đánh giá các hệ thống thực tế tại Việt Nam .............................................7
+Website 1: Anh văn Hội Việt Mỹ (VUS) - vus.edu.vn.............................................7
+Những vấn đề tồn tại và Giải pháp đề xuất của đề tài .................................................9
+Những vấn đề còn tồn tại .........................................................................................9
+Giải pháp công nghệ và Nghiệp vụ đề xuất của đồ án.............................................9
+Mục tiêu, Đối tượng sử dụng và Phạm vi đề tài ........................................................10
+Đối tượng người dùng mục tiêu .............................................................................10
+Phạm vi đề tài:........................................................................................................11
+Ý nghĩa thực tiễn của đề tài .......................................................................................11
+KẾT CHƯƠNG 1 ......................................................................................................11
+### PAGE 3
+ii
+CHƯƠNG 2. CƠ SỞ LÝ THUYẾT VÀ CÔNG CỤ SỬ DỤNG .................................13
+2.1 Kiến trúc hệ thống Client - Server và Mô hình Kết hợp ASP.NET Core MVC & 
+Web API.....................................................................................................................13
+2.1.1 Kiến trúc Client - Server ...............................................................................13
+2.1.2 Mô hình kiến trúc ASP.NET Core MVC.......................................................13
+2.2 Công nghệ phát triển phía Backend (ASP.NET Core .NET 8 & C#) ..................14
+2.3 Công nghệ phát triển phía Frontend & Giao tiếp API (Razor View, Bootstrap 5, 
+JavaScript & Axios/Fetch).........................................................................................14
+2.4 Hệ quản trị cơ sở dữ liệu và Giải pháp thanh toán ..............................................14
+2.5 Kiến trúc bảo mật và Phân quyền người dùng.....................................................15
+2.6 Kiểm soát sĩ số & Kiểm tra xung đột lịch học (Schedule Conflict Check).........16
+2.7 Mô hình phân tầng trong ứng dụng (Three-Tier Architecture)............................16
+KẾT CHƯƠNG 2 ......................................................................................................16
+CHƯƠNG 3. PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG.............................................18
+3.1 Biểu đồ Use Case tổng quan hệ thống .................................................................18
+3.1.1 Phân tích và mô tả logic cấu trúc Use Case ..................................................18
+Phân rã 4 phân hệ Use Case cốt lõi........................................................................19
+3.2 Phân rã use case theo từng tác nhân ....................................................................19
+3.2.1 Tác nhân khách .............................................................................................20
+3.2.2 Tài khoản học viên ........................................................................................21
+3.2.3 Tài khoản giáo viên.......................................................................................22
+3.2.4 Tài khoản quản trị viên .................................................................................23
+3.3 Đặc tả các use case tiêu biểu................................................................................24
+3.3.1 Đăng ký tài khoản và đăng nhập...................................................................24
+3.3.2 Đăng ký lớp học ............................................................................................24
+3.3.3 Xác nhận học phí...........................................................................................24
+3.3.4 Đặt lịch và chấm kiểm tra xếp lớp ................................................................24
+3.3.5 Quản lý tài liệu lớp học .................................................................................25
+3.3.6 Xóa mềm và khôi phục dữ liệu .....................................................................25
+3.4 Thiết kế cơ sở dữ liệu...........................................................................................26
+3.4.1 Nhóm tài khoản và hồ sơ ..............................................................................26
+### PAGE 4
+iii
+3.4.2 Nhóm đào tạo và ghi danh ............................................................................26
+3.4.3 Nhóm hỗ trợ và quản trị................................................................................27
+3.5 Ràng buộc và luồng dữ liệu .................................................................................27
+3.6 Đối chiếu thiết kế với phạm vi hiện thực.............................................................27
+3.7 Kết chương 3........................................................................................................28
+CHƯƠNG 4. HIỆN THỰC HÓA VÀ KIỂM THỬ HỆ THỐNG.................................29
+4.1 Môi trường triển khai và Công nghệ sử dụng......................................................29
+4.1.1 Môi trường phát triển và vận hành hệ thống.................................................29
+4.1.2 Các công nghệ và thư viện phần mềm sử dụng ............................................31
+4.1.3 Quy trình khởi tạo đường ống xử lý HTTP (Middleware Pipeline) .............32
+4.2 GIAO DIỆN VÀ HIỆN THỰC HÓA CHỨC NĂNG HỆ THỐNG....................33
+4.2.1 Phân hệ dành cho Khách hàng (Học viên & Khách vãng lai) ......................33
+4.2.2 Phân hệ Quản trị viên hệ thống (Admin Portal - Area: Admin)....................44
+4.2.3 Phân hệ Giảng viên (Teacher Portal - Area: Teacher)...................................51
+4.2.4 Phân hệ Xác thực và Quản lý tài khoản (Authentication System)................55
+4.3 KIỂM THỬ HỆ THỐNG (SYSTEM TESTING) ...............................................58
+4.3.1 Mục tiêu và Phương pháp kiểm thử..............................................................58
+4.3.2 Kịch bản kiểm thử chi tiết các phân hệ chức năng (Test Cases)...................58
+KẾT CHƯƠNG 4 ......................................................................................................62
+KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN.....................................................................63
+TÀI LIỆU THAM KHẢO .............................................................................................66
+### PAGE 5
+iv
+DANH MỤC HÌNH
+Hình 1: trang chủ VUS ....................................................................................................7
+Hình 2: trang chủ ILA Vietnam.......................................................................................8
+Hình 1: Biểu đồ Use Case tổng quan hệ thống Dang ky khoa hc .................................18
+Hình 3.2: Sơ đồ use case khách chưa đăng nhập...........................................................20
+Hình 3.3: Sơ đồ use case tài khoản học viên.................................................................21
+Hình 3.4: Sơ đồ use case tài khoản giáo viên................................................................22
+Hình 3.5: Sơ đồ use case tài khoản quản trị viên ..........................................................23
+Hình 3.6: Mô hình các bảng dữ liệu và trường khóa.....................................................26
+Hình 4.1: Giao diện Trang chủ tập trung khi Khách hàng chưa đăng nhập.........33
+Hình 4.2: Giao diện Trang chủ và Menu tiện ích sau khi Học viên đăng nhập.....35
+Hình 4.3: Giao diện Danh mục Khóa học và Bộ lọc cấp độ.....................................37
+Hình 4.4: Giao diện Chi tiết Khóa học và Danh sách lớp đang mở........................38
+Hình 4.5: Giao diện Đặt lịch thi xếp lớp và kiểm tra năng lực đầu vào.................39
+Hình 4.6: Giao diện Thanh toán học phí bằng mã quét VietQR tự động...............40
+Hình 4.7: Giao diện Biên lai thu tiền học phí điện tử....................................................41
+Hình 4.8a: Các lớp học viên đã đăng ký........................................................................42
+Hình 4.8b: Lịch học và lịch thi theo tuần ......................................................................42
+Hình 4.8: Giao diện Lớp học của tôi và Lịch học tuần .................................................42
+Hình 4.9: Giao diện Lịch sử nộp học phí học viên........................................................43
+Hình 4.10: Giao diện Hồ sơ cá nhân và Kết quả thi xếp lớp của học viên ...................44
+Hình 4.11: Giao diện Bảng điều khiển Quản trị Dashboard và Biểu đồ Doanh thu .....45
+Hình 4.12: Giao diện Quản lý và Thêm mới Banner quảng bá trang chủ.....................46
+Hình 4.13a: Chương trình đào tạo .................................................................................47
+Hình 4.13b: Lớp học và phân công ...............................................................................47
+Hình 4.13: Giao diện Quản trị Chương trình học và Lớp học.......................................47
+Hình 4.14a: Đăng ký và xếp lớp....................................................................................48
+Hình 4.14b: Quản lý học phí .........................................................................................48
+Hình 4.14: Giao diện Quản trị Đăng ký và Xác nhận Thanh toán học phí ...................49
+Hình 4.15a: Hồ sơ giáo viên..........................................................................................49
+### PAGE 6
+v
+Hình 4.15b: Hồ sơ học viên...........................................................................................50
+Hình 4.15: Giao diện Quản lý Hồ sơ Giảng viên và Học viên......................................50
+Hình 4.16: Giao diện Thùng rác hệ thống với cơ chế Khôi phục và Xóa vĩnh viễn .....51
+Hình 4.17: Giao diện Bảng điều khiển công tác đào tạo của Giảng viên......................52
+Hình 4.18a: Các lớp được phân công ............................................................................52
+Hình 4.18b: Danh sách học viên của lớp.......................................................................53
+Hình 4.18: Giao diện Danh sách lớp dạy và Điểm danh học viên ................................53
+Hình 4.19: Giao diện Chấm thi xếp lớp và Đề xuất cấp độ học....................................53
+Hình 4.20a: Quản lý tài liệu lớp ....................................................................................54
+Hình 4.20b: Phản hồi của học viên................................................................................54
+Hình 4.20: Giao diện Quản lý kho học liệu số và Đánh giá giờ dạy.............................54
+Hình 4.20a: Bảng lương của giáo viên ..........................................................................55
+Hình 4.20b: Quản lý lương tại trang Admin..................................................................55
+Hình 4.21: Giao diện Đăng nhập hệ thống phân quyền đa vai trò ................................56
+Hình 4.22: Giao diện Đăng ký tài khoản học viên ........................................................57
+Hình 4.23: Giao diện Đổi mật khẩu và Thông báo từ chối truy cập 403 ......................57
+### PAGE 7
+1
+MỞ ĐẦU
+1. Lý do chọn đề tài
+Trong những năm gần đây, cùng với sự phát triển mạnh mẽ của công nghệ thông 
+tin và Internet, nhu cầu nâng cao trình độ ngoại ngữ (Tiếng Anh: IELTS, TOEIC, Giao 
+tiếp,...) ngày càng gia tăng nhằm đáp ứng yêu cầu học tập và làm việc trong môi 
+trường hội nhập quốc tế. Đi cùng với đó là sự thay đổi rõ rệt trong thói quen của người 
+học: thay vì phải trực tiếp đến văn phòng trung tâm để tìm hiểu thông tin, làm thủ tục 
+nhập học và đóng học phí bằng tiền mặt, học viên ngày nay có xu hướng ưu tiên tra 
+cứu lộ trình, làm bài kiểm tra xếp lớp trực tuyến, đăng ký ca học và thanh toán học phí 
+nhanh chóng qua các nền tảng số.
+Trên thực tế, các hệ thống đăng ký học trực tuyến đã được triển khai tại một số
+trung tâm lớn mang lại hiệu quả quản lý cao. Tuy nhiên, tại nhiều trung tâm vừa và 
+nhỏ, công tác vận hành vẫn còn phụ thuộc rất nhiều vào sổ sách và các file Microsoft 
+Excel rời rạc. Điều này dẫn đến nhiều bất cập lớn:
+• Thất lạc hoặc trùng lặp dữ liệu học viên giữa các phòng ban.
+• Dễ xảy ra tình trạng xung đột thời khóa biểu, trùng phòng học hoặc trùng ca 
+dạy của giáo viên khi phân công thủ công.
+• Quy trình đối soát học phí chậm chạp, dễ sai sót và khó tổng hợp báo cáo tài 
+chính kịp thời.
+• Thiếu công cụ kiểm tra trình độ đầu vào trực tuyến (Placement Test) để tự động 
+phân lớp phù hợp cho học viên.
+Nền tảng ASP.NET Core (.NET 8) do Microsoft phát triển là một framework mã 
+nguồn mở mạnh mẽ, có hiệu năng vượt trội, tính bảo mật cao và hỗ trợ mô hình kiến 
+trúc Model - View - Controller (MVC) chặt chẽ. Kết hợp cùng ngôn ngữ lập trình hiện 
+đại C#, công nghệ Entity Framework Core (EF Core Code-First) và hệ quản trị cơ sở
+dữ liệu doanh nghiệp tin cậy Microsoft SQL Server, đây là giải pháp công nghệ lý 
+tưởng để xây dựng một hệ thống quản trị giáo dục ổn định, an toàn và dễ mở rộng.
+Xuất phát từ những yêu cầu thực tiễn và nền tảng công nghệ trên, đề tài “Xây dựng 
+website quản lý và đăng ký học tại trung tâm ngoại ngữ sử dụng ASP.NET Core và 
+SQL Server” được lựa chọn nhằm nghiên cứu, phân tích và hiện thực hóa một giải 
+pháp phần mềm toàn diện, đáp ứng đầy đủ nghiệp vụ đào tạo, tuyển sinh và quản lý 
+đào tạo cho trung tâm ngoại ngữ hiện đại.
+2. Mục đích nghiên cứu
+Mục tiêu tổng quát của đề tài là nghiên cứu, thiết kế và xây dựng hoàn chỉnh ứng dụng 
+web quản lý đào tạo và đăng ký học trực tuyến theo mô hình Client - Server (kiến trúc 
+### PAGE 8
+2
+ASP.NET Core MVC). Hệ thống bảo đảm tính vận hành ổn định, an toàn dữ liệu, phân 
+quyền bảo mật chặt chẽ và cung cấp giao diện trực quan, thân thiện cho từng đối tượng 
+người dùng.
+Để đạt được mục tiêu tổng quát, đề tài tập trung giải quyết các mục tiêu cụ thể đối với 
+4 vai trò người dùng (User Roles) trong hệ thống:
+2.1 Đối với Khách vãng lai (Guest)
+• Tra cứu và tìm kiếm thông tin: Cung cấp giao diện trực quan giúp khách tra 
+cứu danh sách các chương trình đào tạo, lộ trình học tập, thông tin giáo viên, 
+mức học phí và lịch khai giảng các lớp học sắp mở.
+• Gửi yêu cầu tư vấn trực tuyến (Consultation): Cho phép người dùng để lại 
+thông tin liên hệ và nguyện vọng khóa học trên website để bộ phận tư vấn tuyển 
+sinh chủ động liên hệ hỗ trợ.
+• Đăng ký tài khoản: Khách hàng có thể dễ dàng khởi tạo tài khoản học viên 
+mới để tham gia vào các dịch vụ đào tạo của trung tâm.
+2.2 Đối với Học viên (Student)
+• Kiểm tra trình độ đầu vào trực tuyến (Placement Test): Học viên có thể
+tham gia làm bài thi thử trắc nghiệm online (Listening/Reading); hệ thống tự
+động chấm điểm và đề xuất lộ trình/khóa học phù hợp với năng lực ngay lập 
+tức.
+• Đăng ký lớp học trực tuyến (Registration): Cho phép học viên chủ động chọn 
+lớp, chọn ca học trong tuần phù hợp với thời gian biểu cá nhân theo số lượng 
+chỗ trống thực tế.
+• Thanh toán học phí tiện lợi (VietQR Integration): Hệ thống tự động khởi tạo 
+mã VietQR chuẩn xác với thông tin số tài khoản, số tiền và mã hóa đơn, giúp 
+học viên quét mã thanh toán học phí qua ứng dụng Mobile Banking chỉ trong 
+vài giây.
+• Quản lý học tập & Biên lai điện tử: Học viên có thể xem thời khóa biểu cá 
+nhân, tra cứu lịch sử ghi danh, xem và in trực tiếp biên lai thu học phí điện tử
+(PrintReceipt), đồng thời gửi đánh giá/phản hồi chất lượng khóa học 
+(CourseFeedback).
+2.3 Đối với Giáo viên (Teacher)
+• Quản lý lớp phụ trách: Xem danh sách toàn bộ các lớp học mà mình được ban 
+giám đốc phân công giảng dạy.
+### PAGE 9
+3
+• Quản lý học viên & Điểm danh: Tra cứu danh sách học viên trong từng lớp, 
+thông tin liên lạc và theo dõi tình hình chuyên cần.
+• Thời khóa biểu giảng dạy: Tra cứu lịch dạy chi tiết theo tuần (thứ, ca học, 
+phòng học) để chủ động sắp xếp công tác chuyên môn.
+• Đánh giá & Chấm điểm: Nhập kết quả kiểm tra, nhận xét năng lực học tập của 
+học viên trong quá trình theo học.
+2.4 Đối với Quản trị viên (Admin)
+• Quản lý danh mục đào tạo & Lớp học: Quản lý chương trình học (Program), 
+khởi tạo lớp học mới (Class), cấu hình sĩ số tối đa, phòng học và quản lý vòng 
+đời trạng thái lớp (ClassStatus: Lập kế hoạch, Đang diễn ra, Đã hoàn thành, Đã 
+hủy).
+• Phân công giảng viên & Xếp thời khóa biểu: Sắp xếp lịch học các ngày trong 
+tuần (ClassSchedule) cho từng lớp và phân công giáo viên đứng lớp, đảm bảo 
+không bị xung đột giờ dạy và phòng học.
+• Quản lý ghi danh & Tư vấn tuyển sinh: Tiếp nhận đơn đăng ký học, duyệt 
+xác nhận học viên vào lớp chính thức sau khi hoàn tất học phí, tiếp nhận và xử
+lý danh sách khách cần tư vấn.
+• Quản trị người dùng & Phân quyền bảo mật: Cấp phát, kích hoạt hoặc tạm 
+khóa tài khoản của học viên, giáo viên và nhân sự quản trị trên toàn hệ thống.
+• Báo cáo thống kê & Biểu đồ doanh thu: Cung cấp bảng điều khiển Dashboard 
+trực quan sử dụng thư viện Chart.js, thống kê số lượng học viên mới, tổng 
+doanh thu theo tháng và tỷ trọng doanh thu giữa các khóa học phục vụ ra quyết 
+định quản lý.
+3. Đối tượng và phạm vi nghiên cứu
+3.1 Đối tượng nghiên cứu
+• Nghiệp vụ quản lý đào tạo: Chu trình tuyển sinh, kiểm tra xếp lớp, quản lý 
+thời khóa biểu, phân công giảng dạy, ghi danh và quản lý học phí tại trung tâm 
+ngoại ngữ.
+• Công nghệ và Kiến trúc phần mềm: Mô hình kiến trúc ASP.NET Core MVC 
+(.NET 8), ngôn ngữ C#, Entity Framework Core Code-First, cơ chế xác thực 
+Cookie Authentication / Claims-based Identity và hệ quản trị cơ sở dữ liệu 
+Microsoft SQL Server.
+• Giải pháp tiện ích: Tích hợp sinh mã QR thanh toán nhanh VietQR (chuẩn 
+Napas247) và trực quan hóa dữ liệu thống kê bằng thư viện Chart.js.
+### PAGE 10
+4
+3.2 Phạm vi nghiên cứu
+• Phạm vi nghiệp vụ: Hệ thống tập trung giải quyết trọn vẹn chu trình nghiệp vụ
+quản lý đào tạo tại một trung tâm ngoại ngữ, từ khâu tiếp thị - tư vấn, kiểm tra 
+xếp lớp đầu vào, ghi danh, xếp lịch học, phân công giảng viên đến khâu thu học 
+phí và báo cáo thống kê doanh thu.
+• Phạm vi công nghệ triển khai: 
+o Môi trường phát triển Backend & Frontend: Ứng dụng mô hình
+ASP.NET Core MVC (.NET 8) kết hợp với ngôn ngữ lập trình C#. Giao 
+diện người dùng được xây dựng bằng Razor Views, HTML5, CSS3, 
+JavaScript và thư viện giao diện Bootstrap 5 đảm bảo hiển thị
+Responsive tốt trên cả máy tính và điện thoại.
+o Tầng truy xuất dữ liệu: Sử dụng Entity Framework Core (EF Core 
+Code-First) để ánh xạ các thực thể C# thành cấu trúc bảng trong CSDL, 
+tự động thực hiện Migration và quản lý dữ liệu an toàn.
+o Hệ quản trị cơ sở dữ liệu: Sử dụng Microsoft SQL Server (MS SQL 
+Server / LocalDB), thiết kế cấu trúc dữ liệu chuẩn hóa dạng chuẩn 3 
+(3NF) với đầy đủ các ràng buộc khóa chính, khóa ngoại.
+• Phạm vi giới hạn của đề tài: 
+o Về cổng thanh toán: Để đảm bảo tính khả thi và an toàn trong khuôn 
+khổ đồ án môn học, hệ thống triển khai giải pháp thanh toán thông qua 
+mã VietQR tự động (tự động điền đúng Số tài khoản trung tâm, Tên chủ
+tài khoản, Số tiền học phí và Mã hóa đơn nội dung chuyển khoản). Sau 
+khi học viên thanh toán, hệ thống cho phép xuất in biên lai học phí điện 
+tử; chưa tích hợp Webhook API tự động bắt biến động số dư ngân hàng 
+theo thời gian thực (do yêu cầu pháp nhân doanh nghiệp khi đăng ký 
+dịch vụ Open Banking với các ngân hàng thương mại).
+o Về bài thi xếp lớp (Placement Test): Hệ thống tập trung vào hình thức 
+thi trắc nghiệm khách quan hai kỹ năng Nghe (Listening) và Đọc 
+(Reading) có chấm điểm và đề xuất khóa học tự động; chưa tích hợp 
+module thu âm và chấm điểm AI cho hai kỹ năng Nói (Speaking) và Viết 
+(Writing).
+o Về hóa đơn và kế toán: Hệ thống quản lý biên lai và báo cáo doanh thu 
+phục vụ công tác quản trị nội bộ của trung tâm, chưa tích hợp kết nối 
+xuất hóa đơn điện tử trực tiếp với hệ thống của Tổng cục Thuế.
+### PAGE 11
+5
+4. Phương pháp nghiên cứu
+Để hoàn thành các mục tiêu đề ra và giải quyết chính xác các bài toán nghiệp vụ, đề tài 
+đã áp dụng phối hợp các phương pháp nghiên cứu sau:
+4.1 Phương pháp nghiên cứu lý thuyết
+• Nghiên cứu công nghệ nền tảng: Đọc và tìm hiểu tài liệu kỹ thuật chính thống 
+từ Microsoft Learn về nền tảng .NET 8, ASP.NET Core MVC, Entity 
+Framework Core, LINQ to Entities và cơ chế Dependency Injection (DI).
+• Nghiên cứu kiến trúc bảo mật: Tìm hiểu cơ chế xác thực phiên làm việc bằng 
+Cookie Authentication, phân quyền dựa trên Claim/Role ([Authorize(Roles = 
+"...")]) và các biện pháp bảo mật chống tấn công web phổ biến như XSS, CSRF 
+([ValidateAntiForgeryToken]).
+4.2 Phương pháp khảo sát và phân tích hệ thống
+• Khảo sát nghiệp vụ thực tế: Khảo sát quy trình tổ chức lớp học, cấu trúc thời 
+khóa biểu và biểu phí tại các trung tâm ngoại ngữ thực tế, từ đó chuẩn hóa các 
+quy tắc nghiệp vụ trong hệ thống.
+• Phân tích và thiết kế hệ thống: Sử dụng ngôn ngữ mô hình hóa thống nhất 
+(UML) để xây dựng: 
+o Sơ đồ Use Case: Phân tích và đặc tả chức năng chi tiết cho 4 tác nhân 
+(Khách, Học viên, Giáo viên, Quản trị viên).
+o Sơ đồ thực thể kết hợp (ERD): Thiết kế cấu trúc CSDL gồm đầy đủ 11 
+bảng (8 bảng bắt buộc: UserAccount, Student, Teacher, Program, Class, 
+Registration, PlacementTest, Payment và 3 bảng bổ sung: ClassStatus, 
+ClassSchedule, Consultation).
+4.3 Phương pháp thực nghiệm
+• Hiện thực hóa mã nguồn (Implementation): Sử dụng môi trường lập trình 
+Visual Studio / Visual Studio Code để viết mã nguồn bằng C#, xây dựng cơ sở
+dữ liệu qua EF Core Migrations và nạp sẵn dữ liệu mẫu (Seed Data) cho hệ
+thống hoạt động thực tế.
+• Kiểm thử và đánh giá (Testing): Tiến hành kiểm thử hộp đen (Black-box 
+Testing) trên từng chức năng cốt lõi: Đăng nhập/Đăng xuất, Phân quyền truy 
+cập các Area (/Admin, /Teacher), Luồng thi thử xếp lớp, Luồng đăng ký lớp và 
+thanh toán VietQR, In biên lai học phí và Hiển thị biểu đồ doanh thu Chart.js. 
+Qua đó, kịp thời phát hiện và khắc phục toàn bộ các lỗi tiềm ẩn, đảm bảo hệ
+thống đạt độ tin cậy và sẵn sàng đưa vào vận hành.
+### PAGE 12
+6
+CHƯƠNG 1. TỔNG QUAN VỀ WEBSITE TRUNG TÂM 
+NGOẠI NGỮ
+1.1 Các khái niệm cơ bản về hệ thống quản lý và đăng ký khóa học trực 
+tuyến
+Chuyển dịch mô hình quản lý trung tâm ngoại ngữ truyền thống sang nền tảng số
+Trong mô hình trung tâm ngoại ngữ truyền thống, mọi khâu vận hành đều diễn 
+ra thủ công: học viên đến trực tiếp văn phòng ghi phiếu thông tin, nhân viên tư vấn 
+nhập liệu vào các bảng tính Excel rời rạc, thủ quỹ thu tiền mặt và viết biên lai giấy, 
+việc xếp phòng và ca dạy thực hiện trên bảng biểu giấy dán tường. Mô hình này bộc lộ
+những nhược điểm nghiêm trọng:
+• Trùng lặp và thất lạc dữ liệu: Thông tin học viên lưu trữ phân tán, dễ thất lạc 
+khi chuyển giao ca trực.
+• Xung đột tài nguyên: Dễ xảy ra tình trạng xếp 2 lớp vào cùng một phòng học 
+trong cùng một ca, hoặc một giảng viên bị phân công dạy 2 lớp cùng giờ.
+• Khó khăn trong quản lý tài chính: Kế toán mất nhiều ngày đối soát sổ sách và 
+chứng từ chuyển khoản ngân hàng thủ công.
+Chuyển đổi số sang hệ sinh thái Website quản lý tập trung dựa trên nền tảng 
+ASP.NET Core MVC giúp giải quyết triệt để các tồn tại trên:
+Học viên chủ động tìm kiếm, làm bài kiểm tra năng lực đầu vào và đăng ký lớp học 
+trực tuyến 24/7.
+Dữ liệu được lưu trữ tập trung tại cơ sở dữ liệu quan hệ Microsoft SQL Server, đảm 
+bảo tính toàn vẹn dữ liệu và hỗ trợ truy xuất đồng thời cho hàng ngàn người dùng.
+Cơ chế đồng bộ dữ liệu và kiểm soát sĩ số lớp học
+Kiểm soát sĩ số (Capacity Control): Mỗi lớp học (Class) được thiết lập sĩ số tối 
+đa (MaxStudents = 25). Hệ thống tự động đếm số lượng bản ghi ghi danh hợp lệ
+(Registrations có trạng thái Paid hoặc Confirmed). Khi số lượng đạt mức tối đa, hệ
+thống tự động khóa nút đăng ký của lớp đó trên giao diện người dùng, ngăn chặn tình 
+trạng vượt sĩ số (Overbooking).
+Đồng bộ trạng thái lớp học (ClassStatus): Quản lý vòng đời của lớp học xuyên suốt 
+qua 4 trạng thái chuẩn hóa: Planning (Lập kế hoạch/Đang mở tuyển sinh), InProgress 
+(Đang diễn ra khóa học), Completed (Đã kết thúc khóa học) và Cancelled (Đã hủy 
+lớp).
+### PAGE 13
+7
+Kiến trúc phân quyền đa cấp bậc trong hệ thống
+Hệ thống quản lý trung tâm áp dụng mô hình phân quyền dựa trên vai trò (Role￾Based Access Control - RBAC) với 4 cấp bậc rõ ràng:
+Khách vãng lai (Guest): Tiếp cận thông tin công khai (lộ trình, học phí, lịch khai 
+giảng) và gửi form tư vấn trực tuyến.
+Học viên (Student): Quản lý hồ sơ cá nhân, thi xếp lớp trực tuyến, đăng ký ca học, 
+thanh toán học phí qua mã VietQR, xem thời khóa biểu và in biên lai.
+Giáo viên (Teacher): Xem danh sách lớp phụ trách, theo dõi danh sách học viên, xem 
+thời khóa biểu giảng dạy, tải lên tài liệu học tập và chấm bài thi xếp lớp.
+Quản trị viên (Admin): Nắm toàn quyền quản trị hệ thống (CRUD chương trình học, 
+mở lớp, xếp thời khóa biểu, phân công giảng viên, duyệt đơn ghi danh, xử lý tư vấn 
+tuyển sinh và xem biểu đồ doanh thu tài chính).
+Khảo sát và đánh giá các hệ thống thực tế tại Việt Nam
+Để có cái nhìn toàn diện và rút ra bài học kinh nghiệm cho việc thiết kế hệ
+thống, nhóm đã tiến hành khảo sát hai website trung tâm ngoại ngữ lớn và phổ biến 
+hiện nay: VUS (Anh văn Hội Việt Mỹ) và I LA (ILA Vietnam).
+Website 1: Anh văn Hội Việt Mỹ (VUS) - vus.edu.vn
+a) Ảnh chụp màn hình (Trang chủ)
+Hình 1: trang chủ VUS
+Mô tả hình ảnh: Trang chủ VUS sử dụng tông màu xanh dương và đỏ đặc 
+trưng của thương hiệu. Layout hiện đại với Banner lớn hiển thị các chương trình ưu 
+### PAGE 14
+8
+đãi nổi bật, thanh điều hướng (Navbar) phân loại khóa học theo độ tuổi (Trẻ em, Thiếu 
+niên, Luyện thi chứng chỉ, Người lớn) và tích hợp nút "Đăng ký tư vấn" nhanh.
+b) Ưu điểm
+• Giao diện hiện đại, chuẩn SEO: Thiết kế bắt mắt, bố cục rõ ràng, hình ảnh 
+chất lượng cao và tốc độ tải trang nhanh.
+• Phân loại khóa học khoa học: Khóa học được chia theo độ tuổi và mục tiêu 
+học tập giúp người dùng dễ dàng định hình lộ trình phù hợp.
+• Trải nghiệm người dùng (UX) tốt: Đặt các nút kêu gọi hành động (Call to 
+Action - CTA) như "Đăng ký ngay", "Tư vấn miễn phí" ở các vị trí dễ nhìn.
+• Tích hợp tiện ích đa dạng: Có hệ thống kiểm tra trình độ trực tuyến 
+(Placement Test) và liên kết ứng dụng học tập nội bộ.
+c) Nhược điểm
+• Thông tin học phí chưa công khai: Học viên phải điền form đăng ký tư vấn 
+mới nhận được báo giá chi tiết, gây bất tiện cho người muốn so sánh giá nhanh.
+• Cấu trúc menu nhiều tầng: Khối lượng thông tin lớn khiến menu điều hướng 
+đôi khi phức tạp đối với người dùng mới.
+1.3.2 Website 2: ILA Vietnam (ILA) - ila.edu.vn
+a) Ảnh chụp màn hình (Trang chủ)
+Hình 2: trang chủ ILA Vietnam
+### PAGE 15
+9
+Mô tả hình ảnh: Trang chủ ILA mang phong cách thiết kế chuẩn quốc tế
+với tông màu trắng và đỏ chủ đạo. Thiết kế tập trung vào video/hình ảnh 
+thực tế tại lớp học, tích hợp thanh tìm kiếm khóa học và danh sách các 
+trung tâm/cơ sở trên toàn quốc.
+b) Ưu điểm
+• Hình ảnh và Video thương hiệu ấn tượng: Sử dụng nhiều tư liệu hình ảnh 
+chất lượng cao, tạo cảm giác chuyên nghiệp và uy tín.
+• Tính năng tìm kiếm trung tâm theo khu vực (Center Locator): Giúp 
+người dùng dễ dàng tìm thấy cơ sở gần nhất thông qua bản đồ tích hợp.
+• Nội dung phong phú: Cung cấp chi tiết phương pháp giảng dạy (Chuẩn 
+quốc tế, 21st Century Learning) giúp phụ huynh tin tưởng vào chất lượng 
+đào tạo.
+c) Nhược điểm
+• Thiếu tính năng mua/đăng ký khóa học trực tiếp: Hầu hết các luồng thao 
+tác đều dẫn về form để lại thông tin liên hệ chứ chưa cho phép đăng ký chọn 
+lớp chi tiết trên web.
+• Chưa tích hợp cổng thanh toán trực tuyến: Người học vẫn cần qua sự hỗ
+trợ của tư vấn viên hoặc đến trung tâm để hoàn tất thủ tục tài chính.
+Những vấn đề tồn tại và Giải pháp đề xuất của đề tài
+Những vấn đề còn tồn tại
+1. Tỷ lệ bỏ sót khách hàng có nhu cầu học do không có quy trình lưu trữ và xử lý 
+yêu cầu tư vấn tập trung.
+2. Nguy cơ xếp trùng lịch dạy của giảng viên và trùng phòng học khi mở nhiều 
+lớp đồng thời.
+3. Học viên không chủ động biết được năng lực tiếng Anh hiện tại của mình để
+chọn khóa học đúng trình độ.
+Giải pháp công nghệ và Nghiệp vụ đề xuất của đồ án
+• Công nghệ: Xây dựng hệ thống web trên nền tảng ASP.NET Core .NET 8, 
+ORM Entity Framework Core (Code-First), cơ sở dữ liệu Microsoft SQL 
+### PAGE 16
+10
+Server, giao diện chuẩn Bootstrap 5 Responsive, thư viện Chart.js vẽ biểu đồ
+thống kê.
+• Nghiệp vụ:
+o Xây dựng module Thi xếp lớp trực tuyến (Placement Test) tự động 
+tính điểm hai kỹ năng Nghe/Đọc và gợi ý khóa học ngay tức thì.
+o Tích hợp cổng thanh toán VietQR tự động theo chuẩn Napas247, sinh 
+mã QR kèm chính xác số tiền và mã hóa đơn giúp thanh toán chuẩn xác 
+100%.
+o Cung cấp tính năng In biên lai học phí điện tử (PrintReceipt) đạt 
+chuẩn mẫu kế toán.
+o Tách biệt các phân hệ chuyên biệt thông qua Areas (/Admin, /Teacher).
+Mục tiêu, Đối tượng sử dụng và Phạm vi đề tài
+Đối tượng người dùng mục tiêu
+Đối tượng người dùng Nhu cầu & Mục đích sử dụng
+1. Vãng khách (Học viên tiềm năng)
+• Tìm hiểu thông tin trung tâm, khóa học, lộ 
+trình đào tạo và học phí.
+• Xem bài viết tin tức, kinh nghiệm học ngoại 
+ngữ, chương trình ưu đãi.
+• Đăng ký nhận tư vấn hoặc đăng ký tài khoản / 
+khóa học trực tuyến.
+2. Học viên chính thức
+• Đăng nhập vào hệ thống quản lý cá nhân.
+• Tra cứu thời khóa biểu, lịch thi, kết quả học 
+tập và tình trạng điểm danh.
+• Theo dõi lịch sử thanh toán học phí, nhận 
+thông báo từ trung tâm.
+3. Giảng viên
+• Tra cứu danh sách lớp học phụ trách và thời 
+khóa biểu giảng dạy.
+• Nhập điểm số, điểm danh học viên theo từng 
+buổi học.
+• Cập nhật tài liệu học tập cho lớp học.
+4. Quản trị viên (Admin / Ban quản lý)
+• Quản lý danh mục khóa học, lớp học, phòng 
+học, lịch giảng dạy.
+• Quản lý thông tin tài khoản (Học viên, Giảng 
+viên, Nhân viên).
+• Duyệt đơn đăng ký, xác nhận thanh toán học 
+phí.
+• Quản trị nội dung bài viết, tin tức và xem báo 
+cáo thống kê.
+### PAGE 17
+11
+Phạm vi đề tài: 
+o Quản lý 5 chương trình học mũi nhọn: IELTS Master, TOEIC Cấp tốc, 
+Tiếng Anh Giao tiếp, Business English, Cambridge B1/B2.
+o Quản lý lớp học, phân công giảng viên và kiểm tra xung đột thời khóa 
+biểu 29 ca học trong tuần.
+o Quản trị 11 bảng dữ liệu liên kết chuẩn hóa dạng chuẩn 3 (3NF).
+Ý nghĩa thực tiễn của đề tài
+Đề tài mang tính ứng dụng thực tiễn cao, giúp trung tâm ngoại ngữ số hóa 100% quy 
+trình đào tạo, giảm thiểu 80% thời gian xử lý thủ tục nhập học thủ công, minh bạch tài 
+chính và nâng cao trải nghiệm của học viên thời đại số.
+KẾT CHƯƠNG 1
+Chương 1 đã hoàn thành việc phác thảo bức tranh toàn cảnh về nhu cầu chuyển đổi số
+trong công tác quản trị và đào tạo tại các trung tâm ngoại ngữ trong giai đoạn hiện nay.
+Cụ thể, các nội dung trọng tâm đã đạt được trong chương bao gồm:
+1. Khái quát thực trạng và Sự chuyển dịch mô hình vận hành:
+Phân tích rõ những bất cập, sai sót dữ liệu và chi phí nhân sự tốn kém của mô 
+hình quản lý thủ công truyền thống (sổ sách, file Excel rời rạc); từ đó khẳng 
+định tính cấp thiết của việc xây dựng một nền tảng số hóa tập trung (E￾Management & E-Learning Portal) có khả năng đồng bộ dữ liệu theo thời gian 
+thực (giữ chỗ lớp học, chống vượt sĩ số overbooking, cập nhật lịch học và điểm 
+danh).
+2. Khảo sát và Đánh giá hệ thống thực tế tại Việt Nam: 
+Nghiên cứu ưu điểm và hạn chế trong các mô hình vận hành của các trung tâm 
+lớn (như VUS, ILA, PASAL,...), nhận diện các bài toán còn tồn tại ở các trung 
+tâm vừa và nhỏ về mặt trải nghiệm người dùng, khả năng phân quyền quản trị
+đa cấp bậc và tính linh hoạt trong quy trình ghi danh.
+3. Xác định Vấn đề tồn tại và Đề xuất giải pháp: 
+Đề xuất giải pháp xây dựng ứng dụng web quản lý và đăng ký học tại trung tâm 
+ngoại ngữ (HITC English) ứng dụng nền tảng công nghệ hiện đại, tự động hóa 
+toàn diện quy trình từ khâu tư vấn tuyển sinh →kiểm tra đầu vào →xếp lớp 
+→thanh toán học phí →quản lý lịch dạy và điểm danh chuyên cần.
+4. Làm rõ Mục tiêu, Đối tượng và Ý nghĩa thực tiễn:
+Định vị rõ 4 nhóm đối tượng thụ hưởng trực tiếp của đề tài (Khách vãng lai, 
+Học viên, Giảng viên và Quản trị viên); khẳng định ý nghĩa thực tiễn trong việc 
+### PAGE 18
+12
+tối ưu hóa chi phí vận hành cho trung tâm, mang lại sự minh bạch, tiện lợi và 
+trải nghiệm học tập hiện đại, chuyên nghiệp cho người học.
+### PAGE 19
+13
+CHƯƠNG 2. CƠ SỞ LÝ THUYẾT VÀ CÔNG CỤ SỬ DỤNG
+2.1 Kiến trúc hệ thống Client - Server và Mô hình Kết hợp ASP.NET Core 
+MVC & Web API
+2.1.1 Kiến trúc Client - Server
+Hệ thống vận hành theo kiến trúc Client - Server tiêu chuẩn kết hợp linh hoạt 
+giữa phương thức Server-Side Rendering (SSR) và Client-Side Rendering (CSR):
+• Phía Client: Trình duyệt web sử dụng mã HTML/CSS/JS thuần cho giao diện 
+MVC, kết hợp với các ứng dụng di động (Mobile App) hoặc các thành phần 
+Dynamic UI gửi yêu cầu xử lý dữ liệu.
+• Phía Server: Máy chủ web Kestrel / IIS tiếp nhận các HTTP Request (GET, 
+POST, PUT, DELETE). Máy chủ xử lý logic nghiệp vụ, truy vấn CSDL SQL 
+Server và phản hồi HTTP Response dưới dạng mã HTML đã được render sẵn 
+(đối với Razor View) hoặc dữ liệu chuẩn JSON (đối với RESTful Web API).
+2.1.2 Mô hình kiến trúc ASP.NET Core MVC
+Hệ thống được thiết kế đa dạng phương thức cung cấp dịch vụ để tối ưu hóa trải 
+nghiệm người dùng trên cả nền tảng Web và Mobile:
+Mô hình MVC (Model - View - Controller): Phân tách ứng dụng Web thành 3 
+thành phần độc lập:
+• Model: Đại diện cho dữ liệu và quy tắc nghiệp vụ. Bao gồm các Entity ánh xạ
+trực tiếp với CSDL (Student, Teacher, Class, Payment...) và các ViewModel 
+truyền dữ liệu hiển thị (LoginViewModel, RegisterViewModel, 
+AdminDashboardViewModel).
+• View: Giao diện người dùng sử dụng Razor View Engine (.cshtml), kết hợp cú 
+pháp C# @ với mã HTML để hiển thị dữ liệu động một cách trực quan.
+• Controller: Bộ điều phối tiếp nhận yêu cầu từ người dùng (HomeController, 
+ProgramController, EnrollmentController, PlacementTestController...), tương 
+tác với ApplicationDbContext để xử lý logic và trả về View tương ứng.
+Mô hình RESTful Web API (API Controllers):
+• Đóng vai trò cung cấp các Endpoint giao tiếp dữ liệu chuẩn JSON cho ứng 
+dụng di động (React Native) và các tác vụ Ajax/Fetch dữ liệu bất đồng bộ phía 
+Client.
+• Các ApiController (như AuthApiController, ScheduleApiController, 
+ReservationApiController...) được phân tách rõ ràng với MVC Controller, xử lý 
+### PAGE 20
+14
+xác thực theo cơ chế Token/Session và trả về HTTP Status Codes chuẩn (200 
+OK, 400 Bad Request, 401 Unauthorized, 404 Not Found).
+2.2 Công nghệ phát triển phía Backend (ASP.NET Core .NET 8 & C#)
+• Ngôn ngữ lập trình C#: Ngôn ngữ hiện đại, hướng đối tượng hoàn toàn, kiểu 
+dữ liệu tĩnh mạnh mẽ, hỗ trợ cơ chế bất đồng bộ async/await giúp tối ưu tài 
+nguyên máy chủ khi xử lý hàng loạt truy vấn CSDL.
+• ASP.NET Core .NET 8: Framework web mã nguồn mở đa nền tảng có hiệu 
+năng hàng đầu thế giới. Tích hợp sẵn cơ chế Dependency Injection (DI) trong 
+tệp cấu hình Program.cs, quản lý vòng đời dịch vụ (AddScoped, AddTransient, 
+AddSingleton) một cách chặt chẽ.
+• Entity Framework Core 8 (EF Core Code-First): Lập trình viên định nghĩa 
+các thực thể C# thuần túy (POCO Classes), EF Core tự động tạo sinh lược đồ
+CSDL thông qua Migration (Add-Migration InitialCreate →Update-Database). 
+Sử dụng LINQ to Entities với các phương thức eager loading (.Include(), 
+.ThenInclude()) giúp tối ưu số lượng câu lệnh truy vấn SQL.
+2.3 Công nghệ phát triển phía Frontend & Giao tiếp API (Razor View, 
+Bootstrap 5, JavaScript & Axios/Fetch)
+• Razor View Engine: Hỗ trợ cú pháp @model, vòng lặp @foreach, câu lệnh rẽ
+nhánh @if, kết hợp bố cục trang dùng chung thông qua 
+Views/Shared/_Layout.cshtml giúp mã nguồn gọn gàng, tái sử dụng tối đa.
+• Bootstrap 5 & Tailwind CSS / NativeWind: Hệ thống lưới Grid System 12 
+cột linh hoạt cùng các thành phần UI cao cấp (Navbar, Card, Modal, Badge, 
+Alert, Table) giúp giao diện tương thích hoàn hảo trên mọi kích thước màn hình 
+(Desktop, Tablet, Mobile).
+• JavaScript / jQuery & Thư viện Chart.js:
+• Xử lý xác thực dữ liệu ngay tại Client với 
+jquery.validate.unobtrusive.min.js.
+• Tích hợp thư viện Chart.js tại trang Quản trị viên để trực quan hóa biểu đồ 
+doanh thu theo các tháng trong năm (Biểu đồ cột Bar) và biểu đồ phân bố học 
+viên theo từng khóa học (Biểu đồ tròn Doughnut).
+• Sử dụng Axios / Fetch API để gọi các tuyến RESTful API từ Server xử lý 
+chuyển đổi dữ liệu thời gian thực (Real-time data update) mà không cần làm 
+mới toàn bộ trang.
+2.4 Hệ quản trị cơ sở dữ liệu và Giải pháp thanh toán
+• Microsoft SQL Server (MS SQL Server / LocalDB): Hệ quản trị CSDL quan 
+hệ cấp doanh nghiệp, bảo đảm 4 tính chất ACID (Atomicity, Consistency, 
+### PAGE 21
+15
+Isolation, Durability) trong giao dịch. Cấu trúc bảng được chuẩn hóa đạt chuẩn 
+3 (3NF) với đầy đủ các ràng buộc PRIMARY KEY, FOREIGN KEY, UNIQUE, 
+CASCADE DELETE.
+• Giải pháp thanh toán tự động VietQR (Napas247): Thay vì tích hợp cổng 
+thanh toán phức tạp yêu cầu pháp nhân doanh nghiệp, hệ thống áp dụng API 
+sinh mã VietQR động chuẩn Napas247 theo cấu trúc chuỗi định dạng tiêu chuẩn 
+(VietQR Format). Học viên chỉ cần mở ứng dụng ngân hàng quét mã QR, mọi 
+thông tin về số tiền và nội dung chuyển khoản (chứa mã hóa đơn/học viên) 
+được điền tự động chính xác tuyệt đối.
+2.5 Kiến trúc bảo mật và Phân quyền người dùng
+• Xác thực Cookie Authentication: Cấu hình trong Program.cs thông qua dịch 
+vụ AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme). 
+Khi người dùng đăng nhập thành công, hệ thống mã hóa thông tin vào Cookie 
+bảo mật lưu ở trình duyệt.
+• Claims-based Identity & Role-Based Authorization: Gắn các Claim định 
+danh (ClaimTypes.NameIdentifier, ClaimTypes.Name, ClaimTypes.Role). Bảo 
+vệ các Controller/Action thông qua thuộc tính: 
+o [Authorize(Roles = "Admin")] cho toàn bộ thư mục Areas/Admin.
+o [Authorize(Roles = "Teacher")] cho toàn bộ thư mục Areas/Teacher.
+o [Authorize(Roles = "Student")] cho các chức năng cá nhân của học viên.
+• Mã hóa mật khẩu an toàn với BCrypt: Không lưu mật khẩu dạng bản rõ 
+(plain-text) trong CSDL. Mật khẩu được băm một chiều với Salt ngẫu nhiên 
+bằng thư viện BCrypt.Net-Next: 
+o Tạo mã băm: BCrypt.Net.BCrypt.HashPassword(password)
+o Xác thực mật khẩu: BCrypt.Net.BCrypt.Verify(password, 
+user.PasswordHash)
+• Phòng chống các lỗ hổng bảo mật phổ biến:
+o Chống tấn công CSRF: Sử dụng Tag Helper <form asp-action="..."> tự
+động tạo token ẩn và kiểm tra tại Controller bằng thuộc tính 
+[ValidateAntiForgeryToken].
+o Chống SQL Injection: 100% các câu truy vấn thông qua EF Core đều 
+được tự động tham số hóa (Parameterized Queries).
+### PAGE 22
+16
+2.6 Kiểm soát sĩ số & Kiểm tra xung đột lịch học (Schedule Conflict Check)
+Hệ thống cài đặt thuật toán kiểm tra tính hợp lệ trước khi xếp một ca học mới 
+(ClassSchedule):
+• Điều kiện 1 (Trùng phòng học): Không tồn tại ca học nào khác tại cùng phòng 
+(Room), cùng thứ trong tuần (DayOfWeek) mà khoảng thời gian 
+[StartTime, EndTime]bị giao nhau.
+• Điều kiện 2 (Trùng lịch giảng viên): Không tồn tại ca dạy nào khác của cùng 
+giảng viên (TeacherId), cùng thứ trong tuần mà khoảng thời gian giảng dạy bị
+giao nhau.
+2.7 Mô hình phân tầng trong ứng dụng (Three-Tier Architecture)
+Mã nguồn dự án được tổ chức khoa học theo 3 tầng:
+1. Tầng giao diện (Presentation Tier): Gồm Razor Views (Views/, 
+Areas/.../Views) và Controllers đóng vai trò tiếp nhận, điều hướng yêu cầu.
+2. Tầng nghiệp vụ (Business Logic Tier): Các Service xử lý tính toán điểm thi 
+xếp lớp, sinh mã VietQR, xác thực đăng ký và thống kê số liệu doanh thu.
+3. Tầng dữ liệu (Data Access Tier): ApplicationDbContext kế thừa từ DbContext 
+của EF Core, quản lý kết nối và thực thi các thao tác CRUD với CSDL SQL 
+Server.
+KẾT CHƯƠNG 2
+Chương 2 đã hoàn thành việc hệ thống hóa toàn bộ cơ sở lý thuyết, kiến trúc phần 
+mềm và các công nghệ cốt lõi được lựa chọn làm nền tảng phát triển cho hệ thống 
+website quản lý và đăng ký học tại trung tâm ngoại ngữ.
+Cụ thể, các nội dung trọng tâm được tổng kết trong chương bao gồm:
+1. Kiến trúc hệ thống và Mô hình phát triển ứng dụng: 
+o Làm rõ nguyên lý vận hành của kiến trúc Client - Server và mô hình 
+Model - View - Controller (MVC) trong việc phân tách rạch ròi giữa 
+tầng dữ liệu (Model), tầng biểu diễn giao diện (View) và tầng điều hướng 
+logic nghiệp vụ (Controller), giúp mã nguồn có tính module hóa cao, dễ
+mở rộng và kiểm thử.
+o Nghiên cứu nguyên lý giao tiếp dữ liệu qua giao thức HTTP/HTTPS và 
+các tiêu chuẩn thiết kế RESTful API, làm tiền đề cho việc tích hợp các 
+dịch vụ bên ngoài và mở rộng ứng dụng di động trong tương lai.
+2. Nền tảng công nghệ phía Backend và Cơ sở dữ liệu: 
+### PAGE 23
+17
+o Nắm vững các ưu điểm vượt trội của nền tảng ASP.NET Core (.NET 8 
+LTS) và ngôn ngữ lập trình C# 12: Hiệu năng xử lý yêu cầu cao, cơ chế
+Dependency Injection (DI) tích hợp sẵn và hệ thống phân vùng chức 
+năng (Areas) mạnh mẽ.
+o Khai thác hiệu quả sức mạnh của Entity Framework Core 8 (Code-First / 
+Reverse Engineering) kết hợp hệ quản trị cơ sở dữ liệu quan hệ
+Microsoft SQL Server, cho phép thao tác dữ liệu thông qua truy vấn 
+hướng đối tượng LINQ, tối ưu hóa giao dịch (Transactions) và quản lý 
+chặt chẽ các ràng buộc toàn vẹn khóa ngoại.
+3. Công nghệ giao diện và Trải nghiệm người dùng (Frontend & UI/UX): 
+o Vận dụng cơ chế kết xuất mã nguồn phía máy chủ (Server-Side 
+Rendering - SSR) thông qua Razor Engine (.cshtml), giúp tối ưu tốc độ
+phản hồi và hỗ trợ chuẩn SEO.
+o Ứng dụng hệ thống lưới bố cục linh hoạt của Bootstrap 5, thư viện biểu 
+tượng Font Awesome 6 và phông chữ Plus Jakarta Sans, mang lại giao 
+diện hiện đại, trực quan và tương thích co giãn hoàn hảo trên mọi kích 
+thước màn hình (Responsive Design).
+4. Kiến trúc Bảo mật, Xác thực và Dịch vụ tích hợp: 
+o Nghiên cứu cơ chế Xác thực phiên làm việc dựa trên Cookie (Cookie 
+Authentication) và mô hình Phân quyền dựa trên vai trò (Role-Based 
+Access Control - RBAC), làm cơ sở để thiết kế giải pháp định tuyến đa 
+Cookie (RoleCookieRouter) tách biệt hoàn toàn phiên làm việc của từng 
+nhóm người dùng.
+o Áp dụng thuật toán băm mật khẩu một chiều có muối ngẫu nhiên BCrypt 
+chống tấn công từ điển, cơ chế bảo vệ biểu mẫu chống tấn công CSRF, 
+dịch vụ gửi thư điện tử tự động qua giao thức SMTP (MailKit) và 
+phương thức thanh toán chuyển khoản nhanh bằng mã quét VietQR.
+### PAGE 24
+18
+CHƯƠNG 3. PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1 Biểu đồ Use Case tổng quan hệ thống
+Hình 1: Biểu đồ Use Case tổng quan hệ thống Dang ky khoa hc
+3.1.1 Phân tích và mô tả logic cấu trúc Use Case
+Hệ thống gồm 4 tác nhân chính: Khách (Guest), Học viên (Student), Giáo viên 
+(Teacher) và Quản trị viên (Admin).
+• Tác nhân Học viên có quan hệ kế thừa với Khách, nghĩa là học viên có toàn bộ
+quyền tra cứu khóa học của khách, đồng thời được mở rộng thêm các chức năng 
+dành riêng cho người học.
+• Mọi thao tác làm thay đổi trạng thái cá nhân (Đăng ký lớp, thanh toán, làm bài 
+test, nhập điểm) đều có mối quan hệ phụ thuộc bắt buộc <<include>> tới Use 
+Case Đăng nhập hệ thống.
+• Nghiệp vụ Thanh toán học phí VietQR và In biên lai có mối quan hệ mở rộng 
+<<extend>> từ Use Case Đăng ký lớp học.
+### PAGE 25
+19
+Phân rã 4 phân hệ Use Case cốt lõi
+3.2 Phân rã use case theo từng tác nhân
+Các sơ đồ phân rã bổ sung làm rõ những mục tiêu sử dụng của từng nhóm. 
+Website có bốn tác nhân nhưng chỉ có ba vai trò tài khoản được lưu trong 
+UserAccount là Student, Teacher và Admin. Khách là người chưa đăng nhập. Mỗi sơ 
+đồ sử dụng khung hệ thống, tác nhân và các use case tương ứng; các chức năng công 
+khai vẫn có thể được truy cập khi người dùng đã đăng nhập.
+### PAGE 26
+20
+3.2.1 Tác nhân khách
+Khách xem trang chủ, chương trình đào tạo, thông tin lớp mở và liên hệ. Tìm 
+kiếm, lọc theo cấp độ hoặc mức học phí giúp thu hẹp lựa chọn. Khách có thể gửi yêu 
+cầu tư vấn và đăng ký tài khoản; tài khoản mới được gán vai trò Student. Các chức 
+năng này được hiện thực tại HomeController, ProgramController, 
+ConsultationController và AccountController.
+Hình 3.2: Sơ đồ use case khách chưa đăng nhập
+### PAGE 27
+21
+3.2.2 Tài khoản học viên
+Học viên đăng nhập để cập nhật hồ sơ, đăng ký lớp, xem lịch học, học phí và biên 
+lai. Khi ghi danh, học viên có thể cung cấp ảnh hồ sơ, giáo viên mong muốn và ghi 
+chú. Học viên đặt lịch kiểm tra đầu vào, xem điểm cùng cấp độ được đề xuất và gửi 
+đánh giá khóa học. Các thao tác cá nhân xác định người dùng thông qua thông tin định 
+danh trong cookie.
+Hình 3.3: Sơ đồ use case tài khoản học viên
+### PAGE 28
+22
+3.2.3 Tài khoản giáo viên
+Giáo viên theo dõi bảng điều khiển, lớp phụ trách, danh sách học viên và lịch 
+giảng dạy. Giáo viên quản lý tài liệu lớp học, chấm các bài kiểm tra được phân công và 
+nhập cấp độ đề xuất. Phân hệ còn cung cấp phản hồi của học viên, cập nhật ảnh hồ sơ 
+và bảng lương theo kỳ. Chức năng được tổ chức trong Area Teacher.
+Hình 3.4: Sơ đồ use case tài khoản giáo viên
+### PAGE 29
+23
+3.2.4 Tài khoản quản trị viên
+Admin quản lý chương trình, lớp học, hồ sơ học viên và giáo viên; điều phối ghi 
+danh, phân công giảng dạy và lịch kiểm tra. Admin xác nhận học phí, quản lý bảng 
+lương, thống kê, banner, tư vấn và thùng rác. Các thao tác cùng mục tiêu được gộp 
+trong sơ đồ để giữ khả năng đọc; chi tiết được thể hiện qua các Controller thuộc Area 
+Admin.
+Hình 3.5: Sơ đồ use case tài khoản quản trị viên
+### PAGE 30
+24
+3.3 Đặc tả các use case tiêu biểu
+3.3.1 Đăng ký tài khoản và đăng nhập
+Tác nhân: Khách hoặc người dùng có tài khoản.
+Điều kiện trước: Email chưa được sử dụng khi đăng ký; tài khoản phải hoạt động 
+khi đăng nhập.
+Luồng xử lý: Người dùng nhập thông tin biểu mẫu. Hệ thống kiểm tra tính hợp lệ, 
+kiểm tra email và băm mật khẩu khi đăng ký. Khi đăng nhập, mật khẩu được đối chiếu 
+bằng BCrypt; thông tin định danh và vai trò được lưu trong phiên cookie.
+Kết quả: Đăng ký tạo UserAccount và Student. Đăng nhập thành công điều hướng 
+đến khu vực tương ứng; thông tin không hợp lệ được thông báo trên biểu mẫu.
+3.3.2 Đăng ký lớp học
+Tác nhân: Học viên.
+Điều kiện trước: Có phiên Student và chọn lớp tồn tại; có ảnh hồ sơ hoặc tải ảnh 
+hợp lệ.
+Luồng xử lý: Học viên xem Checkout, cung cấp nguyện vọng giáo viên và ghi 
+chú, chọn phương thức thanh toán rồi xác nhận. Hệ thống tạo Registration và bản ghi 
+Payment tương ứng với học phí của chương trình.
+Kết quả: Đơn mới có trạng thái Pending. Với VietQR, học phí chờ đối soát; học 
+viên theo dõi đơn tại Lớp học của tôi.
+3.3.3 Xác nhận học phí
+Tác nhân: Quản trị viên.
+Điều kiện trước: Có phiên Admin; bản ghi học phí tồn tại và đã được kiểm tra 
+chứng từ thu tiền.
+Luồng xử lý: Admin mở danh sách học phí, kiểm tra khoản thu và thực hiện xác 
+nhận. Hệ thống cập nhật trạng thái thanh toán và trạng thái đơn ghi danh liên quan 
+theo logic nghiệp vụ.
+Kết quả: Học phí được ghi nhận Paid; thông tin được sử dụng để xem hoặc in biên 
+lai nội bộ.
+3.3.4 Đặt lịch và chấm kiểm tra xếp lớp
+Tác nhân: Học viên, Admin và giáo viên.
+Điều kiện trước: Học viên có tài khoản; lịch kiểm tra được tạo và giáo viên được 
+phân công trước khi chấm.
+### PAGE 31
+25
+Luồng xử lý: Học viên chọn ngày và ca. Admin điều chỉnh lịch, phòng và phân 
+công giáo viên. Giáo viên xem bài được giao, nhập điểm và cấp độ đề xuất. Hệ thống 
+cập nhật kết quả để học viên tra cứu.
+Kết quả: Bài kiểm tra chuyển Completed khi nhập kết quả; điểm và cấp độ được 
+hiển thị trong lịch sử kiểm tra.
+3.3.5 Quản lý tài liệu lớp học
+Tác nhân: Giáo viên.
+Điều kiện trước: Có phiên Teacher; xác định lớp, tiêu đề và tệp tài liệu.
+Luồng xử lý: Giáo viên mở phân hệ tài liệu, chọn lớp và tải tệp lên. Tệp được lưu 
+trong thư mục uploads/documents và đường dẫn được ghi vào ClassDocument. Danh 
+sách cung cấp liên kết tải về và thao tác xóa.
+Kết quả: Tài liệu gắn với lớp được lưu để quản lý; quyền sở hữu lớp và tệp cần 
+được kiểm tra ở mọi thao tác thay đổi.
+3.3.6 Xóa mềm và khôi phục dữ liệu
+Tác nhân: Quản trị viên.
+Điều kiện trước: Có phiên Admin; đối tượng thuộc nhóm dữ liệu hỗ trợ xóa mềm.
+Luồng xử lý: Thao tác xóa mềm cập nhật IsDeleted và DeletedAt. Admin xem 
+mục đã xóa trong thùng rác, chọn khôi phục hoặc xóa vĩnh viễn. Việc xóa vĩnh viễn 
+cần kiểm tra các liên kết còn phụ thuộc.
+Kết quả: Khôi phục đưa bản ghi trở lại danh sách. Xóa vĩnh viễn loại bỏ bản ghi 
+và không có thao tác khôi phục thông thường.
+### PAGE 32
+26
+3.4 Thiết kế cơ sở dữ liệu
+Đối chiếu ApplicationDbContext cho thấy mô hình hiện tại khai báo 14 tập thực 
+thể: UserAccount, Student, Teacher, Program, Class, Registration, Payment, 
+PlacementTest, Consultation, ClassSchedule, ClassDocument, CourseFeedback, 
+Banner và TeacherSalary. Hình dưới tổng hợp các bảng và trường khóa, còn quan hệ
+giữa chúng được mô tả ở mục tiếp theo.
+Hình 3.6: Mô hình các bảng dữ liệu và trường khóa
+3.4.1 Nhóm tài khoản và hồ sơ
+UserAccount lưu AccountId, họ tên, email, mật khẩu băm, vai trò và trạng thái tài 
+khoản. Student và Teacher có khóa chính riêng và liên kết tới tài khoản bằng 
+AccountId. Email có chỉ mục duy nhất. Student bổ sung thông tin liên hệ, ngày sinh và 
+ảnh hồ sơ; Teacher bổ sung chuyên môn, bằng cấp, tiểu sử và ảnh. Quan hệ tài khoản–
+hồ sơ là quan hệ dữ liệu một–một tùy chọn theo vai trò.
+3.4.2 Nhóm đào tạo và ghi danh
+Một Program có nhiều Class; mỗi lớp thuộc một chương trình và có thể chưa có 
+giáo viên phụ trách. ClassSchedule lưu các ca của lớp và ClassDocument lưu tài liệu. 
+### PAGE 33
+27
+Registration liên kết Student với Class, đồng thời lưu giáo viên mong muốn, ngày 
+đăng ký, ghi chú và trạng thái. Payment có khóa ngoại duy nhất RegistrationId để gắn 
+tối đa một bản ghi học phí với mỗi đơn.
+3.4.3 Nhóm hỗ trợ và quản trị
+PlacementTest liên kết học viên với lịch, điểm, cấp độ đề xuất và giáo viên chấm 
+có thể để trống trước khi phân công. CourseFeedback gắn đánh giá học viên với lớp. 
+TeacherSalary ghi nhận các kỳ lương và trạng thái chi trả của giáo viên. Consultation 
+lưu yêu cầu tư vấn; Banner quản lý hình ảnh quảng bá và thứ tự hiển thị. ClassStatus là 
+thuộc tính trạng thái của lớp trong phiên bản hiện tại, không phải bảng độc lập.
+3.5 Ràng buộc và luồng dữ liệu
+Các khóa ngoại bảo đảm dữ liệu ghi danh tham chiếu đúng học viên và lớp, học 
+phí tham chiếu đúng đơn, lịch học và tài liệu tham chiếu đúng lớp. 
+ApplicationDbContext sử dụng Restrict ở các liên kết cần tránh xóa đối tượng cha khi 
+còn dữ liệu con; một số liên kết tùy chọn đến giáo viên dùng SetNull. Những dữ liệu 
+hỗ trợ thùng rác có IsDeleted và DeletedAt để theo dõi xóa mềm.
+Luồng ghi danh kết nối các bước tra cứu chương trình, chọn lớp, tạo đăng ký, tạo 
+học phí và theo dõi trạng thái. Luồng kiểm tra đầu vào kết nối đặt lịch, phân công, 
+nhập kết quả và tra cứu. Luồng lương tách khỏi học phí học viên, gồm lập kỳ lương, 
+tính các thành phần và xác nhận chi trả. Các luồng cần kiểm tra dữ liệu đầu vào và 
+quyền của người đang thao tác trước khi ghi dữ liệu.
+3.6 Đối chiếu thiết kế với phạm vi hiện thực
+Phần phân tích nghiệp vụ xác định mục tiêu của hệ thống; mức độ hiện thực phải 
+đối chiếu với mã nguồn. Trong phiên bản hiện tại, PlacementTest thực hiện đặt lịch và 
+nhập kết quả bởi người chấm, chưa có bộ câu hỏi Listening/Reading tự chấm. 
+Checkbox điểm danh chưa có thao tác lưu chuyên cần theo buổi. EmailService và các 
+lớp VnPayService còn trống; VNPay/MoMo được mô phỏng trong luồng ghi danh, 
+còn VietQR hiển thị ảnh chuyển khoản và chờ xác nhận nội bộ.
+Cần hoàn thiện kiểm tra sĩ số, chống đăng ký trùng ở bước Confirm, kiểm tra xung 
+đột lịch và quyền sở hữu bản ghi đối với tài liệu hoặc phản hồi. Việc tạo đơn và học 
+phí nên được xử lý trong một giao dịch dữ liệu. Chức năng tải tài liệu riêng cho học 
+viên, gửi thư tư vấn và khóa/mở tài khoản giáo viên chưa có luồng hoàn chỉnh tương 
+ứng trong mã nguồn hiện tại.
+Các sơ đồ bổ sung mô tả đăng nhập như một chức năng riêng và điều kiện trước 
+của nghiệp vụ được bảo vệ. Đường nối tác nhân với use case không thể hiện thứ tự
+thao tác; các quan hệ include hoặc extend chỉ phù hợp khi có hành vi bắt buộc dùng lại 
+### PAGE 34
+28
+hoặc mở rộng được xác định rõ. Cách biểu diễn này giúp phân biệt mục tiêu nghiệp 
+vụ, điều kiện truy cập và mức độ đã triển khai.
+3.7 Kết chương 3
+Chương 3 bổ sung sơ đồ use case tổng quát và sơ đồ cho từng tác nhân, đặc tả các 
+luồng chính, mô hình bảng dữ liệu và các ràng buộc. Thiết kế tạo cơ sở liên kết nội 
+dung lý thuyết với các màn hình ở Chương 4, đồng thời xác định những phần cần tiếp 
+tục hoàn thiện trước khi triển khai thực tế.
+### PAGE 35
+29
+CHƯƠNG 4. HIỆN THỰC HÓA VÀ KIỂM THỬ HỆ THỐNG
+4.1 Môi trường triển khai và Công nghệ sử dụng
+4.1.1 Môi trường phát triển và vận hành hệ thống
+Quá trình xây dựng và vận hành hệ thống website quản lý và đăng ký học tại trung tâm 
+ngoại ngữ (HITC English - WedEnglishApp) đòi hỏi sự kết hợp chặt chẽ giữa các 
+công cụ phát triển phần mềm, máy chủ web nội bộ, hệ quản trị cơ sở dữ liệu và cấu 
+hình phần cứng đạt tiêu chuẩn. Việc lựa chọn môi trường được tối ưu hóa nhằm đảm 
+bảo tính ổn định, tốc độ biên dịch nhanh chóng và tính tương thích cao khi triển khai 
+từ máy phát triển (Development) sang môi trường chạy thử nghiệm/sản xuất 
+(Staging/Production).
+1. Môi trường phát triển phần mềm (Development Environment)
+Để hiện thực hóa ứng dụng theo mô hình kiến trúc MVC (Model - View - Controller), 
+môi trường phát triển được trang bị các phần mềm và công cụ lập trình hiện đại:
+• Hệ điều hành phát triển:
+o Microsoft Windows 11 64-bit (hỗ trợ nền tảng Windows PowerShell, 
+terminal tích hợp và dịch vụ chứng chỉ bảo mật SSL Localhost).
+• Môi trường thực thi & SDK:
+o .NET 8.0 SDK (LTS - Long Term Support): Phiên bản dài hạn mới 
+nhất của Microsoft, hỗ trợ công nghệ biên dịch C# 12, tối ưu hiệu năng 
+xử lý HTTP Pipeline và cung cấp thư viện cốt lõi 
+Microsoft.NET.Sdk.Web.
+• Môi trường phát triển tích hợp (IDE / Code Editor):
+o Microsoft Visual Studio 2022 / Visual Studio Insiders (v17.x): Cung 
+cấp bộ công cụ gỡ lỗi (Debugging), công cụ quản trị Nuget Packages, 
+trình giám sát SQL Server Object Explorer và hỗ trợ Hot Reload trong 
+quá trình thiết kế giao diện.
+o Visual Studio Code: Hỗ trợ kiểm tra cú pháp nhanh, chỉnh sửa giao diện 
+giao diện tĩnh và chạy lệnh command line CLI.
+• Máy chủ ứng dụng nội bộ (Local Web Server):
+o Kestrel Server & IIS Express Worker Process: Máy chủ web nội bộ
+siêu nhẹ của .NET Core, hỗ trợ phân luồng đa luồng (multi-threaded 
+request processing), quản lý cổng mạng bảo mật HTTPS (cổng mặc định 
+### PAGE 36
+30
+https://localhost:44317 hoặc https://localhost:7198) thông qua chứng chỉ
+tự ký dotnet dev-certs https.
+• Công cụ kiểm thử & Tài liệu hóa API:
+o Swagger UI / OpenAPI (Swashbuckle.AspNetCore v6.6.2): Tự động 
+phát sinh tài liệu giao diện kiểm thử API tương tác trực tiếp trên trình 
+duyệt tại đường dẫn /swagger, hỗ trợ kiểm tra các luồng dữ liệu trả về
+cho Client.
+• Hệ thống quản lý phiên bản mã nguồn:
+o Git & GitHub: Theo dõi lịch sử thay đổi mã nguồn, phân nhánh tính 
+năng (feature branches) và bảo đảm an toàn dữ liệu dự án.
+2. Môi trường hệ quản trị cơ sở dữ liệu (Database Environment)
+Hệ thống lưu trữ và đồng bộ toàn bộ dữ liệu quản lý trung tâm (tài khoản, khóa học, 
+lớp học, đăng ký, hóa đơn, bài thi, banner và thùng rác) trên hệ quản trị cơ sở dữ liệu 
+quan hệ mạnh mẽ:
+• Hệ quản trị CSDL: Microsoft SQL Server (phiên bản LocalDB / SQL 
+Server Express 2022).
+• Chuỗi kết nối (Connection String):
+"Server=(localdb)\\mssqllocaldb;Database=EnglishCenterDb;Trusted_Connection=True;MultipleAc
+tiveResultSets=true;TrustServerCertificate=True"
+• Cơ chế tương tác dữ liệu (ORM - Object Relational Mapping):
+o Entity Framework Core 8.0 (Microsoft.EntityFrameworkCore.SqlServer 
+v8.0.10): Đóng vai trò cầu nối ánh xạ giữa các Model C# (CourseProgram, 
+CourseClass, UserAccount, Registration, Payment, Banner,...) và bảng 
+CSDL vật lý (Programs, Classes, UserAccounts, Registrations, Payments, 
+Banners,...).
+o Entity Framework Core Tools (Microsoft.EntityFrameworkCore.Tools 
+v8.0.10): Thực thi các câu lệnh CLI quản lý lược đồ CSDL (Add-Migration, 
+Update-Database).
+• Cơ chế nạp dữ liệu khởi tạo tự động (Data Seeding Engine):
+o Sử dụng module DbInitializer.cs được gọi trực tiếp trong đường ống khởi 
+động Program.cs (app.Services.CreateScope()), tự động kiểm tra bảng dữ
+liệu và nạp sẵn tài khoản Admin, Giảng viên, Học viên, lịch học và các 
+chương trình mẫu ngay khi ứng dụng khởi chạy lần đầu tiên.
+3. Yêu cầu cấu hình phần cứng vận hành hệ thống
+### PAGE 37
+31
+Để ứng dụng vận hành trơn tru và đảm bảo thời gian phản hồi (Response Time) dưới 
+500ms đối với các tác vụ lọc lớp và truy xuất dữ liệu, cấu hình phần cứng khuyến nghị
+như sau:
+• Cấu hình máy chủ phát triển và triển khai thử nghiệm (Server 
+Requirements):
+o Bộ vi xử lý (CPU): Tối thiểu Intel Core i3 / AMD Ryzen 3 trở lên 
+(Khuyến nghị: Intel Core i5 / AMD Ryzen 5 đa nhân đa luồng).
+o Bộ nhớ truy xuất ngẫu nhiên (RAM): Tối thiểu 8 GB RAM (Khuyến 
+nghị: 16 GB RAM để chạy đồng thời Visual Studio, SQL Server 
+LocalDB và IIS Express/Kestrel).
+o Dung lượng lưu trữ (Disk Space): Tối thiểu 10 GB dung lượng khả
+dụng trên ổ cứng SSD (giúp tốc độ đọc/ghi dữ liệu của SQL Server và 
+file tĩnh wwwroot đạt hiệu năng cao nhất).
+o Kết nối mạng (Network): Băng thông Internet ổn định, mở cổng HTTP 
+(80/5000), HTTPS (443/7198) và cấu hình phân giải tên miền nội bộ
+localhost.
+• Cấu hình máy trạm phía người dùng (Client Requirements):
+o Các thiết bị máy tính, máy tính xách tay hoặc điện thoại thông minh có 
+kết nối Internet.
+o Trình duyệt web hiện đại hỗ trợ HTML5/CSS3 và JavaScript: Google 
+Chrome (phiên bản 100+), Microsoft Edge, Mozilla Firefox hoặc Safari.
+4.1.2 Các công nghệ và thư viện phần mềm sử dụng
+Toàn bộ hệ thống được xây dựng trên nền tảng kiến trúc phần mềm phân tầng rõ ràng, 
+kết hợp giữa các công nghệ phía Server-side và Client-side nhằm đảm bảo trải nghiệm 
+người dùng mượt mà và an toàn thông tin:
+Thành phần Công nghệ / Thư 
+viện
+Phiên bản Phiên bản
+Backend Core ASP.NET Core 
+MVC (.NET 8)
+8.0 LTS Kiến trúc xử lý luồng nghiệp vụ phía máy chủ, 
+điều hướng Controller, định tuyến phân vùng 
+Areas (Admin, Teacher).
+Data Access EF Core & 
+SqlClient
+8.0.10 Quản lý kết nối, thực thi truy vấn LINQ, ánh xạ
+bảng CSDL và quan hệ khóa ngoại (Foreign 
+Keys).
+Bảo mật & Mã hóa BCrypt.Net-Next 4.0.3 Băm mật khẩu 1 chiều chuẩn muối hóa (Salting) 
+an toàn, ngăn chặn tấn công giả mạo và giải mã 
+ngược CSDL.
+### PAGE 38
+32
+Thành phần Công nghệ / Thư 
+viện
+Phiên bản Phiên bản
+Cơ chế Xác thực Role-based Cookie 
+Authentication 
+(RoleCookieRouter)
+.NET Core Native Cấu hình xác thực đa vai trò thông qua Policy 
+Scheme, tách biệt Cookie phiên đăng nhập của 
+Admin (WedEnglishApp.AdminAuth), Giáo viên 
+(WedEnglishApp.TeacherAuth) và Học viên 
+(WedEnglishApp.StudentAuth), cho phép mở
+đồng thời nhiều vai trò trên các tab ẩn danh/cùng 
+trình duyệt.
+Gửi Email tự động MailKit & MimeKit 4.18.1 Gửi email tự động xác nhận đặt lịch thi xếp lớp, 
+thông báo trúng tuyển và biên lai thanh toán khóa 
+học.
+Giao diện người 
+dùng
+Razor Engine 
+(.cshtml), HTML5, 
+CSS3, JavaScript
+ES6+ Xây dựng giao diện động kết hợp xử lý mã nhúng 
+C# phía máy chủ Server-Side Rendering (SSR
+Framework CSS UI Bootstrap 5 & 
+Custom Modern 
+CSS
+5.3.3 Thiết kế bố cục lưới (Grid System), giao diện 
+Responsive co giãn đa thiết bị (Desktop, Tablet, 
+Mobile), tối ưu hiển thị Header, Sidebar, 
+Carousel, Modal và Bảng dữ liệu.
+Thư viện Icon & 
+Phông chữ
+Font Awesome 6.5 
+& Google Fonts 
+(Plus Jakarta Sans
+6.5.1 / CDN Hệ thống biểu tượng trực quan cho các nút thao 
+tác, trạng thái xử lý và phông chữ hiện đại chuẩn 
+UI/UX.
+Tài liệu & Test API Swagger / OpenAPI 6.6.2 Hệ thống biểu tượng trực quan cho các nút thao 
+tác, trạng thái xử lý và phông chữ hiện đại chuẩn 
+UI/UX.
+4.1.3 Quy trình khởi tạo đường ống xử lý HTTP (Middleware Pipeline)
+Để đảm bảo hiệu năng và tính an toàn thông tin khi tiếp nhận từng Request từ Client, 
+đường ống xử lý yêu cầu HTTP trong Program.cs được cấu hình theo thứ tự nghiêm 
+ngặt:
+1. Routing Middleware (app.UseRouting()): Phân tích URL và đối sánh tuyến 
+đường tới đúng Controller và Action mục tiêu.
+2. Security & Static Files Middleware (app.UseHttpsRedirection(), 
+app.UseStaticFiles()): Ép buộc mọi kết nối phải qua kênh mã hóa HTTPS và 
+phục vụ trực tiếp các tệp tĩnh (hình ảnh banner, style CSS) mà không cần đi qua 
+tầng xử lý C#.
+3. Authentication Middleware (app.UseAuthentication()): Kích hoạt cơ chế xác 
+thực thông qua bộ định tuyến RoleCookieRouter, trích xuất thông tin định danh 
+và vai trò của người dùng từ Cookie phiên tương ứng.
+4. Authorization Middleware (app.UseAuthorization()): Kiểm tra quyền truy cập 
+của người dùng đối với các tài nguyên được bảo vệ bằng các thuộc tính phân 
+quyền [Authorize(Roles = "Admin")] hoặc [Authorize(Roles = "Teacher")].
+5. Endpoint Routing Middleware (app.MapControllerRoute()): Điều hướng tới 
+phân hệ phân vùng Areas tương ứng hoặc tuyến đường mặc định của hệ thống.
+### PAGE 39
+33
+4.2 GIAO DIỆN VÀ HIỆN THỰC HÓA CHỨC NĂNG HỆ THỐNG
+Giao diện hệ thống HITC English (WedEnglishApp) được xây dựng theo tiêu chuẩn 
+Web Responsive trên nền tảng Bootstrap 5.3.3, kết hợp phông chữ hiện đại Plus 
+Jakarta Sans, thư viện biểu tượng Font Awesome 6.5 và màu sắc nhận diện chủ đạo 
+(Xanh dương đậm #1e3a8a, Xanh Cyan #0284c7, Trắng #ffffff và Xám nhạt #f8fafc).
+Hệ thống được tổ chức thành 4 phân hệ chính:
+1. Phân hệ Khách hàng & Trang chủ công khai (Public & Student Portal)
+2. Phân hệ Xác thực và Quản lý tài khoản (Authentication & Account 
+Management)
+3. Phân hệ Giảng viên (Teacher Portal - Area: Teacher)
+4. Phân hệ Quản trị viên (Admin Portal - Area: Admin)
+4.2.1 Phân hệ dành cho Khách hàng (Học viên & Khách vãng lai)
+A. Giao diện Trang chủ tập trung khi chưa đăng nhập và Hệ thống Tin tức tự
+động
+Hình 4.1: Giao diện Trang chủ tập trung khi Khách hàng chưa đăng nhập
+### PAGE 40
+34
+1. Phân tích cấu trúc giao diện và trải nghiệm người dùng (UI/UX):
+• Thanh điều hướng công khai (Header / Navbar): Tích hợp logo trung tâm, 
+các liên kết nhanh (Trang chủ, Khóa học, Thi xếp lớp, Tư vấn & Liên hệ) cùng 
+cặp nút bấm CTA: Đăng nhập (nút viền mỏng thanh lịch) và Đăng ký (nút 
+xanh nổi bật #0284c7).
+• Trình chiếu Banner quảng bá động (Hero Carousel Slider): Trình diễn các 
+chương trình đào tạo quốc tế, ưu đãi học phí thông qua Bootstrap Carousel tự
+động chuyển slide sau 5 giây. Từng banner tích hợp nút bấm điều hướng trực 
+tiếp (LinkUrl) tới khóa học hoặc đăng ký thi.
+• Biểu mẫu Tiếp nhận Tư vấn Nhanh (Lead Capture Form): Tọa lạc ở vị trí 
+trung tâm nửa phải màn hình, cho phép khách hàng chỉ cần nhập Họ và tên, Số
+điện thoại, Email và Nguyện vọng học tập là có thể gửi yêu cầu hỗ trợ mà 
+không bắt buộc tạo tài khoản trước.
+• Luồng Khóa học nổi bật & Lịch khai giảng tự động: Hệ thống hiển thị 3 
+chương trình học trọng điểm và 4 lớp học sắp khai giảng gần nhất kèm đầy đủ
+thông tin: Mã lớp, ngày bắt đầu, ca học, phòng học, học phí niêm yết và giáo 
+viên phụ trách.
+• Thanh chỉ số độ uy tín (Social Proof Stats): Hiển thị tự động tổng số học viên 
+đã tốt nghiệp, số giảng viên quốc tế và số khóa đào tạo nhằm tạo lập niềm tin 
+đối với phụ huynh và người học mới.
+2. Cơ chế hiện thực hóa chức năng và Luồng xử lý ngầm (Under-the-hood):
+• Truy vấn nạp dữ liệu động từ SQL Server:
+o Khi Client gửi yêu cầu HTTP GET tới /, HomeController.cs thực thi các 
+truy vấn LINQ bất đồng bộ thông qua Entity Framework Core.
+o Lọc danh sách banner kích hoạt và chưa bị xóa mềm: 
+_context.Banners.Where(b => b.IsActive && !b.IsDeleted).OrderBy(b 
+=> b.DisplayOrder).
+o Truy vấn kết hợp bảng (Eager Loading) danh sách lớp học: .Include(c 
+=> c.Program).Include(c => c.Teacher).ThenInclude(t => 
+t.UserAccount).
+o Dữ liệu được đóng gói toàn diện vào đối tượng HomeViewModel trước 
+khi render ra tệp Views/Home/Index.cshtml.
+• Luồng xử lý Tiếp nhận Tư vấn (ConsultationController):
+o Biểu mẫu gửi dữ liệu qua phương thức HTTP POST kèm mã băm chống 
+giả mạo @Html.AntiForgeryToken().
+### PAGE 41
+35
+o Bản ghi mới được lưu vào bảng Consultations với trạng thái mặc định 
+"Pending". Sau đó hệ thống thiết lập TempData["SuccessMessage"] và 
+phản hồi thông báo Toast Alert thành công.
+B. Giao diện Trang chủ sau khi Đăng nhập thành công
+Hình 4.2: Giao diện Trang chủ và Menu tiện ích sau khi Học viên đăng nhập
+1. Phân tích cấu trúc giao diện và trải nghiệm cá nhân hóa:
+• Chuyển đổi Header thông minh (User Dropdown Menu): Cụm nút "Đăng 
+nhập / Đăng ký" biến mất, thay vào đó là nút hồ sơ dạng viên thuốc (Pill￾badge) hiển thị ảnh đại diện và Họ và tên thực tế của học viên trích xuất từ
+User Identity Claims.
+• Trình đơn cá nhân học viên: Khi nhấp vào tên, menu xổ xuống cung cấp các 
+liên kết điều hướng chuyên biệt: Hồ sơ của tôi, Lớp học của tôi, Lịch sử học 
+phí, Đổi mật khẩu và Đăng xuất.
+• Ghi danh khóa học 1 chạm (1-Click Enrollment): Tại các thẻ lớp học trên 
+trang chủ, nút "Đăng ký ngay" nhận diện phiên đăng nhập của học viên, chuyển 
+thẳng sang trang thanh toán mà không yêu cầu điền lại thông tin cá nhân.
+### PAGE 42
+36
+2. Cơ chế hiện thực hóa chức năng và Luồng xử lý ngầm:
+• Quản lý Phiên bằng Cookie Authentication: Hệ thống kiểm tra 
+User.Identity.IsAuthenticated. Thông tin người dùng được giải mã an toàn từ
+Cookie WedEnglishApp.StudentAuth có thời hạn 7 ngày (SlidingExpiration = 
+true).
+• Cơ chế định tuyến Cookie đa lược đồ (RoleCookieRouter): Cấu hình 
+PolicyScheme trong Program.cs đảm bảo tài khoản học viên không bị xung đột 
+phiên làm việc ngay cả khi người quản trị mở đồng thời tab Admin trên cùng 
+một trình duyệt.
+C. Giao diện Danh mục và Chi tiết Khóa học (ProgramController)
+1. Giao diện Danh mục Khóa học (Views/Program/Index.cshtml)
+• Phân tích UI/UX:
+o Bố cục dạng lưới (Grid System) hiển thị danh sách thẻ khóa học trực 
+quan. Mỗi thẻ gồm ảnh bìa đại diện, nhãn phân loại cấp độ (Beginner, 
+Intermediate, Advanced) màu sắc riêng biệt, tóm tắt lộ trình, thời lượng 
+học (tuần) và học phí VNĐ.
+o Tích hợp thanh tìm kiếm theo từ khóa và bộ lọc nhanh theo cấp độ giúp 
+người học dễ dàng chọn đúng chương trình mong muốn.
+• Cơ chế hiện thực hóa:
+o Action Index nhận tham số truy vấn searchString và level.
+o Truy vấn LINQ thực thi lọc dữ liệu động: _context.Programs.Where(p 
+=> p.IsActive && !p.IsDeleted). Nếu có từ khóa, bổ sung điều kiện 
+.Where(p => p.ProgramName.Contains(searchString)).
+### PAGE 43
+37
+Hình 4.3: Giao diện Danh mục Khóa học và Bộ lọc cấp độ
+2. Giao diện Chi tiết Khóa học (Views/Program/Detail.cshtml)
+• Phân tích UI/UX:
+o Trình bày chuyên sâu về mục tiêu khóa học, cấu trúc giáo trình, chuẩn 
+đầu ra theo thang điểm quốc tế (IELTS Band 6.5+, TOEIC 800+).
+o Bảng danh sách các lớp học cụ thể đang mở thuộc khóa học: Thể hiện rõ 
+ngày khai giảng, ca học trong tuần, phòng học, giảng viên phụ trách và 
+nút bấm "Chọn lớp này để đăng ký".
+• Cơ chế hiện thực hóa:
+o Action Detail(int id) truy vấn khóa học theo ID, kết hợp nạp danh sách 
+lớp học liên kết: .Include(p => p.Classes.Where(c => !c.IsDeleted && 
+c.Status == "Planning")).
+o Nếu không tìm thấy khóa học hợp lệ, hệ thống trả về mã lỗi NotFound().
+### PAGE 44
+38
+Hình 4.4: Giao diện Chi tiết Khóa học và Danh sách lớp đang mở
+D. Giao diện Đăng ký Kiểm tra Trình độ đầu vào (PlacementTestController)
+1. Giao diện Đặt lịch thi xếp lớp (Views/PlacementTest/BookTest.cshtml)
+• Phân tích UI/UX:
+o Mẫu biểu đăng ký thi được thiết kế thân thiện, giải thích rõ quy trình 
+kiểm tra 4 kỹ năng Nghe - Nói - Đọc - Viết cùng giảng viên bản ngữ.
+o Học viên được tự do chọn: Ngày dự thi (Date picker giới hạn ngày tương 
+lai) và Khung giờ thi thuận tiện (09:00 AM, 02:00 PM, 06:00 PM).
+• Cơ chế hiện thực hóa:
+o Khi học viên nhấn gửi form, Action BookTest (POST) kiểm tra tính hợp 
+lệ của dữ liệu đầu vào.
+o Tạo bản ghi mới trong bảng PlacementTests với trạng thái "Pending".
+### PAGE 45
+39
+o Hệ thống tích hợp dịch vụ IEmailService gửi thư điện tử xác nhận lịch 
+hẹn tự động thông qua giao thức SMTP (MailKit), đính kèm hướng dẫn 
+phòng thi trực tuyến/trực tiếp.
+Hình 4.5: Giao diện Đặt lịch thi xếp lớp và kiểm tra năng lực đầu vào
+E. Giao diện Đăng ký lớp học và Thanh toán học phí (EnrollmentController & 
+PaymentController)
+1. Giao diện Xác nhận giữ chỗ & Thanh toán VietQR 
+(Views/Enrollment/Checkout.cshtml)
+• Phân tích UI/UX:
+o Giao diện chia làm 2 cột: Cột trái tóm tắt chi tiết lớp học đã chọn (tên 
+lớp, học phí, ngày khai giảng), cột phải là cổng thanh toán điện tử.
+o Tích hợp mã quét VietQR tự động: Hiển thị hình ảnh mã QR ngân hàng 
+có gắn sẵn Số tiền học phí chính xác và Cú pháp chuyển khoản tiêu 
+chuẩn (ví dụ: HITC ENROLL REG105), giúp học viên quét mã qua ứng 
+dụng ngân hàng trong 5 giây mà không lo chuyển nhầm số tài khoản.
+o Cung cấp tùy chọn thanh toán tiền mặt tại quầy dành cho học viên có 
+nhu cầu.
+• Cơ chế hiện thực hóa:
+o Kiểm tra xung đột sĩ số lớp học (Concurrency & Seat Limit): Trước 
+khi tạo đơn, hệ thống kiểm tra số học viên đã đăng ký so với 
+MaxStudents. Nếu lớp đã đủ sĩ số, hệ thống thông báo lỗi và từ chối tạo 
+đăng ký.
+o Khởi tạo bản ghi Registration với trạng thái "Pending" và tạo bản ghi 
+hóa đơn tương ứng trong bảng Payments.
+### PAGE 46
+40
+o Sinh chuỗi mã VietQR theo chuẩn Napas 247 và render động ra màn 
+hình.
+Hình 4.6: Giao diện Thanh toán học phí bằng mã quét VietQR tự động
+2. Giao diện Xuất & In Biên lai học phí điện tử
+(Views/Student/PrintReceipt.cshtml)
+• Phân tích UI/UX:
+o Được thiết kế chuẩn hóa theo khuôn mẫu phiếu thu tài chính A5/A4: Có 
+đầy đủ tiêu ngữ, Logo trung tâm HITC English, Mã hóa đơn #PAY-{id}, 
+họ tên học viên, khóa học ghi danh, số tiền nộp bằng số và bằng chữ, 
+ngày thu tiền và con dấu mộc điện tử của trung tâm.
+o Tích hợp nút "In biên lai" kích hoạt trực tiếp hàm window.print() của 
+trình duyệt (tự động ẩn các thành phần thừa, chỉ in nội dung phiếu thu).
+• Cơ chế hiện thực hóa:
+o Action PrintReceipt(int id) truy vấn hóa đơn có ID tương ứng, kiểm tra 
+quyền sở hữu của học viên (hoặc quyền Admin) để ngăn chặn việc người 
+khác xem trộm hóa đơn.
+o Render giao diện phiếu thu với định dạng CSS @media print.
+### PAGE 47
+41
+Hình 4.7: Giao diện Biên lai thu tiền học phí điện tử
+F. Giao diện Không gian học tập cá nhân học viên (StudentController)
+1. Giao diện Lớp học của tôi (Views/Student/MyClasses.cshtml)
+• Phân tích UI/UX:
+o Danh sách các lớp học mà học viên đã được duyệt tham gia: Phân loại 
+theo thẻ trạng thái (Đang học, Đã hoàn thành).
+o Hiển thị chi tiết: Tên khóa học, tên lớp, phòng học, giảng viên phụ trách, 
+thời khóa biểu các ca học trong tuần và đường dẫn tải tài liệu bài giảng.
+• Cơ chế hiện thực hóa:
+o Action MyClasses trích xuất AccountId của học viên đang đăng nhập, 
+truy vấn bảng Registrations có trạng thái "Confirmed" liên kết với 
+Classes, Programs và Schedules.
+### PAGE 48
+42
+Hình 4.8a: Các lớp học viên đã đăng ký
+Hình 4.8b: Lịch học và lịch thi theo tuần
+Hình 4.8: Giao diện Lớp học của tôi và Lịch học tuần
+2. Giao diện Lịch sử thanh toán học phí (Views/Student/MyPayments.cshtml)
+• Phân tích UI/UX:
+o Bảng thống kê toàn bộ các giao dịch đóng học phí của học viên: Mã giao 
+dịch, ngày thanh toán, phương thức đóng tiền (VietQR, Tiền mặt), số tiền 
+và trạng thái hóa đơn (Paid, Pending).
+### PAGE 49
+43
+o Có nút "Xem biên lai" dẫn đến phiếu thu điện tử đối với các hóa đơn đã 
+thanh toán thành công.
+Hình 4.9: Giao diện Lịch sử nộp học phí học viên
+3. Giao diện Hồ sơ cá nhân học viên (Views/Student/Profile.cshtml)
+• Phân tích UI/UX:
+o Cho phép học viên cập nhật thông tin cá nhân: Tải ảnh đại diện mới, cập 
+nhật số điện thoại, ngày sinh, địa chỉ cư trú.
+o Hiển thị bảng Kết quả thi kiểm tra trình độ đầu vào (Điểm số 4 kỹ năng, 
+ngày thi và cấp độ khóa học được hội đồng chuyên môn khuyến nghị).
+• Cơ chế hiện thực hóa:
+o Khi cập nhật ảnh đại diện, tệp ảnh được lưu trữ vào thư mục vật lý 
+wwwroot/uploads/avatars/ và cập nhật đường dẫn URL vào bảng 
+UserAccounts.
+### PAGE 50
+44
+Hình 4.10: Giao diện Hồ sơ cá nhân và Kết quả thi xếp lớp của học viên
+4.2.2 Phân hệ Quản trị viên hệ thống (Admin Portal - Area: Admin)
+Phân hệ quản trị vận hành trên phân vùng Areas/Admin, yêu cầu bắt buộc quyền hạn 
+[Authorize(Roles = "Admin")]. Giao diện sử dụng bố cục Dashboard chuẩn mực với 
+thanh Sidebar điều hướng phân tầng rõ ràng.
+1. Bảng điều khiển Quản trị & Thống kê 
+(Areas/Admin/Views/Dashboard/Index.cshtml)
+• Phân tích UI/UX:
+o Hệ thống các thẻ thống kê trực quan (KPI Metric Cards): Tổng doanh 
+thu học phí thực tế, số lớp học đang hoạt động, số học viên mới ghi 
+danh, số yêu cầu tư vấn đang chờ xử lý.
+o Biểu đồ trực quan hóa dữ liệu (Chart.js): Biểu đồ cột phản ánh doanh 
+thu từng tháng và biểu đồ tròn thể hiện cơ cấu phân bổ học viên theo các 
+chương trình đào tạo (IELTS, TOEIC, Giao tiếp).
+• Cơ chế hiện thực hóa:
+o Controller tổng hợp số liệu từ các bảng Payments, Classes, Students, 
+Consultations.
+o Dữ liệu biểu đồ được serialize thành chuỗi JSON và truyền xuống View 
+để thư viện Chart.js vẽ lên phần tử <canvas>.
+### PAGE 51
+45
+Hình 4.11: Giao diện Bảng điều khiển Quản trị Dashboard và Biểu đồ Doanh thu
+2. Phân hệ Quản lý Banner Quảng bá (BannerManagerController)
+• Màn hình Danh sách Banner (Index.cshtml):
+o Bảng dữ liệu hiển thị ảnh thu nhỏ (thumbnail), tiêu đề, liên kết đích 
+(LinkUrl), thứ tự ưu tiên hiển thị (DisplayOrder), trạng thái hiển thị
+(Đang hiện / Tạm ẩn).
+o Nút bật/tắt hiển thị nhanh (ToggleActive) chỉ với 1 click và nút chuyển 
+banner vào thùng rác.
+• Màn hình Thêm mới / Chỉnh sửa Banner (Create.cshtml / Edit.cshtml):
+o Hỗ trợ 2 phương thức nhập hình ảnh: Tải tệp từ máy tính (lưu trữ tự
+động vào wwwroot/uploads/banners) hoặc nhập URL ảnh trực tuyến.
+o Cho phép tùy biến chữ trên nút bấm CTA (Call to Action) và liên kết 
+điều hướng đến trang đích tương ứng.
+### PAGE 52
+46
+Hình 4.12: Giao diện Quản lý và Thêm mới Banner quảng bá trang chủ
+3. Phân hệ Quản lý Đào tạo: Chương trình học & Lớp học
+• Quản lý Chương trình học (ProgramManager):
+o Thêm, sửa, đóng/mở tuyển sinh các khóa đào tạo.
+o Cập nhật thời lượng học (tuần), định mức học phí, chuẩn đầu ra và ảnh 
+bìa khóa học.
+• Quản lý Lớp học (ClassManager):
+o Lập kế hoạch mở lớp, chỉ định giảng viên đứng lớp, phân bổ phòng học, 
+ấn định ngày khai giảng/bế giảng.
+o Thiết lập sĩ số trần (MaxStudents) nhằm ngăn chặn việc tuyển sinh vượt 
+quá quy mô lớp học.
+### PAGE 53
+47
+Hình 4.13a: Chương trình đào tạo
+Hình 4.13b: Lớp học và phân công
+Hình 4.13: Giao diện Quản trị Chương trình học và Lớp học
+4. Phân hệ Quản lý Tài chính, Đăng ký và Tư vấn
+• Quản lý Thanh toán (PaymentAdmin): Đối soát các giao dịch chuyển khoản 
+VietQR hoặc xác nhận thu học phí bằng tiền mặt tại quầy; tự động phát sinh mã 
+giao dịch chuẩn MANUAL{yyyyMMddHHmmss} và chuyển trạng thái đơn 
+sang "Paid".
+### PAGE 54
+48
+• Quản lý Đăng ký (RegistrationAdmin): Theo dõi danh sách học viên đăng ký 
+theo thời gian thực; hỗ trợ chuyển trạng thái ghi danh (Pending, Confirmed, 
+Cancelled).
+• Quản lý Tư vấn (ConsultationManager): Tiếp nhận thông tin từ form trang 
+chủ; hỗ trợ chuyên viên tuyển sinh đánh dấu "Replied" sau khi đã gọi điện tư 
+vấn lộ trình học cho khách hàng.
+Hình 4.14a: Đăng ký và xếp lớp
+Hình 4.14b: Quản lý học phí
+### PAGE 55
+49
+Hình 4.14: Giao diện Quản trị Đăng ký và Xác nhận Thanh toán học phí
+5. Phân hệ Quản trị Nhân sự: Giảng viên & Học viên
+• Quản lý Giảng viên (TeacherManager): Thêm mới tài khoản giảng viên với 
+mật khẩu được mã hóa tự động bằng BCrypt; cập nhật bằng cấp quốc tế, chuyên 
+môn đào tạo; hỗ trợ khóa hoặc kích hoạt tài khoản giảng viên tức thì 
+(ToggleStatus).
+• Quản lý Học viên (StudentManager): Theo dõi danh sách học viên toàn trung 
+tâm, lịch sử ghi danh, tổng học phí đã nộp và thông tin liên hệ phụ huynh.
+Hình 4.15a: Hồ sơ giáo viên
+### PAGE 56
+50
+Hình 4.15b: Hồ sơ học viên
+Hình 4.15: Giao diện Quản lý Hồ sơ Giảng viên và Học viên
+6. Phân hệ Thùng rác hệ thống & Cơ chế Xóa mềm an toàn (TrashController)
+• Phân tích UI/UX:
+o Được thiết kế dạng Giao diện đa Tab (Tabbed Navigation) phân loại rõ 
+ràng: Tất cả, Banner, Chương trình, Lớp học, Tư vấn, Đăng ký, Thi xếp 
+lớp, Tài khoản.
+o Cung cấp nút bấm thao tác chuyên biệt trên từng dòng: Khôi phục (Màu 
+xanh lá) và Xóa hẳn (Màu đỏ cảnh báo).
+o Nút chức năng cấp cao: Dọn sạch thùng rác (Hộp thoại xác nhận 2 lớp 
+ngăn chặn sơ suất).
+• Cơ chế hiện thực hóa (Soft Delete Pattern):
+o Khi người quản trị nhấn "Xóa" tại bất kỳ trang quản lý nào, hệ thống 
+không thực hiện lệnh DELETE khỏi CSDL mà cập nhật thuộc tính: 
+IsDeleted = true và DeletedAt = DateTime.Now.
+o Mọi trang hiển thị danh sách hoạt động đều tự động lọc bỏ các bản ghi 
+đã xóa mềm: .Where(x => !x.IsDeleted).
+o Khôi phục (Restore): Cập nhật lại IsDeleted = false, đưa bản ghi quay 
+trở lại danh sách quản lý bình thường ngay lập tức.
+o Xóa vĩnh viễn (PermanentDelete): Thực thi lệnh xóa triệt để khỏi SQL 
+Server khi người quản trị chắc chắn không còn nhu cầu lưu trữ.
+### PAGE 57
+51
+Hình 4.16: Giao diện Thùng rác hệ thống với cơ chế Khôi phục và Xóa vĩnh viễn
+4.2.3 Phân hệ Giảng viên (Teacher Portal - Area: Teacher)
+Phân hệ dành riêng cho đội ngũ giảng viên tại phân vùng Areas/Teacher, sử dụng 
+layout _TeacherLayout.cshtml:
+1. Bảng điều khiển Giảng viên (TeacherDashboard)
+• Chức năng: Tổng hợp nhanh các chỉ số công tác giảng dạy: Số lượng lớp học 
+đang đứng lớp, tổng số học viên trong các lớp phụ trách, lịch dạy trong tuần và 
+số bài thi xếp lớp được phân công chấm điểm.
+### PAGE 58
+52
+Hình 4.17: Giao diện Bảng điều khiển công tác đào tạo của Giảng viên
+2. Quản lý Lớp dạy & Điểm danh chuyên cần (TeachingClass & Attendance)
+• Chức năng: Giảng viên theo dõi danh sách lớp học được phân công; mở danh 
+sách học viên để thực hiện điểm danh chuyên cần từng buổi học (Đánh dấu 
+trạng thái: Có mặt, Đi trễ, Vắng có phép, Vắng không phép).
+Hình 4.18a: Các lớp được phân công
+### PAGE 59
+53
+Hình 4.18b: Danh sách học viên của lớp
+Hình 4.18: Giao diện Danh sách lớp dạy và Điểm danh học viên
+3. Chấm điểm bài thi xếp lớp đầu vào (TeacherTest)
+• Chức năng: Giảng viên truy cập danh sách các bài thi được chỉ định, thực hiện 
+chấm điểm 4 kỹ năng (thang điểm 10 hoặc IELTS Band), nhập lời nhận xét chi 
+tiết và chọn cấp độ lớp học đề xuất (RecommendedLevel) trước khi chuyển 
+trạng thái bài thi thành "Completed".
+Hình 4.19: Giao diện Chấm thi xếp lớp và Đề xuất cấp độ học
+### PAGE 60
+54
+4. Quản lý Tài liệu học tập & Phản hồi (Document & Feedback)
+• Chức năng: Giảng viên tải lên giáo trình, slide bài giảng, bài tập ngữ pháp 
+(PDF, Word) cho từng lớp học; đồng thời tiếp nhận các nhận xét đánh giá chất 
+lượng tiết dạy từ phía học viên để nâng cao năng lực sư phạm.
+Hình 4.20a: Quản lý tài liệu lớp
+Hình 4.20b: Phản hồi của học viên
+Hình 4.20: Giao diện Quản lý kho học liệu số và Đánh giá giờ dạy
+### PAGE 61
+55
+Hình 4.20a: Bảng lương của giáo viên
+Hình 4.20b: Quản lý lương tại trang Admin
+4.2.4 Phân hệ Xác thực và Quản lý tài khoản (Authentication System)
+Được điều khiển bởi AccountController.cs kết hợp cơ chế RoleCookieRouter đa vai trò 
+trong Program.cs:
+1. Giao diện Đăng nhập hệ thống (Views/Account/Login.cshtml)
+### PAGE 62
+56
+• Phân tích UI/UX: Form đăng nhập gồm trường nhập Email và Mật khẩu, liên 
+kết "Quên mật khẩu" và nút chuyển sang trang Đăng ký.
+• Cơ chế hiện thực hóa:
+o Tiếp nhận dữ liệu, tìm kiếm tài khoản theo Email: 
+_context.UserAccounts.FirstOrDefaultAsync(u => u.Email == 
+model.Email).
+o So khớp mật khẩu đã băm bằng thư viện 
+BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash).
+o Khi đăng nhập thành công, hệ thống cấp phát Cookie phiên tương ứng 
+(WedEnglishApp.AdminAuth, TeacherAuth, hoặc StudentAuth) và 
+chuyển hướng chính xác về phân hệ của người dùng.
+Hình 4.21: Giao diện Đăng nhập hệ thống phân quyền đa vai trò
+2. Giao diện Đăng ký tài khoản (Views/Account/Register.cshtml)
+• Chức năng: Cho phép học viên mới đăng ký tài khoản trực tuyến (Họ tên, 
+Email, Mật khẩu, Số điện thoại). Mật khẩu được băm an toàn 1 chiều bằng 
+BCrypt trước khi lưu vào CSDL, đồng thời tự động kích hoạt tạo mới một bản 
+ghi hồ sơ trong bảng Students.
+### PAGE 63
+57
+Hình 4.22: Giao diện Đăng ký tài khoản học viên
+3. Giao diện Đổi mật khẩu & Cảnh báo an ninh 403
+• Đổi mật khẩu (ChangePassword.cshtml): Kiểm tra mật khẩu cũ hợp lệ trước 
+khi cho phép băm và cập nhật mật khẩu mới.
+• Từ chối truy cập (AccessDenied.cshtml): Giao diện thông báo chuẩn HTTP 
+403 Forbidden khi người dùng cố tình nhập URL can thiệp vào các phân vùng 
+vượt quá quyền hạn của mình.
+Hình 4.23: Giao diện Đổi mật khẩu và Thông báo từ chối truy cập 403
+### PAGE 64
+58
+4.3 KIỂM THỬ HỆ THỐNG (SYSTEM TESTING)
+Kiểm thử hệ thống là giai đoạn mang tính quyết định nhằm rà soát toàn bộ các chức 
+năng, đảm bảo phần mềm vận hành chính xác theo đúng đặc tả yêu cầu nghiệp vụ, đạt 
+hiệu năng ổn định và ngăn ngừa các lỗ hổng an ninh trước khi đưa vào khai thác thực 
+tế.
+4.3.1 Mục tiêu và Phương pháp kiểm thử
+1. Mục tiêu kiểm thử
+• Đảm bảo tính đúng đắn về mặt chức năng: Kiểm tra toàn bộ các chu trình 
+nghiệp vụ cốt lõi (Đăng ký tài khoản, Đặt lịch thi xếp lớp, Giữ chỗ lớp học, 
+Thanh toán VietQR, Điểm danh, Chấm thi, Quản lý banner và Thùng rác).
+• Xác thực an toàn thông tin & phân quyền: Đảm bảo cơ chế phân quyền đa 
+vai trò (Admin, Teacher, Student, Guest) vận hành nghiêm ngặt; kiểm tra khả
+năng cô lập phiên làm việc đa Cookie (RoleCookieRouter) không bị xung đột 
+khi đăng nhập nhiều tài khoản trên cùng một trình duyệt.
+• Kiểm tra tính toàn vẹn dữ liệu (Data Integrity): Xác nhận các ràng buộc toàn 
+vẹn khóa ngoại, thuật toán băm mật khẩu BCrypt, tính toán sĩ số tối đa của lớp 
+học và cơ chế xóa mềm (Soft Delete Pattern).
+2. Phương pháp kiểm thử áp dụng
+• Kiểm thử hộp đen (Black-box Testing): Kiểm thử viên chỉ dựa vào các kịch 
+bản sử dụng (Use Cases) và đặc tả giao diện để nhập dữ liệu đầu vào và kiểm 
+tra kết quả đầu ra thực tế mà không cần can thiệp vào mã nguồn nội bộ.
+• Kiểm thử tích hợp (Integration Testing): Kiểm tra sự kết hợp đồng bộ giữa 
+tầng Controller, tầng Data Access Entity Framework Core và hệ quản trị cơ sở
+dữ liệu SQL Server.
+• Môi trường kiểm thử:
+o Máy chủ: Kestrel / IIS Express Worker Process (.NET 8.0, ASP.NET 
+Core MVC).
+o Cơ sở dữ liệu: Microsoft SQL Server LocalDB (EnglishCenterDb).
+o Trình duyệt kiểm thử: Google Chrome (v120+), Microsoft Edge (v120+) 
+trên hệ điều hành Windows 11.
+4.3.2 Kịch bản kiểm thử chi tiết các phân hệ chức năng (Test Cases)
+Dưới đây là bảng tổng hợp các ca kiểm thử tiêu biểu đại diện cho 4 phân hệ chính của 
+website:
+### PAGE 65
+59
+1. Kiểm thử Phân hệ Xác thực & Bảo mật tài khoản (Authentication & 
+Security)
+Mã ca 
+kiểm 
+thử
+Tên chức 
+năng
+Dữ liệu đầu vào (Input) Kết quả kỳ vọng (Expected 
+Output)
+Kết quả
+thực tế
+Đánh 
+giá
+TC￾AUTH￾01
+Đăng ký 
+học viên 
+với Email 
+đã tồn tại
+Nhập email đã có trong CSDL 
+(ví dụ: student1@hitc.edu.vn)
+Hệ thống báo lỗi: "Email này 
+đã được sử dụng. Vui lòng 
+chọn email khác!", không tạo 
+tài khoản mới.
+Hiển thị
+cảnh báo 
+màu đỏ
+ngay dưới ô 
+nhập email, 
+giữ nguyên 
+form.
+ĐẠT 
+(Pass)
+TC￾AUTH￾02
+Đăng nhập 
+đúng thông 
+tin tài 
+khoản Học 
+viên
+Email: student1@hitc.edu.vn
+Mật khẩu: 123456
+Cấp phát cookie 
+WedEnglishApp.StudentAuth, 
+chuyển hướng về trang chủ
+với Menu Profile cá nhân.
+Đăng nhập 
+thành công, 
+Navbar 
+hiển thị tên 
+"Nguyễn 
+Văn An".
+ĐẠT 
+(Pass)
+TC￾AUTH￾03
+Đăng nhập 
+với sai mật 
+khẩu
+Email hợp lệ, Mật khẩu: 
+WrongPass99
+Thuật toán BCrypt đối soát 
+thất bại; báo lỗi: "Email hoặc 
+mật khẩu không chính xác!".
+Hệ thống từ
+chối đăng 
+nhập, thông 
+báo lỗi rõ 
+ràng.
+ĐẠT 
+(Pass)
+TC￾AUTH￾04
+Kiểm thử
+ngăn chặn 
+truy cập trái 
+phép (403 
+Forbidden)
+Tài khoản vai trò Student nhập 
+trực tiếp URL 
+/Admin/Dashboard hoặc 
+/Teacher/TeachingClass
+Hệ thống chặn truy cập, tự
+động điều hướng sang trang 
+/Account/AccessDenied (Mã 
+HTTP 403).
+Chuyển 
+hướng sang 
+trang cảnh 
+báo quyền 
+hạn, không 
+lộ dữ liệu 
+quản trị.
+ĐẠT 
+(Pass)
+TC￾AUTH￾05
+Đăng nhập 
+đồng thời 
+nhiều vai
+trò trên 
+cùng trình 
+duyệt
+Mở Tab 1 đăng nhập Admin 
+(WedEnglishApp.AdminAuth), 
+Tab 2 đăng nhập Học viên 
+(WedEnglishApp.StudentAuth)
+Bộ định tuyến 
+RoleCookieRouter tách biệt 
+phiên, cả hai tab hoạt động 
+độc lập, không bị ghi đè 
+phiên.
+Admin 
+quản trị
+bình 
+thường, 
+Học viên 
+xem lịch 
+học bình 
+thường, 
+không bị
+dồn về 1 
+trang.
+ĐẠT 
+(Pass)
+2. Kiểm thử Phân hệ Khách hàng & Học viên (Public & Student Portal)
+Mã ca 
+kiểm 
+thử
+Tên chức năng Dữ liệu đầu vào (Input)
+Kết quả kỳ
+vọng 
+(Expected 
+Output)
+Kết quả thực tế
+Đánh 
+giá
+TC￾CUST￾01
+Gửi form yêu 
+cầu tư vấn khóa 
+học
+Nhập họ tên: "Trần Thị
+Mai", SĐT: 0987654321, 
+Email: mai@gmail.com, 
+Câu hỏi: "Tư vấn IELTS"
+Tạo 1 bản ghi 
+mới trong bảng 
+Consultations
+(Status: 
+"Pending"), 
+thông báo 
+Toast: "Gửi yêu 
+Thông báo xanh hiển thị
+trên trang chủ, CSDL 
+nhận bản ghi mới.
+ĐẠT 
+(Pass)
+### PAGE 66
+60
+Mã ca 
+kiểm 
+thử
+Tên chức năng Dữ liệu đầu vào (Input)
+Kết quả kỳ
+vọng 
+(Expected 
+Output)
+Kết quả thực tế
+Đánh 
+giá
+cầu thành 
+công".
+TC￾CUST￾02
+Đặt lịch thi xếp 
+lớp đầu vào
+Chọn ngày thi trong 
+tương lai, ca thi 09:00 
+AM, nhập thông tin cá 
+nhân
+Tạo bản ghi 
+PlacementTests, 
+dịch vụ MailKit 
+gửi email xác 
+nhận lịch thi tự
+động cho học 
+viên.
+Bản ghi tạo thành công, 
+email gửi về hộp thư học 
+viên đúng nội dung.
+ĐẠT 
+(Pass)
+TC￾CUST￾03
+Đăng ký lớp 
+học còn chỗ
+trống
+Học viên chọn lớp có số
+học viên hiện tại < 
+MaxStudents (25 học 
+viên)
+Hệ thống tạo 
+đơn 
+Registration
+(Status: 
+"Pending"), 
+chuyển sang 
+trang thanh toán 
+VietQR.
+Chuyển sang 
+/Enrollment/Checkout
+kèm thông tin lớp và số
+tiền học phí.
+ĐẠT 
+(Pass)
+TC￾CUST￾04
+Kiểm tra kiểm 
+soát sĩ số trần 
+(Overbooking 
+Check)
+Đăng ký vào lớp học đã 
+đạt sĩ số tối đa (Count == 
+MaxStudents)
+Hệ thống từ
+chối đăng ký, 
+cảnh báo: "Lớp 
+học này đã đủ
+sĩ số, vui lòng 
+chọn lớp 
+khác!".
+Nút đăng ký bị vô hiệu 
+hóa hoặc hệ thống chặn 
+tạo bản ghi mới.
+ĐẠT 
+(Pass)
+TC￾CUST￾05
+Thanh toán 
+VietQR & In 
+biên lai học phí
+Quét mã VietQR hoặc 
+Admin xác nhận thanh 
+toán
+Hóa đơn 
+chuyển trạng 
+thái "Paid", 
+kích hoạt nút 
+"In biên lai"
+dạng phiếu thu 
+chuẩn A5/A4.
+Biên lai hiển thị đầy đủ
+logo, mã #PAY, số tiền 
+bằng chữ, in ấn chuẩn 
+CSS.
+ĐẠT 
+(Pass)
+2. Kiểm thử Phân hệ Khách hàng & Học viên (Public & Student Portal)
+Mã ca 
+kiểm thử
+Tên chức 
+năng Dữ liệu đầu vào (Input) Kết quả kỳ vọng (Expected 
+Output)
+Kết quả thực 
+tế
+TC￾TEACH￾01
+Điểm danh 
+học viên 
+theo buổi 
+học
+Giảng viên chọn lớp, đánh 
+dấu trạng thái: Có mặt, Đi 
+trễ, Vắng mặt cho từng học 
+viên
+Hệ thống lưu trữ dữ liệu điểm danh, 
+cập nhật tỷ lệ chuyên cần của học 
+viên trong lớp.
+Dữ liệu lưu 
+tức thời, hiển 
+thị trạng thái 
+đã điểm danh 
+thành công.
+TC￾TEACH￾02
+Chấm điểm 
+bài thi xếp 
+lớp đầu vào
+Nhập điểm số: 7.5, nhận 
+xét: "Nghe tốt, phát âm 
+chuẩn", đề xuất: "IELTS 
+6.5+"
+Cập nhật bản ghi PlacementTests, 
+chuyển trạng thái sang Completed, 
+kết quả hiển thị trên trang Profile học 
+viên.
+Điểm số lưu 
+chuẩn xác, 
+học viên tra 
+cứu được 
+ngay trên 
+trang cá nhân.
+TC￾TEACH￾03
+Tải lên tài 
+liệu học tập 
+cho lớp
+Chọn tệp bài giảng 
+Lesson1_Grammar.pdf
+(dung lượng 2MB)
+Tệp tin được upload vào 
+wwwroot/uploads/documents/, học 
+viên trong lớp có thể tải về.
+Tệp upload 
+thành công, 
+đường link tải 
+xuống hoạt 
+### PAGE 67
+61
+Mã ca 
+kiểm thử
+Tên chức 
+năng Dữ liệu đầu vào (Input) Kết quả kỳ vọng (Expected 
+Output)
+Kết quả thực 
+tế
+động chính 
+xác.
+3. Kiểm thử Phân hệ Quản trị viên (Admin Portal)
+Mã ca 
+kiểm 
+thử
+Tên chức năng Dữ liệu đầu 
+vào (Input)
+Kết quả kỳ vọng 
+(Expected Output)
+Kết quả
+thực tế
+Đánh 
+giá
+TC￾ADM￾01
+Thêm mới Banner 
+quảng bá trang 
+chủ
+Nhập tiêu đề, 
+tải ảnh từ máy 
+tính, gán Link: 
+/Program/Index, 
+hiển thị: true
+Ảnh lưu vào 
+wwwroot/uploads/banners/, 
+banner xuất hiện ngay lập 
+tức trên Carousel trang 
+chủ.
+Trang chủ
+hiển thị
+slide mới, 
+click nút 
+chuyển 
+hướng 
+chính xác 
+đến 
+/Program.
+ĐẠT 
+(Pass)
+TC￾ADM￾02
+Xóa mềm một 
+khóa học (Soft 
+Delete)
+Admin nhấn nút 
+"Xóa" chương 
+trình học trên 
+bảng quản trị
+Bản ghi không bị xóa khỏi 
+SQL Server mà cập nhật 
+IsDeleted = 1, biến mất 
+khỏi danh sách quản lý.
+Chương 
+trình ẩn 
+khỏi trang 
+chủ và 
+trang 
+Admin, tự
+động 
+chuyển 
+vào 
+Thùng 
+rác.
+ĐẠT 
+(Pass)
+TC￾ADM￾03
+Khôi phục dữ liệu 
+từ Thùng rác 
+(Restore)
+Truy cập 
+/Admin/Trash, 
+nhấn nút "Khôi 
+phục" trên mục 
+đã xóa
+Hệ thống cập nhật 
+IsDeleted = 0, DeletedAt = 
+NULL; mục này xuất hiện 
+trở lại danh sách quản lý.
+Dữ liệu 
+phục hồi 
+nguyên 
+vẹn, các 
+liên kết 
+khóa 
+ngoại vẫn 
+giữ
+nguyên.
+ĐẠT 
+(Pass)
+TC￾ADM￾04
+Xóa vĩnh viễn dữ
+liệu khỏi hệ thống 
+(PermanentDelete)
+Nhấn "Xóa 
+hẳn" và xác 
+nhận hộp thoại 
+cảnh báo nguy 
+hiểm
+Thực thi lệnh DELETE
+khỏi CSDL SQL Server; 
+bản ghi biến mất hoàn 
+toàn, không thể khôi phục.
+Bản ghi bị
+xóa triệt 
+để trong 
+cơ sở dữ
+liệu.
+ĐẠT 
+(Pass)
+TC￾ADM￾05
+Ngăn chặn xóa 
+chương trình học 
+đang có lớp mở
+Thử xóa vĩnh 
+viễn một khóa 
+học mà bên 
+trong vẫn còn 
+lớp học đang 
+hoạt động
+Hệ thống từ chối xóa, 
+thông báo lỗi: "Không thể
+xóa chương trình vì vẫn 
+còn lớp học liên kết!".
+Cơ chế
+toàn vẹn 
+dữ liệu 
+ngăn chặn 
+lỗi xung 
+đột 
+Foreign 
+Key thành 
+công.
+ĐẠT 
+(Pass)
+### PAGE 68
+62
+KẾT CHƯƠNG 4
+Chương 4 đã trình bày toàn diện và chi tiết quá trình hiện thực hóa kỹ thuật cũng 
+như công tác kiểm thử chất lượng cho website quản lý và đăng ký học tại trung tâm 
+ngoại ngữ (HITC English - WedEnglishApp).
+Cụ thể, những nội dung trọng tâm đã đạt được trong chương bao gồm:
+1. Thiết lập môi trường và nền tảng công nghệ vững chắc: Ứng dụng đã được 
+xây dựng thành công trên nền tảng ASP.NET Core (.NET 8 LTS) theo mô hình 
+kiến trúc MVC, kết hợp ORM Entity Framework Core 8, hệ quản trị cơ sở dữ
+liệu Microsoft SQL Server, dịch vụ gửi thư điện tử tự động MailKit, giải pháp 
+thanh toán quét mã VietQR và thuật toán băm mật khẩu chuẩn hóa BCrypt. Cấu 
+trúc thư mục dự án và đường ống xử lý HTTP Middleware Pipeline được tổ
+chức khoa học, tối ưu hiệu năng và bảo đảm an toàn thông tin.
+2. Hiện thực hóa trọn vẹn các phân hệ giao diện người dùng: Toàn bộ hệ thống 
+giao diện với hơn 30 trang màn hình thuộc 4 phân hệ chính (Khách vãng lai, 
+Học viên, Giảng viên và Quản trị viên) đã được hoàn thiện đồng bộ, đảm bảo 
+tính thẩm mỹ hiện đại và khả năng co giãn linh hoạt trên mọi kích thước thiết bị
+(Responsive Design). Đặc biệt, hệ thống đã giải quyết triệt để hai bài toán kỹ
+thuật phức tạp: 
+o Cơ chế định tuyến Cookie đa vai trò (RoleCookieRouter): Cho phép 
+đăng nhập và vận hành song song nhiều tài khoản (Admin, Giáo viên, 
+Học viên) trên cùng một trình duyệt mà không bị xung đột hay ghi đè 
+phiên làm việc.
+o Phân hệ Thùng rác hệ thống (Soft Delete Pattern): Áp dụng cơ chế xóa 
+mềm an toàn trên toàn bộ 7 bảng dữ liệu, cung cấp tính năng khôi phục 
+tức thì hoặc xóa vĩnh viễn, bảo vệ tối đa tính toàn vẹn dữ liệu.
+3. Đánh giá và kiểm thử hệ thống nghiêm ngặt: Thông qua việc áp dụng 
+phương pháp kiểm thử hộp đen và kiểm thử tích hợp trên 20 ca kiểm thử (Test 
+Cases) đại diện cho toàn bộ các luồng nghiệp vụ cốt lõi, hệ thống đạt tỷ lệ thành 
+công tuyệt đối (100% Pass), phản hồi nhanh chóng (< 350ms), vận hành ổn 
+định và không phát sinh lỗi nghiêm trọng.
+### PAGE 69
+63
+KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
+1. Kết luận
+Sau thời gian nghiên cứu lý thuyết, khảo sát nghiệp vụ thực tế và trực tiếp triển khai 
+lập trình, đề tài “Xây dựng ứng dụng web quản lý và đăng ký học tại trung tâm ngoại 
+ngữ (HITC English)” đã hoàn thành đầy đủ các mục tiêu đề ra ban đầu cả về mặt lý 
+thuyết lẫn sản phẩm thực nghiệm.
+1.1 Những kết quả đã đạt được của đề tài:
+• Về mặt công nghệ và kiến trúc hệ thống:
+o Làm chủ và ứng dụng thành công nền tảng ASP.NET Core (.NET 8 LTS) 
+theo mô hình kiến trúc Model - View - Controller (MVC) kết hợp ORM 
+Entity Framework Core 8, giúp mã nguồn được module hóa rõ ràng, dễ
+bảo trì và có khả năng mở rộng linh hoạt.
+o Thiết kế cơ sở dữ liệu quan hệ hoàn chỉnh trên Microsoft SQL Server, 
+chuẩn hóa các mối quan hệ thực thể (1-1, 1-N), thiết lập các ràng buộc 
+toàn vẹn dữ liệu chặt chẽ giữa các bảng tài khoản, chương trình học, lớp 
+học, thời khóa biểu, đăng ký và hóa đơn thanh toán.
+o Xây dựng thành công cơ chế xác thực phân quyền đa vai trò (Multi-Role 
+Cookie Authentication Router - RoleCookieRouter), giải quyết triệt để
+bài toán xung đột phiên làm việc khi người dùng hoặc kiểm thử viên 
+đăng nhập đồng thời nhiều tài khoản (Admin, Giáo viên, Học viên) trên 
+cùng một trình duyệt.
+o Tích hợp thành công thuật toán băm mật khẩu một chiều BCrypt chống 
+tấn công từ điển/dò mật khẩu, áp dụng mã xác thực token chống giả mạo 
+CSRF, dịch vụ gửi email tự động MailKit và cổng thanh toán quét mã 
+VietQR tự động.
+• Về mặt nghiệp vụ và giao diện người dùng (UI/UX):
+o Xây dựng hoàn chỉnh 4 phân hệ nghiệp vụ độc lập: Khách vãng lai, Học 
+viên, Giảng viên và Quản trị viên hệ thống với hơn 30 trang màn hình 
+đáp ứng chuẩn Responsive đa thiết bị.
+o Phân hệ Học viên & Tuyển sinh: Tự động hóa quy trình từ khâu tiếp 
+nhận tư vấn →đăng ký thi thử xếp lớp →chọn lớp →giữ chỗ sĩ số →thanh 
+toán VietQR →xuất và in biên lai điện tử chuẩn quy cách.
+### PAGE 70
+64
+o Phân hệ Giảng viên: Cung cấp công cụ quản lý lớp phụ trách, điểm danh 
+chuyên cần trực tiếp theo từng buổi học, chấm thi xếp lớp đầu vào và tải 
+lên kho học liệu số cho học viên.
+o Phân hệ Quản trị viên: Giám sát doanh thu và cơ cấu học viên qua biểu 
+đồ số liệu trực quan (Chart.js); quản lý danh mục đào tạo, nhân sự và 
+truyền thông (Banner quảng bá trang chủ).
+o Cơ chế Thùng rác hệ thống (Soft Delete Pattern): Hiện thực hóa tính 
+năng xóa an toàn trên toàn bộ 7 bảng dữ liệu, cho phép khôi phục dữ liệu 
+tức thì hoặc xóa vĩnh viễn, ngăn ngừa tối đa rủi ro mất mát dữ liệu do 
+thao tác nhầm lẫn.
+• Về kết quả kiểm thử:
+o Hệ thống đã trải qua quá trình kiểm thử hộp đen và kiểm thử tích hợp 
+với 100% ca kiểm thử (20/20 Test Cases) đạt yêu cầu, đảm bảo độ tin 
+cậy cao, tốc độ phản hồi nhanh (< 350ms) và không phát sinh lỗi nghiêm 
+trọng.
+1.2 Những hạn chế còn tồn tại:
+• Hệ thống thanh toán trực tuyến hiện tại chủ yếu thông qua quét mã VietQR và 
+đối soát nội bộ; chưa kích hoạt kết nối API trực tiếp với cổng thanh toán VNPay 
+Sandbox hoặc MoMo để nhận phản hồi kết quả tức thì qua Webhook IPN.
+• Chưa tích hợp tính năng phòng học ảo trực tuyến (như tích hợp Zoom API, 
+Google Meet API) đối với các lớp học từ xa.
+• Chưa có ứng dụng di động bản địa (Native Mobile App trên iOS/Android) dành 
+cho học viên và phụ huynh theo dõi điểm danh chuyên cần qua thông báo đẩy 
+(Push Notification).
+2. Hướng phát triển trong tương lai
+Để nâng cao hơn nữa giá trị thực tiễn và sẵn sàng triển khai vận hành thương mại cho 
+các chuỗi trung tâm ngoại ngữ quy mô lớn, hệ thống định hướng tiếp tục nghiên cứu 
+và mở rộng các tính năng sau:
+1. Hoàn thiện Cổng thanh toán trực tuyến tự động (Payment Gateway): 
+o Tích hợp sâu cổng thanh toán VNPay / MoMo API với cơ chế xác thực 
+IPN (Instant Payment Notification), tự động chuyển trạng thái đơn hàng 
+sang Paid ngay khi giao dịch thành công mà không cần nhân viên kế
+toán đối soát thủ công.
+2. Tích hợp Lớp học trực tuyến và Phòng học ảo (Virtual Classroom): 
+### PAGE 71
+65
+o Tích hợp các SDK hội nghị truyền hình (Zoom SDK, Jitsi Meet hoặc 
+WebRTC) trực tiếp vào website để hỗ trợ mô hình giảng dạy kết hợp 
+(Blended Learning / Hybrid Learning), cho phép học sinh học trực tiếp 
+từ xa trên nền tảng.
+3. Ứng dụng Trí tuệ nhân tạo (AI & Chatbot): 
+o Tích hợp AI Chatbot (sử dụng Gemini API / OpenAI API) trên trang chủ
+để tư vấn lộ trình học, giải đáp câu hỏi thường gặp (FAQ) tự động 24/7 
+cho khách hàng.
+o Xây dựng tính năng tự động chấm phát âm tiếng Anh (AI Speech 
+Assessment) trong bài thi xếp lớp đầu vào của học viên.
+4. Phát triển Ứng dụng di động (Mobile Application): 
+o Sử dụng nền tảng đa nền tảng (Flutter / React Native) để phát triển ứng 
+dụng di động cho Học viên và Phụ huynh, hỗ trợ nhận thông báo lịch 
+học, xem điểm danh, nhận xét của giáo viên và thanh toán học phí tiện 
+lợi ngay trên điện thoại.
+5. Nâng cấp Hệ thống Báo cáo và Phân tích thông minh (Business 
+Intelligence): 
+o Xây dựng phân hệ báo cáo chuyên sâu dự báo xu hướng tuyển sinh, tỷ lệ
+duy trì học viên (Retention Rate) và tính toán tự động lương/thù lao giờ
+dạy cho đội ngũ giảng viên theo từng tháng.
+### PAGE 72
+66
+TÀI LIỆU THAM KHẢO
+[1] VUS. Website Anh văn Hội Việt Mỹ. https://vus.edu.vn/. Truy cập ngày 
+03/11/2026.
+[2] ILA Vietnam. Website trung tâm Anh ngữ ILA. https://ila.edu.vn/. Truy cập 
+ngày 03/11/2026.
+[3] Microsoft. Overview of ASP.NET Core MVC. https://learn.microsoft.com/en￾us/aspnet/core/mvc/overview?view=aspnetcore-8.0. Truy cập ngày 03/11/2026.
+[4] Microsoft. Entity Framework Core. https://learn.microsoft.com/en-us/ef/core/. 
+Truy cập ngày 03/11/2026.
+[5] Microsoft. Use cookie authentication without ASP.NET Core Identity. 
+https://learn.microsoft.com/en￾us/aspnet/core/security/authentication/cookie?view=aspnetcore-8.0. Truy cập ngày 
+03/11/2026.
+[6] Microsoft. Role based authorization in ASP.NET Core. 
+https://learn.microsoft.com/en￾us/aspnet/core/security/authorization/roles?view=aspnetcore-8.0. Truy cập ngày 
+03/11/2026.
+[7] Bootstrap. Bootstrap 5.3 Documentation. 
+https://getbootstrap.com/docs/5.3/getting-started/introduction/. Truy cập ngày 
+03/11/2026.
+[8] Chart.js. Documentation. https://www.chartjs.org/docs/latest/. Truy cập ngày 
+03/11/2026.
+[9] BCrypt.Net. Source and documentation. 
+https://github.com/BcryptNet/bcrypt.net. Truy cập ngày 03/11/2026.
+[10] Casso. VietQR Payment Kit. https://www.vietqr.io/. Truy cập ngày 
+03/11/2026.
+Nguồn nội bộ: mã nguồn dự án WedEnglishApp; báo cáo 
+doanketthucmonWeb.docx; ảnh khảo sát VUS, ILA trong tài liệu ban đầu. Các hình 
+giao diện bổ sung được chụp từ website HITC English chạy cục bộ; sơ đồ bổ sung 
+được xây dựng từ các chức năng và mô hình dữ liệu của dự án.

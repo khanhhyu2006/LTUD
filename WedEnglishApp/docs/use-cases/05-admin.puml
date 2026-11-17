@@ -1,0 +1,53 @@
+@startuml
+left to right direction
+skinparam defaultFontName Arial
+skinparam shadowing false
+title Use case tài khoản quản trị viên
+actor "Admin" as A0
+rectangle "Hệ thống quản lý trung tâm ngoại ngữ NHK English times" {
+  usecase "Đăng nhập" as U0_0
+  usecase "Đổi mật khẩu" as U0_1
+  usecase "Đăng xuất" as U0_2
+  usecase "Xem thống kê và biểu đồ doanh thu" as U0_3
+  usecase "Quản lý chương trình, bật / tắt tuyển sinh" as U0_4
+  usecase "Thêm, sửa, xóa mềm lớp và lịch học" as U0_5
+  usecase "Xem chi tiết lớp, phân công giáo viên" as U0_6
+  usecase "Thêm / Gỡ học viên khỏi lớp" as U0_7
+  usecase "Tạo, sửa, xóa mềm hồ sơ giáo viên" as U0_8
+  usecase "Sửa hồ sơ, khóa / mở tài khoản học viên" as U0_9
+  usecase "Xếp / Chuyển lớp cho đơn đăng ký" as U0_10
+  usecase "Duyệt, hủy, xóa mềm đơn đăng ký" as U0_11
+  usecase "Xem học phí và xác nhận thu tiền" as U0_12
+  usecase "Xem và in biên lai học phí" as U0_13
+  usecase "Xếp lịch, phòng, giáo viên thi đầu vào" as U0_14
+  usecase "Cập nhật điểm, cấp độ / Xóa mềm lịch thi" as U0_15
+  usecase "Lập, sửa, lọc và xóa bảng lương" as U0_16
+  usecase "Xác nhận chi trả lương giáo viên" as U0_17
+  usecase "Xem, đổi trạng thái, xóa mềm tư vấn" as U0_18
+  usecase "Quản lý banner và bật / tắt hiển thị" as U0_19
+  usecase "Xem và khôi phục dữ liệu thùng rác" as U0_20
+  usecase "Xóa vĩnh viễn / Dọn thùng rác" as U0_21
+}
+A0 -- U0_0
+A0 -- U0_1
+A0 -- U0_2
+A0 -- U0_3
+A0 -- U0_4
+A0 -- U0_5
+A0 -- U0_6
+A0 -- U0_7
+A0 -- U0_8
+A0 -- U0_9
+A0 -- U0_10
+A0 -- U0_11
+A0 -- U0_12
+A0 -- U0_13
+A0 -- U0_14
+A0 -- U0_15
+A0 -- U0_16
+A0 -- U0_17
+A0 -- U0_18
+A0 -- U0_19
+A0 -- U0_20
+A0 -- U0_21
+@enduml

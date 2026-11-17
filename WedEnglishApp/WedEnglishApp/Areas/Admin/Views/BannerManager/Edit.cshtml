@@ -1,0 +1,103 @@
+@model WedEnglishApp.Models.Banner
+@{
+    ViewData["Title"] = "Chỉnh Sửa Banner";
+    Layout = "_AdminLayout";
+}
+
+<div class="container-fluid p-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h4 class="fw-bold mb-1">
+                        <i class="fa-solid fa-pen-to-square text-primary me-2"></i> Chỉnh Sửa Banner #@Model.BannerId
+                    </h4>
+                    <p class="text-muted small mb-0">Cập nhật nội dung hình ảnh, liên kết đích và thứ tự hiển thị của banner.</p>
+                </div>
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="fa-solid fa-arrow-left me-1"></i> Quay lại danh sách
+                </a>
+            </div>
+
+            <div class="admin-card p-4">
+                <form asp-action="Edit" asp-route-id="@Model.BannerId" method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="BannerId" />
+                    <input type="hidden" asp-for="CreatedAt" />
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <!-- Ảnh xem trước hiện tại -->
+                    <div class="mb-4 text-center p-3 bg-light rounded-3 border">
+                        <div class="small text-muted mb-2 fw-semibold">Hình ảnh banner hiện tại:</div>
+                        <img src="@Model.ImageUrl" alt="@Model.Title" class="img-fluid rounded-3 shadow-sm border" style="max-height: 200px; object-fit: cover;" onerror="this.src='/images/default-banner.png'" />
+                    </div>
+
+                    <!-- Tiêu đề Banner -->
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label fw-bold">Tiêu đề Banner <span class="text-danger">*</span></label>
+                        <input asp-for="Title" class="form-control form-control-lg" required />
+                        <span asp-validation-for="Title" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Mô tả / Phụ đề -->
+                    <div class="mb-3">
+                        <label asp-for="Subtitle" class="form-label fw-semibold">Phụ đề / Nội dung giới thiệu ngắn</label>
+                        <textarea asp-for="Subtitle" rows="2" class="form-control"></textarea>
+                        <span asp-validation-for="Subtitle" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Hình ảnh Banner (Upload mới hoặc đổi URL) -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Chọn ảnh mới để thay thế</label>
+                            <input type="file" name="imageFile" class="form-control" accept="image/*" />
+                            <div class="form-text small">Để trống nếu muốn giữ nguyên ảnh hiện tại.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="ImageUrl" class="form-label fw-semibold">Đường dẫn ảnh hiện tại (URL)</label>
+                            <input asp-for="ImageUrl" class="form-control" />
+                            <span asp-validation-for="ImageUrl" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <!-- Liên kết đích (LinkUrl) và Nút bấm -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-7">
+                            <label asp-for="LinkUrl" class="form-label fw-bold">Đường dẫn liên kết đích (LinkUrl) <span class="text-danger">*</span></label>
+                            <input asp-for="LinkUrl" class="form-control" required />
+                            <div class="form-text small">Trang đích chuyển đến khi học viên nhấp vào banner (VD: /Program/Detail/1).</div>
+                            <span asp-validation-for="LinkUrl" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-5">
+                            <label asp-for="ButtonText" class="form-label fw-semibold">Chữ hiển thị trên nút bấm (CTA)</label>
+                            <input asp-for="ButtonText" class="form-control" />
+                            <span asp-validation-for="ButtonText" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <!-- Thứ tự hiển thị và Trạng thái -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label asp-for="DisplayOrder" class="form-label fw-semibold">Thứ tự hiển thị</label>
+                            <input asp-for="DisplayOrder" type="number" class="form-control" min="1" />
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center mt-4">
+                            <div class="form-check form-switch fs-5">
+                                <input asp-for="IsActive" class="form-check-input" type="checkbox" id="isActiveSwitch" />
+                                <label class="form-check-label fs-6 fw-semibold ms-2" for="isActiveSwitch">Kích hoạt hiển thị trên trang chủ</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nút xác nhận -->
+                    <div class="d-flex justify-content-end gap-2 pt-3 border-top">
+                        <a asp-action="Index" class="btn btn-light px-4">Hủy bỏ</a>
+                        <button type="submit" class="btn btn-primary fw-bold px-4">
+                            <i class="fa-solid fa-save me-1"></i> Cập Nhật Banner
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

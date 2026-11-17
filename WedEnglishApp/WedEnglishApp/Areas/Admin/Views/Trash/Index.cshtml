@@ -1,0 +1,564 @@
+@* =================================================================================================
+    VIEW: Admin/Trash/Index.cshtml - TRANG THÙNG RÁC QUẢN TRỊ VIÊN
+    Mục đích: Hiển thị tất cả dữ liệu đã xóa mềm, cho phép khôi phục hoặc xóa vĩnh viễn
+================================================================================================= *@
+
+@model WedEnglishApp.ViewModels.Admin.TrashViewModel
+@{
+    ViewData["Title"] = "Thùng Rác";
+    Layout = "_AdminLayout";
+}
+
+<div class="container-fluid p-0">
+    @* ========================== TIÊU ĐỀ TRANG ========================== *@
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div>
+            <h4 class="fw-bold mb-1">
+                <i class="fa-solid fa-trash-can text-warning me-2"></i> Thùng Rác Hệ Thống
+            </h4>
+            <p class="text-muted small mb-0">
+                Quản lý tất cả dữ liệu đã xóa. Bạn có thể <strong>khôi phục</strong> hoặc <strong>xóa vĩnh viễn</strong> từng mục.
+                Hiện có <span class="badge bg-warning text-dark">@Model.TotalItems</span> mục trong thùng rác.
+            </p>
+        </div>
+        @if (Model.TotalItems > 0)
+        {
+            <form asp-action="EmptyTrash" method="post" onsubmit="return confirm('⚠️ CẢNH BÁO: Bạn có chắc chắn muốn XÓA VĨNH VIỄN tất cả dữ liệu trong thùng rác?\n\nHành động này KHÔNG THỂ HOÀN TÁC!');">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-danger fw-bold">
+                    <i class="fa-solid fa-dumpster-fire me-1"></i> Dọn sạch thùng rác
+                </button>
+            </form>
+        }
+    </div>
+
+    @* ========================== THÙNG RÁC TRỐNG ========================== *@
+    @if (Model.TotalItems == 0)
+    {
+        <div class="admin-card p-5 text-center">
+            <i class="fa-solid fa-recycle text-success mb-3" style="font-size: 4rem; opacity: 0.5;"></i>
+            <h5 class="fw-bold text-muted">Thùng rác đang trống</h5>
+            <p class="text-muted">Không có dữ liệu nào đã bị xóa. Khi bạn xóa một mục bất kỳ từ trang quản lý, nó sẽ xuất hiện tại đây.</p>
+        </div>
+    }
+    else
+    {
+        @* ========================== THANH TAB DANH MỤC ========================== *@
+        <ul class="nav nav-tabs mb-4" id="trashTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-semibold" id="tab-all" data-bs-toggle="tab" data-bs-target="#pane-all" type="button">
+                    <i class="fa-solid fa-layer-group me-1"></i> Tất cả
+                    <span class="badge bg-secondary ms-1">@Model.TotalItems</span>
+                </button>
+            </li>
+            @if (Model.DeletedBanners.Any())
+            {
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="tab-banners" data-bs-toggle="tab" data-bs-target="#pane-banners" type="button">
+                        <i class="fa-solid fa-images me-1"></i> Banner
+                        <span class="badge bg-info text-dark ms-1">@Model.DeletedBanners.Count</span>
+                    </button>
+                </li>
+            }
+            @if (Model.DeletedPrograms.Any())
+            {
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="tab-programs" data-bs-toggle="tab" data-bs-target="#pane-programs" type="button">
+                        <i class="fa-solid fa-book-open me-1"></i> Chương trình
+                        <span class="badge bg-primary ms-1">@Model.DeletedPrograms.Count</span>
+                    </button>
+                </li>
+            }
+            @if (Model.DeletedClasses.Any())
+            {
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="tab-classes" data-bs-toggle="tab" data-bs-target="#pane-classes" type="button">
+                        <i class="fa-solid fa-chalkboard-user me-1"></i> Lớp học
+                        <span class="badge bg-success ms-1">@Model.DeletedClasses.Count</span>
+                    </button>
+                </li>
+            }
+            @if (Model.DeletedConsultations.Any())
+            {
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="tab-consultations" data-bs-toggle="tab" data-bs-target="#pane-consultations" type="button">
+                        <i class="fa-solid fa-headset me-1"></i> Tư vấn
+                        <span class="badge bg-warning text-dark ms-1">@Model.DeletedConsultations.Count</span>
+                    </button>
+                </li>
+            }
+            @if (Model.DeletedRegistrations.Any())
+            {
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="tab-registrations" data-bs-toggle="tab" data-bs-target="#pane-registrations" type="button">
+                        <i class="fa-solid fa-list-check me-1"></i> Đăng ký
+                        <span class="badge bg-danger ms-1">@Model.DeletedRegistrations.Count</span>
+                    </button>
+                </li>
+            }
+            @if (Model.DeletedPlacementTests.Any())
+            {
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="tab-tests" data-bs-toggle="tab" data-bs-target="#pane-tests" type="button">
+                        <i class="fa-solid fa-clipboard-check me-1"></i> Thi xếp lớp
+                        <span class="badge bg-dark ms-1">@Model.DeletedPlacementTests.Count</span>
+                    </button>
+                </li>
+            }
+            @if (Model.DeletedUserAccounts.Any())
+            {
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="tab-users" data-bs-toggle="tab" data-bs-target="#pane-users" type="button">
+                        <i class="fa-solid fa-user-slash me-1"></i> Tài khoản
+                        <span class="badge bg-secondary ms-1">@Model.DeletedUserAccounts.Count</span>
+                    </button>
+                </li>
+            }
+        </ul>
+
+        @* ========================== NỘI DUNG CÁC TAB ========================== *@
+        <div class="tab-content" id="trashTabContent">
+
+            @* ========== TAB: TẤT CẢ ========== *@
+            <div class="tab-pane fade show active" id="pane-all" role="tabpanel">
+                <div class="admin-card">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width: 40px;">#</th>
+                                    <th>Loại dữ liệu</th>
+                                    <th>Tên / Mô tả</th>
+                                    <th>Ngày xóa</th>
+                                    <th class="text-center" style="width: 220px;">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{ int stt = 0; }
+                                @foreach (var b in Model.DeletedBanners)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td class="text-muted">@stt</td>
+                                        <td><span class="badge bg-info text-dark"><i class="fa-solid fa-images me-1"></i> Banner</span></td>
+                                        <td class="fw-semibold">@b.Title</td>
+                                        <td class="text-muted small">@b.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td class="text-center">
+                                            @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Banner" }, { "EntityId", b.BannerId } })
+                                        </td>
+                                    </tr>
+                                }
+                                @foreach (var p in Model.DeletedPrograms)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td class="text-muted">@stt</td>
+                                        <td><span class="badge bg-primary"><i class="fa-solid fa-book-open me-1"></i> Chương trình</span></td>
+                                        <td class="fw-semibold">@p.ProgramName</td>
+                                        <td class="text-muted small">@p.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td class="text-center">
+                                            @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Program" }, { "EntityId", p.ProgramId } })
+                                        </td>
+                                    </tr>
+                                }
+                                @foreach (var c in Model.DeletedClasses)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td class="text-muted">@stt</td>
+                                        <td><span class="badge bg-success"><i class="fa-solid fa-chalkboard-user me-1"></i> Lớp học</span></td>
+                                        <td class="fw-semibold">@c.ClassName <span class="text-muted small">(@c.Program?.ProgramName)</span></td>
+                                        <td class="text-muted small">@c.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td class="text-center">
+                                            @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Class" }, { "EntityId", c.ClassId } })
+                                        </td>
+                                    </tr>
+                                }
+                                @foreach (var c in Model.DeletedConsultations)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td class="text-muted">@stt</td>
+                                        <td><span class="badge bg-warning text-dark"><i class="fa-solid fa-headset me-1"></i> Tư vấn</span></td>
+                                        <td class="fw-semibold">@c.ContactName <span class="text-muted small">(@c.ContactEmail)</span></td>
+                                        <td class="text-muted small">@c.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td class="text-center">
+                                            @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Consultation" }, { "EntityId", c.ConsultationId } })
+                                        </td>
+                                    </tr>
+                                }
+                                @foreach (var r in Model.DeletedRegistrations)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td class="text-muted">@stt</td>
+                                        <td><span class="badge bg-danger"><i class="fa-solid fa-list-check me-1"></i> Đăng ký</span></td>
+                                        <td class="fw-semibold">#REG-@r.RegistrationId <span class="text-muted small">(@r.Student?.UserAccount?.FullName - @r.Program?.ProgramName)</span></td>
+                                        <td class="text-muted small">@r.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td class="text-center">
+                                            @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Registration" }, { "EntityId", r.RegistrationId } })
+                                        </td>
+                                    </tr>
+                                }
+                                @foreach (var t in Model.DeletedPlacementTests)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td class="text-muted">@stt</td>
+                                        <td><span class="badge bg-dark"><i class="fa-solid fa-clipboard-check me-1"></i> Thi xếp lớp</span></td>
+                                        <td class="fw-semibold">#TEST-@t.TestId <span class="text-muted small">(@t.Student?.UserAccount?.FullName - @t.TestDate.ToString("dd/MM/yyyy"))</span></td>
+                                        <td class="text-muted small">@t.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td class="text-center">
+                                            @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "PlacementTest" }, { "EntityId", t.TestId } })
+                                        </td>
+                                    </tr>
+                                }
+                                @foreach (var u in Model.DeletedUserAccounts)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td class="text-muted">@stt</td>
+                                        <td><span class="badge bg-secondary"><i class="fa-solid fa-user-slash me-1"></i> Tài khoản</span></td>
+                                        <td class="fw-semibold">@u.FullName <span class="text-muted small">(@u.Email - @u.Role)</span></td>
+                                        <td class="text-muted small">@u.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                        <td class="text-center">
+                                            @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "UserAccount" }, { "EntityId", u.AccountId } })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            @* ========== TAB: BANNER ========== *@
+            @if (Model.DeletedBanners.Any())
+            {
+                <div class="tab-pane fade" id="pane-banners" role="tabpanel">
+                    <div class="admin-card">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 40px;">#</th>
+                                        <th>Tiêu đề Banner</th>
+                                        <th>Đường dẫn liên kết</th>
+                                        <th>Thứ tự</th>
+                                        <th>Ngày xóa</th>
+                                        <th class="text-center" style="width: 220px;">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ int bIdx = 0; }
+                                    @foreach (var b in Model.DeletedBanners)
+                                    {
+                                        bIdx++;
+                                        <tr>
+                                            <td class="text-muted">@bIdx</td>
+                                            <td class="fw-semibold">@b.Title</td>
+                                            <td class="text-muted small">@b.LinkUrl</td>
+                                            <td>@b.DisplayOrder</td>
+                                            <td class="text-muted small">@b.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td class="text-center">
+                                                @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Banner" }, { "EntityId", b.BannerId } })
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @* ========== TAB: CHƯƠNG TRÌNH HỌC ========== *@
+            @if (Model.DeletedPrograms.Any())
+            {
+                <div class="tab-pane fade" id="pane-programs" role="tabpanel">
+                    <div class="admin-card">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 40px;">#</th>
+                                        <th>Tên chương trình</th>
+                                        <th>Trình độ</th>
+                                        <th>Học phí</th>
+                                        <th>Ngày xóa</th>
+                                        <th class="text-center" style="width: 220px;">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ int pIdx = 0; }
+                                    @foreach (var p in Model.DeletedPrograms)
+                                    {
+                                        pIdx++;
+                                        <tr>
+                                            <td class="text-muted">@pIdx</td>
+                                            <td class="fw-semibold">@p.ProgramName</td>
+                                            <td><span class="badge bg-primary">@p.Level</span></td>
+                                            <td>@p.TuitionFee.ToString("N0") VNĐ</td>
+                                            <td class="text-muted small">@p.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td class="text-center">
+                                                @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Program" }, { "EntityId", p.ProgramId } })
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @* ========== TAB: LỚP HỌC ========== *@
+            @if (Model.DeletedClasses.Any())
+            {
+                <div class="tab-pane fade" id="pane-classes" role="tabpanel">
+                    <div class="admin-card">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 40px;">#</th>
+                                        <th>Tên lớp</th>
+                                        <th>Chương trình</th>
+                                        <th>Trạng thái</th>
+                                        <th>Ngày xóa</th>
+                                        <th class="text-center" style="width: 220px;">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ int cIdx = 0; }
+                                    @foreach (var c in Model.DeletedClasses)
+                                    {
+                                        cIdx++;
+                                        <tr>
+                                            <td class="text-muted">@cIdx</td>
+                                            <td class="fw-semibold">@c.ClassName</td>
+                                            <td>@c.Program?.ProgramName</td>
+                                            <td>
+                                                @{
+                                                    var statusClass = c.Status switch
+                                                    {
+                                                        "Planning" => "bg-warning text-dark",
+                                                        "InProgress" => "bg-success",
+                                                        "Completed" => "bg-secondary",
+                                                        "Cancelled" => "bg-danger",
+                                                        _ => "bg-light text-dark"
+                                                    };
+                                                }
+                                                <span class="badge @statusClass">@c.Status</span>
+                                            </td>
+                                            <td class="text-muted small">@c.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td class="text-center">
+                                                @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Class" }, { "EntityId", c.ClassId } })
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @* ========== TAB: YÊU CẦU TƯ VẤN ========== *@
+            @if (Model.DeletedConsultations.Any())
+            {
+                <div class="tab-pane fade" id="pane-consultations" role="tabpanel">
+                    <div class="admin-card">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 40px;">#</th>
+                                        <th>Họ tên khách hàng</th>
+                                        <th>Email</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Trạng thái</th>
+                                        <th>Ngày xóa</th>
+                                        <th class="text-center" style="width: 220px;">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ int coIdx = 0; }
+                                    @foreach (var c in Model.DeletedConsultations)
+                                    {
+                                        coIdx++;
+                                        <tr>
+                                            <td class="text-muted">@coIdx</td>
+                                            <td class="fw-semibold">@c.ContactName</td>
+                                            <td>@c.ContactEmail</td>
+                                            <td>@c.PhoneNumber</td>
+                                            <td>
+                                                <span class="badge @(c.Status == "Pending" ? "bg-warning text-dark" : "bg-success")">
+                                                    @(c.Status == "Pending" ? "Chờ gọi" : "Đã tư vấn")
+                                                </span>
+                                            </td>
+                                            <td class="text-muted small">@c.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td class="text-center">
+                                                @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Consultation" }, { "EntityId", c.ConsultationId } })
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @* ========== TAB: ĐĂNG KÝ ========== *@
+            @if (Model.DeletedRegistrations.Any())
+            {
+                <div class="tab-pane fade" id="pane-registrations" role="tabpanel">
+                    <div class="admin-card">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 40px;">#</th>
+                                        <th>Mã đăng ký</th>
+                                        <th>Học viên</th>
+                                        <th>Lớp / Khóa học</th>
+                                        <th>Trạng thái</th>
+                                        <th>Ngày xóa</th>
+                                        <th class="text-center" style="width: 220px;">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ int rIdx = 0; }
+                                    @foreach (var r in Model.DeletedRegistrations)
+                                    {
+                                        rIdx++;
+                                        <tr>
+                                            <td class="text-muted">@rIdx</td>
+                                            <td class="fw-semibold">#REG-@r.RegistrationId</td>
+                                            <td>@r.Student?.UserAccount?.FullName</td>
+                                            <td>@r.Class?.ClassName <span class="text-muted small">(@r.Program?.ProgramName)</span></td>
+                                            <td>
+                                                @{
+                                                    var regStatusClass = r.Status switch
+                                                    {
+                                                        "Pending" => "bg-warning text-dark",
+                                                        "Confirmed" => "bg-success",
+                                                        "Cancelled" => "bg-danger",
+                                                        _ => "bg-secondary"
+                                                    };
+                                                }
+                                                <span class="badge @regStatusClass">@r.Status</span>
+                                            </td>
+                                            <td class="text-muted small">@r.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td class="text-center">
+                                                @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "Registration" }, { "EntityId", r.RegistrationId } })
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @* ========== TAB: THI XẾP LỚP ========== *@
+            @if (Model.DeletedPlacementTests.Any())
+            {
+                <div class="tab-pane fade" id="pane-tests" role="tabpanel">
+                    <div class="admin-card">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 40px;">#</th>
+                                        <th>Mã bài thi</th>
+                                        <th>Học viên</th>
+                                        <th>Ngày thi</th>
+                                        <th>Trạng thái</th>
+                                        <th>Ngày xóa</th>
+                                        <th class="text-center" style="width: 220px;">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ int tIdx = 0; }
+                                    @foreach (var t in Model.DeletedPlacementTests)
+                                    {
+                                        tIdx++;
+                                        <tr>
+                                            <td class="text-muted">@tIdx</td>
+                                            <td class="fw-semibold">#TEST-@t.TestId</td>
+                                            <td>@t.Student?.UserAccount?.FullName</td>
+                                            <td>@t.TestDate.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                <span class="badge @(t.Status == "Pending" ? "bg-warning text-dark" : "bg-success")">
+                                                    @(t.Status == "Pending" ? "Chờ chấm" : "Đã chấm")
+                                                </span>
+                                            </td>
+                                            <td class="text-muted small">@t.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td class="text-center">
+                                                @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "PlacementTest" }, { "EntityId", t.TestId } })
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @* ========== TAB: TÀI KHOẢN NGƯỜI DÙNG ========== *@
+            @if (Model.DeletedUserAccounts.Any())
+            {
+                <div class="tab-pane fade" id="pane-users" role="tabpanel">
+                    <div class="admin-card">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th style="width: 40px;">#</th>
+                                        <th>Họ và tên</th>
+                                        <th>Email</th>
+                                        <th>Vai trò</th>
+                                        <th>Ngày xóa</th>
+                                        <th class="text-center" style="width: 220px;">Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{ int uIdx = 0; }
+                                    @foreach (var u in Model.DeletedUserAccounts)
+                                    {
+                                        uIdx++;
+                                        <tr>
+                                            <td class="text-muted">@uIdx</td>
+                                            <td class="fw-semibold">@u.FullName</td>
+                                            <td>@u.Email</td>
+                                            <td>
+                                                @{
+                                                    var roleClass = u.Role switch
+                                                    {
+                                                        "Admin" => "bg-danger",
+                                                        "Teacher" => "bg-primary",
+                                                        "Student" => "bg-success",
+                                                        _ => "bg-secondary"
+                                                    };
+                                                }
+                                                <span class="badge @roleClass">@u.Role</span>
+                                            </td>
+                                            <td class="text-muted small">@u.DeletedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td class="text-center">
+                                                @await Html.PartialAsync("_TrashActions", new ViewDataDictionary(ViewData) { { "EntityType", "UserAccount" }, { "EntityId", u.AccountId } })
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

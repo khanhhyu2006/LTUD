@@ -1,0 +1,9 @@
+from pathlib import Path
+p=Path('WedEnglishApp/wwwroot/js/consultation-chat.js');s=p.read_text(encoding='utf8').replace("            closed=data.status==='Closed';controls.forEach", "            const wasClosed=closed;closed=data.status==='Closed';controls.forEach");s=s.replace("            if(closed)feedback.textContent='Cuộc tư vấn đã kết thúc. Bạn có thể gửi yêu cầu mới từ trang liên hệ.';", "            if(closed)feedback.textContent='Cuộc tư vấn đã kết thúc. Bạn có thể gửi yêu cầu mới từ trang liên hệ.';\n            else if(wasClosed)feedback.textContent='Cuộc tư vấn đã được mở lại. Bạn có thể tiếp tục nhắn tin.';");p.write_text(s,encoding='utf8')
+p=Path('WedEnglishApp/wwwroot/css/consultation-chat.css');s=p.read_text(encoding='utf8');p.write_text('.consultation-page{overflow-wrap:anywhere}\n'+s,encoding='utf8')
+for name in ['Thread','Mine']:
+ p=Path(f'WedEnglishApp/Views/Consultation/{name}.cshtml');s=p.read_text(encoding='utf8').replace('<div class="container ', '<div class="container consultation-page ')
+ if name=='Mine':s=s.replace('<div class="container', '@section Styles { <link rel="stylesheet" href="~/css/consultation-chat.css" asp-append-version="true" /> }\n<div class="container',1)
+ p.write_text(s,encoding='utf8')
+p=Path('WedEnglishApp/Areas/Admin/Views/ConsultationManager/Details.cshtml');s=p.read_text(encoding='utf8').replace('<div class="d-flex flex-wrap justify-content-between','<div class="consultation-page d-flex flex-wrap justify-content-between',1);p.write_text(s,encoding='utf8')
+p=Path('session-state/test-consultation-chat.cjs');s=p.read_text(encoding='utf-8-sig').replace("check('Admin can reopen conversation',true);", "check('Admin can reopen conversation',(await guest.p.locator('[data-chat-feedback]').innerText()).includes('đã được mở lại'));");p.write_text(s,encoding='utf8')

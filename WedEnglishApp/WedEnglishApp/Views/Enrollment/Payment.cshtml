@@ -1,0 +1,29 @@
+@model WedEnglishApp.Models.Registration
+@{ ViewData["Title"] = "Đóng học phí"; }
+<div class="container py-5"><div class="row justify-content-center"><div class="col-lg-8">
+    <h2 class="fw-bold">@(Model.Payment?.Status == "Paid" ? "Đã xác nhận học phí" : "Hoàn tất đăng ký và đóng học phí")</h2>
+    <p class="text-success">Đã tiếp nhận đăng ký #REG-@Model.RegistrationId của @Model.Student.UserAccount.FullName.</p>
+    <div class="card border-0 shadow-sm p-4 mb-4">
+        <h5>@Model.Program.ProgramName</h5>
+        @await Html.PartialAsync("_EnrollmentPreferences", Model)
+        <hr />
+        @if (Model.Payment?.PaymentMethod == "Cash" && Model.Payment.Status != "Paid")
+        {
+            <h5>Đóng học phí tại trung tâm</h5>
+            <p>Vui lòng cung cấp mã <strong>#REG-@Model.RegistrationId</strong> và họ tên tại quầy để đóng học phí. Nhân viên sẽ xác nhận khoản thu vào tài khoản của bạn.</p>
+        }
+        @await Html.PartialAsync("_RegistrationPayment", Model)
+        @if (Model.Payment?.Status == "Paid")
+        {
+            <a asp-controller="Student" asp-action="PrintReceipt" asp-route-id="@Model.Payment.PaymentId" class="btn btn-outline-primary align-self-start">Xem biên lai học phí</a>
+        }
+        else
+        {
+            <p class="small text-muted mt-3 mb-0">Nếu đã chuyển khoản, vui lòng chờ trung tâm đối soát. Trạng thái chỉ đổi thành đã thanh toán sau khi khoản thu được xác nhận.</p>
+        }
+    </div>
+    <div class="d-flex flex-wrap gap-2">
+        <a asp-controller="Student" asp-action="MyClasses" class="btn btn-primary">Theo dõi đăng ký và xếp lớp</a>
+        <a asp-controller="Student" asp-action="MyPayments" class="btn btn-outline-primary">Lịch sử học phí</a>
+    </div>
+</div></div></div>

@@ -1,0 +1,7 @@
+@model List<WedEnglishApp.Models.ClassDocument>
+@{ ViewData["Title"] = "Tài liệu học tập"; }
+<div class="container py-4"><div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4"><div><h2>Tài liệu học tập</h2><p class="text-muted">Tài liệu giáo viên đã công bố cho các lớp bạn được xếp.</p></div><a asp-controller="Student" asp-action="MyClasses" class="btn btn-outline-primary">Lớp học của tôi</a></div>
+<div class="card table-responsive"><table class="table align-middle mb-0"><thead><tr><th>Tài liệu</th><th>Lớp</th><th>Cập nhật</th><th>Tải về</th></tr></thead><tbody>
+@if (!Model.Any()) { <tr><td colspan="4" class="text-center p-4 text-muted">Chưa có tài liệu được công bố cho lớp của bạn.</td></tr> }
+@foreach(var d in Model){<tr><td>@d.Title</td><td>@d.Class.ClassName</td><td>@((d.UpdatedAt ?? d.UploadedAt).ToString("dd/MM/yyyy HH:mm"))</td><td><a asp-action="Download" asp-route-id="@d.DocumentId" class="btn btn-sm btn-primary">Tải tài liệu</a></td></tr>}
+</tbody></table></div></div>

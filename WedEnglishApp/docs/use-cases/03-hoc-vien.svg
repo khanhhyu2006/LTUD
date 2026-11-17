@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1410" viewBox="0 0 1080 1410" role="img" aria-label="Use case tài khoản học viên"><style>text{font-family:Arial,'Segoe UI',sans-serif;fill:#172b4d} .uc{fill:#f4f8ff;stroke:#315a85;stroke-width:1.5}.link{stroke:#6e839c;stroke-width:1.3;fill:none}</style><rect width="1080" height="1410" fill="white"/><text x="40" y="38" font-size="25" font-weight="700">Use case tài khoản học viên</text><text x="40" y="65" font-size="14">NHK English times · Đối chiếu mã nguồn ngày 03/11/2026</text><rect x="310" y="88" width="735" height="1298" rx="8" fill="none" stroke="#172b4d" stroke-width="2"/><text x="332" y="114" font-size="15" font-weight="700">HỆ THỐNG QUẢN LÝ TRUNG TÂM NGOẠI NGỮ</text>
+<g stroke="#172b4d" stroke-width="2" fill="none"><circle cx="135" cy="672" r="15"/><path d="M135 687v48 M105 705h60 M135 735l-25 33 M135 735l25 33"/></g><text x="135" y="795" text-anchor="middle" font-size="18" font-weight="700">Học viên</text>
+<path class="link" d="M168 720 L380 148"/><ellipse class="uc" cx="685" cy="148" rx="305" ry="34"/>
+<text x="685" y="154" text-anchor="middle" font-size="17">Đăng nhập</text>
+<path class="link" d="M168 720 L380 236"/><ellipse class="uc" cx="685" cy="236" rx="305" ry="34"/>
+<text x="685" y="242" text-anchor="middle" font-size="17">Đổi mật khẩu</text>
+<path class="link" d="M168 720 L380 324"/><ellipse class="uc" cx="685" cy="324" rx="305" ry="34"/>
+<text x="685" y="330" text-anchor="middle" font-size="17">Đăng xuất</text>
+<path class="link" d="M168 720 L380 412"/><ellipse class="uc" cx="685" cy="412" rx="305" ry="34"/>
+<text x="685" y="418" text-anchor="middle" font-size="17">Xem và cập nhật hồ sơ, ảnh đại diện</text>
+<path class="link" d="M168 720 L380 500"/><ellipse class="uc" cx="685" cy="500" rx="305" ry="34"/>
+<text x="685" y="506" text-anchor="middle" font-size="17">Tra cứu khóa học và lớp mở</text>
+<path class="link" d="M168 720 L380 588"/><ellipse class="uc" cx="685" cy="588" rx="305" ry="34"/>
+<text x="685" y="594" text-anchor="middle" font-size="17">Đăng ký lớp và chọn cách thanh toán</text>
+<path class="link" d="M168 720 L380 676"/><ellipse class="uc" cx="685" cy="676" rx="305" ry="34"/>
+<text x="685" y="682" text-anchor="middle" font-size="17">Gửi nguyện vọng giáo viên, ghi chú, ảnh</text>
+<path class="link" d="M168 720 L380 764"/><ellipse class="uc" cx="685" cy="764" rx="305" ry="34"/>
+<text x="685" y="770" text-anchor="middle" font-size="17">Xem lớp đã đăng ký và trạng thái</text>
+<path class="link" d="M168 720 L380 852"/><ellipse class="uc" cx="685" cy="852" rx="305" ry="34"/>
+<text x="685" y="858" text-anchor="middle" font-size="17">Xem lịch học và lịch thi theo tuần</text>
+<path class="link" d="M168 720 L380 940"/><ellipse class="uc" cx="685" cy="940" rx="305" ry="34"/>
+<text x="685" y="946" text-anchor="middle" font-size="17">Xem lịch sử học phí</text>
+<path class="link" d="M168 720 L380 1028"/><ellipse class="uc" cx="685" cy="1028" rx="305" ry="34"/>
+<text x="685" y="1034" text-anchor="middle" font-size="17">Xem và in biên lai học phí</text>
+<path class="link" d="M168 720 L380 1116"/><ellipse class="uc" cx="685" cy="1116" rx="305" ry="34"/>
+<text x="685" y="1122" text-anchor="middle" font-size="17">Đặt lịch kiểm tra xếp lớp</text>
+<path class="link" d="M168 720 L380 1204"/><ellipse class="uc" cx="685" cy="1204" rx="305" ry="34"/>
+<text x="685" y="1210" text-anchor="middle" font-size="17">Xem lịch, điểm và cấp độ đề xuất</text>
+<path class="link" d="M168 720 L380 1292"/><ellipse class="uc" cx="685" cy="1292" rx="305" ry="34"/>
+<text x="685" y="1298" text-anchor="middle" font-size="17">Gửi đánh giá, nhận xét khóa học</text>
+</svg>

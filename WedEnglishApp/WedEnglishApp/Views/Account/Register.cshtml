@@ -1,0 +1,66 @@
+@model WedEnglishApp.ViewModels.Auth.RegisterViewModel
+@{
+    ViewData["Title"] = "Đăng Ký Tài Khoản Học Viên";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card card-custom p-4 border-0 bg-white shadow-sm">
+                <div class="text-center mb-4">
+                    <div class="rounded-circle bg-success bg-opacity-10 d-inline-flex p-3 text-success mb-2">
+                        <i class="fa-solid fa-user-plus fs-2"></i>
+                    </div>
+                    <h3 class="fw-bold mb-1">Đăng Ký Học Viên</h3>
+                    <p class="text-muted small">Tạo tài khoản để đăng ký các khóa học tiếng Anh và theo dõi kết quả học tập</p>
+                </div>
+
+                <form asp-action="Register" method="post">
+                    @Html.AntiForgeryToken()
+                    <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="FullName" class="form-label fw-semibold">Họ và tên <span class="text-danger">*</span></label>
+                        <input asp-for="FullName" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" />
+                        <span asp-validation-for="FullName" class="text-danger small"></span>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="Email" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+                            <input asp-for="Email" class="form-control" placeholder="example@gmail.com" />
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="PhoneNumber" class="form-label fw-semibold">Số điện thoại <span class="text-danger">*</span></label>
+                            <input asp-for="PhoneNumber" class="form-control" placeholder="0901234567" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label asp-for="Password" class="form-label fw-semibold">Mật khẩu <span class="text-danger">*</span></label>
+                            <input asp-for="Password" class="form-control" placeholder="Tối thiểu 6 ký tự" />
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="ConfirmPassword" class="form-label fw-semibold">Xác nhận mật khẩu <span class="text-danger">*</span></label>
+                            <input asp-for="ConfirmPassword" class="form-control" placeholder="Nhập lại mật khẩu" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary-custom w-100 py-2 fw-bold mb-3">
+                        <i class="fa-solid fa-check me-1"></i> Hoàn Tất Đăng Ký
+                    </button>
+
+                    <div class="text-center small text-muted">
+                        Đã có tài khoản? 
+                        <a asp-action="Login" class="fw-bold text-primary text-decoration-none">Đăng nhập</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

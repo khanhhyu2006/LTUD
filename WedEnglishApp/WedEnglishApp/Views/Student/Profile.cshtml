@@ -1,0 +1,100 @@
+@model WedEnglishApp.ViewModels.Student.StudentProfileViewModel
+@{
+    ViewData["Title"] = "Hồ Sơ Của Tôi";
+}
+
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Sidebar Navigation -->
+        <div class="col-lg-3">
+            <div class="card card-custom p-4 border-0 bg-white text-center">
+                <div class="mb-3">
+                    <img src="@(string.IsNullOrEmpty(Model.AvatarUrl) ? "/images/default-avatar.png" : Model.AvatarUrl)" 
+                         alt="Avatar" class="rounded-circle border border-3 border-primary p-1 shadow-sm" style="width: 110px; height: 110px; object-fit: cover;"
+                         onerror="this.src='https://ui-avatars.com/api/?name=@Uri.EscapeDataString(Model.FullName)&background=0284c7&color=fff';" />
+                </div>
+                <h5 class="fw-bold mb-1">@Model.FullName</h5>
+                <p class="text-muted small mb-3">@Model.Email</p>
+                <div class="badge bg-primary px-3 py-2 rounded-pill">Học Viên</div>
+
+                <hr class="my-4" />
+                <div class="list-group list-group-flush text-start small">
+                    <a asp-action="Profile" class="list-group-item list-group-item-action active fw-bold border-0 rounded-2 mb-1">
+                        <i class="fa-solid fa-user me-2"></i> Thông tin cá nhân
+                    </a>
+                    <a asp-action="MyClasses" class="list-group-item list-group-item-action border-0 rounded-2 mb-1">
+                        <i class="fa-solid fa-chalkboard me-2"></i> Lớp học của tôi
+                    </a>
+                    <a asp-action="MyPayments" class="list-group-item list-group-item-action border-0 rounded-2 mb-1">
+                        <i class="fa-solid fa-receipt me-2"></i> Lịch sử học phí
+                    </a>
+                    <a asp-controller="PlacementTest" asp-action="BookTest" asp-route-authRole="Student" class="list-group-item list-group-item-action border-0 rounded-2 mb-1">
+                        <i class="fa-solid fa-clipboard-check me-2"></i> Kết quả thi xếp lớp
+                    </a>
+                    <a asp-controller="Account" asp-action="ChangePassword" asp-route-authRole="Student" class="list-group-item list-group-item-action border-0 rounded-2 mb-1">
+                        <i class="fa-solid fa-key me-2"></i> Đổi mật khẩu
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nội dung chính Form Profile -->
+        <div class="col-lg-9">
+            <div class="card card-custom p-4 border-0 bg-white">
+                <h4 class="fw-bold text-primary mb-4">
+                    <i class="fa-solid fa-user-gear me-2"></i> Cập Nhật Hồ Sơ Học Viên
+                </h4>
+
+                <form asp-action="Profile" method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="StudentId" />
+                    <input type="hidden" asp-for="AccountId" />
+
+                    <div asp-validation-summary="All" class="text-danger small mb-3"></div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="FullName" class="form-label fw-semibold">Họ và tên <span class="text-danger">*</span></label>
+                            <input asp-for="FullName" class="form-control" />
+                            <span asp-validation-for="FullName" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Email (Không thể thay đổi)</label>
+                            <input type="text" class="form-control bg-light" value="@Model.Email" readonly />
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="PhoneNumber" class="form-label fw-semibold">Số điện thoại</label>
+                            <input asp-for="PhoneNumber" class="form-control" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="DateOfBirth" class="form-label fw-semibold">Ngày sinh</label>
+                            <input asp-for="DateOfBirth" type="date" class="form-control" />
+                            <span asp-validation-for="DateOfBirth" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Address" class="form-label fw-semibold">Địa chỉ liên hệ</label>
+                        <input asp-for="Address" class="form-control" placeholder="Số nhà, tên đường, quận/huyện, TP.HCM" />
+                        <span asp-validation-for="Address" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="AvatarFile" class="form-label fw-semibold">Ảnh đại diện học viên</label>
+                        <input asp-for="AvatarFile" type="file" class="form-control" accept=".jpg,.jpeg,.png,.webp" />
+                        <span asp-validation-for="AvatarFile" class="text-danger small"></span>
+                        <div class="form-text small">Chọn ảnh mới để thay avatar. Hỗ trợ JPG, PNG hoặc WEBP, tối đa 5 MB.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary-custom px-4 py-2 fw-bold">
+                        <i class="fa-solid fa-floppy-disk me-1"></i> Lưu Thay Đổi Hồ Sơ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

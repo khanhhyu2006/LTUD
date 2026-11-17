@@ -1,0 +1,702 @@
+{
+  "source_paragraphs": 494,
+  "original_paragraphs_retained": 494,
+  "deleted_original_paragraphs": [],
+  "updated_paragraphs": {
+    "13": {
+      "before": "Để đạt được mục tiêu tổng quát, đề tài tập trung giải quyết các mục tiêu cụ thể đối với 4 vai trò người dùng (User Roles) trong hệ thống:",
+      "after": "Để đạt được mục tiêu tổng quát, đề tài tập trung giải quyết các mục tiêu cụ thể đối với 4 nhóm người sử dụng: Khách, Học viên, Giáo viên và Quản trị viên. Ba vai trò tài khoản được lưu là Student, Teacher và Admin; Khách là người chưa đăng nhập."
+    },
+    "16": {
+      "before": "Gửi yêu cầu tư vấn trực tuyến (Consultation): Cho phép người dùng để lại thông tin liên hệ và nguyện vọng khóa học trên website để bộ phận tư vấn tuyển sinh chủ động liên hệ hỗ trợ.",
+      "after": "Gửi yêu cầu tư vấn trực tuyến (Consultation): Cho phép người dùng để lại thông tin liên hệ và nguyện vọng khóa học trên website, sau đó trao đổi trực tiếp với Admin trong cuộc hội thoại riêng. Học viên theo dõi lịch sử theo tài khoản; khách giữ cookie hoặc liên kết riêng để xem lại nội dung."
+    },
+    "19": {
+      "before": "Kiểm tra trình độ đầu vào trực tuyến (Placement Test): Học viên có thể tham gia làm bài thi thử trắc nghiệm online (Listening/Reading); hệ thống tự động chấm điểm và đề xuất lộ trình/khóa học phù hợp với năng lực ngay lập tức.",
+      "after": "Kiểm tra trình độ đầu vào (Placement Test): Học viên đăng ký ngày và giờ mong muốn. Admin tạo phòng thi, xếp các học viên đăng ký vào lớp thi và phân công giáo viên chấm cả ca. Giáo viên nhập điểm và cấp độ đề xuất; học viên xem kết quả trong tài khoản. Bộ đề Listening/Reading tự chấm là hướng phát triển tiếp theo."
+    },
+    "20": {
+      "before": "Đăng ký lớp học trực tuyến (Registration): Cho phép học viên chủ động chọn lớp, chọn ca học trong tuần phù hợp với thời gian biểu cá nhân theo số lượng chỗ trống thực tế.",
+      "after": "Đăng ký khóa học trực tuyến (Registration): Học viên chọn chương trình, ngày có thể bắt đầu, buổi học và nhóm thứ 2–4–6 hoặc 3–5–7 phù hợp với thời gian cá nhân. Học viên không chọn lớp hoặc giáo viên; Admin căn cứ đơn và nguyện vọng để xếp lớp sau."
+    },
+    "25": {
+      "before": "Quản lý học viên & Điểm danh: Tra cứu danh sách học viên trong từng lớp, thông tin liên lạc và theo dõi tình hình chuyên cần.",
+      "after": "Quản lý học viên và chuyên cần: Tra cứu danh sách học viên trong từng lớp, thông tin liên lạc và theo dõi lớp được phân công. Giao diện hiện có checkbox điểm danh; việc lưu chuyên cần theo ngày, buổi và các trạng thái đi trễ hoặc vắng cần được bổ sung."
+    },
+    "31": {
+      "before": "Quản lý ghi danh & Tư vấn tuyển sinh: Tiếp nhận đơn đăng ký học, duyệt xác nhận học viên vào lớp chính thức sau khi hoàn tất học phí, tiếp nhận và xử lý danh sách khách cần tư vấn.",
+      "after": "Quản lý ghi danh và tư vấn tuyển sinh: Tiếp nhận đơn đăng ký khóa học, đối chiếu nguyện vọng để xếp học viên vào lớp phù hợp và xác nhận học phí theo nghiệp vụ riêng. Admin tiếp nhận yêu cầu tư vấn, gửi trả lời trực tiếp, theo dõi tin chưa đọc và kết thúc hoặc mở lại cuộc hội thoại."
+    },
+    "32": {
+      "before": "Quản trị người dùng & Phân quyền bảo mật: Cấp phát, kích hoạt hoặc tạm khóa tài khoản của học viên, giáo viên và nhân sự quản trị trên toàn hệ thống.",
+      "after": "Quản trị người dùng và phân quyền bảo mật: Cấp tài khoản, cập nhật hồ sơ và phân quyền theo chức năng của hệ thống. Phân hệ học viên có khóa hoặc kích hoạt tài khoản; chức năng khóa/mở riêng cho giáo viên cần tiếp tục hoàn thiện."
+    },
+    "47": {
+      "before": "Về bài thi xếp lớp (Placement Test): Hệ thống tập trung vào hình thức thi trắc nghiệm khách quan hai kỹ năng Nghe (Listening) và Đọc (Reading) có chấm điểm và đề xuất khóa học tự động; chưa tích hợp module thu âm và chấm điểm AI cho hai kỹ năng Nói (Speaking) và Viết (Writing).",
+      "after": "Về bài thi xếp lớp (Placement Test): Hệ thống tập trung vào đăng ký kiểm tra, xếp phòng, phân công người chấm và lưu điểm cùng cấp độ đề xuất. Chưa tích hợp bộ câu hỏi Nghe/Đọc tự chấm, thu âm hoặc chấm điểm AI cho kỹ năng Nói và Viết."
+    },
+    "58": {
+      "before": "Sơ đồ thực thể kết hợp (ERD): Thiết kế cấu trúc CSDL gồm đầy đủ 11 bảng (8 bảng bắt buộc: UserAccount, Student, Teacher, Program, Class, Registration, PlacementTest, Payment và 3 bảng bổ sung: ClassStatus, ClassSchedule, Consultation).",
+      "after": "Sơ đồ thực thể kết hợp (ERD): Thiết kế 16 bảng nghiệp vụ gồm UserAccount, Student, Teacher, CourseProgram, CourseClass, Registration, Payment, PlacementTest, ExamSession, ClassSchedule, ClassDocument, CourseFeedback, TeacherSalary, Consultation, ConsultationMessage và Banner. ClassStatus là thuộc tính trạng thái của lớp, không phải một bảng độc lập."
+    },
+    "74": {
+      "before": "Kiểm soát sĩ số (Capacity Control): Mỗi lớp học (Class) được thiết lập sĩ số tối đa (MaxStudents = 25). Hệ thống tự động đếm số lượng bản ghi ghi danh hợp lệ (Registrations có trạng thái Paid hoặc Confirmed). Khi số lượng đạt mức tối đa, hệ thống tự động khóa nút đăng ký của lớp đó trên giao diện người dùng, ngăn chặn tình trạng vượt sĩ số (Overbooking).",
+      "after": "Kiểm soát sĩ số (Capacity Control): Mỗi lớp học được thiết lập MaxStudents theo quy mô lớp. Khi Admin xếp học viên, hệ thống đếm các đăng ký Confirmed chưa xóa của lớp, kiểm tra chỗ trống và từ chối vượt sĩ số ngay tại máy chủ. Học viên đăng ký chương trình trước, vì vậy giao diện công khai không dùng nút giữ chỗ một lớp cụ thể."
+    },
+    "116": {
+      "before": "Xây dựng module Thi xếp lớp trực tuyến (Placement Test) tự động tính điểm hai kỹ năng Nghe/Đọc và gợi ý khóa học ngay tức thì.",
+      "after": "Xây dựng phân hệ kiểm tra xếp lớp: Học viên gửi yêu cầu ngày giờ; Admin tổ chức phòng thi, xếp nhiều thí sinh và phân công giáo viên chấm. Kết quả gồm điểm và cấp độ đề xuất; thi trực tuyến tự chấm hai kỹ năng Nghe/Đọc được định hướng phát triển sau."
+    },
+    "124": {
+      "before": "Quản lý 5 chương trình học mũi nhọn: IELTS Master, TOEIC Cấp tốc, Tiếng Anh Giao tiếp, Business English, Cambridge B1/B2.",
+      "after": "Quản lý các chương trình IELTS Master, TOEIC Cấp tốc, Tiếng Anh Giao tiếp, Business English và Cambridge B1/B2; bổ sung tiếng Anh tiểu học, THCS, THPT, Phonics, Cambridge Young Learners, củng cố kiến thức và IELTS Foundation. Danh mục được quản lý động trong cơ sở dữ liệu."
+    },
+    "126": {
+      "before": "Quản trị 11 bảng dữ liệu liên kết chuẩn hóa dạng chuẩn 3 (3NF).",
+      "after": "Quản trị 16 bảng nghiệp vụ có khóa chính, khóa ngoại và các ràng buộc dữ liệu, liên kết từ tài khoản, chương trình và ghi danh tới lớp, học phí, kiểm tra và tư vấn."
+    },
+    "129": {
+      "before": "Đề tài mang tính ứng dụng thực tiễn cao, giúp trung tâm ngoại ngữ số hóa 100% quy trình đào tạo, giảm thiểu 80% thời gian xử lý thủ tục nhập học thủ công, minh bạch tài chính và nâng cao trải nghiệm của học viên thời đại số.",
+      "after": "Đề tài hướng tới số hóa quy trình quản lý đào tạo, giảm thao tác nhập liệu và tổng hợp thủ tục thủ công, minh bạch tình trạng học phí và nâng cao trải nghiệm học viên. Mức tiết kiệm thời gian và hiệu quả vận hành cần được đo bằng khảo sát thực tế, chưa có số liệu để khẳng định tỷ lệ phần trăm cụ thể."
+    },
+    "145": {
+      "before": "Phía Client: Trình duyệt web sử dụng mã HTML/CSS/JS thuần cho giao diện MVC, kết hợp với các ứng dụng di động (Mobile App) hoặc các thành phần Dynamic UI gửi yêu cầu xử lý dữ liệu.",
+      "after": "Phía Client: Trình duyệt web sử dụng HTML, CSS và JavaScript cho giao diện MVC. Các thành phần tương tác dùng Fetch để lấy tin tư vấn và cập nhật nội dung mà không tải lại toàn bộ trang. Ứng dụng di động là hướng mở rộng, chưa có sản phẩm độc lập trong phiên bản hiện tại."
+    },
+    "155": {
+      "before": "Đóng vai trò cung cấp các Endpoint giao tiếp dữ liệu chuẩn JSON cho ứng dụng di động (React Native) và các tác vụ Ajax/Fetch dữ liệu bất đồng bộ phía Client.",
+      "after": "RESTful API là cơ sở lý thuyết cho việc cung cấp endpoint JSON tới ứng dụng di động và các tác vụ Ajax/Fetch. Trong phiên bản hiện tại, một số action MVC trả JSON để phục vụ tương tác, đặc biệt ở phân hệ tư vấn; chưa có một backend API riêng hoàn chỉnh cho React Native."
+    },
+    "156": {
+      "before": "Các ApiController (như AuthApiController, ScheduleApiController, ReservationApiController...) được phân tách rõ ràng với MVC Controller, xử lý xác thực theo cơ chế Token/Session và trả về HTTP Status Codes chuẩn (200 OK, 400 Bad Request, 401 Unauthorized, 404 Not Found).",
+      "after": "Khi mở rộng thành dịch vụ API độc lập, các chức năng xác thực, lịch học và ghi danh cần có hợp đồng dữ liệu, kiểm tra quyền và mã trạng thái HTTP rõ ràng. Các tên AuthApiController, ScheduleApiController và ReservationApiController là ví dụ định hướng, không phải các Controller đã hiện thực trong dự án hiện tại."
+    },
+    "190": {
+      "before": "Tầng nghiệp vụ (Business Logic Tier): Các Service xử lý tính toán điểm thi xếp lớp, sinh mã VietQR, xác thực đăng ký và thống kê số liệu doanh thu.",
+      "after": "Tầng nghiệp vụ (Business Logic Tier): CourseClassAssignment kiểm tra xếp lớp; ClassSchedulePlanner quản lý lịch tuần; ExamSessionPlanner kiểm tra phòng thi; ConsultationAccess và ConsultationMessaging xử lý quyền và tin nhắn. Một số nghiệp vụ truy vấn, thanh toán và thống kê vẫn nằm trong Controller, chưa tách hoàn toàn thành tầng dịch vụ."
+    },
+    "206": {
+      "before": "Áp dụng thuật toán băm mật khẩu một chiều có muối ngẫu nhiên BCrypt chống tấn công từ điển, cơ chế bảo vệ biểu mẫu chống tấn công CSRF, dịch vụ gửi thư điện tử tự động qua giao thức SMTP (MailKit) và phương thức thanh toán chuyển khoản nhanh bằng mã quét VietQR.",
+      "after": "Áp dụng thuật toán băm mật khẩu một chiều có Salt ngẫu nhiên BCrypt, cơ chế bảo vệ biểu mẫu chống CSRF và hướng dẫn chuyển khoản bằng mã VietQR. MailKit đã được khai báo trong phụ thuộc nhưng dịch vụ gửi thư tự động chưa hoàn thiện; việc xác nhận thu tiền do Admin đối soát."
+    },
+    "212": {
+      "before": "Tác nhân Học viên có quan hệ kế thừa với Khách, nghĩa là học viên có toàn bộ quyền tra cứu khóa học của khách, đồng thời được mở rộng thêm các chức năng dành riêng cho người học.",
+      "after": "Học viên sử dụng được các chức năng công khai của khách như tra cứu chương trình và thông tin liên hệ, đồng thời có thêm hồ sơ, đăng ký khóa học, lịch học và học phí cá nhân. Sơ đồ hiện tại thể hiện các mục tiêu theo từng tác nhân; quyền công khai không phụ thuộc việc có phiên đăng nhập."
+    },
+    "213": {
+      "before": "Mọi thao tác làm thay đổi trạng thái cá nhân (Đăng ký lớp, thanh toán, làm bài test, nhập điểm) đều có mối quan hệ phụ thuộc bắt buộc <<include>> tới Use Case Đăng nhập hệ thống.",
+      "after": "Đăng nhập là điều kiện trước của các nghiệp vụ được bảo vệ như đăng ký khóa học, theo dõi học phí và nhập điểm. Quan hệ include chỉ dùng khi có hành vi bắt buộc dùng lại; không dùng để thay cho mọi điều kiện phân quyền hoặc để mô tả thứ tự mở các màn hình."
+    },
+    "214": {
+      "before": "Nghiệp vụ Thanh toán học phí VietQR và In biên lai có mối quan hệ mở rộng <<extend>> từ Use Case Đăng ký lớp học.",
+      "after": "Đăng ký khóa học, xem hướng dẫn đóng học phí và in biên lai có liên hệ về dữ liệu. Xếp lớp và xác nhận thu là hai nghiệp vụ độc lập; biên lai chỉ phản ánh khoản thu hợp lệ. Không mặc định dùng quan hệ extend chỉ vì các chức năng xuất hiện sau bước ghi danh."
+    },
+    "247": {
+      "before": "Để ứng dụng vận hành trơn tru và đảm bảo thời gian phản hồi (Response Time) dưới 500ms đối với các tác vụ lọc lớp và truy xuất dữ liệu, cấu hình phần cứng khuyến nghị như sau:",
+      "after": "Để ứng dụng vận hành thuận tiện trên máy phát triển và triển khai thử nghiệm, có thể tham khảo cấu hình phần cứng sau. Đây là đề xuất phục vụ chạy IDE, cơ sở dữ liệu và máy chủ cục bộ; thời gian phản hồi cần được đo thực tế, chưa có kết quả kiểm thử tải để bảo đảm một ngưỡng cố định."
+    },
+    "280": {
+      "before": "Biểu mẫu Tiếp nhận Tư vấn Nhanh (Lead Capture Form): Tọa lạc ở vị trí trung tâm nửa phải màn hình, cho phép khách hàng chỉ cần nhập Họ và tên, Số điện thoại, Email và Nguyện vọng học tập là có thể gửi yêu cầu hỗ trợ mà không bắt buộc tạo tài khoản trước.",
+      "after": "Tiếp nhận tư vấn trực tuyến (Lead Capture): Trang chủ có liên kết tới Tư vấn và Liên hệ. Biểu mẫu tại trang liên hệ nhận Họ tên, Số điện thoại, Email và nội dung cần hỗ trợ; khách không bắt buộc tạo tài khoản trước khi mở cuộc hội thoại riêng với Admin."
+    },
+    "281": {
+      "before": "Luồng Khóa học nổi bật & Lịch khai giảng tự động: Hệ thống hiển thị 3 chương trình học trọng điểm và 4 lớp học sắp khai giảng gần nhất kèm đầy đủ thông tin: Mã lớp, ngày bắt đầu, ca học, phòng học, học phí niêm yết và giáo viên phụ trách.",
+      "after": "Khóa học nổi bật và lịch lớp tham khảo: Trang chủ trình bày chương trình cùng thời lượng, học phí và liên kết đăng ký. Danh sách lớp cung cấp lịch để tham khảo; việc gửi đơn thuộc khóa học và lưu nguyện vọng, không buộc người học chọn trước một lớp hoặc giáo viên."
+    },
+    "282": {
+      "before": "Thanh chỉ số độ uy tín (Social Proof Stats): Hiển thị tự động tổng số học viên đã tốt nghiệp, số giảng viên quốc tế và số khóa đào tạo nhằm tạo lập niềm tin đối với phụ huynh và người học mới.",
+      "after": "Thanh chỉ số tổng quan (Stats): Hiển thị số chương trình đào tạo, lớp đang mở, giáo viên và học viên theo dữ liệu trình diễn của hệ thống. Các chỉ số này không được hiểu mặc định là số học viên đã tốt nghiệp hoặc kết quả khảo sát uy tín thực tế."
+    },
+    "291": {
+      "before": "Bản ghi mới được lưu vào bảng Consultations với trạng thái mặc định \"Pending\". Sau đó hệ thống thiết lập TempData[\"SuccessMessage\"] và phản hồi thông báo Toast Alert thành công.",
+      "after": "Yêu cầu hợp lệ được lưu tại Consultations với trạng thái Pending và tạo tin nhắn đầu tiên tại ConsultationMessages. Học viên được gắn chủ sở hữu từ phiên; khách được cấp cookie truy cập và liên kết riêng. Hệ thống mở trang hội thoại để tiếp tục trao đổi với Admin thay vì chỉ hiển thị thông báo gửi thành công."
+    },
+    "298": {
+      "before": "Ghi danh khóa học 1 chạm (1-Click Enrollment): Tại các thẻ lớp học trên trang chủ, nút \"Đăng ký ngay\" nhận diện phiên đăng nhập của học viên, chuyển thẳng sang trang thanh toán mà không yêu cầu điền lại thông tin cá nhân.",
+      "after": "Ghi danh khóa học: Tại trang chương trình, học viên mở biểu mẫu Checkout theo ProgramId. Thông tin tài khoản được lấy từ hồ sơ; học viên bổ sung ngày có thể bắt đầu, buổi, nhóm thứ và cách đóng học phí trước khi xác nhận, không chọn trực tiếp một lớp ở trang chủ."
+    },
+    "315": {
+      "before": "Bảng danh sách các lớp học cụ thể đang mở thuộc khóa học: Thể hiện rõ ngày khai giảng, ca học trong tuần, phòng học, giảng viên phụ trách và nút bấm \"Chọn lớp này để đăng ký\".",
+      "after": "Danh sách lớp tham khảo của chương trình: Cung cấp ngày khai giảng, lịch tuần và thông tin lớp để người học tìm hiểu. Nút đăng ký thuộc khóa học; học viên gửi nguyện vọng, sau đó Admin lựa chọn lớp phù hợp theo thời gian, sức chứa và kế hoạch đào tạo."
+    },
+    "324": {
+      "before": "Mẫu biểu đăng ký thi được thiết kế thân thiện, giải thích rõ quy trình kiểm tra 4 kỹ năng Nghe - Nói - Đọc - Viết cùng giảng viên bản ngữ.",
+      "after": "Mẫu đăng ký kiểm tra giải thích quy trình tiếp nhận yêu cầu, Admin xếp phòng và phân công giáo viên. Bên cạnh biểu mẫu là lịch sử kiểm tra, trạng thái, lịch chính thức và kết quả đã có; chưa có màn hình làm bài bốn kỹ năng trực tuyến."
+    },
+    "325": {
+      "before": "Học viên được tự do chọn: Ngày dự thi (Date picker giới hạn ngày tương lai) và Khung giờ thi thuận tiện (09:00 AM, 02:00 PM, 06:00 PM).",
+      "after": "Học viên chọn ngày mong muốn từ ngày mai trở đi và một khung giờ thuận tiện: 08:30, 10:00, 14:00, 16:00 hoặc 18:30. Đây là yêu cầu ban đầu; lịch phòng thi chính thức do Admin xác nhận sau khi bố trí ca thi."
+    },
+    "329": {
+      "before": "Hệ thống tích hợp dịch vụ IEmailService gửi thư điện tử xác nhận lịch hẹn tự động thông qua giao thức SMTP (MailKit), đính kèm hướng dẫn phòng thi trực tuyến/trực tiếp.",
+      "after": "Admin tạo ExamSession với phòng, ngày, giờ và sức chứa; chọn nhiều yêu cầu để xếp cùng lớp thi, rồi phân công giáo viên chấm cả ca. Sau khi xếp, lịch và người chấm được hiển thị cho học viên. IEmailService chưa có quy trình gửi thư xác nhận tự động hoàn chỉnh."
+    },
+    "335": {
+      "before": "Giao diện chia làm 2 cột: Cột trái tóm tắt chi tiết lớp học đã chọn (tên lớp, học phí, ngày khai giảng), cột phải là cổng thanh toán điện tử.",
+      "after": "Giao diện chia hai cột: bên trái nhập ngày có thể bắt đầu, buổi, nhóm 2–4–6 hoặc 3–5–7 và ghi chú; bên phải hiển thị tên khóa học, thời lượng, tổng học phí và lựa chọn đóng tại trung tâm hoặc VietQR. Ảnh hồ sơ là tùy chọn; không có trường chọn lớp hoặc giáo viên."
+    },
+    "336": {
+      "before": "Tích hợp mã quét VietQR tự động: Hiển thị hình ảnh mã QR ngân hàng có gắn sẵn Số tiền học phí chính xác và Cú pháp chuyển khoản tiêu chuẩn (ví dụ: HITC ENROLL REG105), giúp học viên quét mã qua ứng dụng ngân hàng trong 5 giây mà không lo chuyển nhầm số tài khoản.",
+      "after": "Hướng dẫn VietQR sau xác nhận: Khi học viên chọn chuyển khoản và gửi đơn hợp lệ, trang học phí hiển thị mã QR, số tiền và nội dung chuyển khoản theo mã đơn. Người học quét bằng ứng dụng ngân hàng; Admin vẫn phải kiểm tra chứng từ trước khi ghi nhận Paid, không coi việc hiển thị QR là đã thanh toán."
+    },
+    "339": {
+      "before": "Kiểm tra xung đột sĩ số lớp học (Concurrency & Seat Limit): Trước khi tạo đơn, hệ thống kiểm tra số học viên đã đăng ký so với MaxStudents. Nếu lớp đã đủ sĩ số, hệ thống thông báo lỗi và từ chối tạo đăng ký.",
+      "after": "Kiểm soát dữ liệu khi đăng ký: Máy chủ kiểm tra chương trình đang hoạt động, ngày có thể bắt đầu, buổi và nhóm thứ hợp lệ; ngăn đăng ký trùng khóa học đang hoạt động. Kiểm tra sĩ số và lịch trùng được thực hiện khi Admin xếp học viên vào lớp, không giữ chỗ lớp từ bước đăng ký khóa học."
+    },
+    "340": {
+      "before": "Khởi tạo bản ghi Registration với trạng thái \"Pending\" và tạo bản ghi hóa đơn tương ứng trong bảng Payments.",
+      "after": "Khởi tạo Registration Pending có ProgramId và ClassId để trống, đồng thời tạo Payment Pending trong cùng transaction. Mức phí được lấy từ chương trình ở máy chủ; không sử dụng số tiền hoặc trạng thái tùy ý từ biểu mẫu của người dùng."
+    },
+    "341": {
+      "before": "Sinh chuỗi mã VietQR theo chuẩn Napas 247 và render động ra màn hình.",
+      "after": "Trang hướng dẫn học phí sinh nội dung chuyển khoản theo mã đăng ký và hiển thị VietQR khi chọn phương thức này. Admin đối soát thu tiền riêng; khi xếp lớp, ngày khai giảng phải bằng hoặc sau ngày học viên có thể bắt đầu, đồng thời kiểm tra đúng khóa, sức chứa và lịch xung đột."
+    },
+    "356": {
+      "before": "Hiển thị chi tiết: Tên khóa học, tên lớp, phòng học, giảng viên phụ trách, thời khóa biểu các ca học trong tuần và đường dẫn tải tài liệu bài giảng.",
+      "after": "Hiển thị chi tiết: Tên khóa học, tên lớp, phòng học, giảng viên phụ trách và thời khóa biểu các ca trong tuần. Đơn chưa được xếp có khu vực theo dõi nguyện vọng riêng; đường dẫn tải học liệu trong khu vực học viên là hạng mục cần hoàn thiện."
+    },
+    "368": {
+      "before": "Hiển thị bảng Kết quả thi kiểm tra trình độ đầu vào (Điểm số 4 kỹ năng, ngày thi và cấp độ khóa học được hội đồng chuyên môn khuyến nghị).",
+      "after": "Kết quả kiểm tra đầu vào gồm điểm, ngày thi và cấp độ do giáo viên đề xuất được tra cứu tại lịch sử kiểm tra. Hồ sơ cá nhân có liên kết đến kết quả; hiện chưa có bảng điểm riêng cho bốn kỹ năng."
+    },
+    "395": {
+      "before": "Lập kế hoạch mở lớp, chỉ định giảng viên đứng lớp, phân bổ phòng học, ấn định ngày khai giảng/bế giảng.",
+      "after": "Lập kế hoạch mở lớp, phân bổ phòng, sĩ số và ngày khai giảng/bế giảng; chọn lịch 2–4–6 hoặc 3–5–7 cùng giờ bắt đầu, kết thúc để lưu ba ca học trong ClassSchedules. Giáo viên có thể được phân công sau. Lịch được áp dụng vào thời khóa biểu học viên và giáo viên trong khoảng thời gian của lớp."
+    },
+    "399": {
+      "before": "Quản lý Thanh toán (PaymentAdmin): Đối soát các giao dịch chuyển khoản VietQR hoặc xác nhận thu học phí bằng tiền mặt tại quầy; tự động phát sinh mã giao dịch chuẩn MANUAL{yyyyMMddHHmmss} và chuyển trạng thái đơn sang \"Paid\".",
+      "after": "Quản lý thanh toán (PaymentAdmin): Đối soát chuyển khoản VietQR hoặc xác nhận thu tiền mặt tại trung tâm; cập nhật Payment Paid sau khi kiểm tra. Trạng thái thu tiền tách khỏi Pending hoặc Confirmed của đơn xếp lớp; các đơn và biên lai đã thanh toán trước đây được giữ nguyên để đối chiếu lịch sử."
+    },
+    "400": {
+      "before": "Quản lý Đăng ký (RegistrationAdmin): Theo dõi danh sách học viên đăng ký theo thời gian thực; hỗ trợ chuyển trạng thái ghi danh (Pending, Confirmed, Cancelled).",
+      "after": "Quản lý đăng ký (RegistrationAdmin): Theo dõi đơn theo chương trình, ngày bắt đầu và nguyện vọng; xếp hoặc chuyển sang lớp phù hợp, cập nhật Pending, Confirmed hoặc Cancelled. Chỉ gán ClassId khi Admin xếp lớp; khi trả về chờ hoặc hủy, liên kết lớp được xử lý theo trạng thái đơn."
+    },
+    "401": {
+      "before": "Quản lý Tư vấn (ConsultationManager): Tiếp nhận thông tin từ form trang chủ; hỗ trợ chuyên viên tuyển sinh đánh dấu \"Replied\" sau khi đã gọi điện tư vấn lộ trình học cho khách hàng.",
+      "after": "Quản lý tư vấn (ConsultationManager): Mở hộp thư, xem thông tin người liên hệ và lịch sử tin nhắn, gửi trả lời trực tiếp cho khách hoặc học viên. Hệ thống có tin chưa đọc, đánh dấu đã xem và thao tác kết thúc/mở lại; giao diện lấy tin mới định kỳ, chưa dùng SignalR hoặc WebSocket."
+    },
+    "424": {
+      "before": "Chức năng: Giảng viên theo dõi danh sách lớp học được phân công; mở danh sách học viên để thực hiện điểm danh chuyên cần từng buổi học (Đánh dấu trạng thái: Có mặt, Đi trễ, Vắng có phép, Vắng không phép).",
+      "after": "Chức năng: Giảng viên theo dõi danh sách lớp được phân công, mở danh sách học viên và thông tin liên hệ. Giao diện có checkbox Có mặt để minh họa thao tác; chưa có bảng lưu chuyên cần theo từng ngày/buổi hoặc các trạng thái đi trễ, vắng có phép và vắng không phép."
+    },
+    "427": {
+      "before": "Chức năng: Giảng viên truy cập danh sách các bài thi được chỉ định, thực hiện chấm điểm 4 kỹ năng (thang điểm 10 hoặc IELTS Band), nhập lời nhận xét chi tiết và chọn cấp độ lớp học đề xuất (RecommendedLevel) trước khi chuyển trạng thái bài thi thành \"Completed\".",
+      "after": "Chức năng: Giảng viên mở lớp thi được phân công, xem danh sách thí sinh và nhập điểm từ 0 đến 10 cùng cấp độ đề xuất (RecommendedLevel) cho từng bài. Bài chấm xong chuyển Completed; khi tất cả bài hoàn tất, ca thi được đánh dấu hoàn thành. Giáo viên khác không được chấm ca không thuộc phân công."
+    },
+    "446": {
+      "before": "Từ chối truy cập (AccessDenied.cshtml): Giao diện thông báo chuẩn HTTP 403 Forbidden khi người dùng cố tình nhập URL can thiệp vào các phân vùng vượt quá quyền hạn của mình.",
+      "after": "Kiểm soát truy cập: Authorize và RoleCookieRouter giới hạn từng khu vực theo vai trò. Người chưa có cookie đúng vai trò có thể được chuyển đến trang đăng nhập tương ứng; không phải mọi tình huống truy cập trái quyền đều hiển thị một trang HTTP 403. Các action cá nhân còn cần kiểm tra quyền trên từng bản ghi."
+    },
+    "477": {
+      "before": "Đánh giá và kiểm thử hệ thống nghiêm ngặt: Thông qua việc áp dụng phương pháp kiểm thử hộp đen và kiểm thử tích hợp trên 20 ca kiểm thử (Test Cases) đại diện cho toàn bộ các luồng nghiệp vụ cốt lõi, hệ thống đạt tỷ lệ thành công tuyệt đối (100% Pass), phản hồi nhanh chóng (< 350ms), vận hành ổn định và không phát sinh lỗi nghiêm trọng.",
+      "after": "Đánh giá và kiểm thử: Các bảng ca kiểm thử mô tả tình huống, kết quả cần đạt và phạm vi đã kiểm tra. Luồng đăng ký, xếp lớp, lịch tuần, phòng thi và tư vấn đã được kiểm tra trên dữ liệu riêng; bộ tư vấn ghi nhận 31 kiểm tra đạt. Chưa có số đo độ trễ, kiểm thử tải hoặc căn cứ để khẳng định toàn bộ hệ thống đạt 100% và phản hồi dưới 350 ms."
+    },
+    "490": {
+      "before": "Phân hệ Học viên & Tuyển sinh: Tự động hóa quy trình từ khâu tiếp nhận tư vấn đăng ký thi thử xếp lớp chọn lớp giữ chỗ sĩ số thanh toán VietQR xuất và in biên lai điện tử chuẩn quy cách.",
+      "after": "Phân hệ học viên và tuyển sinh: Tiếp nhận tư vấn hai chiều, đăng ký kiểm tra đầu vào, gửi nguyện vọng khóa học, theo dõi lớp được Admin xếp, xem hướng dẫn VietQR hoặc đóng tại trung tâm và in biên lai khoản thu đã xác nhận. Xác nhận thu học phí và xếp lớp được xử lý riêng."
+    },
+    "495": {
+      "before": "Hệ thống đã trải qua quá trình kiểm thử hộp đen và kiểm thử tích hợp với 100% ca kiểm thử (20/20 Test Cases) đạt yêu cầu, đảm bảo độ tin cậy cao, tốc độ phản hồi nhanh (< 350ms) và không phát sinh lỗi nghiêm trọng.",
+      "after": "Các luồng mới đã được kiểm tra bằng thao tác và dữ liệu thử riêng; 31 kiểm tra tư vấn bao gồm trao đổi hai chiều, quyền sở hữu, CSRF, nội dung quá dài và kết thúc/mở lại hội thoại. Các ca trong bảng cần phân biệt giữa đã quan sát, đã kiểm tra nghiệp vụ và chưa chạy lại. Hiệu năng hoặc độ tin cậy khi vận hành thực tế cần được đánh giá tiếp."
+    },
+    "43": {
+      "before": "Tầng truy xuất dữ liệu: Sử dụng Entity Framework Core (EF Core Code-First) để ánh xạ các thực thể C# thành cấu trúc bảng trong CSDL, tự động thực hiện Migration và quản lý dữ liệu an toàn.",
+      "after": "Tầng truy xuất dữ liệu: Sử dụng Entity Framework Core (EF Core Code-First) để ánh xạ các thực thể C# thành cấu trúc bảng trong CSDL, hỗ trợ Migration và các script SQL nâng cấp có kiểm soát và quản lý dữ liệu an toàn."
+    },
+    "44": {
+      "before": "Hệ quản trị cơ sở dữ liệu: Sử dụng Microsoft SQL Server (MS SQL Server / LocalDB), thiết kế cấu trúc dữ liệu chuẩn hóa dạng chuẩn 3 (3NF) với đầy đủ các ràng buộc khóa chính, khóa ngoại.",
+      "after": "Hệ quản trị cơ sở dữ liệu: Sử dụng Microsoft SQL Server (MS SQL Server / LocalDB), thiết kế cấu trúc dữ liệu quan hệ với đầy đủ các ràng buộc khóa chính, khóa ngoại."
+    },
+    "46": {
+      "before": "Về cổng thanh toán: Để đảm bảo tính khả thi và an toàn trong khuôn khổ đồ án môn học, hệ thống triển khai giải pháp thanh toán thông qua mã VietQR tự động (tự động điền đúng Số tài khoản trung tâm, Tên chủ tài khoản, Số tiền học phí và Mã hóa đơn nội dung chuyển khoản). Sau khi học viên thanh toán, hệ thống cho phép xuất in biên lai học phí điện tử; chưa tích hợp Webhook API tự động bắt biến động số dư ngân hàng theo thời gian thực (do yêu cầu pháp nhân doanh nghiệp khi đăng ký dịch vụ Open Banking với các ngân hàng thương mại).",
+      "after": "Về cổng thanh toán: Để đảm bảo tính khả thi và an toàn trong khuôn khổ đồ án môn học, hệ thống triển khai giải pháp thanh toán thông qua mã VietQR tự động (tự động điền đúng Số tài khoản trung tâm, Tên chủ tài khoản, Số tiền học phí và Mã hóa đơn nội dung chuyển khoản). Sau khi Admin đối soát và xác nhận đã thu, hệ thống cho phép xuất in biên lai học phí điện tử; chưa tích hợp Webhook API tự động bắt biến động số dư ngân hàng theo thời gian thực (do yêu cầu pháp nhân doanh nghiệp khi đăng ký dịch vụ Open Banking với các ngân hàng thương mại)."
+    },
+    "61": {
+      "before": "Kiểm thử và đánh giá (Testing): Tiến hành kiểm thử hộp đen (Black-box Testing) trên từng chức năng cốt lõi: Đăng nhập/Đăng xuất, Phân quyền truy cập các Area (/Admin, /Teacher), Luồng thi thử xếp lớp, Luồng đăng ký lớp và thanh toán VietQR, In biên lai học phí và Hiển thị biểu đồ doanh thu Chart.js. Qua đó, kịp thời phát hiện và khắc phục toàn bộ các lỗi tiềm ẩn, đảm bảo hệ thống đạt độ tin cậy và sẵn sàng đưa vào vận hành.",
+      "after": "Kiểm thử và đánh giá (Testing): Tiến hành kiểm thử hộp đen (Black-box Testing) trên từng chức năng cốt lõi: Đăng nhập/Đăng xuất, Phân quyền truy cập các Area (/Admin, /Teacher), Luồng thi thử xếp lớp, Luồng đăng ký lớp và thanh toán VietQR, In biên lai học phí và Hiển thị biểu đồ doanh thu Chart.js. Qua đó, kịp thời phát hiện và khắc phục các lỗi phát hiện trong phạm vi kiểm tra, làm cơ sở tiếp tục đánh giá trước khi vận hành."
+    },
+    "71": {
+      "before": "Học viên chủ động tìm kiếm, làm bài kiểm tra năng lực đầu vào và đăng ký lớp học trực tuyến 24/7.",
+      "after": "Học viên chủ động tìm kiếm, đăng ký kiểm tra đầu vào và gửi nguyện vọng khóa học trực tuyến 24/7."
+    },
+    "72": {
+      "before": "Dữ liệu được lưu trữ tập trung tại cơ sở dữ liệu quan hệ Microsoft SQL Server, đảm bảo tính toàn vẹn dữ liệu và hỗ trợ truy xuất đồng thời cho hàng ngàn người dùng.",
+      "after": "Dữ liệu được lưu trữ tập trung tại cơ sở dữ liệu quan hệ Microsoft SQL Server, đảm bảo tính toàn vẹn dữ liệu và hỗ trợ truy xuất dữ liệu có kiểm soát; quy mô đồng thời cần kiểm thử tải."
+    },
+    "79": {
+      "before": "Học viên (Student): Quản lý hồ sơ cá nhân, thi xếp lớp trực tuyến, đăng ký ca học, thanh toán học phí qua mã VietQR, xem thời khóa biểu và in biên lai.",
+      "after": "Học viên (Student): Quản lý hồ sơ cá nhân, đăng ký kiểm tra xếp lớp, gửi nguyện vọng học, thanh toán học phí qua mã VietQR, xem thời khóa biểu và in biên lai."
+    },
+    "117": {
+      "before": "Tích hợp cổng thanh toán VietQR tự động theo chuẩn Napas247, sinh mã QR kèm chính xác số tiền và mã hóa đơn giúp thanh toán chuẩn xác 100%.",
+      "after": "Tích hợp cổng thanh toán VietQR tự động theo chuẩn Napas247, sinh mã QR kèm chính xác số tiền và mã hóa đơn hỗ trợ đối chiếu khoản thu; Admin xác nhận sau khi kiểm tra."
+    },
+    "125": {
+      "before": "Quản lý lớp học, phân công giảng viên và kiểm tra xung đột thời khóa biểu 29 ca học trong tuần.",
+      "after": "Quản lý lớp học, phân công giảng viên và kiểm tra xung đột thời khóa biểu theo các ca được cấu hình trong tuần."
+    },
+    "134": {
+      "before": " Phân tích rõ những bất cập, sai sót dữ liệu và chi phí nhân sự tốn kém của mô hình quản lý thủ công truyền thống (sổ sách, file Excel rời rạc); từ đó khẳng định tính cấp thiết của việc xây dựng một nền tảng số hóa tập trung (E-Management & E-Learning Portal) có khả năng đồng bộ dữ liệu theo thời gian thực (giữ chỗ lớp học, chống vượt sĩ số overbooking, cập nhật lịch học và điểm danh).",
+      "after": " Phân tích rõ những bất cập, sai sót dữ liệu và chi phí nhân sự tốn kém của mô hình quản lý thủ công truyền thống (sổ sách, file Excel rời rạc); từ đó khẳng định tính cấp thiết của việc xây dựng một nền tảng số hóa tập trung (E-Management & E-Learning Portal) có khả năng đồng bộ dữ liệu theo thời gian thực (xếp lớp theo nguyện vọng, chống vượt sĩ số và cập nhật lịch học; lưu chuyên cần cần được bổ sung)."
+    },
+    "136": {
+      "before": "Nghiên cứu ưu điểm và hạn chế trong các mô hình vận hành của các trung tâm lớn (như VUS, ILA, PASAL,...), nhận diện các bài toán còn tồn tại ở các trung tâm vừa và nhỏ về mặt trải nghiệm người dùng, khả năng phân quyền quản trị đa cấp bậc và tính linh hoạt trong quy trình ghi danh.",
+      "after": "Nghiên cứu ưu điểm và hạn chế trong các mô hình vận hành của các trung tâm lớn (như VUS, ILA), nhận diện các bài toán còn tồn tại ở các trung tâm vừa và nhỏ về mặt trải nghiệm người dùng, khả năng phân quyền quản trị đa cấp bậc và tính linh hoạt trong quy trình ghi danh."
+    },
+    "138": {
+      "before": "Đề xuất giải pháp xây dựng ứng dụng web quản lý và đăng ký học tại trung tâm ngoại ngữ (HITC English) ứng dụng nền tảng công nghệ hiện đại, hỗ trợ quy trình từ khâu tư vấn tuyển sinh kiểm tra đầu vào xếp lớp thanh toán học phí quản lý lịch dạy và điểm danh chuyên cần.",
+      "after": "Đề xuất giải pháp xây dựng ứng dụng web quản lý và đăng ký học tại trung tâm ngoại ngữ (HITC English) ứng dụng nền tảng công nghệ hiện đại, hỗ trợ quy trình từ khâu tư vấn tuyển sinh kiểm tra đầu vào xếp lớp đối soát học phí và quản lý lịch dạy; chuyên cần là hạng mục tiếp tục hoàn thiện."
+    },
+    "142": {
+      "before": "2.1 Kiến trúc hệ thống Client - Server và Mô hình Kết hợp ASP.NET Core MVC & Web API",
+      "after": "2.1 Kiến trúc hệ thống Client - Server và ASP.NET Core MVC và định hướng Web API"
+    },
+    "149": {
+      "before": "Hệ thống được thiết kế đa dạng phương thức cung cấp dịch vụ để tối ưu hóa trải nghiệm người dùng trên cả nền tảng Web và Mobile:",
+      "after": "Hệ thống được thiết kế đa dạng phương thức cung cấp dịch vụ để tối ưu hóa trải nghiệm người dùng trên nền tảng Web, tạo cơ sở mở rộng Mobile:"
+    },
+    "154": {
+      "before": "Mô hình RESTful Web API (API Controllers):",
+      "after": "Định hướng mở rộng RESTful Web API:"
+    },
+    "163": {
+      "before": "Bootstrap 5 & Tailwind CSS / NativeWind: Hệ thống lưới Grid System 12 cột linh hoạt cùng các thành phần UI cao cấp (Navbar, Card, Modal, Badge, Alert, Table) giúp giao diện tương thích hoàn hảo trên mọi kích thước màn hình (Desktop, Tablet, Mobile).",
+      "after": "Bootstrap 5 và CSS tùy chỉnh: Hệ thống lưới Grid System 12 cột linh hoạt cùng các thành phần UI cao cấp (Navbar, Card, Modal, Badge, Alert, Table) giúp giao diện tương thích hoàn hảo trên mọi kích thước màn hình (Desktop, Tablet, Mobile)."
+    },
+    "167": {
+      "before": "Sử dụng Axios / Fetch API để gọi các tuyến RESTful API từ Server xử lý chuyển đổi dữ liệu thời gian thực (Real-time data update) mà không cần làm mới toàn bộ trang.",
+      "after": "Sử dụng Fetch API để gọi các action trả JSON, cập nhật tin nhắn tư vấn theo truy vấn định kỳ mà không cần làm mới toàn bộ trang."
+    },
+    "169": {
+      "before": "Microsoft SQL Server (MS SQL Server / LocalDB): Hệ quản trị CSDL quan hệ cấp doanh nghiệp, bảo đảm 4 tính chất ACID (Atomicity, Consistency, Isolation, Durability) trong giao dịch. Cấu trúc bảng được chuẩn hóa đạt chuẩn 3 (3NF) với đầy đủ các ràng buộc PRIMARY KEY, FOREIGN KEY, UNIQUE, CASCADE DELETE.",
+      "after": "Microsoft SQL Server (MS SQL Server / LocalDB): Hệ quản trị CSDL quan hệ cấp doanh nghiệp, bảo đảm 4 tính chất ACID (Atomicity, Consistency, Isolation, Durability) trong giao dịch. Cấu trúc bảng được tổ chức theo các thực thể và quan hệ với đầy đủ các ràng buộc PRIMARY KEY, FOREIGN KEY, UNIQUE, CASCADE DELETE."
+    },
+    "170": {
+      "before": "Giải pháp thanh toán tự động VietQR (Napas247): Thay vì tích hợp cổng thanh toán phức tạp yêu cầu pháp nhân doanh nghiệp, hệ thống áp dụng API sinh mã VietQR động chuẩn Napas247 theo cấu trúc chuỗi định dạng tiêu chuẩn (VietQR Format). Học viên chỉ cần mở ứng dụng ngân hàng quét mã QR, mọi thông tin về số tiền và nội dung chuyển khoản (chứa mã hóa đơn/học viên) được điền tự động chính xác tuyệt đối.",
+      "after": "Giải pháp thanh toán tự động VietQR (Napas247): Thay vì tích hợp cổng thanh toán phức tạp yêu cầu pháp nhân doanh nghiệp, hệ thống áp dụng API sinh mã VietQR động chuẩn Napas247 theo cấu trúc chuỗi định dạng tiêu chuẩn (VietQR Format). Học viên chỉ cần mở ứng dụng ngân hàng quét mã QR, mọi thông tin về số tiền và nội dung chuyển khoản (chứa mã hóa đơn/học viên) được điền tự động theo đơn đăng ký để Admin đối chiếu."
+    },
+    "182": {
+      "before": "Chống SQL Injection: 100% các câu truy vấn thông qua EF Core đều được tự động tham số hóa (Parameterized Queries).",
+      "after": "Chống SQL Injection: Các truy vấn LINQ qua EF Core thường được tự động tham số hóa (Parameterized Queries)."
+    },
+    "226": {
+      "before": ".NET 8.0 SDK (LTS - Long Term Support): Phiên bản dài hạn mới nhất của Microsoft, hỗ trợ công nghệ biên dịch C# 12, tối ưu hiệu năng xử lý HTTP Pipeline và cung cấp thư viện cốt lõi Microsoft.NET.Sdk.Web.",
+      "after": ".NET 8.0 SDK (LTS - Long Term Support): Phiên bản được lựa chọn trong dự án, hỗ trợ công nghệ biên dịch C# 12, tối ưu hiệu năng xử lý HTTP Pipeline và cung cấp thư viện cốt lõi Microsoft.NET.Sdk.Web."
+    },
+    "297": {
+      "before": "Trình đơn cá nhân học viên: Khi nhấp vào tên, menu xổ xuống cung cấp các liên kết điều hướng chuyên biệt: Hồ sơ của tôi, Lớp học của tôi, Lịch sử học phí, Đổi mật khẩu và Đăng xuất.",
+      "after": "Trình đơn cá nhân học viên: Khi nhấp vào tên, menu xổ xuống cung cấp các liên kết điều hướng chuyên biệt: Tư vấn của tôi, Hồ sơ của tôi, Lớp học của tôi, Lịch học và thời khóa biểu, Lịch sử học phí, Đổi mật khẩu và Đăng xuất."
+    },
+    "404": {
+      "before": "Quản lý Giảng viên (TeacherManager): Thêm mới tài khoản giảng viên với mật khẩu được mã hóa tự động bằng BCrypt; cập nhật bằng cấp quốc tế, chuyên môn đào tạo; hỗ trợ khóa hoặc kích hoạt tài khoản giảng viên tức thì (ToggleStatus).",
+      "after": "Quản lý Giảng viên (TeacherManager): Thêm mới tài khoản giảng viên với mật khẩu được mã hóa tự động bằng BCrypt; cập nhật bằng cấp quốc tế, chuyên môn đào tạo; hỗ trợ xóa mềm và khôi phục; chưa có action khóa/mở giáo viên riêng."
+    },
+    "411": {
+      "before": "Nút chức năng cấp cao: Dọn sạch thùng rác (Hộp thoại xác nhận 2 lớp ngăn chặn sơ suất).",
+      "after": "Nút chức năng cấp cao: Dọn sạch thùng rác (yêu cầu xác nhận để hạn chế thao tác nhầm)."
+    },
+    "413": {
+      "before": "Khi người quản trị nhấn \"Xóa\" tại bất kỳ trang quản lý nào, hệ thống không thực hiện lệnh DELETE khỏi CSDL mà cập nhật thuộc tính: IsDeleted = true và DeletedAt = DateTime.Now.",
+      "after": "Khi người quản trị nhấn \"Xóa\" tại các trang có hỗ trợ xóa mềm, hệ thống không thực hiện lệnh DELETE khỏi CSDL mà cập nhật thuộc tính: IsDeleted = true và DeletedAt = DateTime.Now."
+    },
+    "473": {
+      "before": "Thiết lập môi trường và nền tảng công nghệ vững chắc: Ứng dụng đã được xây dựng thành công trên nền tảng ASP.NET Core (.NET 8 LTS) theo mô hình kiến trúc MVC, kết hợp ORM Entity Framework Core 8, hệ quản trị cơ sở dữ liệu Microsoft SQL Server, dịch vụ gửi thư điện tử tự động MailKit, giải pháp thanh toán quét mã VietQR và thuật toán băm mật khẩu chuẩn hóa BCrypt. Cấu trúc thư mục dự án và đường ống xử lý HTTP Middleware Pipeline được tổ chức khoa học, tối ưu hiệu năng và bảo đảm an toàn thông tin.",
+      "after": "Thiết lập môi trường và nền tảng công nghệ vững chắc: Ứng dụng đã được xây dựng thành công trên nền tảng ASP.NET Core (.NET 8 LTS) theo mô hình kiến trúc MVC, kết hợp ORM Entity Framework Core 8, hệ quản trị cơ sở dữ liệu Microsoft SQL Server, phụ thuộc MailKit cho định hướng gửi thư điện tử, giải pháp thanh toán quét mã VietQR và thuật toán băm mật khẩu chuẩn hóa BCrypt. Cấu trúc thư mục dự án và đường ống xử lý HTTP Middleware Pipeline được tổ chức khoa học, tối ưu hiệu năng và bảo đảm an toàn thông tin."
+    },
+    "474": {
+      "before": "Hiện thực hóa trọn vẹn các phân hệ giao diện người dùng: Toàn bộ hệ thống giao diện với hơn 30 trang màn hình thuộc 4 phân hệ chính (Khách vãng lai, Học viên, Giảng viên và Quản trị viên) đã được hoàn thiện đồng bộ, đảm bảo tính thẩm mỹ hiện đại và khả năng co giãn linh hoạt trên các kích thước thiết bị được kiểm tra (Responsive Design). Đặc biệt, hệ thống đã giải quyết triệt để hai bài toán kỹ thuật phức tạp: ",
+      "after": "Hiện thực hóa trọn vẹn các phân hệ giao diện người dùng: Toàn bộ hệ thống giao diện với hơn 30 trang màn hình thuộc 4 phân hệ chính (Khách vãng lai, Học viên, Giảng viên và Quản trị viên) đã được hoàn thiện đồng bộ, đảm bảo tính thẩm mỹ hiện đại và khả năng co giãn linh hoạt trên các kích thước thiết bị được kiểm tra (Responsive Design). Đặc biệt, hệ thống đã xử lý hai bài toán kỹ thuật phức tạp: "
+    },
+    "476": {
+      "before": "Phân hệ Thùng rác hệ thống (Soft Delete Pattern): Áp dụng cơ chế xóa mềm an toàn trên toàn bộ 7 bảng dữ liệu, cung cấp tính năng khôi phục tức thì hoặc xóa vĩnh viễn, bảo vệ tối đa tính toàn vẹn dữ liệu.",
+      "after": "Phân hệ Thùng rác hệ thống (Soft Delete Pattern): Áp dụng cơ chế xóa mềm an toàn cho các nhóm dữ liệu có hỗ trợ, cung cấp tính năng khôi phục tức thì hoặc xóa vĩnh viễn, bảo vệ tối đa tính toàn vẹn dữ liệu."
+    },
+    "487": {
+      "before": "Tích hợp thành công thuật toán băm mật khẩu một chiều BCrypt chống tấn công từ điển/dò mật khẩu, áp dụng mã xác thực token chống giả mạo CSRF, dịch vụ gửi email tự động MailKit và cổng thanh toán quét mã VietQR tự động.",
+      "after": "Tích hợp thành công thuật toán băm mật khẩu một chiều BCrypt chống tấn công từ điển/dò mật khẩu, áp dụng mã xác thực token chống giả mạo CSRF, hướng dẫn chuyển khoản bằng VietQR; dịch vụ gửi thư MailKit chưa hoàn thiện."
+    },
+    "491": {
+      "before": "Phân hệ Giảng viên: Cung cấp công cụ quản lý lớp phụ trách, điểm danh chuyên cần trực tiếp theo từng buổi học, chấm thi xếp lớp đầu vào và tải lên kho học liệu số cho học viên.",
+      "after": "Phân hệ Giảng viên: Cung cấp công cụ quản lý lớp phụ trách, xem danh sách học viên và giao diện điểm danh minh họa, chấm thi xếp lớp đầu vào và tải lên kho học liệu số cho học viên."
+    },
+    "493": {
+      "before": "Cơ chế Thùng rác hệ thống (Soft Delete Pattern): Hiện thực hóa tính năng xóa an toàn trên toàn bộ 7 bảng dữ liệu, cho phép khôi phục dữ liệu tức thì hoặc xóa vĩnh viễn, ngăn ngừa tối đa rủi ro mất mát dữ liệu do thao tác nhầm lẫn.",
+      "after": "Cơ chế Thùng rác hệ thống (Soft Delete Pattern): Hiện thực hóa tính năng xóa an toàn ở các nhóm dữ liệu có hỗ trợ, cho phép khôi phục dữ liệu tức thì hoặc xóa vĩnh viễn, ngăn ngừa tối đa rủi ro mất mát dữ liệu do thao tác nhầm lẫn."
+    },
+    "65": {
+      "before": "Chuyển dịch mô hình quản lý trung tâm ngoại ngữ truyền thống sang nền tảng số",
+      "after": "1.1.1 Chuyển dịch mô hình quản lý sang nền tảng số"
+    },
+    "73": {
+      "before": " Cơ chế đồng bộ dữ liệu và kiểm soát sĩ số lớp học",
+      "after": "1.1.2 Đồng bộ dữ liệu và kiểm soát sĩ số"
+    },
+    "76": {
+      "before": " Kiến trúc phân quyền đa cấp bậc trong hệ thống",
+      "after": "1.1.3 Phân quyền sử dụng hệ thống"
+    },
+    "82": {
+      "before": "Khảo sát và đánh giá các hệ thống thực tế tại Việt Nam",
+      "after": "1.2 Khảo sát và đánh giá các hệ thống thực tế"
+    },
+    "108": {
+      "before": "Những vấn đề tồn tại và Giải pháp đề xuất của đề tài",
+      "after": "1.3 Vấn đề tồn tại và giải pháp đề xuất"
+    },
+    "113": {
+      "before": "Giải pháp công nghệ và Nghiệp vụ đề xuất của đồ án",
+      "after": "1.3.2 Giải pháp công nghệ và nghiệp vụ"
+    },
+    "120": {
+      "before": "Mục tiêu, Đối tượng sử dụng và Phạm vi đề tài",
+      "after": "1.4 Mục tiêu đối tượng và phạm vi"
+    },
+    "121": {
+      "before": "Đối tượng người dùng mục tiêu",
+      "after": "1.4.1 Đối tượng người dùng mục tiêu"
+    },
+    "123": {
+      "before": "Phạm vi đề tài: ",
+      "after": "1.4.2 Phạm vi đề tài"
+    },
+    "128": {
+      "before": "Ý nghĩa thực tiễn của đề tài",
+      "after": "1.4.3 Ý nghĩa thực tiễn"
+    },
+    "215": {
+      "before": "Phân rã 4 phân hệ Use Case cốt lõi",
+      "after": "3.1.2 Phân rã các nhóm chức năng"
+    },
+    "274": {
+      "before": "A. Giao diện Trang chủ tập trung khi chưa đăng nhập và Hệ thống Tin tức tự động",
+      "after": "4.2.1 Trang chủ khi chưa đăng nhập"
+    },
+    "292": {
+      "before": "B. Giao diện Trang chủ sau khi Đăng nhập thành công",
+      "after": "4.2.2 Trang chủ và tài khoản học viên"
+    },
+    "302": {
+      "before": "C. Giao diện Danh mục và Chi tiết Khóa học (ProgramController)",
+      "after": "4.2.3 Danh mục và chi tiết khóa học"
+    },
+    "321": {
+      "before": "D. Giao diện Đăng ký Kiểm tra Trình độ đầu vào (PlacementTestController)",
+      "after": "4.2.4 Đăng ký kiểm tra đầu vào"
+    },
+    "332": {
+      "before": "E. Giao diện Đăng ký lớp học và Thanh toán học phí (EnrollmentController & PaymentController)",
+      "after": "4.2.5 Đăng ký khóa học và học phí"
+    },
+    "352": {
+      "before": "F. Giao diện Không gian học tập cá nhân học viên (StudentController)",
+      "after": "4.2.6 Không gian học tập của học viên"
+    },
+    "372": {
+      "before": "4.2.2 Phân hệ Quản trị viên hệ thống (Admin Portal - Area: Admin)",
+      "after": "4.3 Phân hệ quản trị viên"
+    },
+    "374": {
+      "before": "1. Bảng điều khiển Quản trị & Thống kê (Areas/Admin/Views/Dashboard/Index.cshtml)",
+      "after": "4.3.1 Bảng điều khiển quản trị"
+    },
+    "382": {
+      "before": "2. Phân hệ Quản lý Banner Quảng bá (BannerManagerController)",
+      "after": "4.3.2 Quản lý banner"
+    },
+    "390": {
+      "before": "3. Phân hệ Quản lý Đào tạo: Chương trình học & Lớp học",
+      "after": "4.3.3 Chương trình lớp và lịch học"
+    },
+    "398": {
+      "before": "4. Phân hệ Quản lý Tài chính, Đăng ký và Tư vấn",
+      "after": "4.3.4 Ghi danh học phí và tư vấn"
+    },
+    "403": {
+      "before": "5. Phân hệ Quản trị Nhân sự: Giảng viên & Học viên",
+      "after": "4.3.5 Hồ sơ giáo viên và học viên"
+    },
+    "407": {
+      "before": "6. Phân hệ Thùng rác hệ thống & Cơ chế Xóa mềm an toàn (TrashController)",
+      "after": "4.3.6 Thùng rác và dữ liệu đã xóa"
+    },
+    "418": {
+      "before": "4.2.3 Phân hệ Giảng viên (Teacher Portal - Area: Teacher)",
+      "after": "4.4 Phân hệ giáo viên"
+    },
+    "420": {
+      "before": "1. Bảng điều khiển Giảng viên (TeacherDashboard)",
+      "after": "4.4.1 Bảng điều khiển giáo viên"
+    },
+    "423": {
+      "before": "2. Quản lý Lớp dạy & Điểm danh chuyên cần (TeachingClass & Attendance)",
+      "after": "4.4.2 Theo dõi lớp và học viên"
+    },
+    "426": {
+      "before": "3. Chấm điểm bài thi xếp lớp đầu vào (TeacherTest)",
+      "after": "4.4.3 Chấm kiểm tra xếp lớp"
+    },
+    "429": {
+      "before": "4. Quản lý Tài liệu học tập & Phản hồi (Document & Feedback)",
+      "after": "4.4.4 Tài liệu và phản hồi"
+    },
+    "432": {
+      "before": "4.2.4 Phân hệ Xác thực và Quản lý tài khoản (Authentication System)",
+      "after": "4.5 Xác thực và quản lý tài khoản"
+    },
+    "434": {
+      "before": "1. Giao diện Đăng nhập hệ thống (Views/Account/Login.cshtml)",
+      "after": "4.5.1 Đăng nhập"
+    },
+    "441": {
+      "before": "2. Giao diện Đăng ký tài khoản (Views/Account/Register.cshtml)",
+      "after": "4.5.2 Đăng ký tài khoản"
+    },
+    "444": {
+      "before": "3. Giao diện Đổi mật khẩu & Cảnh báo an ninh 403",
+      "after": "4.5.3 Đổi mật khẩu và kiểm soát truy cập"
+    },
+    "448": {
+      "before": "4.3 KIỂM THỬ HỆ THỐNG (SYSTEM TESTING)",
+      "after": "4.6 Kiểm thử hệ thống"
+    },
+    "450": {
+      "before": "4.3.1 Mục tiêu và Phương pháp kiểm thử",
+      "after": "4.6.1 Mục tiêu và phương pháp"
+    },
+    "462": {
+      "before": "4.3.2 Kịch bản kiểm thử chi tiết các phân hệ chức năng (Test Cases)",
+      "after": "4.6.2 Kịch bản kiểm thử"
+    },
+    "84": {
+      "before": "Website 1: Anh văn Hội Việt Mỹ (VUS) - vus.edu.vn",
+      "after": "1.2.1 Website VUS"
+    },
+    "96": {
+      "before": "1.3.2 Website 2: ILA Vietnam (ILA) - ila.edu.vn",
+      "after": "1.2.2 Website ILA Vietnam"
+    },
+    "109": {
+      "before": "Những vấn đề còn tồn tại",
+      "after": "1.3.1 Những vấn đề còn tồn tại"
+    },
+    "359": {
+      "before": "Hình 4.8: Giao diện Lớp học của tôi và Lịch học tuần",
+      "after": "Nhóm hình minh họa: Giao diện Lớp học của tôi và Lịch học tuần"
+    },
+    "397": {
+      "before": "Hình 4.13: Giao diện Quản trị Chương trình học và Lớp học",
+      "after": "Nhóm hình minh họa: Giao diện Quản trị Chương trình học và Lớp học"
+    },
+    "402": {
+      "before": "Hình 4.14: Giao diện Quản trị Đăng ký và Xác nhận Thanh toán học phí",
+      "after": "Nhóm hình minh họa: Giao diện Quản trị Đăng ký và Xác nhận Thanh toán học phí"
+    },
+    "406": {
+      "before": "Hình 4.15: Giao diện Quản lý Hồ sơ Giảng viên và Học viên",
+      "after": "Nhóm hình minh họa: Giao diện Quản lý Hồ sơ Giảng viên và Học viên"
+    },
+    "425": {
+      "before": "Hình 4.18: Giao diện Danh sách lớp dạy và Điểm danh học viên",
+      "after": "Nhóm hình minh họa: Giao diện Danh sách lớp dạy và Điểm danh học viên"
+    },
+    "431": {
+      "before": "Hình 4.20: Giao diện Quản lý kho học liệu số và Đánh giá giờ dạy",
+      "after": "Nhóm hình minh họa: Giao diện Quản lý kho học liệu số và Đánh giá giờ dạy"
+    },
+    "209": {
+      "before": "Hình 1: Biểu đồ Use Case tổng quan hệ thống Dang ky khoa hc",
+      "after": "Sơ đồ use case tổng quát hệ thống HITC English"
+    },
+    "343": {
+      "before": " Hình 4.6: Giao diện Thanh toán học phí bằng mã quét VietQR tự động",
+      "after": "Đăng ký khóa học theo nguyện vọng và cách đóng học phí"
+    },
+    "371": {
+      "before": "Hình 4.10: Giao diện Hồ sơ cá nhân và Kết quả thi xếp lớp của học viên",
+      "after": "Hồ sơ cá nhân của học viên"
+    },
+    "428": {
+      "before": "Hình 4.19: Giao diện Chấm thi xếp lớp và Đề xuất cấp độ học",
+      "after": "Các lớp thi được phân công chấm"
+    },
+    "447": {
+      "before": "Hình 4.23: Giao diện Đổi mật khẩu và Thông báo từ chối truy cập 403",
+      "after": "Đổi mật khẩu và kiểm soát truy cập"
+    }
+  },
+  "table_cell_updates": [
+    [
+      7,
+      1,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      7,
+      2,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      7,
+      3,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      7,
+      4,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      7,
+      5,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      8,
+      1,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      8,
+      2,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      8,
+      3,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      8,
+      4,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      8,
+      5,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      10,
+      1,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      10,
+      2,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      10,
+      3,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      10,
+      4,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      10,
+      5,
+      5,
+      "ĐẠT (Pass)",
+      "Cần kiểm tra lại"
+    ],
+    [
+      "TC-AUTH-01",
+      "actual",
+      "Hiển thị cảnh báo màu đỏ ngay dưới ô nhập email, giữ nguyên form.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Hiển thị cảnh báo màu đỏ ngay dưới ô nhập email, giữ nguyên form."
+    ],
+    [
+      "TC-AUTH-03",
+      "actual",
+      "Hệ thống từ chối đăng nhập, thông báo lỗi rõ ràng.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Hệ thống từ chối đăng nhập, thông báo lỗi rõ ràng."
+    ],
+    [
+      "TC-CUST-02",
+      "actual",
+      "Bản ghi tạo thành công, email gửi về hộp thư học viên đúng nội dung.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Bản ghi tạo thành công, email gửi về hộp thư học viên đúng nội dung."
+    ],
+    [
+      "TC-CUST-05",
+      "actual",
+      "Biên lai hiển thị đầy đủ logo, mã #PAY, số tiền bằng chữ, in ấn chuẩn CSS.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Biên lai hiển thị đầy đủ logo, mã #PAY, số tiền bằng chữ, in ấn chuẩn CSS."
+    ],
+    [
+      "TC-TEACH-01",
+      "actual",
+      "Dữ liệu lưu tức thời, hiển thị trạng thái đã điểm danh thành công.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Dữ liệu lưu tức thời, hiển thị trạng thái đã điểm danh thành công."
+    ],
+    [
+      "TC-TEACH-03",
+      "actual",
+      "Tệp upload thành công, đường link tải xuống hoạt động chính xác.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Tệp upload thành công, đường link tải xuống hoạt động chính xác."
+    ],
+    [
+      "TC-ADM-01",
+      "actual",
+      "Trang chủ hiển thị slide mới, click nút chuyển hướng chính xác đến /Program.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Trang chủ hiển thị slide mới, click nút chuyển hướng chính xác đến /Program."
+    ],
+    [
+      "TC-ADM-02",
+      "actual",
+      "Chương trình ẩn khỏi trang chủ và trang Admin, tự động chuyển vào Thùng rác.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Chương trình ẩn khỏi trang chủ và trang Admin, tự động chuyển vào Thùng rác."
+    ],
+    [
+      "TC-ADM-03",
+      "actual",
+      "Dữ liệu phục hồi nguyên vẹn, các liên kết khóa ngoại vẫn giữ nguyên.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Dữ liệu phục hồi nguyên vẹn, các liên kết khóa ngoại vẫn giữ nguyên."
+    ],
+    [
+      "TC-ADM-04",
+      "actual",
+      "Bản ghi bị xóa triệt để trong cơ sở dữ liệu.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Bản ghi bị xóa triệt để trong cơ sở dữ liệu."
+    ],
+    [
+      "TC-ADM-05",
+      "actual",
+      "Cơ chế toàn vẹn dữ liệu ngăn chặn lỗi xung đột Foreign Key thành công.",
+      "Chưa chạy lại ca này. Nội dung cần đối chiếu: Cơ chế toàn vẹn dữ liệu ngăn chặn lỗi xung đột Foreign Key thành công."
+    ]
+  ],
+  "figures": 47,
+  "body_words_without_cached_contents": 16289
+}

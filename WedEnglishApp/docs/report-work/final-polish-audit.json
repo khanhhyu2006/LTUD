@@ -1,0 +1,501 @@
+{
+  "source": "Bao_cao_LLUD_Hoan_thien_Chuong_3.docx",
+  "targeted_edits": [
+    {
+      "old": "Trong những năm gần đây, cùng với sự phát triển mạnh mẽ của công nghệ thông tin và Internet, nhu cầu nâng cao trình độ ngoại ngữ (Tiếng Anh: IELTS, TOEIC, Giao tiếp,...) ngày càng gia tăng nhằm đáp ứng yêu cầu học tập và làm việc trong môi trường hội nhập quốc tế. Đi cùng với đó là sự thay đổi rõ rệt trong thói quen của người học: thay vì phải trực tiếp đến văn phòng trung tâm để tìm hiểu thông tin, làm thủ tục nhập học và đóng học phí bằng tiền mặt, học viên ngày nay có xu hướng ưu tiên tra cứu lộ trình, làm bài kiểm tra xếp lớp trực tuyến, đăng ký ca học và thanh toán học phí nhanh chóng qua các nền tảng số.",
+      "new": "Nhu cầu học tiếng Anh phục vụ học tập và công việc đặt ra yêu cầu quản lý thông tin rõ ràng tại các trung tâm ngoại ngữ. Người học cần tra cứu chương trình, đăng ký kiểm tra đầu vào, gửi nguyện vọng lịch học và theo dõi học phí trên website. Với trung tâm, các thao tác này cần được liên kết để hạn chế nhập liệu nhiều lần và thuận tiện khi xếp lớp."
+    },
+    {
+      "old": "Thiếu công cụ kiểm tra trình độ đầu vào trực tuyến (Placement Test) để tự động phân lớp phù hợp cho học viên.",
+      "new": "Thiếu công cụ tiếp nhận yêu cầu kiểm tra đầu vào, tổ chức phòng thi và lưu kết quả để tư vấn trình độ phù hợp."
+    },
+    {
+      "old": "Nền tảng ASP.NET Core (.NET 8) do Microsoft phát triển là một framework mã nguồn mở mạnh mẽ, có hiệu năng vượt trội, tính bảo mật cao và hỗ trợ mô hình kiến trúc Model - View - Controller (MVC) chặt chẽ. Kết hợp cùng ngôn ngữ lập trình hiện đại C#, công nghệ Entity Framework Core (EF Core Code-First) và hệ quản trị cơ sở dữ liệu doanh nghiệp tin cậy Microsoft SQL Server, đây là giải pháp công nghệ lý tưởng để xây dựng một hệ thống quản trị giáo dục ổn định, an toàn và dễ mở rộng.",
+      "new": "Đề tài lựa chọn ASP.NET Core MVC trên .NET 8, ngôn ngữ C#, Entity Framework Core và SQL Server. Các công nghệ này phù hợp với ứng dụng web quản lý dữ liệu quan hệ và cho phép tổ chức giao diện, xử lý yêu cầu và truy cập dữ liệu trong cùng dự án."
+    },
+    {
+      "old": "Xuất phát từ những yêu cầu thực tiễn và nền tảng công nghệ trên, đề tài “Xây dựng website quản lý và đăng ký học tại trung tâm ngoại ngữ sử dụng ASP.NET Core và SQL Server” được lựa chọn nhằm nghiên cứu, phân tích và hiện thực hóa một giải pháp phần mềm toàn diện, đáp ứng đầy đủ nghiệp vụ đào tạo, tuyển sinh và quản lý đào tạo cho trung tâm ngoại ngữ hiện đại.",
+      "new": "Từ những yêu cầu trên, đề tài “Xây dựng website quản lý trung tâm ngoại ngữ NHK English times” được thực hiện để hỗ trợ tư vấn, đăng ký khóa học, xếp lớp, quản lý lịch học và đối soát học phí. Báo cáo trình bày thiết kế, chức năng đã triển khai và những phần cần tiếp tục hoàn thiện."
+    },
+    {
+      "old": "Mục tiêu tổng quát của đề tài là nghiên cứu, thiết kế và xây dựng hoàn chỉnh ứng dụng web quản lý đào tạo và đăng ký học trực tuyến theo mô hình Client - Server (kiến trúc ASP.NET Core MVC). Hệ thống bảo đảm tính vận hành ổn định, an toàn dữ liệu, phân quyền bảo mật chặt chẽ và cung cấp giao diện trực quan, thân thiện cho từng đối tượng người dùng.",
+      "new": "Mục tiêu của đề tài là xây dựng ứng dụng web quản lý trung tâm ngoại ngữ theo mô hình ASP.NET Core MVC. Ứng dụng cung cấp khu vực sử dụng theo vai trò, lưu dữ liệu tập trung và hỗ trợ các bước từ đăng ký nguyện vọng đến xếp lớp, theo dõi lịch và học phí."
+    },
+    {
+      "old": "Thanh toán học phí tiện lợi (VietQR Integration): Hệ thống tự động khởi tạo mã VietQR chuẩn xác với thông tin số tài khoản, số tiền và mã hóa đơn, giúp học viên quét mã thanh toán học phí qua ứng dụng Mobile Banking chỉ trong vài giây.",
+      "new": "Hướng dẫn đóng học phí: Hiển thị số tiền, nội dung chuyển khoản và mã VietQR theo đơn đăng ký, hoặc hướng dẫn đóng tại trung tâm. Admin đối soát chứng từ rồi xác nhận khoản thu; quét mã không tự làm thay đổi trạng thái học phí."
+    },
+    {
+      "old": "Đánh giá & Chấm điểm: Nhập kết quả kiểm tra, nhận xét năng lực học tập của học viên trong quá trình theo học.",
+      "new": "Chấm kiểm tra đầu vào: Nhập điểm và cấp độ đề xuất cho thí sinh trong ca thi được phân công. Phiên bản hiện tại chưa có bảng điểm quá trình riêng cho từng khóa học."
+    },
+    {
+      "old": "Báo cáo thống kê & Biểu đồ doanh thu: Cung cấp bảng điều khiển Dashboard trực quan sử dụng thư viện Chart.js, thống kê số lượng học viên mới, tổng doanh thu theo tháng và tỷ trọng doanh thu giữa các khóa học phục vụ ra quyết định quản lý.",
+      "new": "Thống kê quản trị: Bảng điều khiển dùng Chart.js để minh họa doanh thu và cơ cấu chương trình. Tổng khoản thu đã xác nhận được lấy từ dữ liệu; chuỗi tháng và tỷ trọng trên một số biểu đồ còn là dữ liệu mẫu, cần hoàn thiện trước khi dùng cho báo cáo vận hành."
+    },
+    {
+      "old": "Phạm vi nghiệp vụ: Hệ thống tập trung giải quyết trọn vẹn chu trình nghiệp vụ quản lý đào tạo tại một trung tâm ngoại ngữ, từ khâu tiếp thị - tư vấn, kiểm tra xếp lớp đầu vào, ghi danh, xếp lịch học, phân công giảng viên đến khâu thu học phí và báo cáo thống kê doanh thu.",
+      "new": "Phạm vi nghiệp vụ: Tư vấn tuyển sinh, đăng ký kiểm tra đầu vào, tổ chức ca thi, ghi danh theo nguyện vọng, xếp lớp, lập lịch học, phân công giáo viên và theo dõi học phí tại một trung tâm ngoại ngữ."
+    },
+    {
+      "old": "Môi trường phát triển Backend & Frontend: Ứng dụng mô hình ASP.NET Core MVC (.NET 8) kết hợp với ngôn ngữ lập trình C#. Giao diện người dùng được xây dựng bằng Razor Views, HTML5, CSS3, JavaScript và thư viện giao diện Bootstrap 5 đảm bảo hiển thị Responsive tốt trên cả máy tính và điện thoại.",
+      "new": "Môi trường phát triển: ASP.NET Core MVC (.NET 8), C#, Razor Views, HTML, CSS, JavaScript và Bootstrap 5. Bố cục được điều chỉnh theo kích thước màn hình; mức độ tương thích cần được kiểm tra trên các thiết bị dự kiến sử dụng."
+    },
+    {
+      "old": "Về cổng thanh toán: Để đảm bảo tính khả thi và an toàn trong khuôn khổ đồ án môn học, hệ thống triển khai giải pháp thanh toán thông qua mã VietQR tự động (tự động điền đúng Số tài khoản trung tâm, Tên chủ tài khoản, Số tiền học phí và Mã hóa đơn nội dung chuyển khoản). Sau khi Admin đối soát và xác nhận đã thu, hệ thống cho phép xuất in biên lai học phí điện tử; chưa tích hợp Webhook API tự động bắt biến động số dư ngân hàng theo thời gian thực (do yêu cầu pháp nhân doanh nghiệp khi đăng ký dịch vụ Open Banking với các ngân hàng thương mại).",
+      "new": "Về thanh toán: Ứng dụng hiển thị hướng dẫn VietQR theo số tài khoản, số tiền và mã đơn hoặc cho phép chọn đóng tại trung tâm. Admin kiểm tra chứng từ và xác nhận đã thu trước khi học viên in biên lai nội bộ. Chưa tích hợp callback ngân hàng để tự động đối soát."
+    },
+    {
+      "old": "Khảo sát nghiệp vụ thực tế: Khảo sát quy trình tổ chức lớp học, cấu trúc thời khóa biểu và biểu phí tại các trung tâm ngoại ngữ thực tế, từ đó chuẩn hóa các quy tắc nghiệp vụ trong hệ thống.",
+      "new": "Khảo sát giao diện và phân tích nghiệp vụ: Tham khảo các trang công khai của VUS, ILA và mô hình tổ chức lớp học để xác định nhóm thông tin cần trình bày. Phần khảo sát không bao gồm quyền truy cập hệ thống quản trị nội bộ của các đơn vị này."
+    },
+    {
+      "old": "Hiện thực hóa mã nguồn (Implementation): Sử dụng môi trường lập trình Visual Studio / Visual Studio Code để viết mã nguồn bằng C#, xây dựng cơ sở dữ liệu qua EF Core Migrations và nạp sẵn dữ liệu mẫu (Seed Data) cho hệ thống hoạt động thực tế.",
+      "new": "Hiện thực mã nguồn: Sử dụng Visual Studio và Visual Studio Code để xây dựng ứng dụng C#. Cơ sở dữ liệu được quản lý bằng EF Core cùng các script SQL nâng cấp; dữ liệu mẫu phục vụ chạy thử các nghiệp vụ."
+    },
+    {
+      "old": "Kiểm thử và đánh giá (Testing): Tiến hành kiểm thử hộp đen (Black-box Testing) trên từng chức năng cốt lõi: Đăng nhập/Đăng xuất, Phân quyền truy cập các Area (/Admin, /Teacher), Luồng thi thử xếp lớp, Luồng đăng ký lớp và thanh toán VietQR, In biên lai học phí và Hiển thị biểu đồ doanh thu Chart.js. Qua đó, kịp thời phát hiện và khắc phục các lỗi phát hiện trong phạm vi kiểm tra, làm cơ sở tiếp tục đánh giá trước khi vận hành.",
+      "new": "Kiểm thử và đánh giá: Kiểm tra đăng nhập, phân quyền, đăng ký khóa học, xếp lớp, lập lịch, tổ chức ca thi và tư vấn trên dữ liệu thử. Các bảng kiểm thử phân biệt tình huống đã quan sát với ca chưa chạy lại; kết quả không thay thế kiểm thử tải hoặc đánh giá bảo mật chuyên sâu."
+    },
+    {
+      "old": "Trong mô hình trung tâm ngoại ngữ truyền thống, mọi khâu vận hành đều diễn ra thủ công: học viên đến trực tiếp văn phòng ghi phiếu thông tin, nhân viên tư vấn nhập liệu vào các bảng tính Excel rời rạc, thủ quỹ thu tiền mặt và viết biên lai giấy, việc xếp phòng và ca dạy thực hiện trên bảng biểu giấy dán tường. Mô hình này bộc lộ những nhược điểm nghiêm trọng:",
+      "new": "Ở mô hình quản lý thủ công, thông tin đăng ký, thu học phí và lịch giảng dạy thường được ghi trong sổ hoặc các bảng tính riêng. Khi số lớp tăng, cách lưu trữ phân tán có thể dẫn đến những khó khăn sau:"
+    },
+    {
+      "old": "Chuyển đổi số sang hệ sinh thái Website quản lý tập trung dựa trên nền tảng ASP.NET Core MVC giúp giải quyết triệt để các tồn tại trên:",
+      "new": "Website quản lý tập trung được đề xuất để hạn chế các vấn đề trên:"
+    },
+    {
+      "old": "Hệ thống quản lý trung tâm áp dụng mô hình phân quyền dựa trên vai trò (Role-Based Access Control - RBAC) với 4 cấp bậc rõ ràng:\t",
+      "new": "Hệ thống có bốn nhóm người sử dụng. Trong đó, Student, Teacher và Admin là ba vai trò tài khoản; Guest là người truy cập chưa đăng nhập:"
+    },
+    {
+      "old": "Để có cái nhìn toàn diện và rút ra bài học kinh nghiệm cho việc thiết kế hệ thống, nhóm đã tiến hành khảo sát hai website trung tâm ngoại ngữ lớn và phổ biến hiện nay: VUS (Anh văn Hội Việt Mỹ) và I LA (ILA Vietnam).",
+      "new": "Phần khảo sát tham khảo giao diện công khai của VUS (Anh văn Hội Việt Mỹ) và ILA Vietnam qua các hình trong tài liệu ban đầu [1], [2]. Nhận xét dưới đây phục vụ lựa chọn bố cục và cách giới thiệu khóa học, không đánh giá hệ thống quản trị nội bộ của hai đơn vị."
+    },
+    {
+      "old": "Hình 1. trang chủ VUS",
+      "new": "Hình 1. Trang chủ VUS"
+    },
+    {
+      "old": "Giao diện hiện đại, chuẩn SEO: Thiết kế bắt mắt, bố cục rõ ràng, hình ảnh chất lượng cao và tốc độ tải trang nhanh.",
+      "new": "Bố cục trang chủ: Khu vực banner, nhóm khóa học và nút tư vấn được đặt rõ ràng trong hình khảo sát. Báo cáo chưa đo tốc độ tải hoặc đánh giá SEO của website."
+    },
+    {
+      "old": "Tích hợp tiện ích đa dạng: Có hệ thống kiểm tra trình độ trực tuyến (Placement Test) và liên kết ứng dụng học tập nội bộ.",
+      "new": "Tiện ích hỗ trợ người học: Các liên kết kiểm tra trình độ và tư vấn gợi ý cách tổ chức điểm vào cho người dùng mới; chức năng nội bộ không nằm trong phạm vi khảo sát."
+    },
+    {
+      "old": "Thông tin học phí chưa công khai: Học viên phải điền form đăng ký tư vấn mới nhận được báo giá chi tiết, gây bất tiện cho người muốn so sánh giá nhanh.",
+      "new": "Thông tin học phí: Hình khảo sát chưa thể hiện đủ học phí từng chương trình, nên người xem cần tìm thêm thông tin hoặc liên hệ tư vấn để so sánh."
+    },
+    {
+      "old": "Hình 2. trang chủ ILA Vietnam",
+      "new": "Hình 2. Trang chủ ILA Vietnam"
+    },
+    {
+      "old": "\tMô tả hình ảnh: Trang chủ ILA mang phong cách thiết kế chuẩn quốc tế với tông màu trắng và đỏ chủ đạo. Thiết kế tập trung vào video/hình ảnh thực tế tại lớp học, tích hợp thanh tìm kiếm khóa học và danh sách các trung tâm/cơ sở trên toàn quốc.",
+      "new": "Mô tả hình ảnh: Trang chủ ILA trong hình khảo sát ưu tiên hình ảnh lớp học, các chương trình đào tạo và thông tin cơ sở. Cách trình bày này giúp phụ huynh và người học tiếp cận thông tin trước khi liên hệ tư vấn."
+    },
+    {
+      "old": "Nội dung phong phú: Cung cấp chi tiết phương pháp giảng dạy (Chuẩn quốc tế, 21st Century Learning) giúp phụ huynh tin tưởng vào chất lượng đào tạo.",
+      "new": "Nội dung giới thiệu: Trang trình bày chương trình và phương pháp giảng dạy để người học tham khảo. Báo cáo không kiểm chứng chất lượng đào tạo từ nội dung quảng bá."
+    },
+    {
+      "old": "Thiếu tính năng mua/đăng ký khóa học trực tiếp: Hầu hết các luồng thao tác đều dẫn về form để lại thông tin liên hệ chứ chưa cho phép đăng ký chọn lớp chi tiết trên web.",
+      "new": "Giới hạn quan sát: Các điểm điều hướng trong hình khảo sát chủ yếu phục vụ tìm hiểu chương trình và gửi thông tin tư vấn; chưa có căn cứ kết luận toàn bộ website không hỗ trợ ghi danh trực tuyến."
+    },
+    {
+      "old": "Chưa tích hợp cổng thanh toán trực tuyến: Người học vẫn cần qua sự hỗ trợ của tư vấn viên hoặc đến trung tâm để hoàn tất thủ tục tài chính.",
+      "new": "Thanh toán: Phần giao diện được khảo sát chưa thể hiện đầy đủ quy trình thanh toán. Vì không thực hiện giao dịch, báo cáo không đánh giá các kênh thanh toán của đơn vị."
+    },
+    {
+      "old": "Tích hợp cổng thanh toán VietQR tự động theo chuẩn Napas247, sinh mã QR kèm chính xác số tiền và mã hóa đơn hỗ trợ đối chiếu khoản thu; Admin xác nhận sau khi kiểm tra.",
+      "new": "Hiển thị VietQR theo đơn đăng ký, kèm số tiền và nội dung chuyển khoản để hỗ trợ đối chiếu. Admin xác nhận khoản thu sau khi kiểm tra chứng từ."
+    },
+    {
+      "old": "Cung cấp tính năng In biên lai học phí điện tử (PrintReceipt) đạt chuẩn mẫu kế toán.",
+      "new": "Cung cấp chức năng xem và in biên lai học phí nội bộ (PrintReceipt); mẫu trình diễn không thay thế hóa đơn điện tử hoặc chứng từ được cơ quan có thẩm quyền chứng nhận."
+    },
+    {
+      "old": "Chương 1 đã hoàn thành việc phác thảo bức tranh toàn cảnh về nhu cầu chuyển đổi số trong công tác quản trị và đào tạo tại các trung tâm ngoại ngữ trong giai đoạn hiện nay.",
+      "new": "Chương 1 xác định nhu cầu quản lý tập trung và phạm vi website NHK English times."
+    },
+    {
+      "old": "Cụ thể, các nội dung trọng tâm đã đạt được trong chương bao gồm:",
+      "new": "Các nội dung chính gồm:"
+    },
+    {
+      "old": "Phân tích rõ những bất cập, sai sót dữ liệu và chi phí nhân sự tốn kém của mô hình quản lý thủ công truyền thống (sổ sách, file Excel rời rạc); từ đó khẳng định tính cấp thiết của việc xây dựng một nền tảng số hóa tập trung (E-Management & E-Learning Portal) có khả năng đồng bộ dữ liệu theo thời gian thực (xếp lớp theo nguyện vọng, chống vượt sĩ số và cập nhật lịch học; lưu chuyên cần cần được bổ sung).",
+      "new": "Phân tích nguy cơ trùng thông tin, xung đột phòng và khó đối soát khi sử dụng sổ sách, bảng tính riêng. Hệ thống đề xuất lưu tập trung đơn đăng ký, lớp, lịch và học phí; lưu chuyên cần theo buổi còn cần bổ sung."
+    },
+    {
+      "old": "Nghiên cứu ưu điểm và hạn chế trong các mô hình vận hành của các trung tâm lớn (như VUS, ILA), nhận diện các bài toán còn tồn tại ở các trung tâm vừa và nhỏ về mặt trải nghiệm người dùng, khả năng phân quyền quản trị đa cấp bậc và tính linh hoạt trong quy trình ghi danh.",
+      "new": "Tham khảo cách giới thiệu khóa học và bố trí điểm liên hệ trên giao diện công khai của VUS, ILA. Các nhận xét không thay thế khảo sát vận hành thực tế tại trung tâm."
+    },
+    {
+      "old": "Đề xuất giải pháp xây dựng ứng dụng web quản lý và đăng ký học tại trung tâm ngoại ngữ (NHK English times) ứng dụng nền tảng công nghệ hiện đại, hỗ trợ quy trình từ khâu tư vấn tuyển sinh kiểm tra đầu vào xếp lớp đối soát học phí và quản lý lịch dạy; chuyên cần là hạng mục tiếp tục hoàn thiện.",
+      "new": "Đề xuất website NHK English times để tiếp nhận tư vấn, kiểm tra đầu vào, đăng ký nguyện vọng, xếp lớp, quản lý lịch dạy và đối soát học phí."
+    },
+    {
+      "old": "Định vị rõ 4 nhóm đối tượng thụ hưởng trực tiếp của đề tài (Khách vãng lai, Học viên, Giảng viên và Quản trị viên); khẳng định ý nghĩa thực tiễn trong việc tối ưu hóa chi phí vận hành cho trung tâm, mang lại sự minh bạch, tiện lợi và trải nghiệm học tập hiện đại, chuyên nghiệp cho người học.",
+      "new": "Xác định phạm vi sử dụng của khách, học viên, giáo viên và Admin. Hiệu quả tiết kiệm thời gian cần được đo khi có điều kiện triển khai thực tế."
+    },
+    {
+      "old": "2.1 Kiến trúc hệ thống Client - Server và ASP.NET Core MVC và định hướng Web API",
+      "new": "2.1 Kiến trúc Client–Server và ASP.NET Core MVC"
+    },
+    {
+      "old": "Hệ thống vận hành theo kiến trúc Client - Server tiêu chuẩn kết hợp linh hoạt giữa phương thức Server-Side Rendering (SSR) và Client-Side Rendering (CSR):",
+      "new": "Ứng dụng vận hành theo mô hình Client–Server. Razor dựng phần lớn giao diện ở máy chủ; JavaScript cập nhật một số khu vực bằng dữ liệu JSON:"
+    },
+    {
+      "old": "Phía Server: Máy chủ web Kestrel / IIS tiếp nhận các HTTP Request (GET, POST, PUT, DELETE). Máy chủ xử lý logic nghiệp vụ, truy vấn CSDL SQL Server và phản hồi HTTP Response dưới dạng mã HTML đã được render sẵn (đối với Razor View) hoặc dữ liệu chuẩn JSON (đối với RESTful Web API).",
+      "new": "Phía Server: Kestrel hoặc IIS tiếp nhận yêu cầu HTTP/HTTPS, thực hiện kiểm tra nghiệp vụ và truy vấn SQL Server. Các action MVC trả giao diện Razor hoặc JSON tùy chức năng; dự án chưa có backend Web API độc lập."
+    },
+    {
+      "old": "Hệ thống được thiết kế đa dạng phương thức cung cấp dịch vụ để tối ưu hóa trải nghiệm người dùng trên nền tảng Web, tạo cơ sở mở rộng Mobile:",
+      "new": "ASP.NET Core MVC chia mã nguồn theo dữ liệu, giao diện và bộ điều khiển [3]:"
+    },
+    {
+      "old": "Model: Đại diện cho dữ liệu và quy tắc nghiệp vụ. Bao gồm các Entity ánh xạ trực tiếp với CSDL (Student, Teacher, Class, Payment...) và các ViewModel truyền dữ liệu hiển thị (LoginViewModel, RegisterViewModel, AdminDashboardViewModel).",
+      "new": "Model: Các thực thể như Student, Teacher, CourseClass và Payment mô tả dữ liệu nghiệp vụ. ViewModel định dạng dữ liệu gửi tới giao diện hoặc nhận từ biểu mẫu."
+    },
+    {
+      "old": "ASP.NET Core .NET 8: Framework web mã nguồn mở đa nền tảng có hiệu năng hàng đầu thế giới. Tích hợp sẵn cơ chế Dependency Injection (DI) trong tệp cấu hình Program.cs, quản lý vòng đời dịch vụ (AddScoped, AddTransient, AddSingleton) một cách chặt chẽ.",
+      "new": "ASP.NET Core trên .NET 8: Nền tảng web mã nguồn mở, hỗ trợ Dependency Injection trong Program.cs. Các dịch vụ được đăng ký với vòng đời phù hợp để controller có thể sử dụng qua hàm khởi tạo."
+    },
+    {
+      "old": "Entity Framework Core 8 (EF Core Code-First): Lập trình viên định nghĩa các thực thể C# thuần túy (POCO Classes), EF Core tự động tạo sinh lược đồ CSDL thông qua Migration (Add-Migration InitialCreate Update-Database). Sử dụng LINQ to Entities với các phương thức eager loading (.Include(), .ThenInclude()) giúp tối ưu số lượng câu lệnh truy vấn SQL.",
+      "new": "Entity Framework Core 8: Ánh xạ thực thể C# sang dữ liệu quan hệ và hỗ trợ truy vấn LINQ, theo dõi thay đổi, giao dịch và migrations [4]. Include/ThenInclude nạp dữ liệu liên quan; hiệu quả truy vấn vẫn phụ thuộc cách sử dụng và lượng dữ liệu. Dự án còn dùng script SQL để nâng cấp schema."
+    },
+    {
+      "old": "2.3 Công nghệ phát triển phía Frontend & Giao tiếp API (Razor View, Bootstrap 5, JavaScript & Axios/Fetch)",
+      "new": "2.3 Công nghệ giao diện Razor Views, Bootstrap và JavaScript"
+    },
+    {
+      "old": "Bootstrap 5 và CSS tùy chỉnh: Hệ thống lưới Grid System 12 cột linh hoạt cùng các thành phần UI cao cấp (Navbar, Card, Modal, Badge, Alert, Table) giúp giao diện tương thích hoàn hảo trên mọi kích thước màn hình (Desktop, Tablet, Mobile).",
+      "new": "Bootstrap 5 và CSS tùy chỉnh: Sử dụng lưới 12 cột và các thành phần Navbar, Card, Modal, Badge, Alert, Table để xây dựng bố cục theo kích thước màn hình [7]. Các bảng nhiều cột cần vùng cuộn và kiểm tra riêng trên màn hình nhỏ."
+    },
+    {
+      "old": "Tích hợp thư viện Chart.js tại trang Quản trị viên để trực quan hóa biểu đồ doanh thu theo các tháng trong năm (Biểu đồ cột Bar) và biểu đồ phân bố học viên theo từng khóa học (Biểu đồ tròn Doughnut).",
+      "new": "Chart.js được dùng tại trang quản trị để vẽ biểu đồ [8]. Một số chuỗi dữ liệu đang phục vụ minh họa; cần thay bằng truy vấn tổng hợp theo kỳ trước khi dùng làm báo cáo quản lý."
+    },
+    {
+      "old": "Microsoft SQL Server (MS SQL Server / LocalDB): Hệ quản trị CSDL quan hệ cấp doanh nghiệp, bảo đảm 4 tính chất ACID (Atomicity, Consistency, Isolation, Durability) trong giao dịch. Cấu trúc bảng được tổ chức theo các thực thể và quan hệ với đầy đủ các ràng buộc PRIMARY KEY, FOREIGN KEY, UNIQUE, CASCADE DELETE.",
+      "new": "Microsoft SQL Server/LocalDB: Lưu trữ dữ liệu quan hệ, hỗ trợ giao dịch và các ràng buộc khóa chính, khóa ngoại, duy nhất, CHECK. Hành vi khi xóa được cấu hình theo từng quan hệ; không áp dụng Cascade cho mọi bảng."
+    },
+    {
+      "old": "Giải pháp thanh toán tự động VietQR (Napas247): Thay vì tích hợp cổng thanh toán phức tạp yêu cầu pháp nhân doanh nghiệp, hệ thống áp dụng API sinh mã VietQR động chuẩn Napas247 theo cấu trúc chuỗi định dạng tiêu chuẩn (VietQR Format). Học viên chỉ cần mở ứng dụng ngân hàng quét mã QR, mọi thông tin về số tiền và nội dung chuyển khoản (chứa mã hóa đơn/học viên) được điền tự động theo đơn đăng ký để Admin đối chiếu.",
+      "new": "Hướng dẫn chuyển khoản VietQR: Giao diện hiển thị QR kèm số tiền và nội dung theo mã đăng ký [10]. Người học thực hiện chuyển tiền qua ứng dụng ngân hàng; Admin kiểm tra chứng từ rồi cập nhật trạng thái thu trong hệ thống."
+    },
+    {
+      "old": "Xác thực Cookie Authentication: Cấu hình trong Program.cs thông qua dịch vụ AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme). Khi người dùng đăng nhập thành công, hệ thống mã hóa thông tin vào Cookie bảo mật lưu ở trình duyệt.",
+      "new": "Cookie Authentication: Program.cs đăng ký ba lược đồ cookie cho Admin, Teacher và Student. RoleCookieRouter chọn lược đồ phù hợp theo khu vực truy cập; thông tin phiên được ASP.NET Core bảo vệ [5]."
+    },
+    {
+      "old": "Claims-based Identity & Role-Based Authorization: Gắn các Claim định danh (ClaimTypes.NameIdentifier, ClaimTypes.Name, ClaimTypes.Role). Bảo vệ các Controller/Action thông qua thuộc tính: ",
+      "new": "Claims và phân quyền theo vai trò: ClaimTypes.NameIdentifier, Name và Role nhận diện tài khoản. Authorize giới hạn các controller/action tương ứng [6]:"
+    },
+    {
+      "old": "Mã hóa mật khẩu an toàn với BCrypt: Không lưu mật khẩu dạng bản rõ (plain-text) trong CSDL. Mật khẩu được băm một chiều với Salt ngẫu nhiên bằng thư viện BCrypt.Net-Next: ",
+      "new": "Băm mật khẩu bằng BCrypt: Hệ thống lưu chuỗi băm kèm salt thay cho mật khẩu dạng rõ [9]. BCrypt không thay thế giới hạn số lần đăng nhập, quản lý mật khẩu và bảo vệ phiên."
+    },
+    {
+      "old": "Chương 2 đã hoàn thành việc hệ thống hóa toàn bộ cơ sở lý thuyết, kiến trúc phần mềm và các công nghệ cốt lõi được lựa chọn làm nền tảng phát triển cho hệ thống website quản lý và đăng ký học tại trung tâm ngoại ngữ.",
+      "new": "Chương 2 trình bày nền tảng công nghệ và cách áp dụng trong dự án."
+    },
+    {
+      "old": "Các nội dung trọng tâm được tổng kết trong chương bao gồm:",
+      "new": "Những nội dung được sử dụng để triển khai gồm:"
+    },
+    {
+      "old": "Làm rõ nguyên lý vận hành của kiến trúc Client - Server và mô hình Model - View - Controller (MVC) trong việc phân tách rạch ròi giữa tầng dữ liệu (Model), tầng biểu diễn giao diện (View) và tầng điều hướng logic nghiệp vụ (Controller), giúp mã nguồn có tính module hóa cao, dễ mở rộng và kiểm thử.",
+      "new": "Client–Server và MVC phân chia giao diện, dữ liệu và điều phối yêu cầu. Việc tổ chức này hỗ trợ bảo trì nhưng vẫn cần tránh đưa quá nhiều quy tắc nghiệp vụ vào controller."
+    },
+    {
+      "old": "Nắm vững các ưu điểm vượt trội của nền tảng ASP.NET Core (.NET 8 LTS) và ngôn ngữ lập trình C# 12: Hiệu năng xử lý yêu cầu cao, cơ chế Dependency Injection (DI) tích hợp sẵn và hệ thống phân vùng chức năng (Areas) mạnh mẽ.",
+      "new": "ASP.NET Core trên .NET 8 và C# hỗ trợ xây dựng ứng dụng web; DI và Areas được dùng để tổ chức dịch vụ và hai khu vực quản trị."
+    },
+    {
+      "old": "Khai thác hiệu quả sức mạnh của Entity Framework Core 8 (Code-First / Reverse Engineering) kết hợp hệ quản trị cơ sở dữ liệu quan hệ Microsoft SQL Server, cho phép thao tác dữ liệu thông qua truy vấn hướng đối tượng LINQ, tối ưu hóa giao dịch (Transactions) và quản lý chặt chẽ các ràng buộc toàn vẹn khóa ngoại.",
+      "new": "EF Core và SQL Server hỗ trợ truy vấn dữ liệu, giao dịch và kiểm tra quan hệ. Migrations cùng script SQL được sử dụng để quản lý thay đổi lược đồ."
+    },
+    {
+      "old": "Vận dụng cơ chế kết xuất mã nguồn phía máy chủ (Server-Side Rendering - SSR) thông qua Razor Engine (.cshtml), giúp tối ưu tốc độ phản hồi và hỗ trợ chuẩn SEO.",
+      "new": "Razor dựng HTML ở máy chủ. Một số tương tác dùng fetch để gửi, nhận JSON và cập nhật khu vực giao diện mà không tải lại toàn trang."
+    },
+    {
+      "old": "Ứng dụng hệ thống lưới bố cục linh hoạt của Bootstrap 5, thư viện biểu tượng Font Awesome 6 và phông chữ Plus Jakarta Sans, mang lại giao diện hiện đại, trực quan và tương thích co giãn hoàn hảo trên mọi kích thước màn hình (Responsive Design).",
+      "new": "Bootstrap, Font Awesome và Plus Jakarta Sans cung cấp lưới bố cục, biểu tượng và phông chữ. Bảng dữ liệu và thanh điều hướng được điều chỉnh để sử dụng trên các kích thước màn hình đã kiểm tra."
+    },
+    {
+      "old": "Chương này trình bày các tác nhân và đặc tả nghiệp vụ của NHK English times, thiết kế cơ sở dữ liệu, luồng đăng ký và thanh toán, cùng kiến trúc và tổ chức mã nguồn. Các nội dung được đối chiếu với ứng dụng ASP.NET Core MVC và cấu trúc SQL Server LocalDB đang sử dụng; phần phân tích đã có được giữ lại và sắp xếp theo các mục tương ứng.",
+      "new": "Chương này trình bày tác nhân và đặc tả nghiệp vụ của NHK English times, cơ sở dữ liệu, luồng đăng ký và thanh toán, cùng cách tổ chức mã nguồn ASP.NET Core MVC. Các bảng và sơ đồ được đối chiếu với mô hình dữ liệu đang sử dụng."
+    },
+    {
+      "old": "Luồng xử lý: Thao tác xóa mềm cập nhật IsDeleted và DeletedAt. Admin xem mục đã xóa trong tc)hùng rác, chọn khôi phục hoặc xóa vĩnh viễn. Việc xóa vĩnh viễn cần kiểm tra các liên kết còn phụ thuộc.",
+      "new": "Luồng xử lý: Xóa mềm cập nhật IsDeleted và DeletedAt. Admin xem mục đã xóa trong thùng rác, chọn khôi phục hoặc xóa vĩnh viễn. Trước khi xóa vật lý, hệ thống cần kiểm tra các quan hệ còn phụ thuộc."
+    },
+    {
+      "old": "Mô hình hiện tại có 16 bảng nghiệp vụ: tài khoản, học viên, giáo viên, chương trình, lớp, ghi danh, học phí, lịch học, tài liệu, phòng thi, bài kiểm tra, phản hồi, lương, tư vấn, tin nhắn và banner. Hai hình sau tách nhóm đào tạo khỏi nhóm hỗ trợ để giữ chữ dễ đọc; các quan hệ chi tiết được đối chiếu trong từ điển dữ liệu.",
+      "new": "Mô hình có 16 bảng nghiệp vụ phục vụ tài khoản, đào tạo, ghi danh, học phí, kiểm tra, tư vấn và quản trị. Sơ đồ tổng quát thể hiện các quan hệ; hai sơ đồ nhóm phía sau giúp đọc rõ nhóm đào tạo và nhóm hỗ trợ."
+    },
+    {
+      "old": "Khóa ngoại ghép (ClassId, ProgramId) tham chiếu Classes; khi ClassId NULL, đơn vẫn tham chiếu Programs qua ProgramId. DesiredTeacherId là cột cũ không có khóa ngoại vật lý trong database được đối chiếu, dù model còn khai báo thuộc tính điều hướng.",
+      "new": "Khóa ngoại ghép (ClassId, ProgramId) tham chiếu Classes; khi ClassId NULL, đơn vẫn tham chiếu Programs qua ProgramId. DesiredTeacherId là cột tương thích dữ liệu cũ, hiện không có khóa ngoại vật lý trong cơ sở dữ liệu được đối chiếu, dù model còn khai báo thuộc tính điều hướng."
+    },
+    {
+      "old": "3.3.1 Biểu đồ Hoạt động – Quy trình đặt khóa học",
+      "new": "3.3.1 Biểu đồ hoạt động – Quy trình đăng ký khóa học"
+    },
+    {
+      "old": "NHK English times sử dụng ASP.NET Core MVC trên .NET 8 trong một dự án WedEnglishApp. Giao diện Razor được dựng ở máy chủ; các phân hệ Admin và Teacher được tổ chức bằng Areas. Có sự phân chia trách nhiệm giữa trình bày, điều phối, nghiệp vụ và dữ liệu, nhưng đây không phải kiến trúc hai ứng dụng Spring Boot và Next.js triển khai riêng.",
+      "new": "NHK English times sử dụng ASP.NET Core MVC trên .NET 8 trong dự án WedEnglishApp. Razor dựng giao diện ở máy chủ; Admin và Teacher được tổ chức bằng Areas. Mã nguồn phân chia trách nhiệm trình bày, điều phối, nghiệp vụ và truy cập dữ liệu."
+    },
+    {
+      "old": "Quá trình xây dựng và vận hành hệ thống website quản lý và đăng ký học tại trung tâm ngoại ngữ (NHK English times - WedEnglishApp) đòi hỏi sự kết hợp chặt chẽ giữa các công cụ phát triển phần mềm, máy chủ web nội bộ, hệ quản trị cơ sở dữ liệu và cấu hình phần cứng đạt tiêu chuẩn. Việc lựa chọn môi trường được tối ưu hóa nhằm đảm bảo tính ổn định, tốc độ biên dịch nhanh chóng và tính tương thích cao khi triển khai từ máy phát triển (Development) sang môi trường chạy thử nghiệm/sản xuất (Staging/Production).",
+      "new": "Ứng dụng được phát triển và chạy thử trên Windows với .NET 8, SQL Server LocalDB và IIS Express/Kestrel. Phần này ghi nhận các công cụ, cấu hình và bước khởi tạo của dự án; chưa mô tả một môi trường production đã được nghiệm thu."
+    },
+    {
+      "old": "Visual Studio Code: Hỗ trợ kiểm tra cú pháp nhanh, chỉnh sửa giao diện giao diện tĩnh và chạy lệnh command line CLI.",
+      "new": "Visual Studio Code: Hỗ trợ chỉnh sửa giao diện tĩnh, kiểm tra mã nguồn và chạy lệnh CLI."
+    },
+    {
+      "old": "Kestrel Server & IIS Express Worker Process: Máy chủ web nội bộ siêu nhẹ của .NET Core, hỗ trợ phân luồng đa luồng (multi-threaded request processing), quản lý cổng mạng bảo mật HTTPS (cổng mặc định https://localhost:44317 hoặc https://localhost:7198) thông qua chứng chỉ tự ký dotnet dev-certs https.",
+      "new": "Kestrel và IIS Express: Phục vụ ứng dụng cục bộ theo các profile trong launchSettings.json. HTTPS dùng chứng chỉ phát triển; địa chỉ truy cập thực tế phụ thuộc profile được chọn."
+    },
+    {
+      "old": "Git & GitHub: Theo dõi lịch sử thay đổi mã nguồn, phân nhánh tính năng (feature branches) và bảo đảm an toàn dữ liệu dự án.",
+      "new": "Git: Theo dõi thay đổi mã nguồn trong quá trình phát triển. Sao lưu dữ liệu và quản lý thông tin cấu hình cần có quy trình riêng."
+    },
+    {
+      "old": "Toàn bộ hệ thống được xây dựng trên nền tảng kiến trúc phần mềm phân tầng rõ ràng, kết hợp giữa các công nghệ phía Server-side và Client-side nhằm đảm bảo trải nghiệm người dùng mượt mà và an toàn thông tin:",
+      "new": "Các thành phần sau được sử dụng trong dự án. Phiên bản được đối chiếu từ tệp cấu hình gói và các tài nguyên giao diện:"
+    },
+    {
+      "old": "Để đảm bảo hiệu năng và tính an toàn thông tin khi tiếp nhận từng Request từ Client, đường ống xử lý yêu cầu HTTP trong Program.cs được cấu hình theo thứ tự nghiêm ngặt:",
+      "new": "Thứ tự chính trong Program.cs là phục vụ HTTPS và tệp tĩnh, định tuyến, xác thực, phân quyền, sau đó ánh xạ endpoint. Swagger được bật trong môi trường phát triển:"
+    },
+    {
+      "old": "Routing Middleware (app.UseRouting()): Phân tích URL và đối sánh tuyến đường tới đúng Controller và Action mục tiêu.",
+      "new": "HTTPS và tệp tĩnh: UseHttpsRedirection chuyển hướng yêu cầu phù hợp sang HTTPS; UseStaticFiles phục vụ CSS, JavaScript và hình ảnh trong wwwroot."
+    },
+    {
+      "old": "Security & Static Files Middleware (app.UseHttpsRedirection(), app.UseStaticFiles()): Ép buộc mọi kết nối phải qua kênh mã hóa HTTPS và phục vụ trực tiếp các tệp tĩnh (hình ảnh banner, style CSS) mà không cần đi qua tầng xử lý C#.",
+      "new": "Định tuyến: UseRouting đối sánh URL với các tuyến; bước này chạy sau cấu hình HTTPS và tệp tĩnh trong mã nguồn hiện tại."
+    },
+    {
+      "old": "4.2.1 Phân hệ dành cho Khách hàng (Học viên & Khách vãng lai)",
+      "new": "Các màn hình công khai và cá nhân của học viên được trình bày theo thứ tự thao tác dưới đây."
+    },
+    {
+      "old": "2. Cơ chế hiện thực hóa chức năng và Luồng xử lý ngầm (Under-the-hood):",
+      "new": "2. Cách xử lý dữ liệu:"
+    },
+    {
+      "old": "2. Cơ chế hiện thực hóa chức năng và Luồng xử lý ngầm:",
+      "new": "2. Cách xử lý dữ liệu:"
+    },
+    {
+      "old": "Action Index nhận tham số truy vấn searchString và level.",
+      "new": "Action Index nhận search, level, minFee, maxFee và page; kết quả được phân trang theo sáu chương trình mỗi trang."
+    },
+    {
+      "old": "Truy vấn LINQ thực thi lọc dữ liệu động: _context.Programs.Where(p => p.IsActive && !p.IsDeleted). Nếu có từ khóa, bổ sung điều kiện .Where(p => p.ProgramName.Contains(searchString)).",
+      "new": "Truy vấn chỉ lấy chương trình đang hoạt động, chưa xóa; tìm từ khóa trong tên hoặc mô tả, lọc cấp độ và khoảng học phí trước khi phân trang."
+    },
+    {
+      "old": "Action Detail(int id) truy vấn khóa học theo ID, kết hợp nạp danh sách lớp học liên kết: .Include(p => p.Classes.Where(c => !c.IsDeleted && c.Status == \"Planning\")).",
+      "new": "Action Detail(int id) lấy chương trình hợp lệ và các lớp chưa xóa, có trạng thái Planning hoặc InProgress, chưa kết thúc; nạp lịch tuần để hiển thị tham khảo."
+    },
+    {
+      "old": "Trình bày chuyên sâu về mục tiêu khóa học, cấu trúc giáo trình, chuẩn đầu ra theo thang điểm quốc tế (IELTS Band 6.5+, TOEIC 800+).",
+      "new": "Trình bày mục tiêu, thời lượng, học phí và chuẩn đầu ra theo nội dung từng chương trình. Các mức điểm mục tiêu là thông tin của khóa học, không phải cam kết kết quả cho mọi học viên."
+    },
+    {
+      "old": "1. Giao diện Xác nhận giữ chỗ & Thanh toán VietQR (Views/Enrollment/Checkout.cshtml)",
+      "new": "1. Giao diện đăng ký theo nguyện vọng (Views/Enrollment/Checkout.cshtml)"
+    },
+    {
+      "old": "Được thiết kế chuẩn hóa theo khuôn mẫu phiếu thu tài chính A5/A4: Có đầy đủ tiêu ngữ, Logo trung tâm NHK English times, Mã hóa đơn #PAY-{id}, họ tên học viên, khóa học ghi danh, số tiền nộp bằng số và bằng chữ, ngày thu tiền và con dấu mộc điện tử của trung tâm.",
+      "new": "Biên lai nội bộ hiển thị mã #PAY-{id}, học viên, chương trình, lớp nếu đã xếp và khoản thu. Nhãn “đã thu tiền” là thành phần giao diện, không phải chữ ký số được chứng thực. Ngày hiển thị lấy từ PaymentDate và có giới hạn dữ liệu đã nêu ở mục 3.3.2."
+    },
+    {
+      "old": "Bảng thống kê toàn bộ các giao dịch đóng học phí của học viên: Mã giao dịch, ngày thanh toán, phương thức đóng tiền (VietQR, Tiền mặt), số tiền và trạng thái hóa đơn (Paid, Pending).",
+      "new": "Danh sách học phí hiển thị mã, thời điểm đang lưu, phương thức, số tiền và trạng thái Pending hoặc Paid. PaymentDate chưa phản ánh riêng thời điểm Admin xác nhận; cần phân biệt khi đối soát."
+    },
+    {
+      "old": "Hệ thống các thẻ thống kê trực quan (KPI Metric Cards): Tổng doanh thu học phí thực tế, số lớp học đang hoạt động, số học viên mới ghi danh, số yêu cầu tư vấn đang chờ xử lý.",
+      "new": "Các thẻ tổng quan được tổng hợp từ dữ liệu tài khoản, lớp và khoản học phí đã xác nhận. Những chỉ số trình diễn cần được phân biệt với số liệu vận hành của một trung tâm thực tế."
+    },
+    {
+      "old": "Biểu đồ trực quan hóa dữ liệu (Chart.js): Biểu đồ cột phản ánh doanh thu từng tháng và biểu đồ tròn thể hiện cơ cấu phân bổ học viên theo các chương trình đào tạo (IELTS, TOEIC, Giao tiếp).",
+      "new": "Biểu đồ Chart.js minh họa xu hướng và cơ cấu chương trình. Chuỗi tháng có các giá trị mẫu, biểu đồ tỷ trọng đang dùng tỷ lệ cố định; chưa thể sử dụng như báo cáo doanh thu theo tháng đã kiểm chứng."
+    },
+    {
+      "old": "Dữ liệu biểu đồ được serialize thành chuỗi JSON và truyền xuống View để thư viện Chart.js vẽ lên phần tử <canvas>.",
+      "new": "View nhận một số tổng số từ controller và dựng biểu đồ trên phần tử canvas. Cần thay các giá trị mẫu bằng truy vấn theo kỳ và kiểm tra lại trước khi triển khai."
+    },
+    {
+      "old": "Quản lý Học viên (StudentManager): Theo dõi danh sách học viên toàn trung tâm, lịch sử ghi danh, tổng học phí đã nộp và thông tin liên hệ phụ huynh.",
+      "new": "Quản lý học viên (StudentManager): Xem hồ sơ, thông tin liên hệ, đăng ký và học phí theo tài khoản; khóa hoặc kích hoạt học viên theo chức năng hiện có. Phiên bản này chưa có hồ sơ phụ huynh độc lập."
+    },
+    {
+      "old": "Mọi trang hiển thị danh sách hoạt động đều tự động lọc bỏ các bản ghi đã xóa mềm: .Where(x => !x.IsDeleted).",
+      "new": "Các danh sách hoạt động lọc IsDeleted ở các nhóm có hỗ trợ xóa mềm. Quy tắc này cần được áp dụng nhất quán ở cả truy vấn hiển thị và thao tác thay đổi."
+    },
+    {
+      "old": "Xóa vĩnh viễn (PermanentDelete): Thực thi lệnh xóa triệt để khỏi SQL Server khi người quản trị chắc chắn không còn nhu cầu lưu trữ.",
+      "new": "Xóa vĩnh viễn (PermanentDelete): Loại bỏ bản ghi khi được phép và không còn ràng buộc cản trở; dữ liệu đã xóa vật lý không thể khôi phục bằng chức năng thùng rác."
+    },
+    {
+      "old": "Phân tích UI/UX: Form đăng nhập gồm trường nhập Email và Mật khẩu, liên kết \"Quên mật khẩu\" và nút chuyển sang trang Đăng ký.",
+      "new": "Giao diện đăng nhập gồm Email, Mật khẩu và liên kết sang đăng ký tài khoản. Chức năng khôi phục mật khẩu tự động qua email cần được hoàn thiện cùng dịch vụ gửi thư."
+    },
+    {
+      "old": "Kiểm thử hệ thống là giai đoạn mang tính quyết định nhằm rà soát toàn bộ các chức năng, đảm bảo phần mềm vận hành chính xác theo đúng đặc tả yêu cầu nghiệp vụ, đạt hiệu năng ổn định và ngăn ngừa các lỗ hổng an ninh trước khi đưa vào khai thác thực tế.",
+      "new": "Kiểm thử tập trung vào kết quả thao tác, quyền truy cập và tính nhất quán dữ liệu. Phạm vi dưới đây gồm các ca đã quan sát, kiểm tra riêng trên dữ liệu thử và ca cần chạy lại; chưa có kiểm thử tải hoặc đánh giá bảo mật toàn diện."
+    },
+    {
+      "old": "Đảm bảo tính đúng đắn về mặt chức năng: Kiểm tra toàn bộ các chu trình nghiệp vụ cốt lõi (Đăng ký tài khoản, Đặt lịch thi xếp lớp, Giữ chỗ lớp học, Thanh toán VietQR, Điểm danh, Chấm thi, Quản lý banner và Thùng rác).",
+      "new": "Kiểm tra nghiệp vụ chính: Tạo tài khoản, đăng ký kiểm tra, gửi nguyện vọng khóa học, xếp lớp, theo dõi VietQR, xác nhận thu, chấm thi, banner và thùng rác. Điểm danh theo buổi chưa có phần lưu dữ liệu nên được ghi nhận là hạn chế."
+    },
+    {
+      "old": "Xác thực an toàn thông tin & phân quyền: Đảm bảo cơ chế phân quyền đa vai trò (Admin, Teacher, Student, Guest) vận hành nghiêm ngặt; kiểm tra khả năng cô lập phiên làm việc đa Cookie (RoleCookieRouter) không bị xung đột khi đăng nhập nhiều tài khoản trên cùng một trình duyệt.",
+      "new": "Kiểm tra phân quyền: Ba vai trò tài khoản Admin, Teacher và Student; khách chưa đăng nhập chỉ sử dụng chức năng công khai. Kiểm tra cookie theo vai trò khi mở nhiều khu vực trong cùng trình duyệt."
+    },
+    {
+      "old": "2. Kiểm thử Phân hệ Khách hàng & Học viên (Public & Student Portal)",
+      "new": "Kiểm thử phân hệ khách và học viên"
+    },
+    {
+      "old": "Kiểm thử Phân hệ Khách hàng & Học viên (Public & Student Portal)",
+      "new": "Kiểm thử phân hệ giáo viên"
+    },
+    {
+      "old": "Chương 4 đã trình bày toàn diện và chi tiết quá trình hiện thực hóa kỹ thuật cũng như công tác kiểm thử chất lượng cho website quản lý và đăng ký học tại trung tâm ngoại ngữ (NHK English times - WedEnglishApp).",
+      "new": "Chương 4 trình bày môi trường chạy, các màn hình và phạm vi kiểm thử của website NHK English times."
+    },
+    {
+      "old": "Những nội dung trọng tâm đã đạt được trong chương bao gồm:",
+      "new": "Các kết quả chính gồm:"
+    },
+    {
+      "old": "Thiết lập môi trường và nền tảng công nghệ vững chắc: Ứng dụng đã được xây dựng thành công trên nền tảng ASP.NET Core (.NET 8 LTS) theo mô hình kiến trúc MVC, kết hợp ORM Entity Framework Core 8, hệ quản trị cơ sở dữ liệu Microsoft SQL Server, phụ thuộc MailKit cho định hướng gửi thư điện tử, giải pháp thanh toán quét mã VietQR và thuật toán băm mật khẩu chuẩn hóa BCrypt. Cấu trúc thư mục dự án và đường ống xử lý HTTP Middleware Pipeline được tổ chức khoa học, tối ưu hiệu năng và bảo đảm an toàn thông tin.",
+      "new": "Môi trường và công nghệ: ASP.NET Core MVC trên .NET 8, EF Core và SQL Server LocalDB; BCrypt bảo vệ mật khẩu lưu trữ, cookie quản lý phiên và mã CSRF bảo vệ biểu mẫu. VietQR hỗ trợ hướng dẫn chuyển khoản; MailKit mới là phụ thuộc cho hướng phát triển gửi thư."
+    },
+    {
+      "old": "Hiện thực hóa trọn vẹn các phân hệ giao diện người dùng: Toàn bộ hệ thống giao diện với hơn 30 trang màn hình thuộc 4 phân hệ chính (Khách vãng lai, Học viên, Giảng viên và Quản trị viên) đã được hoàn thiện đồng bộ, đảm bảo tính thẩm mỹ hiện đại và khả năng co giãn linh hoạt trên các kích thước thiết bị được kiểm tra (Responsive Design). Đặc biệt, hệ thống đã xử lý hai bài toán kỹ thuật phức tạp: ",
+      "new": "Giao diện và nghiệp vụ: Các màn hình công khai, học viên, giáo viên và Admin hỗ trợ tra cứu, ghi danh, xếp lớp, lịch học, ca thi và học phí. Những phần chưa hoàn thiện được nêu cùng từng chức năng."
+    },
+    {
+      "old": "Phân hệ Thùng rác hệ thống (Soft Delete Pattern): Áp dụng cơ chế xóa mềm an toàn cho các nhóm dữ liệu có hỗ trợ, cung cấp tính năng khôi phục tức thì hoặc xóa vĩnh viễn, bảo vệ tối đa tính toàn vẹn dữ liệu.",
+      "new": "Thùng rác: Các nhóm dữ liệu có hỗ trợ xóa mềm được lưu để khôi phục; xóa vĩnh viễn vẫn phải tuân thủ ràng buộc quan hệ."
+    },
+    {
+      "old": "Sau thời gian nghiên cứu lý thuyết, khảo sát nghiệp vụ thực tế và trực tiếp triển khai lập trình, đề tài “Xây dựng ứng dụng web quản lý và đăng ký học tại trung tâm ngoại ngữ (NHK English times)” đã hoàn thành đầy đủ các mục tiêu đề ra ban đầu cả về mặt lý thuyết lẫn sản phẩm thực nghiệm.",
+      "new": "Đề tài đã xây dựng website NHK English times với các chức năng chính về tư vấn, đăng ký nguyện vọng, xếp lớp, lịch học, kiểm tra đầu vào và học phí. Sản phẩm đáp ứng phạm vi chạy thử của đồ án; một số chức năng và điều kiện vận hành còn cần hoàn thiện."
+    },
+    {
+      "old": "Làm chủ và ứng dụng thành công nền tảng ASP.NET Core (.NET 8 LTS) theo mô hình kiến trúc Model - View - Controller (MVC) kết hợp ORM Entity Framework Core 8, giúp mã nguồn được module hóa rõ ràng, dễ bảo trì và có khả năng mở rộng linh hoạt.",
+      "new": "Ứng dụng ASP.NET Core MVC trên .NET 8 kết hợp EF Core để tổ chức giao diện, xử lý yêu cầu và truy cập SQL Server. Các dịch vụ nghiệp vụ được tách ở những phần cần tái sử dụng; một số controller vẫn truy vấn trực tiếp DbContext."
+    },
+    {
+      "old": "Xây dựng thành công cơ chế xác thực phân quyền đa vai trò (Multi-Role Cookie Authentication Router - RoleCookieRouter), giải quyết triệt để bài toán xung đột phiên làm việc khi người dùng hoặc kiểm thử viên đăng nhập đồng thời nhiều tài khoản (Admin, Giáo viên, Học viên) trên cùng một trình duyệt.",
+      "new": "RoleCookieRouter chọn cookie theo vai trò để hỗ trợ sử dụng các khu vực Admin, Teacher và Student trên cùng trình duyệt. Phân quyền còn được kiểm tra tại controller và theo từng bản ghi."
+    },
+    {
+      "old": "Tích hợp thành công thuật toán băm mật khẩu một chiều BCrypt chống tấn công từ điển/dò mật khẩu, áp dụng mã xác thực token chống giả mạo CSRF, hướng dẫn chuyển khoản bằng VietQR; dịch vụ gửi thư MailKit chưa hoàn thiện.",
+      "new": "BCrypt lưu mật khẩu dưới dạng băm; các biểu mẫu được bảo vệ bằng mã CSRF ở những action tương ứng. VietQR hỗ trợ hướng dẫn đóng học phí; gửi thư tự động chưa hoàn thiện."
+    },
+    {
+      "old": "Xây dựng hoàn chỉnh 4 phân hệ nghiệp vụ độc lập: Khách vãng lai, Học viên, Giảng viên và Quản trị viên hệ thống với hơn 30 trang màn hình đáp ứng chuẩn Responsive đa thiết bị.",
+      "new": "Giao diện gồm các khu vực cho khách, học viên, giáo viên và Admin. Các màn hình được xây dựng bằng Razor, Bootstrap và CSS tùy chỉnh, cần tiếp tục kiểm tra khả năng sử dụng khi mở rộng dữ liệu."
+    },
+    {
+      "old": "Phân hệ Quản trị viên: Giám sát doanh thu và cơ cấu học viên qua biểu đồ số liệu trực quan (Chart.js); quản lý danh mục đào tạo, nhân sự và truyền thông (Banner quảng bá trang chủ).",
+      "new": "Phân hệ Admin quản lý đào tạo, nhân sự, ghi danh, học phí, tư vấn và banner. Tổng khoản thu có dữ liệu thực; một số chuỗi trên biểu đồ Chart.js còn là dữ liệu mẫu nên cần hoàn thiện báo cáo theo kỳ."
+    },
+    {
+      "old": "Cơ chế Thùng rác hệ thống (Soft Delete Pattern): Hiện thực hóa tính năng xóa an toàn ở các nhóm dữ liệu có hỗ trợ, cho phép khôi phục dữ liệu tức thì hoặc xóa vĩnh viễn, ngăn ngừa tối đa rủi ro mất mát dữ liệu do thao tác nhầm lẫn.",
+      "new": "Xóa mềm cho phép khôi phục các bản ghi thuộc nhóm hỗ trợ. Chức năng này hạn chế mất dữ liệu do thao tác nhầm nhưng không thay thế sao lưu và phục hồi cơ sở dữ liệu."
+    },
+    {
+      "old": "Hệ thống thanh toán trực tuyến hiện tại chủ yếu thông qua quét mã VietQR và đối soát nội bộ; chưa kích hoạt kết nối API trực tiếp với cổng thanh toán VNPay Sandbox hoặc MoMo để nhận phản hồi kết quả tức thì qua Webhook IPN.",
+      "new": "Thanh toán còn cần Admin đối soát; chưa có callback ngân hàng hoặc cổng thanh toán để tự động ghi nhận kết quả. PaymentDate chưa có trường riêng ghi thời điểm xác nhận thu."
+    },
+    {
+      "old": "Để nâng cao hơn nữa giá trị thực tiễn và sẵn sàng triển khai vận hành thương mại cho các chuỗi trung tâm ngoại ngữ quy mô lớn, hệ thống định hướng tiếp tục nghiên cứu và mở rộng các tính năng sau:",
+      "new": "Các hướng mở rộng dưới đây được đề xuất theo nhu cầu sử dụng. Trước khi thêm tích hợp, cần hoàn thiện chức năng nền tảng và kiểm tra với dữ liệu thực tế:"
+    },
+    {
+      "old": "Tích hợp sâu cổng thanh toán VNPay / MoMo API với cơ chế xác thực IPN (Instant Payment Notification), tự động chuyển trạng thái đơn hàng sang Paid ngay khi giao dịch thành công mà không cần nhân viên kế toán đối soát thủ công.",
+      "new": "Nghiên cứu tích hợp cổng thanh toán có callback/IPN, kiểm tra chữ ký, số tiền, mã đơn và xử lý thông báo lặp trước khi chuyển Payment sang Paid. Trạng thái xếp lớp vẫn được quản lý độc lập."
+    },
+    {
+      "old": "Ngôn ngữ lập trình C#: Ngôn ngữ hiện đại, hướng đối tượng hoàn toàn, kiểu dữ liệu tĩnh mạnh mẽ, hỗ trợ cơ chế bất đồng bộ async/await giúp tối ưu tài nguyên máy chủ khi xử lý hàng loạt truy vấn CSDL.",
+      "new": "Ngôn ngữ lập trình C#: Ngôn ngữ hiện đại, hướng đối tượng hoàn toàn, kiểu dữ liệu tĩnh phù hợp, hỗ trợ cơ chế bất đồng bộ async/await giúp tối ưu tài nguyên máy chủ khi xử lý hàng loạt truy vấn CSDL."
+    },
+    {
+      "old": "Hệ thống lưu trữ và đồng bộ toàn bộ dữ liệu quản lý trung tâm (tài khoản, khóa học, lớp học, đăng ký, hóa đơn, bài thi, banner và thùng rác) trên hệ quản trị cơ sở dữ liệu quan hệ mạnh mẽ:",
+      "new": "Hệ thống lưu trữ và đồng bộ toàn bộ dữ liệu quản lý trung tâm (tài khoản, khóa học, lớp học, đăng ký, hóa đơn, bài thi, banner và thùng rác) trên hệ quản trị cơ sở dữ liệu quan hệ phù hợp:"
+    },
+    {
+      "old": "Biểu mẫu gửi dữ liệu qua phương thức HTTP POST kèm mã băm chống giả mạo @Html.AntiForgeryToken().",
+      "new": "Biểu mẫu gửi dữ liệu qua phương thức HTTP POST kèm token chống giả mạo @Html.AntiForgeryToken()."
+    },
+    {
+      "old": "Frontend là tập View và tài nguyên tĩnh cùng nằm trong dự án MVC. Tuyến trang do controller/action xác định; ứng dụng không có thư mục app/ hoặc cơ chế App Router của Next.js.",
+      "new": "Frontend gồm Razor Views và tài nguyên tĩnh trong cùng dự án MVC. Controller và action xác định tuyến trang; các View dùng layout chung theo từng khu vực."
+    },
+    {
+      "old": "Tài nguyên Bootstrap, Font Awesome, Google Fonts và Chart.js được các layout tham chiếu theo cấu hình đang có. JavaScript dùng fetch ở luồng tư vấn để gửi/nhận JSON và cập nhật giao diện theo chu kỳ; điều đó không làm ứng dụng trở thành một frontend Next.js riêng.",
+      "new": "Các layout tham chiếu Bootstrap, Font Awesome, Google Fonts và Chart.js. Ở phân hệ tư vấn, JavaScript dùng fetch để gửi, nhận JSON và cập nhật tin nhắn theo chu kỳ."
+    }
+  ],
+  "screenshots_updated": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "table_count": 30,
+  "inline_images": 52,
+  "automatic_table_captions": 29,
+  "automatic_figure_entries": 51,
+  "restored_folder_section": true
+}

@@ -1,0 +1,91 @@
+@model WedEnglishApp.Models.Banner
+@{
+    ViewData["Title"] = "Thêm Mới Banner";
+    Layout = "_AdminLayout";
+}
+
+<div class="container-fluid p-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h4 class="fw-bold mb-1">
+                        <i class="fa-solid fa-plus-circle text-primary me-2"></i> Thêm Mới Banner Quảng Bá
+                    </h4>
+                    <p class="text-muted small mb-0">Tạo slide mới xuất hiện trên trang chủ cùng liên kết đích điều hướng.</p>
+                </div>
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="fa-solid fa-arrow-left me-1"></i> Quay lại danh sách
+                </a>
+            </div>
+
+            <div class="admin-card p-4">
+                <form asp-action="Create" method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <!-- Tiêu đề Banner -->
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label fw-bold">Tiêu đề Banner <span class="text-danger">*</span></label>
+                        <input asp-for="Title" class="form-control form-control-lg" placeholder="Ví dụ: Khai Giảng Khóa Học IELTS Master 2026" required />
+                        <span asp-validation-for="Title" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Mô tả / Phụ đề -->
+                    <div class="mb-3">
+                        <label asp-for="Subtitle" class="form-label fw-semibold">Phụ đề / Nội dung giới thiệu ngắn</label>
+                        <textarea asp-for="Subtitle" rows="2" class="form-control" placeholder="Mô tả tóm tắt điểm nổi bật, ưu đãi học bổng..."></textarea>
+                        <span asp-validation-for="Subtitle" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Hình ảnh Banner (Upload hoặc URL) -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Tải ảnh lên từ máy tính</label>
+                            <input type="file" name="imageFile" class="form-control" accept="image/*" />
+                            <div class="form-text small">Hỗ trợ các định dạng: PNG, JPG, WEBP. Khuyến nghị kích thước: 1920x800px.</div>
+                        </div>
+                    </div>
+
+                    <!-- Liên kết đích (LinkUrl) và Nút bấm -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-7">
+                            <label asp-for="LinkUrl" class="form-label fw-bold">Đường dẫn liên kết đích (LinkUrl) <span class="text-danger">*</span></label>
+                            <input asp-for="LinkUrl" class="form-control" placeholder="Ví dụ: /Program/Detail/1 hoặc /PlacementTest/BookTest" required />
+                            <div class="form-text small">Khi học viên nhấp vào banner hoặc nút bấm, hệ thống sẽ mở đường dẫn này.</div>
+                            <span asp-validation-for="LinkUrl" class="text-danger small"></span>
+                        </div>
+                        <div class="col-md-5">
+                            <label asp-for="ButtonText" class="form-label fw-semibold">Chữ hiển thị trên nút bấm (CTA)</label>
+                            <input asp-for="ButtonText" class="form-control" placeholder="Khám phá ngay" />
+                            <span asp-validation-for="ButtonText" class="text-danger small"></span>
+                        </div>
+                    </div>
+
+                    <!-- Thứ tự hiển thị và Trạng thái -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label asp-for="DisplayOrder" class="form-label fw-semibold">Thứ tự hiển thị</label>
+                            <input asp-for="DisplayOrder" type="number" class="form-control" value="1" min="1" />
+                            <div class="form-text small">Số nhỏ hơn sẽ được ưu tiên hiển thị trước.</div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center mt-4">
+                            <div class="form-check form-switch fs-5">
+                                <input asp-for="IsActive" class="form-check-input" type="checkbox" id="isActiveSwitch" checked />
+                                <label class="form-check-label fs-6 fw-semibold ms-2" for="isActiveSwitch">Kích hoạt hiển thị ngay trên trang chủ</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nút xác nhận -->
+                    <div class="d-flex justify-content-end gap-2 pt-3 border-top">
+                        <a asp-action="Index" class="btn btn-light px-4">Hủy bỏ</a>
+                        <button type="submit" class="btn btn-primary fw-bold px-4">
+                            <i class="fa-solid fa-save me-1"></i> Lưu Banner
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

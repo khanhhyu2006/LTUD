@@ -1,0 +1,4 @@
+@model List<WedEnglishApp.Models.ExamSession>
+@{ ViewData["Title"]="Lớp thi được phân công"; }
+<h3>Lớp thi được phân công chấm bài</h3><p class="text-muted">Mở từng lớp thi để xem học viên và nhập kết quả.</p>
+<div class="teacher-card p-3"><div class="table-responsive"><table class="table"><thead><tr><th>Lớp thi / Phòng</th><th>Thời gian</th><th>Học viên</th><th>Đã chấm</th><th>Thao tác</th></tr></thead><tbody>@foreach(var s in Model) { <tr><td><strong>@s.Name</strong><div>@s.Room</div></td><td>@s.ExamDate.ToString("dd/MM/yyyy") · @s.StartTime.ToString(@"hh\:mm")–@s.EndTime.ToString(@"hh\:mm")</td><td>@s.Tests.Count</td><td>@s.Tests.Count(t=>t.Status=="Completed") / @s.Tests.Count</td><td><a asp-action="Session" asp-route-id="@s.ExamSessionId" class="btn btn-success btn-sm">Mở danh sách chấm</a></td></tr> }</tbody></table></div></div>

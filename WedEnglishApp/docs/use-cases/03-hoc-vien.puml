@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+skinparam defaultFontName Arial
+skinparam shadowing false
+title Use case tài khoản học viên
+actor "Học viên" as A0
+rectangle "Hệ thống quản lý trung tâm ngoại ngữ NHK English times" {
+  usecase "Đăng nhập" as U0_0
+  usecase "Đổi mật khẩu" as U0_1
+  usecase "Đăng xuất" as U0_2
+  usecase "Xem và cập nhật hồ sơ, ảnh đại diện" as U0_3
+  usecase "Tra cứu khóa học và lớp mở" as U0_4
+  usecase "Đăng ký lớp và chọn cách thanh toán" as U0_5
+  usecase "Gửi nguyện vọng giáo viên, ghi chú, ảnh" as U0_6
+  usecase "Xem lớp đã đăng ký và trạng thái" as U0_7
+  usecase "Xem lịch học và lịch thi theo tuần" as U0_8
+  usecase "Xem lịch sử học phí" as U0_9
+  usecase "Xem và in biên lai học phí" as U0_10
+  usecase "Đặt lịch kiểm tra xếp lớp" as U0_11
+  usecase "Xem lịch, điểm và cấp độ đề xuất" as U0_12
+  usecase "Gửi đánh giá, nhận xét khóa học" as U0_13
+}
+A0 -- U0_0
+A0 -- U0_1
+A0 -- U0_2
+A0 -- U0_3
+A0 -- U0_4
+A0 -- U0_5
+A0 -- U0_6
+A0 -- U0_7
+A0 -- U0_8
+A0 -- U0_9
+A0 -- U0_10
+A0 -- U0_11
+A0 -- U0_12
+A0 -- U0_13
+@enduml

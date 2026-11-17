@@ -1,0 +1,30 @@
+[
+  {
+    "url": "/Admin/ClassManager/Create",
+    "status": 200
+  },
+  {
+    "url": "/Admin/ClassManager/Edit/1004",
+    "status": 200
+  },
+  {
+    "url": "/Admin/ClassManager/Details/1004",
+    "status": 200
+  },
+  {
+    "url": "/Admin/PlacementTestAdmin",
+    "status": 200
+  },
+  {
+    "url": "/Admin/PlacementTestAdmin/Create",
+    "status": 200
+  },
+  {
+    "url": "/Admin/RegistrationAdmin",
+    "status": 200
+  },
+  {
+    "url": "/Admin/PaymentAdmin",
+    "status": 200
+  }
+]

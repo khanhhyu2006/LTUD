@@ -1,0 +1,10 @@
+SET NOCOUNT ON;
+SELECT COUNT(*) AS Registrations FROM Registrations;
+SELECT COUNT(*) AS Payments FROM Payments;
+SELECT COUNT(*) AS Programs FROM Programs;
+SELECT COUNT(*) AS ExamSessions FROM ExamSessions;
+SELECT COUNT(*) AS ChangedPaidReceipts FROM Payments p JOIN OPENJSON((SELECT PreviousPayments FROM DatabaseAlignmentHistory WHERE AlignmentKey='20261104_course_enrollment_v2')) WITH(PaymentId int,Status nvarchar(30),Amount decimal(18,2),PaymentMethod nvarchar(50),RegistrationId int) old ON p.PaymentId=old.PaymentId WHERE old.Status='Paid' AND(p.Status<>old.Status OR p.Amount<>old.Amount OR p.PaymentMethod<>old.PaymentMethod OR p.RegistrationId<>old.RegistrationId);
+SELECT COUNT(*) AS ChangedPastExamResults FROM PlacementTests p JOIN OPENJSON((SELECT PreviousTests FROM ExamSessionUpgradeHistory WHERE UpgradeKey='20261104_exam_sessions_v1')) WITH(TestId int,Score decimal(4,2),Status nvarchar(30),RecommendedLevel nvarchar(100)) old ON p.TestId=old.TestId WHERE old.Status='Completed' AND(p.Status<>old.Status OR ISNULL(p.Score,-1)<>ISNULL(old.Score,-1) OR ISNULL(p.RecommendedLevel,N'')<>ISNULL(old.RecommendedLevel,N''));
+SELECT Summary FROM DatabaseAlignmentHistory;
+DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
+DBCC CHECKDB(EnglishCenterDb) WITH NO_INFOMSGS;

@@ -1,0 +1,99 @@
+@model List<WedEnglishApp.Models.ClassDocument>
+@{
+    ViewData["Title"] = "Quản Lý Tài Liệu Lớp Học";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h3 class="fw-bold mb-1">Quản Lý Tài Liệu & Bài Giảng</h3>
+        <p class="text-muted small mb-0">Tải lên slide bài giảng, đề thi mẫu hoặc file PDF cho học viên các lớp</p>
+    </div>
+    <button type="button" class="btn btn-success fw-semibold" data-bs-toggle="modal" data-bs-target="#uploadDocModal">
+        <i class="fa-solid fa-cloud-arrow-up me-1"></i> Tải Lên Tài Liệu Mới
+    </button>
+</div>
+
+<!-- Modal Upload Tài Liệu -->
+<div class="modal fade" id="uploadDocModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form asp-action="Upload" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Tải Lên Tài Liệu Cho Lớp Học</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Chọn lớp học áp dụng <span class="text-danger">*</span></label>
+                        <select name="classId" asp-items="ViewBag.Classes" class="form-select" required>
+                            <option value="">-- Chọn lớp --</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Tiêu đề tài liệu <span class="text-danger">*</span></label>
+                        <input type="text" name="title" class="form-control" placeholder="Ví dụ: Slide Bài 1 - IELTS Writing Task 2" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Chọn file đính kèm (PDF, DOCX, ZIP) <span class="text-danger">*</span></label>
+                        <input type="file" name="documentFile" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-success fw-bold">Tải Lên</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="teacher-card overflow-hidden">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th class="ps-4">Tiêu Đề Tài Liệu</th>
+                    <th>Lớp Học Áp Dụng</th>
+                    <th>Ngày Tải Lên</th>
+                    <th>File Đính Kèm</th>
+                    <th class="text-end pe-4">Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="5" class="text-center py-4 text-muted">Chưa có tài liệu nào được tải lên.</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var d in Model)
+                    {
+                        <tr>
+                            <td class="ps-4 fw-bold text-dark">
+                                <i class="fa-solid fa-file-lines text-primary me-2"></i> @d.Title
+                            </td>
+                            <td><span class="badge bg-light text-dark border">@d.Class.ClassName</span></td>
+                            <td class="small text-muted">@d.UploadedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>
+                                <a href="@d.FilePath" target="_blank" class="btn btn-sm btn-outline-primary">
+                                    <i class="fa-solid fa-download me-1"></i> Tải về
+                                </a>
+                            </td>
+                            <td class="text-end pe-4">
+                                <form asp-action="Delete" asp-route-id="@d.DocumentId" method="post" class="d-inline" onsubmit="return confirm('Bạn có chắc muốn xóa tài liệu này?');">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-sm btn-outline-danger" title="Xóa">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+@model WedEnglishApp.Models.ClassDocument
+@{ ViewData["Title"] = "Sửa tài liệu"; }
+<div class="teacher-card p-4 mx-auto" style="max-width:760px">
+<h3>Sửa tài liệu</h3><p class="text-muted">Lớp @Model.Class.ClassName. Giữ nguyên tệp hiện tại nếu không chọn tệp thay thế.</p>
+<form asp-action="Edit" asp-route-id="@Model.DocumentId" method="post" enctype="multipart/form-data">
+ @Html.AntiForgeryToken()
+ <label for="editTitle" class="form-label">Tiêu đề</label><input id="editTitle" name="title" value="@Model.Title" maxlength="200" required class="form-control mb-3"/>
+ <label for="replaceFile" class="form-label">Thay thế tệp (tùy chọn)</label><input id="replaceFile" name="documentFile" type="file" accept=".pdf,.docx,.pptx,.xlsx,.txt" class="form-control"/>
+ <p class="form-text">PDF, DOCX, PPTX, XLSX hoặc TXT, tối đa 10 MB.</p>
+ <div class="form-check mb-4"><input asp-for="IsPublished" class="form-check-input"/><label asp-for="IsPublished" class="form-check-label">Công bố cho học viên trong lớp</label></div>
+ <button type="submit" class="btn btn-success">Lưu thay đổi</button><a asp-action="Index" class="btn btn-outline-secondary ms-2">Quay lại</a>
+</form></div>

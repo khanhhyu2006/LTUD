@@ -1,0 +1,18 @@
+{
+  "source": "D:\\LTUD\\WedEnglishApp\\Bao_cao_LLUD_Khoi_phuc_noi_dung_goc.docx",
+  "original_body_paragraphs_retained": 56,
+  "missing_original_body_paragraphs": [],
+  "outside_chapter3_xml_unchanged": true,
+  "business_tables": 16,
+  "detailed_columns": 149,
+  "use_case_rows": {
+    "student_guest": 8,
+    "teacher": 7,
+    "admin": 10
+  },
+  "new_tables": 19,
+  "old_chapter_tables_retained": 4,
+  "figures_total": 52,
+  "post_word_original_content_preserved_except_automatic_figure_numbers": true,
+  "final_pages": 87
+}

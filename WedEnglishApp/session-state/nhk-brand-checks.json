@@ -1,0 +1,340 @@
+{
+  "rows": [
+    {
+      "role": "Guest",
+      "url": "/",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Guest",
+      "url": "/Program",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Guest",
+      "url": "/Program/Detail/1012",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Guest",
+      "url": "/Account/Login",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Guest",
+      "url": "/Account/Register",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Guest",
+      "url": "/Home/Contact",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Student",
+      "url": "/Student/Profile",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Student",
+      "url": "/Student/MyClasses",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Student",
+      "url": "/Student/Schedule",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Student",
+      "url": "/Student/MyPayments",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Student",
+      "url": "/Student/PrintReceipt/2",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Student",
+      "url": "/PlacementTest/BookTest",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Student",
+      "url": "/Enrollment/Checkout?programId=1012&authRole=Student",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Student",
+      "url": "/Account/ChangePassword?authRole=Student",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Teacher",
+      "url": "/Teacher/TeacherDashboard",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Teacher",
+      "url": "/Teacher/TeachingClass",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Teacher",
+      "url": "/Teacher/TeachingClass/Schedule",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Teacher",
+      "url": "/Teacher/TeacherTest",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Teacher",
+      "url": "/Teacher/Document",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Teacher",
+      "url": "/Teacher/Feedback",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Teacher",
+      "url": "/Teacher/TeacherSalary",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/Dashboard",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/ProgramManager",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/ClassManager",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/RegistrationAdmin",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/PaymentAdmin",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/StudentManager",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/TeacherManager",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/PlacementTestAdmin",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/SalaryAdmin",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/ConsultationManager",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/BannerManager",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/Trash",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/ClassManager/Create",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/PlacementTestAdmin/Create",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    },
+    {
+      "role": "Admin",
+      "url": "/Admin/PaymentAdmin/PrintReceipt/2",
+      "status": 200,
+      "hasBrand": true,
+      "hasOldBrand": false
+    }
+  ],
+  "layout": [
+    {
+      "role": "Guest",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "role": "Guest",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "role": "Guest",
+      "viewport": 768,
+      "width": 768
+    },
+    {
+      "role": "Guest",
+      "viewport": 1440,
+      "width": 1440
+    },
+    {
+      "role": "Student",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "role": "Student",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "role": "Student",
+      "viewport": 768,
+      "width": 768
+    },
+    {
+      "role": "Student",
+      "viewport": 1440,
+      "width": 1440
+    },
+    {
+      "role": "Teacher",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "role": "Teacher",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "role": "Teacher",
+      "viewport": 768,
+      "width": 768
+    },
+    {
+      "role": "Teacher",
+      "viewport": 1440,
+      "width": 1440
+    },
+    {
+      "role": "Admin",
+      "viewport": 320,
+      "width": 320
+    },
+    {
+      "role": "Admin",
+      "viewport": 390,
+      "width": 390
+    },
+    {
+      "role": "Admin",
+      "viewport": 768,
+      "width": 768
+    },
+    {
+      "role": "Admin",
+      "viewport": 1440,
+      "width": 1440
+    }
+  ],
+  "failures": [],
+  "overflow": []
+}

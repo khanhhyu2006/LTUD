@@ -1,0 +1,18 @@
+[
+  {
+    "url": "/",
+    "status": 200
+  },
+  {
+    "url": "/Home/Contact",
+    "status": 200
+  },
+  {
+    "url": "/Consultation/Mine",
+    "status": 200
+  },
+  {
+    "url": "/Admin/ConsultationManager",
+    "status": 200
+  }
+]

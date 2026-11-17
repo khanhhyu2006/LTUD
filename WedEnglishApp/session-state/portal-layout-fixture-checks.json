@@ -1,0 +1,1934 @@
+[
+  {
+    "role": "Admin",
+    "folder": "BannerManager",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "BannerManager",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "BannerManager",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "BannerManager",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "BannerManager",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "BannerManager",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ClassManager",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ClassManager",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ClassManager",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ClassManager",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ClassManager",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      125,
+      125,
+      125,
+      125,
+      125,
+      125,
+      125,
+      125
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ClassManager",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ConsultationManager",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ConsultationManager",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ConsultationManager",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ConsultationManager",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ConsultationManager",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ConsultationManager",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Dashboard",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Dashboard",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Dashboard",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Dashboard",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Dashboard",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Dashboard",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PaymentAdmin",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PaymentAdmin",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PaymentAdmin",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PaymentAdmin",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PaymentAdmin",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PaymentAdmin",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PlacementTestAdmin",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PlacementTestAdmin",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PlacementTestAdmin",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PlacementTestAdmin",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PlacementTestAdmin",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "PlacementTestAdmin",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ProgramManager",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ProgramManager",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ProgramManager",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ProgramManager",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ProgramManager",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "ProgramManager",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "RegistrationAdmin",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "RegistrationAdmin",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "RegistrationAdmin",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "RegistrationAdmin",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "RegistrationAdmin",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "RegistrationAdmin",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "SalaryAdmin",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "SalaryAdmin",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "SalaryAdmin",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "SalaryAdmin",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "SalaryAdmin",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93,
+      93
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "SalaryAdmin",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "StudentManager",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "StudentManager",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "StudentManager",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "StudentManager",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "StudentManager",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "StudentManager",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "TeacherManager",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "TeacherManager",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "TeacherManager",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "TeacherManager",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "TeacherManager",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      109,
+      109,
+      109,
+      109,
+      109,
+      109
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "TeacherManager",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Trash",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Trash",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Trash",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Trash",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 740,
+    "frame": 740,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Trash",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 484,
+    "frame": 484,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Admin",
+    "folder": "Trash",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Document",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Document",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Document",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Document",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 770,
+    "frame": 770,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Document",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 514,
+    "frame": 514,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Document",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Feedback",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Feedback",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Feedback",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Feedback",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 770,
+    "frame": 770,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Feedback",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 514,
+    "frame": 514,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "Feedback",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherDashboard",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherDashboard",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherDashboard",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherDashboard",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 770,
+    "frame": 770,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherDashboard",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 514,
+    "frame": 514,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherDashboard",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherSalary",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherSalary",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherSalary",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherSalary",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 770,
+    "frame": 770,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherSalary",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77,
+      77
+    ],
+    "table": 514,
+    "frame": 514,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherSalary",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherTest",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherTest",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherTest",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherTest",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 770,
+    "frame": 770,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherTest",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 514,
+    "frame": 514,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeacherTest",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeachingClass",
+    "width": 1920,
+    "body": 1920,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1620,
+    "frame": 1620,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeachingClass",
+    "width": 1536,
+    "body": 1536,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 1236,
+    "frame": 1236,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeachingClass",
+    "width": 1280,
+    "body": 1280,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 980,
+    "frame": 980,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeachingClass",
+    "width": 1024,
+    "body": 1024,
+    "headerHeights": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ],
+    "table": 770,
+    "frame": 770,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeachingClass",
+    "width": 768,
+    "body": 768,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 514,
+    "frame": 514,
+    "clippedButtons": 0
+  },
+  {
+    "role": "Teacher",
+    "folder": "TeachingClass",
+    "width": 390,
+    "body": 390,
+    "headerHeights": [
+      61,
+      61,
+      61,
+      61,
+      61,
+      61,
+      61
+    ],
+    "table": 760,
+    "frame": 356,
+    "clippedButtons": 0
+  }
+]

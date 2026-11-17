@@ -1,0 +1,15 @@
+SET NOCOUNT ON;
+SELECT Role,COUNT(*) AS Records FROM UserAccounts GROUP BY Role;
+SELECT Status,COUNT(*) AS Records FROM PlacementTests GROUP BY Status;
+SELECT Status,COUNT(*) AS Records FROM TeacherSalaries GROUP BY Status;
+SELECT Status,COUNT(*) AS Records FROM Consultations GROUP BY Status;
+SELECT 'InvalidClasses' AS CheckName,COUNT(*) AS Records FROM Classes WHERE EndDate<StartDate OR MaxStudents<1;
+SELECT 'InvalidPrograms' AS CheckName,COUNT(*) AS Records FROM Programs WHERE DurationWeeks<1 OR TuitionFee<0;
+SELECT 'InvalidSchedules' AS CheckName,COUNT(*) AS Records FROM ClassSchedules WHERE DayOfWeek NOT BETWEEN 2 AND 8 OR StartTime>=EndTime;
+SELECT 'InvalidFeedback' AS CheckName,COUNT(*) AS Records FROM CourseFeedbacks WHERE Rating NOT BETWEEN 1 AND 5;
+SELECT 'UnknownPreference' AS CheckName,COUNT(*) AS Records FROM Registrations WHERE PreferredDays IS NOT NULL AND PreferredDays NOT IN('2,4,6','3,5,7') OR PreferredSession IS NOT NULL AND PreferredSession NOT IN('Morning','Afternoon','Evening','Any');
+SELECT 'ClassCourseMismatch' AS CheckName,COUNT(*) AS Records FROM Registrations r JOIN Classes c ON r.ClassId=c.ClassId WHERE r.ProgramId<>c.ProgramId;
+SELECT 'MissingPayments' AS CheckName,COUNT(*) AS Records FROM Registrations r LEFT JOIN Payments p ON r.RegistrationId=p.RegistrationId WHERE p.PaymentId IS NULL;
+SELECT 'PlacementScores' AS CheckName,COUNT(*) AS Records FROM PlacementTests WHERE Score<0 OR Score>10;
+SELECT name,is_disabled,is_not_trusted FROM sys.foreign_keys WHERE is_disabled=1 OR is_not_trusted=1;
+DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;

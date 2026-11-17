@@ -1,0 +1,5 @@
+from pathlib import Path
+p=Path('session-state/check-portal-fit.cjs');s=p.read_text(encoding='utf8')
+s=s.replace("headers.map(h=>/Chương Trình", "headers.map(h=>/Email/.test(h)?'john.smith@englishcenter.edu.vn':/Ảnh.*Tên/.test(h)?'<div class=\"d-flex align-items-center gap-2\"><img width=\"44\" height=\"44\" alt=\"Ảnh\"><div><strong>ThS. Trần Thị Mai</strong><div>ID: #TEA-1</div></div></div>':/Học Vị/.test(h)?'<span class=\"badge bg-light text-dark border\">Thạc sĩ TESOL – ĐH Melbourne</span>':/Chuyên Môn/.test(h)?'<span class=\"badge bg-info-subtle text-info border\">IELTS Chuyên Sâu, Writing & Speaking</span>':/Số Lớp/.test(h)?'2 lớp':/Chương Trình")
+s=s.replace('<div class="btn-group"><button class="btn btn-sm btn-primary">Xếp học viên</button><button class="btn btn-sm btn-outline-danger">Xóa</button></div>', '<a class="btn btn-sm btn-outline-primary me-1">Sửa</a><form class="d-inline"><button class="btn btn-sm btn-outline-danger">Xóa tài khoản</button></form>')
+p.write_text(s,encoding='utf8')

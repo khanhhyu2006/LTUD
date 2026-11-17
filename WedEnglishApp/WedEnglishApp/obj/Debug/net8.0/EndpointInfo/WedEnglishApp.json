@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WedEnglishApp",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Student/Materials": {
+      "get": {
+        "tags": [
+          "StudentMaterials"
+        ],
+        "parameters": [
+          {
+            "name": "classId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Student/Materials/Download/{id}": {
+      "get": {
+        "tags": [
+          "StudentMaterials"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

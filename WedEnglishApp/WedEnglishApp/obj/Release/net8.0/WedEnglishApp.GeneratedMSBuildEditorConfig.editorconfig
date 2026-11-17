@@ -1,0 +1,308 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WedEnglishApp
+build_property.RootNamespace = WedEnglishApp
+build_property.ProjectDir = D:\LTUD\WedEnglishApp\WedEnglishApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\LTUD\WedEnglishApp\WedEnglishApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/BannerManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFubmVyTWFuYWdlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/BannerManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFubmVyTWFuYWdlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/BannerManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFubmVyTWFuYWdlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ClassManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ClassManager/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ClassManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ClassManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2xhc3NNYW5hZ2VyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ConsultationManager/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29uc3VsdGF0aW9uTWFuYWdlclxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ConsultationManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29uc3VsdGF0aW9uTWFuYWdlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/PaymentAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGF5bWVudEFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/PlacementTestAdmin/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGxhY2VtZW50VGVzdEFkbWluXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/PlacementTestAdmin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGxhY2VtZW50VGVzdEFkbWluXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/PlacementTestAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGxhY2VtZW50VGVzdEFkbWluXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ProgramManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZ3JhbU1hbmFnZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ProgramManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZ3JhbU1hbmFnZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/ProgramManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZ3JhbU1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/RegistrationAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVnaXN0cmF0aW9uQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/SalaryAdmin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2FsYXJ5QWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Shared/_ClassScheduleForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9DbGFzc1NjaGVkdWxlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/StudentManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudE1hbmFnZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/StudentManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3R1ZGVudE1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/TeacherManager/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlck1hbmFnZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/TeacherManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlck1hbmFnZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/TeacherManager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGVhY2hlck1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Trash/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHJhc2hcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/Trash/_TrashActions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVHJhc2hcX1RyYXNoQWN0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/Document/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xEb2N1bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/Feedback/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xGZWVkYmFja1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/Shared/_TeacherLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xTaGFyZWRcX1RlYWNoZXJMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/TeacherDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/TeacherSalary/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyU2FsYXJ5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/TeacherTest/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyVGVzdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/TeacherTest/Session.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyVGVzdFxTZXNzaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/TeachingClass/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGluZ0NsYXNzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/TeachingClass/Schedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGluZ0NsYXNzXFNjaGVkdWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/TeachingClass/Students.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGluZ0NsYXNzXFN0dWRlbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Areas/Teacher/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Account/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Consultation/Mine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGF0aW9uXE1pbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Consultation/Thread.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdGF0aW9uXFRocmVhZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Enrollment/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsbWVudFxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Enrollment/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsbWVudFxQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/PlacementTest/BookTest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhY2VtZW50VGVzdFxCb29rVGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Program/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Program/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Shared/_AvailableClasses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdmFpbGFibGVDbGFzc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Shared/_ConsultationConversation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db25zdWx0YXRpb25Db252ZXJzYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Shared/_EnrollmentPreferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbnJvbGxtZW50UHJlZmVyZW5jZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Shared/_RegistrationPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZWdpc3RyYXRpb25QYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Student/MyClasses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxNeUNsYXNzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Student/MyPayments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxNeVBheW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Student/PrintReceipt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxQcmludFJlY2VpcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Student/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/Student/Schedule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTY2hlZHVsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LTUD/WedEnglishApp/WedEnglishApp/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

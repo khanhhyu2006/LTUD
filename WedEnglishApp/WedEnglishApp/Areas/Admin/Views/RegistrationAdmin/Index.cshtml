@@ -1,0 +1,33 @@
+@model List<WedEnglishApp.Models.Registration>
+@using WedEnglishApp.Services
+@{ ViewData["Title"] = "Đăng ký khóa học và xếp lớp";
+var classes = ViewBag.AvailableClasses as List<WedEnglishApp.Models.CourseClass> ?? new();
+var programs = ViewBag.Programs as List<WedEnglishApp.Models.CourseProgram> ?? new(); }
+<h3>Đăng ký khóa học và xếp lớp</h3>
+<p class="text-muted">Tiếp nhận nguyện vọng, kiểm tra lịch và xếp học viên vào lớp phù hợp. Thanh toán được quản lý riêng.</p>
+<form method="get" class="d-flex gap-2 mb-4"><select class="form-select" name="programId"><option value="">Tất cả khóa học</option>@foreach(var p in programs) { <option value="@p.ProgramId" selected="@(ViewBag.SelectedProgramId == p.ProgramId)">@p.ProgramName</option> }</select><button class="btn btn-primary">Lọc</button></form>
+<div class="admin-card"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Học viên / Khóa học</th><th>Nguyện vọng lịch học</th><th>Lớp đã xếp</th><th>Thanh toán</th><th>Trạng thái / Thao tác</th></tr></thead><tbody>
+@foreach(var reg in Model) {
+var candidates = classes.Where(c => CourseClassAssignment.CheckPreferences(reg, c) == null && c.Registrations.Count(x => !x.IsDeleted && x.Status == "Confirmed" && x.RegistrationId != reg.RegistrationId) < c.MaxStudents).OrderByDescending(c => reg.DesiredTeacherId.HasValue && c.TeacherId == reg.DesiredTeacherId).ThenBy(c => c.StartDate).ToList();
+<tr><td><strong>@reg.Student.UserAccount.FullName</strong><div class="small">@reg.Student.UserAccount.Email</div><div class="text-primary mt-2">@reg.Program.ProgramName</div><small>#REG-@reg.RegistrationId</small></td>
+<td>@await Html.PartialAsync("_EnrollmentPreferences", reg)</td>
+<td>@(reg.Class?.ClassName ?? "Chờ xếp lớp")
+@if(reg.Class != null) { <div class="small">@reg.Class.StartDate.ToString("dd/MM/yyyy") · @(reg.Class.Teacher?.UserAccount.FullName ?? "Chưa phân công giáo viên")</div> }
+</td>
+<td><span class="badge @(reg.Payment?.Status == "Paid" ? "bg-success" : "bg-warning text-dark")">@(reg.Payment?.Status == "Paid" ? "Đã thu học phí" : "Chờ thu học phí")</span><div>@reg.Payment?.Amount.ToString("N0") đ</div></td>
+<td><div class="mb-2">@(reg.Status == "Confirmed" ? "Đã xếp lớp" : reg.Status == "Cancelled" ? "Đã hủy" : "Chờ xếp lớp")</div>
+@if(reg.Status != "Cancelled") {
+@if(candidates.Any()) { <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#assign-@reg.RegistrationId">Xếp / đổi lớp</button> }
+else { <div class="small text-warning-emphasis">Chưa có lớp cùng khóa khai giảng từ ngày học viên có thể bắt đầu và còn chỗ. Hãy tạo / điều chỉnh lớp phù hợp.</div><a asp-controller="ClassManager" asp-action="Create" class="btn btn-sm btn-outline-primary">Mở lớp mới</a> }
+<form asp-action="UpdateStatus" method="post" class="mt-2">@Html.AntiForgeryToken()<input type="hidden" name="id" value="@reg.RegistrationId" /><button class="btn btn-sm btn-outline-secondary" name="status" value="Pending">Đưa về chờ xếp lớp</button><button class="btn btn-sm btn-outline-danger mt-1" name="status" value="Cancelled" onclick="return confirm('Hủy đăng ký này?');">Hủy đăng ký</button></form>
+}
+</td></tr>
+}
+</tbody></table></div></div>
+@foreach(var reg in Model.Where(r => r.Status != "Cancelled")) {
+var candidates = classes.Where(c => CourseClassAssignment.CheckPreferences(reg, c) == null && c.Registrations.Count(x => !x.IsDeleted && x.Status == "Confirmed" && x.RegistrationId != reg.RegistrationId) < c.MaxStudents).OrderByDescending(c => reg.DesiredTeacherId.HasValue && c.TeacherId == reg.DesiredTeacherId).ThenBy(c => c.StartDate).ToList();
+<div class="modal fade" id="assign-@reg.RegistrationId" tabindex="-1" aria-labelledby="assign-title-@reg.RegistrationId" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content"><form asp-action="AssignClass" method="post">@Html.AntiForgeryToken()<input type="hidden" name="registrationId" value="@reg.RegistrationId" /><div class="modal-header"><h5 id="assign-title-@reg.RegistrationId">Xếp lớp: @reg.Student.UserAccount.FullName</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button></div><div class="modal-body"><h6>@reg.Program.ProgramName</h6>@await Html.PartialAsync("_EnrollmentPreferences", reg)
+<label class="form-label mt-3" for="class-@reg.RegistrationId">Lớp cùng khóa, đáp ứng ngày bắt đầu và còn chỗ</label><select name="newClassId" id="class-@reg.RegistrationId" class="form-select" required><option value="">Chọn lớp phù hợp</option>
+@foreach(var c in candidates) { <option value="@c.ClassId">@c.ClassName · @c.StartDate.ToString("dd/MM/yyyy") · @string.Join(", ",c.Schedules.Select(s => $"{(s.DayOfWeek == 8 ? "CN" : $"T{s.DayOfWeek}")} {s.StartTime:hh\\:mm}–{s.EndTime:hh\\:mm}")) · @(c.Teacher?.UserAccount.FullName ?? "Chưa có giáo viên") @(reg.DesiredTeacherId.HasValue && c.TeacherId == reg.DesiredTeacherId ? "(Đúng giáo viên mong muốn)" : "")</option> }
+</select><p class="form-text">Lớp có thể chưa có lịch chi tiết. Buổi, thứ và giáo viên mong muốn để Admin tham khảo. Hệ thống vẫn kiểm tra sĩ số và lịch trùng đã có khi xác nhận.</p></div><div class="modal-footer"><button class="btn btn-primary" type="submit">Xác nhận xếp lớp</button></div></form></div></div></div>
+}

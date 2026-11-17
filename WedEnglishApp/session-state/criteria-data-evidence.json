@@ -1,0 +1,98 @@
+{
+  "registration_states": [
+    {
+      "Status": "Cancelled",
+      "Records": 3
+    },
+    {
+      "Status": "Confirmed",
+      "Records": 24
+    },
+    {
+      "Status": "Pending",
+      "Records": 2
+    }
+  ],
+  "payment_states": [
+    {
+      "Status": "Paid",
+      "Records": 22
+    },
+    {
+      "Status": "Pending",
+      "Records": 7
+    }
+  ],
+  "counts": [
+    {
+      "Table": "UserAccounts",
+      "Records": 20
+    },
+    {
+      "Table": "Students",
+      "Records": 15
+    },
+    {
+      "Table": "Teachers",
+      "Records": 4
+    },
+    {
+      "Table": "Programs",
+      "Records": 16
+    },
+    {
+      "Table": "Classes",
+      "Records": 15
+    },
+    {
+      "Table": "Registrations",
+      "Records": 29
+    },
+    {
+      "Table": "Payments",
+      "Records": 29
+    },
+    {
+      "Table": "ClassSchedules",
+      "Records": 32
+    },
+    {
+      "Table": "ClassDocuments",
+      "Records": 3
+    },
+    {
+      "Table": "ExamSessions",
+      "Records": 14
+    },
+    {
+      "Table": "PlacementTests",
+      "Records": 23
+    },
+    {
+      "Table": "CourseFeedbacks",
+      "Records": 3
+    },
+    {
+      "Table": "Consultations",
+      "Records": 3
+    },
+    {
+      "Table": "ConsultationMessages",
+      "Records": 9
+    },
+    {
+      "Table": "TeacherSalaries",
+      "Records": 8
+    },
+    {
+      "Table": "Banners",
+      "Records": 4
+    },
+    {
+      "Table": "TeacherActivities",
+      "Records": 2
+    }
+  ],
+  "database": "EnglishCenterDb",
+  "date": "2026-11-05"
+}

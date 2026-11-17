@@ -1,0 +1,95 @@
+@startuml
+left to right direction
+skinparam monochrome true
+actor "Khách" as Guest
+actor "Học viên" as Student
+actor "Giáo viên" as Teacher
+actor "Quản trị viên" as Admin
+rectangle "NHK English times" {
+usecase "Tra cứu, tìm kiếm\nvà lọc khóa học" as g1
+usecase "Xem chi tiết, học phí\nvà lớp học tham khảo" as g2
+usecase "Đăng ký tài khoản học viên" as g3
+usecase "Gửi và theo dõi tư vấn\nTrao đổi riêng với Admin" as g4
+usecase "Cập nhật hồ sơ và ảnh" as t0
+usecase "Xem lớp, danh sách học viên" as t1
+usecase "Xem lịch dạy và lịch thi" as t2
+usecase "Quản lý tài liệu lớp học" as t3
+usecase "Chấm bài kiểm tra xếp lớp" as t4
+usecase "Nhập điểm và đề xuất cấp độ" as t5
+usecase "Xem phản hồi học viên" as t6
+usecase "Xem bảng lương cá nhân" as t7
+usecase "Cập nhật hồ sơ và ảnh" as s1
+usecase "Đăng ký khóa học" as s2
+usecase "Gửi nguyện vọng lịch học\nNgày bắt đầu, buổi, 246 / 357" as s3
+usecase "Theo dõi đơn đăng ký\nvà lớp được Admin xếp" as s4
+usecase "Xem hướng dẫn học phí\nLịch sử và in biên lai" as s5
+usecase "Đăng ký kiểm tra xếp lớp" as s6
+usecase "Xem thời khóa biểu\nLịch thi, điểm và cấp độ" as s7
+usecase "Đánh giá lớp học" as s8
+usecase "Trao đổi tư vấn với Admin\nvà xem lịch sử hội thoại" as s9
+usecase "Quản lý chương trình đào tạo" as a1
+usecase "Tạo và chỉnh sửa lớp học" as a2
+usecase "Thiết lập lịch tuần\n246 / 357 và giờ học" as a3
+usecase "Phân công giáo viên giảng dạy" as a0
+usecase "Xếp và chuyển lớp học viên" as a4
+usecase "Kiểm tra điều kiện xếp lớp\nKhóa, ngày, chỗ và lịch trùng" as a5
+usecase "Tạo phòng thi, xếp thí sinh\nvà phân công người chấm" as a6
+usecase "Đối soát học phí\nXác nhận thu và in biên lai" as a7
+usecase "Quản lý tài khoản, hồ sơ\nhọc viên và giáo viên" as a8
+usecase "Lập bảng lương\nvà xác nhận chi trả" as a9
+usecase "Trả lời, kết thúc / mở lại\ncuộc tư vấn" as a10
+usecase "Xem thống kê\nvà quản lý banner" as a11
+usecase "Khôi phục dữ liệu\nvà dọn thùng rác" as a12
+usecase "Đăng nhập hệ thống" as login
+usecase "Đổi mật khẩu" as password
+usecase "Đăng xuất" as logout
+}
+Guest -- g1
+Guest -- g2
+Guest -- g3
+Guest -- g4
+Teacher -- t0
+Teacher -- t1
+Teacher -- t2
+Teacher -- t3
+Teacher -- t4
+Teacher -- t5
+Teacher -- t6
+Teacher -- t7
+Student -- s1
+Student -- s2
+Student -- s3
+Student -- s4
+Student -- s5
+Student -- s6
+Student -- s7
+Student -- s8
+Student -- s9
+Admin -- a1
+Admin -- a2
+Admin -- a3
+Admin -- a0
+Admin -- a4
+Admin -- a5
+Admin -- a6
+Admin -- a7
+Admin -- a8
+Admin -- a9
+Admin -- a10
+Admin -- a11
+Admin -- a12
+Guest -- login
+Student -- login
+Teacher -- login
+Admin -- login
+Student -- password
+Student -- logout
+Teacher -- password
+Teacher -- logout
+Admin -- password
+Admin -- logout
+s2 ..> s3 : <<include>>
+t4 ..> t5 : <<include>>
+a2 ..> a3 : <<include>>
+a4 ..> a5 : <<include>>
+@enduml

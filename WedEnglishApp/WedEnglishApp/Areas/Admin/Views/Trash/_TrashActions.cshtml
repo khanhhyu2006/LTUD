@@ -1,0 +1,32 @@
+@* =================================================================================================
+    PARTIAL VIEW: _TrashActions.cshtml - NÚT KHÔI PHỤC & XÓA VĨNH VIỄN TRÊN TỪNG DÒNG THÙNG RÁC
+================================================================================================= *@
+
+@{
+    var entityType = ViewData["EntityType"]?.ToString();
+    var entityId = ViewData["EntityId"];
+}
+
+<div class="d-flex justify-content-center gap-2">
+    @* Nút Khôi Phục: Đưa dữ liệu trở lại danh sách quản lý *@
+    <form asp-area="Admin" asp-controller="Trash" asp-action="Restore" method="post"
+          onsubmit="return confirm('Bạn có chắc chắn muốn khôi phục mục này?');">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="entityType" value="@entityType" />
+        <input type="hidden" name="id" value="@entityId" />
+        <button type="submit" class="btn btn-sm btn-outline-success" title="Khôi phục về danh sách quản lý">
+            <i class="fa-solid fa-rotate-left me-1"></i> Khôi phục
+        </button>
+    </form>
+
+    @* Nút Xóa Vĩnh Viễn: Xóa hoàn toàn khỏi CSDL, không thể hoàn tác *@
+    <form asp-area="Admin" asp-controller="Trash" asp-action="PermanentDelete" method="post"
+          onsubmit="return confirm('⚠️ CẢNH BÁO: Bạn có chắc chắn muốn XÓA VĨNH VIỄN mục này?\n\nHành động này KHÔNG THỂ HOÀN TÁC!');">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="entityType" value="@entityType" />
+        <input type="hidden" name="id" value="@entityId" />
+        <button type="submit" class="btn btn-sm btn-outline-danger" title="Xóa vĩnh viễn khỏi hệ thống">
+            <i class="fa-solid fa-ban me-1"></i> Xóa hẳn
+        </button>
+    </form>
+</div>

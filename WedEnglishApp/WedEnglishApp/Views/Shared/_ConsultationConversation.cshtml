@@ -1,0 +1,26 @@
+@model WedEnglishApp.ViewModels.Consultations.ConsultationThreadViewModel
+@{ var ordered=Model.Conversation.Messages.OrderBy(m=>m.MessageId).ToList(); var lastId=ordered.LastOrDefault()?.MessageId??0; }
+<div class="consultation-chat" data-feed-url="@Model.FeedUrl" data-send-url="@Model.SendUrl" data-read-url="@Model.ReadUrl" data-last-id="@lastId" data-admin="@Model.IsAdmin.ToString().ToLowerInvariant()" data-contact="@Model.Conversation.ContactName">
+    <div class="d-flex flex-wrap justify-content-between gap-2 align-items-center mb-3">
+        <h5 class="mb-0">Nội dung trao đổi</h5><span data-chat-status class="small text-muted">Tự cập nhật khi có tin nhắn mới</span>
+    </div>
+    <div class="consultation-log" role="log" aria-live="polite" aria-label="Lịch sử trao đổi tư vấn">
+        @foreach(var message in ordered) {
+            var own=(message.SenderRole=="Admin")==Model.IsAdmin;
+            <div class="chat-message @(own?"chat-own":"chat-other")" data-message-id="@message.MessageId">
+                <div class="small fw-semibold mb-1">@(own?"Bạn":message.SenderRole=="Admin"?"Tư vấn viên":Model.Conversation.ContactName)</div>
+                <div class="chat-body">@message.Body</div>
+                <div class="chat-time">@message.SentAt.ToString("HH:mm dd/MM/yyyy")</div>
+            </div>
+        }
+    </div>
+    <form action="@Model.SendUrl" method="post" class="chat-form mt-3">
+        @Html.AntiForgeryToken()
+        <label for="consultation-body" class="form-label">Tin nhắn của bạn</label>
+        <textarea id="consultation-body" name="body" rows="3" maxlength="2000" class="form-control mb-2" placeholder="Nhập nội dung cần trao đổi..." required data-chat-control disabled="@(Model.Conversation.Status=="Closed")"></textarea>
+        <div class="d-flex justify-content-between gap-2 align-items-center">
+            <span class="small text-muted" data-chat-feedback role="status">@(Model.Conversation.Status=="Closed"?"Cuộc tư vấn đã kết thúc.":"Tối đa 2000 ký tự mỗi tin nhắn.")</span>
+            <button type="submit" class="btn btn-primary px-4" data-chat-control disabled="@(Model.Conversation.Status=="Closed")">Gửi tin nhắn</button>
+        </div>
+    </form>
+</div>

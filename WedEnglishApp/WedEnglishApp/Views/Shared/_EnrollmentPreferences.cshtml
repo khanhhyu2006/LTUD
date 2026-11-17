@@ -1,0 +1,8 @@
+@model WedEnglishApp.Models.Registration
+<div class="small">
+<div>Có thể bắt đầu: <strong>@(Model.EarliestStartDate?.ToString("dd/MM/yyyy") ?? "Chưa cung cấp")</strong></div>
+<div>Buổi: <strong>@(Model.PreferredSession switch { "Morning" => "Sáng (06:00–12:00)", "Afternoon" => "Chiều (12:00–18:00)", "Evening" => "Tối (18:00–22:00)", "Any" => "Linh hoạt", _ => "Chưa cung cấp" })</strong></div>
+<div>Thứ có thể học: <strong>@(string.IsNullOrWhiteSpace(Model.PreferredDays) ? "Chưa cung cấp" : string.Join(", ", Model.PreferredDays.Split(',').Select(d => d == "8" ? "Chủ nhật" : $"Thứ {d}")))</strong></div>
+@if (Model.DesiredTeacher != null) { <div>Giáo viên mong muốn: @Model.DesiredTeacher.UserAccount.FullName</div> }
+@if (!string.IsNullOrWhiteSpace(Model.Notes)) { <div>Ghi chú: @Model.Notes</div> }
+</div>

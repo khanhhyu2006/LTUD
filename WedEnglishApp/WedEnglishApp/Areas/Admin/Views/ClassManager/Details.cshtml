@@ -1,0 +1,287 @@
+@model WedEnglishApp.Models.CourseClass
+@{
+    ViewData["Title"] = $"Chi Tiết & Xếp Lớp: {Model.ClassName}";
+    var otherRegistrations = ViewBag.OtherRegistrations as List<WedEnglishApp.Models.Registration> ?? new();
+    var currentPattern = string.Join(",", Model.Schedules.OrderBy(s => s.DayOfWeek).Select(s => s.DayOfWeek));
+    var currentStart = Model.Schedules.FirstOrDefault()?.StartTime.ToString(@"hh\:mm");
+    var currentEnd = Model.Schedules.FirstOrDefault()?.EndTime.ToString(@"hh\:mm");
+    var teachers = ViewBag.Teachers as List<WedEnglishApp.Models.Teacher> ?? new();
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <div class="d-flex align-items-center gap-2 mb-1">
+            <a asp-action="Index" class="btn btn-sm btn-outline-secondary rounded-circle me-1" title="Quay lại danh sách">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h3 class="fw-bold mb-0 text-dark">Lớp: @Model.ClassName</h3>
+            <span class="badge @(Model.Status == "Planning" ? "bg-warning text-dark" : Model.Status == "InProgress" ? "bg-success" : "bg-secondary")">
+                @Model.Status
+            </span>
+        </div>
+        <p class="text-muted small mb-0">Khóa học: <strong class="text-primary">@Model.Program.ProgramName</strong> | Phòng: <strong>@Model.Room</strong> | Thời gian: @Model.StartDate.ToString("dd/MM/yyyy") - @Model.EndDate.ToString("dd/MM/yyyy")</p>
+    </div>
+    <div class="d-flex gap-2">
+        <button type="button" class="btn btn-outline-primary fw-semibold" data-bs-toggle="modal" data-bs-target="#assignTeacherModal">
+            <i class="fa-solid fa-user-tie me-1"></i> @(Model.Teacher != null ? "Đổi GVCN" : "+ Chọn GVCN")
+        </button>
+        <a asp-action="Edit" asp-route-id="@Model.ClassId" class="btn btn-outline-secondary">
+            <i class="fa-solid fa-pen-to-square me-1"></i> Sửa Lớp
+        </a>
+    </div>
+</div>
+
+<div class="admin-card p-4 mb-4" id="weekly-schedule">
+    <h5 class="fw-bold">Lịch học trong tuần của lớp</h5>
+    <p class="small text-muted">Lịch này dùng chung cho cả lớp và hiển thị trên thời khóa biểu sau khi học viên được xếp vào lớp.</p>
+    @if (Model.Schedules.Any()) {
+        <p class="small">Lịch hiện tại: <strong>@string.Join(", ", Model.Schedules.OrderBy(s => s.DayOfWeek).Select(s => $"T{s.DayOfWeek}: {s.StartTime.ToString(@"hh\:mm")}–{s.EndTime.ToString(@"hh\:mm")}"))</strong></p>
+    }
+    <form asp-action="SaveSchedule" method="post" class="row g-3 align-items-end">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="classId" value="@Model.ClassId" />
+        <div class="col-md-4"><label class="form-label" for="weekly-pattern">Các thứ học</label><select name="SchedulePattern" id="weekly-pattern" class="form-select" required><option value="">Chọn lịch trong tuần</option><option value="246" selected="@(currentPattern == "2,4,6")">Thứ 2 – Thứ 4 – Thứ 6</option><option value="357" selected="@(currentPattern == "3,5,7")">Thứ 3 – Thứ 5 – Thứ 7</option></select></div>
+        <div class="col-md-3"><label class="form-label" for="weekly-start">Giờ bắt đầu</label><input type="time" name="StartTime" id="weekly-start" value="@currentStart" class="form-control" required /></div>
+        <div class="col-md-3"><label class="form-label" for="weekly-end">Giờ kết thúc</label><input type="time" name="EndTime" id="weekly-end" value="@currentEnd" class="form-control" required /></div>
+        <div class="col-md-2"><button class="btn btn-primary w-100" type="submit">Lưu lịch học</button></div>
+    </form>
+</div>
+
+<!-- Card tổng quan tiến độ lớp & GVCN -->
+<div class="row g-4 mb-4">
+    <div class="col-md-6 col-lg-4">
+        <div class="admin-card p-3 h-100 bg-white">
+            <div class="text-muted small fw-semibold text-uppercase mb-1">Giáo viên chủ nhiệm (GVCN)</div>
+            @if (Model.Teacher != null)
+            {
+                <div class="d-flex align-items-center gap-3 mt-2">
+                    <div class="rounded-circle bg-primary-subtle text-primary d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                        <i class="fa-solid fa-user-tie fs-4"></i>
+                    </div>
+                    <div>
+                        <div class="fw-bold text-dark fs-6">@Model.Teacher.UserAccount.FullName</div>
+                        <div class="small text-muted">@Model.Teacher.Degree - @Model.Teacher.Specialization</div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-warning-subtle border border-warning-subtle rounded-3 p-2 mt-2 mb-0 small">
+                    <i class="fa-solid fa-triangle-exclamation text-warning me-1"></i> Chưa có GVCN cụ thể.
+                    <button type="button" class="btn btn-sm btn-link p-0 fw-bold" data-bs-toggle="modal" data-bs-target="#assignTeacherModal">Chọn GV ngay</button>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="admin-card p-3 h-100 bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="text-muted small fw-semibold text-uppercase">Sĩ số lớp</span>
+                <span class="fw-bold text-primary">@Model.Registrations.Count / @Model.MaxStudents học viên</span>
+            </div>
+            @{
+                int percent = Model.MaxStudents > 0 ? (Model.Registrations.Count * 100 / Model.MaxStudents) : 0;
+            }
+            <div class="progress mt-2" style="height: 10px;">
+                <div class="progress-bar @(percent >= 100 ? "bg-danger" : percent >= 75 ? "bg-warning" : "bg-primary")" role="progressbar" style="width: @percent%;"></div>
+            </div>
+            <div class="small text-muted mt-2">
+                @(Model.MaxStudents - Model.Registrations.Count > 0 ? $"Còn trống {Model.MaxStudents - Model.Registrations.Count} chỗ" : "Đã đầy sĩ số")
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <div class="admin-card p-3 h-100 bg-white">
+            <div class="text-muted small fw-semibold text-uppercase mb-1">Khóa học & Học phí</div>
+            <div class="fw-bold text-dark fs-6">@Model.Program.ProgramName</div>
+            <div class="text-danger fw-bold fs-6 mt-1">@Model.Program.TuitionFee.ToString("N0") VNĐ</div>
+            <div class="small text-muted">Cấp độ: @Model.Program.Level - Thời lượng: @Model.Program.DurationWeeks tuần</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- CỘT 1: Danh sách học viên ĐANG Ở TRONG LỚP NÀY -->
+    <div class="col-lg-7">
+        <div class="admin-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold text-dark mb-0">
+                    <i class="fa-solid fa-users text-primary me-2"></i> Học Viên Trong Lớp (@Model.Registrations.Count)
+                </h5>
+            </div>
+
+            @if (Model.Registrations.Count == 0)
+            {
+                <div class="alert alert-light border text-center py-4 text-muted">
+                    <i class="fa-solid fa-user-group fs-2 mb-2 text-secondary"></i>
+                    <p class="mb-0">Lớp hiện chưa có học viên nào. Chọn học viên từ cột bên phải để xếp vào lớp!</p>
+                </div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Học Viên</th>
+                                <th>Nguyện Vọng GV</th>
+                                <th>Trạng Thái</th>
+                                <th class="text-end">Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var r in Model.Registrations)
+                            {
+                                <tr>
+                                    <td>
+                                        <div class="fw-bold text-dark">@r.Student.UserAccount.FullName</div>
+                                        <div class="small text-muted">@r.Student.UserAccount.Email</div>
+                                        @if (!string.IsNullOrEmpty(r.Notes))
+                                        {
+                                            <div class="x-small text-secondary fst-italic">"@(r.Notes)"</div>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (r.DesiredTeacher != null)
+                                        {
+                                            <span class="badge @(Model.TeacherId == r.DesiredTeacherId ? "bg-success-subtle text-success border border-success-subtle" : "bg-light text-secondary border")">
+                                                @(Model.TeacherId == r.DesiredTeacherId ? "⭐ Khớp GVCN" : r.DesiredTeacher.UserAccount.FullName)
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="small text-muted">Mặc định</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <span class="badge @(r.Status == "Confirmed" ? "bg-success" : "bg-warning text-dark")">
+                                            @r.Status
+                                        </span>
+                                    </td>
+                                    <td class="text-end">
+                                        <form asp-action="RemoveStudentFromClass" method="post" class="d-inline" onsubmit="return confirm('Chuyển học viên này về danh sách chờ xếp lớp?');">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="registrationId" value="@r.RegistrationId" />
+                                            <input type="hidden" name="classId" value="@Model.ClassId" />
+                                            <button type="submit" class="btn btn-sm btn-outline-danger" title="Rút khỏi lớp">
+                                                <i class="fa-solid fa-user-minus"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- CỘT 2: Danh sách học viên ĐĂNG KÝ CÙNG KHÓA NÀY CHỜ XẾP LỚP -->
+    <div class="col-lg-5">
+        <div class="admin-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold text-dark mb-0">
+                    <i class="fa-solid fa-user-plus text-success me-2"></i> Đăng Ký Cùng Khóa Chờ Xếp (@otherRegistrations.Count)
+                </h5>
+            </div>
+            <p class="text-muted small mb-3">Các học viên đã đăng ký khóa <strong>@Model.Program.ProgramName</strong> để Admin xếp lớp. Lớp khai giảng từ ngày học viên có thể bắt đầu; buổi và thứ học là thông tin tham khảo:</p>
+
+            @if (otherRegistrations.Count == 0)
+            {
+                <div class="alert alert-light border text-center py-4 text-muted">
+                    <i class="fa-solid fa-circle-check fs-2 mb-2 text-success"></i>
+                    <p class="mb-0">Không có học viên nào chờ xếp lớp cho khóa học này!</p>
+                </div>
+            }
+            else
+            {
+                <div class="d-flex flex-column gap-3">
+                    @foreach (var reg in otherRegistrations)
+                    {
+                        bool isMatchDesired = Model.TeacherId.HasValue && reg.DesiredTeacherId == Model.TeacherId.Value;
+                        <div class="border rounded-3 p-3 bg-light @(isMatchDesired ? "border-success" : "")">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <div class="fw-bold text-dark">@reg.Student.UserAccount.FullName</div>
+                                    <div class="small text-muted">@reg.Student.UserAccount.Email</div>
+                                </div>
+                                <form asp-action="AddStudentToClass" method="post">
+                                    @Html.AntiForgeryToken()
+                                    <input type="hidden" name="registrationId" value="@reg.RegistrationId" />
+                                    <input type="hidden" name="classId" value="@Model.ClassId" />
+                                    <button type="submit" class="btn btn-sm btn-success fw-bold px-3">
+                                        <i class="fa-solid fa-plus me-1"></i> Xếp Vào Lớp
+                                    </button>
+                                </form>
+                            </div>
+
+                            <div class="small mb-1">
+                                <span class="text-muted">Lớp hiện tại:</span>
+                                <span class="badge bg-light text-dark border">@(reg.Class?.ClassName ?? "Chờ xếp lớp")</span>
+                                @await Html.PartialAsync("_EnrollmentPreferences", reg)
+                            </div>
+
+                            @if (reg.DesiredTeacher != null)
+                            {
+                                <div class="small mb-1">
+                                    <span class="text-muted">Nguyện vọng GV:</span>
+                                    <span class="badge @(isMatchDesired ? "bg-success text-white" : "bg-warning-subtle text-dark border")">
+                                        @(isMatchDesired ? "⭐ KHỚP GVCN: " : "")@reg.DesiredTeacher.UserAccount.FullName
+                                    </span>
+                                </div>
+                            }
+
+                            @if (!string.IsNullOrEmpty(reg.Notes))
+                            {
+                                <div class="x-small text-muted bg-white p-2 rounded border mt-2">
+                                    <i class="fa-regular fa-comment-dots text-primary me-1"></i> Ghi chú: "@reg.Notes"
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Modal Chọn / Đổi GVCN trong trang Details -->
+<div class="modal fade" id="assignTeacherModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 border-0 shadow">
+            <div class="modal-header bg-light rounded-top-4">
+                <h5 class="modal-title fw-bold text-primary">
+                    <i class="fa-solid fa-user-tie me-2"></i> Chọn Giáo Viên Chủ Nhiệm
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="AssignTeacher" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="classId" value="@Model.ClassId" />
+                <div class="modal-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label text-muted small fw-semibold">Lớp học:</label>
+                        <div class="fw-bold fs-6 text-dark p-2 bg-light rounded border">@Model.ClassName (@Model.Program.ProgramName)</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Chọn Giáo viên Chủ nhiệm (GVCN):</label>
+                        <select name="teacherId" class="form-select">
+                            <option value="">-- Để trống (Chưa có GVCN) --</option>
+                            @foreach (var t in teachers)
+                            {
+                                <option value="@t.TeacherId" selected="@(Model.TeacherId == t.TeacherId)">
+                                    @t.UserAccount.FullName (@t.Specialization - @t.Degree)
+                                </option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer bg-light rounded-bottom-4">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-primary fw-bold px-4">Lưu Phân Công GVCN</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

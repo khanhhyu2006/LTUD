@@ -1,0 +1,4666 @@
+[
+  {
+    "i": 0,
+    "style": "Normal",
+    "text": "TRƯỜNG CAO ĐẲNG CÔNG THƯƠNG TP HỒ CHÍ MINH",
+    "rids": []
+  },
+  {
+    "i": 1,
+    "style": "Normal",
+    "text": "KHOA CÔNG NGHỆ THÔNG TIN",
+    "rids": []
+  },
+  {
+    "i": 2,
+    "style": "Normal",
+    "text": "BÁO CÁO ĐỒ ÁN KẾT THÚC MÔN",
+    "rids": []
+  },
+  {
+    "i": 3,
+    "style": "Normal",
+    "text": "LẬP TRÌNH ỨNG DỤNG",
+    "rids": []
+  },
+  {
+    "i": 4,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId8"
+    ]
+  },
+  {
+    "i": 5,
+    "style": "Title",
+    "text": "XÂY DỰNG WEBSITE QUẢN LÝ\nTRUNG TÂM NGOẠI NGỮ HITC ENGLISH",
+    "rids": []
+  },
+  {
+    "i": 6,
+    "style": "Normal",
+    "text": "Sinh viên thực hiện   Nguyễn Khánh Huy",
+    "rids": []
+  },
+  {
+    "i": 7,
+    "style": "Normal",
+    "text": "MSSV   2124110269",
+    "rids": []
+  },
+  {
+    "i": 8,
+    "style": "Normal",
+    "text": "Lớp   ................................",
+    "rids": []
+  },
+  {
+    "i": 9,
+    "style": "Normal",
+    "text": "Giảng viên hướng dẫn   Nguyễn Minh Nhứt",
+    "rids": []
+  },
+  {
+    "i": 10,
+    "style": "Normal",
+    "text": "TP Hồ Chí Minh tháng 11 năm 2026",
+    "rids": []
+  },
+  {
+    "i": 11,
+    "style": "Normal",
+    "text": "",
+    "rids": []
+  },
+  {
+    "i": 12,
+    "style": "Normal",
+    "text": "MỤC LỤC",
+    "rids": []
+  },
+  {
+    "i": 13,
+    "style": "toc 1",
+    "text": "MỞ ĐẦU\t1",
+    "rids": []
+  },
+  {
+    "i": 14,
+    "style": "toc 2",
+    "text": "1. Lý do chọn đề tài\t1",
+    "rids": []
+  },
+  {
+    "i": 15,
+    "style": "toc 2",
+    "text": "2. Mục đích nghiên cứu\t1",
+    "rids": []
+  },
+  {
+    "i": 16,
+    "style": "toc 3",
+    "text": "2.1 Đối với Khách vãng lai (Guest)\t2",
+    "rids": []
+  },
+  {
+    "i": 17,
+    "style": "toc 3",
+    "text": "2.2 Đối với Học viên (Student)\t2",
+    "rids": []
+  },
+  {
+    "i": 18,
+    "style": "toc 3",
+    "text": "2.3 Đối với Giáo viên (Teacher)\t2",
+    "rids": []
+  },
+  {
+    "i": 19,
+    "style": "toc 3",
+    "text": "2.4 Đối với Quản trị viên (Admin)\t3",
+    "rids": []
+  },
+  {
+    "i": 20,
+    "style": "toc 2",
+    "text": "3. Đối tượng và phạm vi nghiên cứu\t3",
+    "rids": []
+  },
+  {
+    "i": 21,
+    "style": "toc 3",
+    "text": "3.1 Đối tượng nghiên cứu\t3",
+    "rids": []
+  },
+  {
+    "i": 22,
+    "style": "toc 3",
+    "text": "3.2 Phạm vi nghiên cứu\t4",
+    "rids": []
+  },
+  {
+    "i": 23,
+    "style": "toc 2",
+    "text": "4. Phương pháp nghiên cứu\t5",
+    "rids": []
+  },
+  {
+    "i": 24,
+    "style": "toc 3",
+    "text": "4.1 Phương pháp nghiên cứu lý thuyết\t5",
+    "rids": []
+  },
+  {
+    "i": 25,
+    "style": "toc 3",
+    "text": "4.2 Phương pháp khảo sát và phân tích hệ thống\t5",
+    "rids": []
+  },
+  {
+    "i": 26,
+    "style": "toc 3",
+    "text": "4.3 Phương pháp thực nghiệm\t5",
+    "rids": []
+  },
+  {
+    "i": 27,
+    "style": "toc 1",
+    "text": "CHƯƠNG 1. TỔNG QUAN VỀ WEBSITE TRUNG TÂM NGOẠI NGỮ\t6",
+    "rids": []
+  },
+  {
+    "i": 28,
+    "style": "toc 2",
+    "text": "1.1 Các khái niệm cơ bản về hệ thống quản lý và đăng ký khóa học trực tuyến\t6",
+    "rids": []
+  },
+  {
+    "i": 29,
+    "style": "toc 3",
+    "text": "Chuyển dịch mô hình quản lý trung tâm ngoại ngữ truyền thống sang nền tảng số\t6",
+    "rids": []
+  },
+  {
+    "i": 30,
+    "style": "toc 3",
+    "text": "Cơ chế đồng bộ dữ liệu và kiểm soát sĩ số lớp học\t6",
+    "rids": []
+  },
+  {
+    "i": 31,
+    "style": "toc 3",
+    "text": "Kiến trúc phân quyền đa cấp bậc trong hệ thống\t7",
+    "rids": []
+  },
+  {
+    "i": 32,
+    "style": "toc 2",
+    "text": "Khảo sát và đánh giá các hệ thống thực tế tại Việt Nam\t7",
+    "rids": []
+  },
+  {
+    "i": 33,
+    "style": "toc 3",
+    "text": "Website 1: Anh văn Hội Việt Mỹ (VUS) - vus.edu.vn\t7",
+    "rids": []
+  },
+  {
+    "i": 34,
+    "style": "toc 2",
+    "text": "Những vấn đề tồn tại và Giải pháp đề xuất của đề tài\t9",
+    "rids": []
+  },
+  {
+    "i": 35,
+    "style": "toc 3",
+    "text": "Những vấn đề còn tồn tại\t9",
+    "rids": []
+  },
+  {
+    "i": 36,
+    "style": "toc 3",
+    "text": "Giải pháp công nghệ và Nghiệp vụ đề xuất của đồ án\t9",
+    "rids": []
+  },
+  {
+    "i": 37,
+    "style": "toc 2",
+    "text": "Mục tiêu, Đối tượng sử dụng và Phạm vi đề tài\t10",
+    "rids": []
+  },
+  {
+    "i": 38,
+    "style": "toc 3",
+    "text": "Đối tượng người dùng mục tiêu\t10",
+    "rids": []
+  },
+  {
+    "i": 39,
+    "style": "toc 3",
+    "text": "Phạm vi đề tài:\t10",
+    "rids": []
+  },
+  {
+    "i": 40,
+    "style": "toc 2",
+    "text": "Ý nghĩa thực tiễn của đề tài\t11",
+    "rids": []
+  },
+  {
+    "i": 41,
+    "style": "toc 2",
+    "text": "KẾT CHƯƠNG 1\t11",
+    "rids": []
+  },
+  {
+    "i": 42,
+    "style": "toc 1",
+    "text": "CHƯƠNG 2. CƠ SỞ LÝ THUYẾT VÀ CÔNG CỤ SỬ DỤNG\t12",
+    "rids": []
+  },
+  {
+    "i": 43,
+    "style": "toc 2",
+    "text": "2.1 Kiến trúc hệ thống Client - Server và Mô hình Kết hợp ASP.NET Core MVC & Web API\t12",
+    "rids": []
+  },
+  {
+    "i": 44,
+    "style": "toc 3",
+    "text": "2.1.1 Kiến trúc Client - Server\t12",
+    "rids": []
+  },
+  {
+    "i": 45,
+    "style": "toc 3",
+    "text": "2.1.2 Mô hình kiến trúc ASP.NET Core MVC\t12",
+    "rids": []
+  },
+  {
+    "i": 46,
+    "style": "toc 2",
+    "text": "2.2 Công nghệ phát triển phía Backend (ASP.NET Core .NET 8 & C#)\t13",
+    "rids": []
+  },
+  {
+    "i": 47,
+    "style": "toc 2",
+    "text": "2.3 Công nghệ phát triển phía Frontend & Giao tiếp API (Razor View, Bootstrap 5, JavaScript & Axios/Fetch)\t13",
+    "rids": []
+  },
+  {
+    "i": 48,
+    "style": "toc 2",
+    "text": "2.4 Hệ quản trị cơ sở dữ liệu và Giải pháp thanh toán\t13",
+    "rids": []
+  },
+  {
+    "i": 49,
+    "style": "toc 2",
+    "text": "2.5 Kiến trúc bảo mật và Phân quyền người dùng\t14",
+    "rids": []
+  },
+  {
+    "i": 50,
+    "style": "toc 2",
+    "text": "2.6 Kiểm soát sĩ số & Kiểm tra xung đột lịch học (Schedule Conflict Check)\t15",
+    "rids": []
+  },
+  {
+    "i": 51,
+    "style": "toc 2",
+    "text": "2.7 Mô hình phân tầng trong ứng dụng (Three-Tier Architecture)\t15",
+    "rids": []
+  },
+  {
+    "i": 52,
+    "style": "toc 2",
+    "text": "KẾT CHƯƠNG 2\t15",
+    "rids": []
+  },
+  {
+    "i": 53,
+    "style": "toc 1",
+    "text": "CHƯƠNG 3. PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG\t17",
+    "rids": []
+  },
+  {
+    "i": 54,
+    "style": "toc 2",
+    "text": "3.1 Biểu đồ Use Case tổng quan hệ thống\t17",
+    "rids": []
+  },
+  {
+    "i": 55,
+    "style": "toc 3",
+    "text": "3.1.1 Phân tích và mô tả logic cấu trúc Use Case\t17",
+    "rids": []
+  },
+  {
+    "i": 56,
+    "style": "toc 3",
+    "text": "Phân rã 4 phân hệ Use Case cốt lõi\t18",
+    "rids": []
+  },
+  {
+    "i": 57,
+    "style": "toc 2",
+    "text": "3.2 Phân rã use case theo từng tác nhân\t18",
+    "rids": []
+  },
+  {
+    "i": 58,
+    "style": "toc 3",
+    "text": "3.2.1 Tác nhân khách\t18",
+    "rids": []
+  },
+  {
+    "i": 59,
+    "style": "toc 3",
+    "text": "3.2.2 Tài khoản học viên\t19",
+    "rids": []
+  },
+  {
+    "i": 60,
+    "style": "toc 3",
+    "text": "3.2.3 Tài khoản giáo viên\t20",
+    "rids": []
+  },
+  {
+    "i": 61,
+    "style": "toc 3",
+    "text": "3.2.4 Tài khoản quản trị viên\t21",
+    "rids": []
+  },
+  {
+    "i": 62,
+    "style": "toc 2",
+    "text": "3.3 Đặc tả các use case tiêu biểu\t22",
+    "rids": []
+  },
+  {
+    "i": 63,
+    "style": "toc 3",
+    "text": "3.3.1 Đăng ký tài khoản và đăng nhập\t22",
+    "rids": []
+  },
+  {
+    "i": 64,
+    "style": "toc 3",
+    "text": "3.3.2 Đăng ký lớp học\t22",
+    "rids": []
+  },
+  {
+    "i": 65,
+    "style": "toc 3",
+    "text": "3.3.3 Xác nhận học phí\t22",
+    "rids": []
+  },
+  {
+    "i": 66,
+    "style": "toc 3",
+    "text": "3.3.4 Đặt lịch và chấm kiểm tra xếp lớp\t22",
+    "rids": []
+  },
+  {
+    "i": 67,
+    "style": "toc 3",
+    "text": "3.3.5 Quản lý tài liệu lớp học\t23",
+    "rids": []
+  },
+  {
+    "i": 68,
+    "style": "toc 3",
+    "text": "3.3.6 Xóa mềm và khôi phục dữ liệu\t23",
+    "rids": []
+  },
+  {
+    "i": 69,
+    "style": "toc 2",
+    "text": "3.4 Thiết kế cơ sở dữ liệu\t24",
+    "rids": []
+  },
+  {
+    "i": 70,
+    "style": "toc 3",
+    "text": "3.4.1 Nhóm tài khoản và hồ sơ\t24",
+    "rids": []
+  },
+  {
+    "i": 71,
+    "style": "toc 3",
+    "text": "3.4.2 Nhóm đào tạo và ghi danh\t24",
+    "rids": []
+  },
+  {
+    "i": 72,
+    "style": "toc 3",
+    "text": "3.4.3 Nhóm hỗ trợ và quản trị\t25",
+    "rids": []
+  },
+  {
+    "i": 73,
+    "style": "toc 2",
+    "text": "3.5 Ràng buộc và luồng dữ liệu\t25",
+    "rids": []
+  },
+  {
+    "i": 74,
+    "style": "toc 2",
+    "text": "3.6 Đối chiếu thiết kế với phạm vi hiện thực\t25",
+    "rids": []
+  },
+  {
+    "i": 75,
+    "style": "toc 2",
+    "text": "3.7 Kết chương 3\t26",
+    "rids": []
+  },
+  {
+    "i": 76,
+    "style": "toc 1",
+    "text": "CHƯƠNG 4. HIỆN THỰC HÓA VÀ KIỂM THỬ HỆ THỐNG\t27",
+    "rids": []
+  },
+  {
+    "i": 77,
+    "style": "toc 2",
+    "text": "4.1 Môi trường triển khai và Công nghệ sử dụng\t27",
+    "rids": []
+  },
+  {
+    "i": 78,
+    "style": "toc 3",
+    "text": "4.1.1 Môi trường phát triển và vận hành hệ thống\t27",
+    "rids": []
+  },
+  {
+    "i": 79,
+    "style": "toc 3",
+    "text": "4.1.2 Các công nghệ và thư viện phần mềm sử dụng\t29",
+    "rids": []
+  },
+  {
+    "i": 80,
+    "style": "toc 3",
+    "text": "4.1.3 Quy trình khởi tạo đường ống xử lý HTTP (Middleware Pipeline)\t30",
+    "rids": []
+  },
+  {
+    "i": 81,
+    "style": "toc 2",
+    "text": "4.2 GIAO DIỆN VÀ HIỆN THỰC HÓA CHỨC NĂNG HỆ THỐNG\t31",
+    "rids": []
+  },
+  {
+    "i": 82,
+    "style": "toc 3",
+    "text": "4.2.1 Phân hệ dành cho Khách hàng (Học viên & Khách vãng lai)\t31",
+    "rids": []
+  },
+  {
+    "i": 83,
+    "style": "toc 3",
+    "text": "4.2.2 Phân hệ Quản trị viên hệ thống (Admin Portal - Area: Admin)\t42",
+    "rids": []
+  },
+  {
+    "i": 84,
+    "style": "toc 3",
+    "text": "4.2.3 Phân hệ Giảng viên (Teacher Portal - Area: Teacher)\t49",
+    "rids": []
+  },
+  {
+    "i": 85,
+    "style": "toc 3",
+    "text": "4.2.4 Phân hệ Xác thực và Quản lý tài khoản (Authentication System)\t53",
+    "rids": []
+  },
+  {
+    "i": 86,
+    "style": "toc 2",
+    "text": "4.3 KIỂM THỬ HỆ THỐNG (SYSTEM TESTING)\t56",
+    "rids": []
+  },
+  {
+    "i": 87,
+    "style": "toc 3",
+    "text": "4.3.1 Mục tiêu và Phương pháp kiểm thử\t56",
+    "rids": []
+  },
+  {
+    "i": 88,
+    "style": "toc 3",
+    "text": "4.3.2 Kịch bản kiểm thử chi tiết các phân hệ chức năng (Test Cases)\t56",
+    "rids": []
+  },
+  {
+    "i": 89,
+    "style": "toc 2",
+    "text": "KẾT CHƯƠNG 4\t59",
+    "rids": []
+  },
+  {
+    "i": 90,
+    "style": "toc 1",
+    "text": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN\t61",
+    "rids": []
+  },
+  {
+    "i": 91,
+    "style": "toc 1",
+    "text": "TÀI LIỆU THAM KHẢO\t64",
+    "rids": []
+  },
+  {
+    "i": 92,
+    "style": "Normal",
+    "text": "",
+    "rids": []
+  },
+  {
+    "i": 93,
+    "style": "Normal",
+    "text": "DANH MỤC HÌNH",
+    "rids": []
+  },
+  {
+    "i": 94,
+    "style": "toc 1",
+    "text": "Hình 1: trang chủ VUS\t7",
+    "rids": []
+  },
+  {
+    "i": 95,
+    "style": "toc 1",
+    "text": "Hình 2: trang chủ ILA Vietnam\t8",
+    "rids": []
+  },
+  {
+    "i": 96,
+    "style": "toc 1",
+    "text": "Hình 1: Biểu đồ Use Case tổng quan hệ thống Dang ky khoa hc\t17",
+    "rids": []
+  },
+  {
+    "i": 97,
+    "style": "toc 1",
+    "text": "Hình 3.2: Sơ đồ use case khách chưa đăng nhập\t18",
+    "rids": []
+  },
+  {
+    "i": 98,
+    "style": "toc 1",
+    "text": "Hình 3.3: Sơ đồ use case tài khoản học viên\t19",
+    "rids": []
+  },
+  {
+    "i": 99,
+    "style": "toc 1",
+    "text": "Hình 3.4: Sơ đồ use case tài khoản giáo viên\t20",
+    "rids": []
+  },
+  {
+    "i": 100,
+    "style": "toc 1",
+    "text": "Hình 3.5: Sơ đồ use case tài khoản quản trị viên\t21",
+    "rids": []
+  },
+  {
+    "i": 101,
+    "style": "toc 1",
+    "text": "Hình 3.6: Mô hình các bảng dữ liệu và trường khóa\t24",
+    "rids": []
+  },
+  {
+    "i": 102,
+    "style": "toc 1",
+    "text": "Hình 4.1: Giao diện Trang chủ tập trung khi Khách hàng chưa đăng nhập\t31",
+    "rids": []
+  },
+  {
+    "i": 103,
+    "style": "toc 1",
+    "text": "Hình 4.2: Giao diện Trang chủ và Menu tiện ích sau khi Học viên đăng nhập\t33",
+    "rids": []
+  },
+  {
+    "i": 104,
+    "style": "toc 1",
+    "text": "Hình 4.3: Giao diện Danh mục Khóa học và Bộ lọc cấp độ\t35",
+    "rids": []
+  },
+  {
+    "i": 105,
+    "style": "toc 1",
+    "text": "Hình 4.4: Giao diện Chi tiết Khóa học và Danh sách lớp đang mở\t36",
+    "rids": []
+  },
+  {
+    "i": 106,
+    "style": "toc 1",
+    "text": "Hình 4.5: Giao diện Đặt lịch thi xếp lớp và kiểm tra năng lực đầu vào\t37",
+    "rids": []
+  },
+  {
+    "i": 107,
+    "style": "toc 1",
+    "text": "Hình 4.6: Giao diện Thanh toán học phí bằng mã quét VietQR tự động\t38",
+    "rids": []
+  },
+  {
+    "i": 108,
+    "style": "toc 1",
+    "text": "Hình 4.7: Giao diện Biên lai thu tiền học phí điện tử\t39",
+    "rids": []
+  },
+  {
+    "i": 109,
+    "style": "toc 1",
+    "text": "Hình 4.8a: Các lớp học viên đã đăng ký\t40",
+    "rids": []
+  },
+  {
+    "i": 110,
+    "style": "toc 1",
+    "text": "Hình 4.8b: Lịch học và lịch thi theo tuần\t40",
+    "rids": []
+  },
+  {
+    "i": 111,
+    "style": "toc 1",
+    "text": "Hình 4.8: Giao diện Lớp học của tôi và Lịch học tuần\t40",
+    "rids": []
+  },
+  {
+    "i": 112,
+    "style": "toc 1",
+    "text": "Hình 4.9: Giao diện Lịch sử nộp học phí học viên\t41",
+    "rids": []
+  },
+  {
+    "i": 113,
+    "style": "toc 1",
+    "text": "Hình 4.10: Giao diện Hồ sơ cá nhân và Kết quả thi xếp lớp của học viên\t42",
+    "rids": []
+  },
+  {
+    "i": 114,
+    "style": "toc 1",
+    "text": "Hình 4.11: Giao diện Bảng điều khiển Quản trị Dashboard và Biểu đồ Doanh thu\t43",
+    "rids": []
+  },
+  {
+    "i": 115,
+    "style": "toc 1",
+    "text": "Hình 4.12: Giao diện Quản lý và Thêm mới Banner quảng bá trang chủ\t44",
+    "rids": []
+  },
+  {
+    "i": 116,
+    "style": "toc 1",
+    "text": "Hình 4.13a: Chương trình đào tạo\t45",
+    "rids": []
+  },
+  {
+    "i": 117,
+    "style": "toc 1",
+    "text": "Hình 4.13b: Lớp học và phân công\t45",
+    "rids": []
+  },
+  {
+    "i": 118,
+    "style": "toc 1",
+    "text": "Hình 4.13: Giao diện Quản trị Chương trình học và Lớp học\t45",
+    "rids": []
+  },
+  {
+    "i": 119,
+    "style": "toc 1",
+    "text": "Hình 4.14a: Đăng ký và xếp lớp\t46",
+    "rids": []
+  },
+  {
+    "i": 120,
+    "style": "toc 1",
+    "text": "Hình 4.14b: Quản lý học phí\t46",
+    "rids": []
+  },
+  {
+    "i": 121,
+    "style": "toc 1",
+    "text": "Hình 4.14: Giao diện Quản trị Đăng ký và Xác nhận Thanh toán học phí\t47",
+    "rids": []
+  },
+  {
+    "i": 122,
+    "style": "toc 1",
+    "text": "Hình 4.15a: Hồ sơ giáo viên\t47",
+    "rids": []
+  },
+  {
+    "i": 123,
+    "style": "toc 1",
+    "text": "Hình 4.15b: Hồ sơ học viên\t48",
+    "rids": []
+  },
+  {
+    "i": 124,
+    "style": "toc 1",
+    "text": "Hình 4.15: Giao diện Quản lý Hồ sơ Giảng viên và Học viên\t48",
+    "rids": []
+  },
+  {
+    "i": 125,
+    "style": "toc 1",
+    "text": "Hình 4.16: Giao diện Thùng rác hệ thống với cơ chế Khôi phục và Xóa vĩnh viễn\t49",
+    "rids": []
+  },
+  {
+    "i": 126,
+    "style": "toc 1",
+    "text": "Hình 4.17: Giao diện Bảng điều khiển công tác đào tạo của Giảng viên\t50",
+    "rids": []
+  },
+  {
+    "i": 127,
+    "style": "toc 1",
+    "text": "Hình 4.18a: Các lớp được phân công\t50",
+    "rids": []
+  },
+  {
+    "i": 128,
+    "style": "toc 1",
+    "text": "Hình 4.18b: Danh sách học viên của lớp\t51",
+    "rids": []
+  },
+  {
+    "i": 129,
+    "style": "toc 1",
+    "text": "Hình 4.18: Giao diện Danh sách lớp dạy và Điểm danh học viên\t51",
+    "rids": []
+  },
+  {
+    "i": 130,
+    "style": "toc 1",
+    "text": "Hình 4.19: Giao diện Chấm thi xếp lớp và Đề xuất cấp độ học\t51",
+    "rids": []
+  },
+  {
+    "i": 131,
+    "style": "toc 1",
+    "text": "Hình 4.20a: Quản lý tài liệu lớp\t52",
+    "rids": []
+  },
+  {
+    "i": 132,
+    "style": "toc 1",
+    "text": "Hình 4.20b: Phản hồi của học viên\t52",
+    "rids": []
+  },
+  {
+    "i": 133,
+    "style": "toc 1",
+    "text": "Hình 4.20: Giao diện Quản lý kho học liệu số và Đánh giá giờ dạy\t52",
+    "rids": []
+  },
+  {
+    "i": 134,
+    "style": "toc 1",
+    "text": "Hình 4.20a: Bảng lương của giáo viên\t53",
+    "rids": []
+  },
+  {
+    "i": 135,
+    "style": "toc 1",
+    "text": "Hình 4.20b: Quản lý lương tại trang Admin\t53",
+    "rids": []
+  },
+  {
+    "i": 136,
+    "style": "toc 1",
+    "text": "Hình 4.21: Giao diện Đăng nhập hệ thống phân quyền đa vai trò\t54",
+    "rids": []
+  },
+  {
+    "i": 137,
+    "style": "toc 1",
+    "text": "Hình 4.22: Giao diện Đăng ký tài khoản học viên\t55",
+    "rids": []
+  },
+  {
+    "i": 138,
+    "style": "toc 1",
+    "text": "Hình 4.23: Giao diện Đổi mật khẩu và Thông báo từ chối truy cập 403\t55",
+    "rids": []
+  },
+  {
+    "i": 139,
+    "style": "Normal",
+    "text": "",
+    "rids": []
+  },
+  {
+    "i": 140,
+    "style": "Normal",
+    "text": "",
+    "rids": []
+  },
+  {
+    "i": 141,
+    "style": "Heading 1",
+    "text": "MỞ ĐẦU",
+    "rids": []
+  },
+  {
+    "i": 142,
+    "style": "Heading 2",
+    "text": "1. Lý do chọn đề tài",
+    "rids": []
+  },
+  {
+    "i": 143,
+    "style": "Normal",
+    "text": "Trong những năm gần đây, cùng với sự phát triển mạnh mẽ của công nghệ thông tin và Internet, nhu cầu nâng cao trình độ ngoại ngữ (Tiếng Anh: IELTS, TOEIC, Giao tiếp,...) ngày càng gia tăng nhằm đáp ứng yêu cầu học tập và làm việc trong môi trường hội nhập quốc tế. Đi cùng với đó là sự thay đổi rõ rệt trong thói quen của người học: thay vì phải trực tiếp đến văn phòng trung tâm để tìm hiểu thông tin, làm thủ tục nhập học và đóng học phí bằng tiền mặt, học viên ngày nay có xu hướng ưu tiên tra cứu lộ trình, làm bài kiểm tra xếp lớp trực tuyến, đăng ký ca học và thanh toán học phí nhanh chóng qua các nền tảng số.",
+    "rids": []
+  },
+  {
+    "i": 144,
+    "style": "Normal",
+    "text": "Trên thực tế, các hệ thống đăng ký học trực tuyến đã được triển khai tại một số trung tâm lớn mang lại hiệu quả quản lý cao. Tuy nhiên, tại nhiều trung tâm vừa và nhỏ, công tác vận hành vẫn còn phụ thuộc rất nhiều vào sổ sách và các file Microsoft Excel rời rạc. Điều này dẫn đến nhiều bất cập lớn:",
+    "rids": []
+  },
+  {
+    "i": 145,
+    "style": "Normal",
+    "text": "Thất lạc hoặc trùng lặp dữ liệu học viên giữa các phòng ban.",
+    "rids": []
+  },
+  {
+    "i": 146,
+    "style": "Normal",
+    "text": "Dễ xảy ra tình trạng xung đột thời khóa biểu, trùng phòng học hoặc trùng ca dạy của giáo viên khi phân công thủ công.",
+    "rids": []
+  },
+  {
+    "i": 147,
+    "style": "Normal",
+    "text": "Quy trình đối soát học phí chậm chạp, dễ sai sót và khó tổng hợp báo cáo tài chính kịp thời.",
+    "rids": []
+  },
+  {
+    "i": 148,
+    "style": "Normal",
+    "text": "Thiếu công cụ kiểm tra trình độ đầu vào trực tuyến (Placement Test) để tự động phân lớp phù hợp cho học viên.",
+    "rids": []
+  },
+  {
+    "i": 149,
+    "style": "Normal",
+    "text": "Nền tảng ASP.NET Core (.NET 8) do Microsoft phát triển là một framework mã nguồn mở mạnh mẽ, có hiệu năng vượt trội, tính bảo mật cao và hỗ trợ mô hình kiến trúc Model - View - Controller (MVC) chặt chẽ. Kết hợp cùng ngôn ngữ lập trình hiện đại C#, công nghệ Entity Framework Core (EF Core Code-First) và hệ quản trị cơ sở dữ liệu doanh nghiệp tin cậy Microsoft SQL Server, đây là giải pháp công nghệ lý tưởng để xây dựng một hệ thống quản trị giáo dục ổn định, an toàn và dễ mở rộng.",
+    "rids": []
+  },
+  {
+    "i": 150,
+    "style": "Normal",
+    "text": "Xuất phát từ những yêu cầu thực tiễn và nền tảng công nghệ trên, đề tài “Xây dựng website quản lý và đăng ký học tại trung tâm ngoại ngữ sử dụng ASP.NET Core và SQL Server” được lựa chọn nhằm nghiên cứu, phân tích và hiện thực hóa một giải pháp phần mềm toàn diện, đáp ứng đầy đủ nghiệp vụ đào tạo, tuyển sinh và quản lý đào tạo cho trung tâm ngoại ngữ hiện đại.",
+    "rids": []
+  },
+  {
+    "i": 151,
+    "style": "Heading 2",
+    "text": "2. Mục đích nghiên cứu",
+    "rids": []
+  },
+  {
+    "i": 152,
+    "style": "Normal",
+    "text": "Mục tiêu tổng quát của đề tài là nghiên cứu, thiết kế và xây dựng hoàn chỉnh ứng dụng web quản lý đào tạo và đăng ký học trực tuyến theo mô hình Client - Server (kiến trúc ASP.NET Core MVC). Hệ thống bảo đảm tính vận hành ổn định, an toàn dữ liệu, phân quyền bảo mật chặt chẽ và cung cấp giao diện trực quan, thân thiện cho từng đối tượng người dùng.",
+    "rids": []
+  },
+  {
+    "i": 153,
+    "style": "Normal",
+    "text": "Để đạt được mục tiêu tổng quát, đề tài tập trung giải quyết các mục tiêu cụ thể đối với 4 vai trò người dùng (User Roles) trong hệ thống:",
+    "rids": []
+  },
+  {
+    "i": 154,
+    "style": "Heading 3",
+    "text": "2.1 Đối với Khách vãng lai (Guest)",
+    "rids": []
+  },
+  {
+    "i": 155,
+    "style": "Normal",
+    "text": "Tra cứu và tìm kiếm thông tin: Cung cấp giao diện trực quan giúp khách tra cứu danh sách các chương trình đào tạo, lộ trình học tập, thông tin giáo viên, mức học phí và lịch khai giảng các lớp học sắp mở.",
+    "rids": []
+  },
+  {
+    "i": 156,
+    "style": "Normal",
+    "text": "Gửi yêu cầu tư vấn trực tuyến (Consultation): Cho phép người dùng để lại thông tin liên hệ và nguyện vọng khóa học trên website để bộ phận tư vấn tuyển sinh chủ động liên hệ hỗ trợ.",
+    "rids": []
+  },
+  {
+    "i": 157,
+    "style": "Normal",
+    "text": "Đăng ký tài khoản: Khách hàng có thể dễ dàng khởi tạo tài khoản học viên mới để tham gia vào các dịch vụ đào tạo của trung tâm.",
+    "rids": []
+  },
+  {
+    "i": 158,
+    "style": "Heading 3",
+    "text": "2.2 Đối với Học viên (Student)",
+    "rids": []
+  },
+  {
+    "i": 159,
+    "style": "Normal",
+    "text": "Kiểm tra trình độ đầu vào trực tuyến (Placement Test): Học viên có thể tham gia làm bài thi thử trắc nghiệm online (Listening/Reading); hệ thống tự động chấm điểm và đề xuất lộ trình/khóa học phù hợp với năng lực ngay lập tức.",
+    "rids": []
+  },
+  {
+    "i": 160,
+    "style": "Normal",
+    "text": "Đăng ký lớp học trực tuyến (Registration): Cho phép học viên chủ động chọn lớp, chọn ca học trong tuần phù hợp với thời gian biểu cá nhân theo số lượng chỗ trống thực tế.",
+    "rids": []
+  },
+  {
+    "i": 161,
+    "style": "Normal",
+    "text": "Thanh toán học phí tiện lợi (VietQR Integration): Hệ thống tự động khởi tạo mã VietQR chuẩn xác với thông tin số tài khoản, số tiền và mã hóa đơn, giúp học viên quét mã thanh toán học phí qua ứng dụng Mobile Banking chỉ trong vài giây.",
+    "rids": []
+  },
+  {
+    "i": 162,
+    "style": "Normal",
+    "text": "Quản lý học tập & Biên lai điện tử: Học viên có thể xem thời khóa biểu cá nhân, tra cứu lịch sử ghi danh, xem và in trực tiếp biên lai thu học phí điện tử (PrintReceipt), đồng thời gửi đánh giá/phản hồi chất lượng khóa học (CourseFeedback).",
+    "rids": []
+  },
+  {
+    "i": 163,
+    "style": "Heading 3",
+    "text": "2.3 Đối với Giáo viên (Teacher)",
+    "rids": []
+  },
+  {
+    "i": 164,
+    "style": "Normal",
+    "text": "Quản lý lớp phụ trách: Xem danh sách toàn bộ các lớp học mà mình được ban giám đốc phân công giảng dạy.",
+    "rids": []
+  },
+  {
+    "i": 165,
+    "style": "Normal",
+    "text": "Quản lý học viên & Điểm danh: Tra cứu danh sách học viên trong từng lớp, thông tin liên lạc và theo dõi tình hình chuyên cần.",
+    "rids": []
+  },
+  {
+    "i": 166,
+    "style": "Normal",
+    "text": "Thời khóa biểu giảng dạy: Tra cứu lịch dạy chi tiết theo tuần (thứ, ca học, phòng học) để chủ động sắp xếp công tác chuyên môn.",
+    "rids": []
+  },
+  {
+    "i": 167,
+    "style": "Normal",
+    "text": "Đánh giá & Chấm điểm: Nhập kết quả kiểm tra, nhận xét năng lực học tập của học viên trong quá trình theo học.",
+    "rids": []
+  },
+  {
+    "i": 168,
+    "style": "Heading 3",
+    "text": "2.4 Đối với Quản trị viên (Admin)",
+    "rids": []
+  },
+  {
+    "i": 169,
+    "style": "Normal",
+    "text": "Quản lý danh mục đào tạo & Lớp học: Quản lý chương trình học (Program), khởi tạo lớp học mới (Class), cấu hình sĩ số tối đa, phòng học và quản lý vòng đời trạng thái lớp (ClassStatus: Lập kế hoạch, Đang diễn ra, Đã hoàn thành, Đã hủy).",
+    "rids": []
+  },
+  {
+    "i": 170,
+    "style": "Normal",
+    "text": "Phân công giảng viên & Xếp thời khóa biểu: Sắp xếp lịch học các ngày trong tuần (ClassSchedule) cho từng lớp và phân công giáo viên đứng lớp, đảm bảo không bị xung đột giờ dạy và phòng học.",
+    "rids": []
+  },
+  {
+    "i": 171,
+    "style": "Normal",
+    "text": "Quản lý ghi danh & Tư vấn tuyển sinh: Tiếp nhận đơn đăng ký học, duyệt xác nhận học viên vào lớp chính thức sau khi hoàn tất học phí, tiếp nhận và xử lý danh sách khách cần tư vấn.",
+    "rids": []
+  },
+  {
+    "i": 172,
+    "style": "Normal",
+    "text": "Quản trị người dùng & Phân quyền bảo mật: Cấp phát, kích hoạt hoặc tạm khóa tài khoản của học viên, giáo viên và nhân sự quản trị trên toàn hệ thống.",
+    "rids": []
+  },
+  {
+    "i": 173,
+    "style": "Normal",
+    "text": "Báo cáo thống kê & Biểu đồ doanh thu: Cung cấp bảng điều khiển Dashboard trực quan sử dụng thư viện Chart.js, thống kê số lượng học viên mới, tổng doanh thu theo tháng và tỷ trọng doanh thu giữa các khóa học phục vụ ra quyết định quản lý.",
+    "rids": []
+  },
+  {
+    "i": 174,
+    "style": "Heading 2",
+    "text": "3. Đối tượng và phạm vi nghiên cứu",
+    "rids": []
+  },
+  {
+    "i": 175,
+    "style": "Heading 3",
+    "text": "3.1 Đối tượng nghiên cứu",
+    "rids": []
+  },
+  {
+    "i": 176,
+    "style": "Normal",
+    "text": "Nghiệp vụ quản lý đào tạo: Chu trình tuyển sinh, kiểm tra xếp lớp, quản lý thời khóa biểu, phân công giảng dạy, ghi danh và quản lý học phí tại trung tâm ngoại ngữ.",
+    "rids": []
+  },
+  {
+    "i": 177,
+    "style": "Normal",
+    "text": "Công nghệ và Kiến trúc phần mềm: Mô hình kiến trúc ASP.NET Core MVC (.NET 8), ngôn ngữ C#, Entity Framework Core Code-First, cơ chế xác thực Cookie Authentication / Claims-based Identity và hệ quản trị cơ sở dữ liệu Microsoft SQL Server.",
+    "rids": []
+  },
+  {
+    "i": 178,
+    "style": "Normal",
+    "text": "Giải pháp tiện ích: Tích hợp sinh mã QR thanh toán nhanh VietQR (chuẩn Napas247) và trực quan hóa dữ liệu thống kê bằng thư viện Chart.js.",
+    "rids": []
+  },
+  {
+    "i": 179,
+    "style": "Heading 3",
+    "text": "3.2 Phạm vi nghiên cứu",
+    "rids": []
+  },
+  {
+    "i": 180,
+    "style": "Normal",
+    "text": "Phạm vi nghiệp vụ: Hệ thống tập trung giải quyết trọn vẹn chu trình nghiệp vụ quản lý đào tạo tại một trung tâm ngoại ngữ, từ khâu tiếp thị - tư vấn, kiểm tra xếp lớp đầu vào, ghi danh, xếp lịch học, phân công giảng viên đến khâu thu học phí và báo cáo thống kê doanh thu.",
+    "rids": []
+  },
+  {
+    "i": 181,
+    "style": "Normal",
+    "text": "Phạm vi công nghệ triển khai: ",
+    "rids": []
+  },
+  {
+    "i": 182,
+    "style": "Normal",
+    "text": "Môi trường phát triển Backend & Frontend: Ứng dụng mô hình ASP.NET Core MVC (.NET 8) kết hợp với ngôn ngữ lập trình C#. Giao diện người dùng được xây dựng bằng Razor Views, HTML5, CSS3, JavaScript và thư viện giao diện Bootstrap 5 đảm bảo hiển thị Responsive tốt trên cả máy tính và điện thoại.",
+    "rids": []
+  },
+  {
+    "i": 183,
+    "style": "Normal",
+    "text": "Tầng truy xuất dữ liệu: Sử dụng Entity Framework Core (EF Core Code-First) để ánh xạ các thực thể C# thành cấu trúc bảng trong CSDL, tự động thực hiện Migration và quản lý dữ liệu an toàn.",
+    "rids": []
+  },
+  {
+    "i": 184,
+    "style": "Normal",
+    "text": "Hệ quản trị cơ sở dữ liệu: Sử dụng Microsoft SQL Server (MS SQL Server / LocalDB), thiết kế cấu trúc dữ liệu chuẩn hóa dạng chuẩn 3 (3NF) với đầy đủ các ràng buộc khóa chính, khóa ngoại.",
+    "rids": []
+  },
+  {
+    "i": 185,
+    "style": "Normal",
+    "text": "Phạm vi giới hạn của đề tài: ",
+    "rids": []
+  },
+  {
+    "i": 186,
+    "style": "Normal",
+    "text": "Về cổng thanh toán: Để đảm bảo tính khả thi và an toàn trong khuôn khổ đồ án môn học, hệ thống triển khai giải pháp thanh toán thông qua mã VietQR tự động (tự động điền đúng Số tài khoản trung tâm, Tên chủ tài khoản, Số tiền học phí và Mã hóa đơn nội dung chuyển khoản). Sau khi học viên thanh toán, hệ thống cho phép xuất in biên lai học phí điện tử; chưa tích hợp Webhook API tự động bắt biến động số dư ngân hàng theo thời gian thực (do yêu cầu pháp nhân doanh nghiệp khi đăng ký dịch vụ Open Banking với các ngân hàng thương mại).",
+    "rids": []
+  },
+  {
+    "i": 187,
+    "style": "Normal",
+    "text": "Về bài thi xếp lớp (Placement Test): Hệ thống tập trung vào hình thức thi trắc nghiệm khách quan hai kỹ năng Nghe (Listening) và Đọc (Reading) có chấm điểm và đề xuất khóa học tự động; chưa tích hợp module thu âm và chấm điểm AI cho hai kỹ năng Nói (Speaking) và Viết (Writing).",
+    "rids": []
+  },
+  {
+    "i": 188,
+    "style": "Normal",
+    "text": "Về hóa đơn và kế toán: Hệ thống quản lý biên lai và báo cáo doanh thu phục vụ công tác quản trị nội bộ của trung tâm, chưa tích hợp kết nối xuất hóa đơn điện tử trực tiếp với hệ thống của Tổng cục Thuế.",
+    "rids": []
+  },
+  {
+    "i": 189,
+    "style": "Heading 2",
+    "text": "4. Phương pháp nghiên cứu",
+    "rids": []
+  },
+  {
+    "i": 190,
+    "style": "Normal",
+    "text": "Để hoàn thành các mục tiêu đề ra và giải quyết chính xác các bài toán nghiệp vụ, đề tài đã áp dụng phối hợp các phương pháp nghiên cứu sau:",
+    "rids": []
+  },
+  {
+    "i": 191,
+    "style": "Heading 3",
+    "text": "4.1 Phương pháp nghiên cứu lý thuyết",
+    "rids": []
+  },
+  {
+    "i": 192,
+    "style": "Normal",
+    "text": "Nghiên cứu công nghệ nền tảng: Đọc và tìm hiểu tài liệu kỹ thuật chính thống từ Microsoft Learn về nền tảng .NET 8, ASP.NET Core MVC, Entity Framework Core, LINQ to Entities và cơ chế Dependency Injection (DI).",
+    "rids": []
+  },
+  {
+    "i": 193,
+    "style": "Normal",
+    "text": "Nghiên cứu kiến trúc bảo mật: Tìm hiểu cơ chế xác thực phiên làm việc bằng Cookie Authentication, phân quyền dựa trên Claim/Role ([Authorize(Roles = \"...\")]) và các biện pháp bảo mật chống tấn công web phổ biến như XSS, CSRF ([ValidateAntiForgeryToken]).",
+    "rids": []
+  },
+  {
+    "i": 194,
+    "style": "Heading 3",
+    "text": "4.2 Phương pháp khảo sát và phân tích hệ thống",
+    "rids": []
+  },
+  {
+    "i": 195,
+    "style": "Normal",
+    "text": "Khảo sát nghiệp vụ thực tế: Khảo sát quy trình tổ chức lớp học, cấu trúc thời khóa biểu và biểu phí tại các trung tâm ngoại ngữ thực tế, từ đó chuẩn hóa các quy tắc nghiệp vụ trong hệ thống.",
+    "rids": []
+  },
+  {
+    "i": 196,
+    "style": "Normal",
+    "text": "Phân tích và thiết kế hệ thống: Sử dụng ngôn ngữ mô hình hóa thống nhất (UML) để xây dựng: ",
+    "rids": []
+  },
+  {
+    "i": 197,
+    "style": "Normal",
+    "text": "Sơ đồ Use Case: Phân tích và đặc tả chức năng chi tiết cho 4 tác nhân (Khách, Học viên, Giáo viên, Quản trị viên).",
+    "rids": []
+  },
+  {
+    "i": 198,
+    "style": "Normal",
+    "text": "Sơ đồ thực thể kết hợp (ERD): Thiết kế cấu trúc CSDL gồm đầy đủ 11 bảng (8 bảng bắt buộc: UserAccount, Student, Teacher, Program, Class, Registration, PlacementTest, Payment và 3 bảng bổ sung: ClassStatus, ClassSchedule, Consultation).",
+    "rids": []
+  },
+  {
+    "i": 199,
+    "style": "Heading 3",
+    "text": "4.3 Phương pháp thực nghiệm",
+    "rids": []
+  },
+  {
+    "i": 200,
+    "style": "Normal",
+    "text": "Hiện thực hóa mã nguồn (Implementation): Sử dụng môi trường lập trình Visual Studio / Visual Studio Code để viết mã nguồn bằng C#, xây dựng cơ sở dữ liệu qua EF Core Migrations và nạp sẵn dữ liệu mẫu (Seed Data) cho hệ thống hoạt động thực tế.",
+    "rids": []
+  },
+  {
+    "i": 201,
+    "style": "Normal",
+    "text": "Kiểm thử và đánh giá (Testing): Tiến hành kiểm thử hộp đen (Black-box Testing) trên từng chức năng cốt lõi: Đăng nhập/Đăng xuất, Phân quyền truy cập các Area (/Admin, /Teacher), Luồng thi thử xếp lớp, Luồng đăng ký lớp và thanh toán VietQR, In biên lai học phí và Hiển thị biểu đồ doanh thu Chart.js. Qua đó, kịp thời phát hiện và khắc phục toàn bộ các lỗi tiềm ẩn, đảm bảo hệ thống đạt độ tin cậy và sẵn sàng đưa vào vận hành.",
+    "rids": []
+  },
+  {
+    "i": 202,
+    "style": "Heading 1",
+    "text": "CHƯƠNG 1. TỔNG QUAN VỀ WEBSITE TRUNG TÂM NGOẠI NGỮ",
+    "rids": []
+  },
+  {
+    "i": 203,
+    "style": "Heading 2",
+    "text": "1.1 Các khái niệm cơ bản về hệ thống quản lý và đăng ký khóa học trực tuyến",
+    "rids": []
+  },
+  {
+    "i": 204,
+    "style": "Heading 3",
+    "text": "Chuyển dịch mô hình quản lý trung tâm ngoại ngữ truyền thống sang nền tảng số",
+    "rids": []
+  },
+  {
+    "i": 205,
+    "style": "Normal",
+    "text": "Trong mô hình trung tâm ngoại ngữ truyền thống, mọi khâu vận hành đều diễn ra thủ công: học viên đến trực tiếp văn phòng ghi phiếu thông tin, nhân viên tư vấn nhập liệu vào các bảng tính Excel rời rạc, thủ quỹ thu tiền mặt và viết biên lai giấy, việc xếp phòng và ca dạy thực hiện trên bảng biểu giấy dán tường. Mô hình này bộc lộ những nhược điểm nghiêm trọng:",
+    "rids": []
+  },
+  {
+    "i": 206,
+    "style": "List Paragraph",
+    "text": "Trùng lặp và thất lạc dữ liệu: Thông tin học viên lưu trữ phân tán, dễ thất lạc khi chuyển giao ca trực.",
+    "rids": []
+  },
+  {
+    "i": 207,
+    "style": "List Paragraph",
+    "text": "Xung đột tài nguyên: Dễ xảy ra tình trạng xếp 2 lớp vào cùng một phòng học trong cùng một ca, hoặc một giảng viên bị phân công dạy 2 lớp cùng giờ.",
+    "rids": []
+  },
+  {
+    "i": 208,
+    "style": "List Paragraph",
+    "text": "Khó khăn trong quản lý tài chính: Kế toán mất nhiều ngày đối soát sổ sách và chứng từ chuyển khoản ngân hàng thủ công.",
+    "rids": []
+  },
+  {
+    "i": 209,
+    "style": "Normal",
+    "text": "Chuyển đổi số sang hệ sinh thái Website quản lý tập trung dựa trên nền tảng ASP.NET Core MVC giúp giải quyết triệt để các tồn tại trên:",
+    "rids": []
+  },
+  {
+    "i": 210,
+    "style": "Normal",
+    "text": "Học viên chủ động tìm kiếm, làm bài kiểm tra năng lực đầu vào và đăng ký lớp học trực tuyến 24/7.",
+    "rids": []
+  },
+  {
+    "i": 211,
+    "style": "Normal",
+    "text": "Dữ liệu được lưu trữ tập trung tại cơ sở dữ liệu quan hệ Microsoft SQL Server, đảm bảo tính toàn vẹn dữ liệu và hỗ trợ truy xuất đồng thời cho hàng ngàn người dùng.",
+    "rids": []
+  },
+  {
+    "i": 212,
+    "style": "Heading 3",
+    "text": " Cơ chế đồng bộ dữ liệu và kiểm soát sĩ số lớp học",
+    "rids": []
+  },
+  {
+    "i": 213,
+    "style": "Normal",
+    "text": "Kiểm soát sĩ số (Capacity Control): Mỗi lớp học (Class) được thiết lập sĩ số tối đa (MaxStudents = 25). Hệ thống tự động đếm số lượng bản ghi ghi danh hợp lệ (Registrations có trạng thái Paid hoặc Confirmed). Khi số lượng đạt mức tối đa, hệ thống tự động khóa nút đăng ký của lớp đó trên giao diện người dùng, ngăn chặn tình trạng vượt sĩ số (Overbooking).",
+    "rids": []
+  },
+  {
+    "i": 214,
+    "style": "Normal",
+    "text": "Đồng bộ trạng thái lớp học (ClassStatus): Quản lý vòng đời của lớp học xuyên suốt qua 4 trạng thái chuẩn hóa: Planning (Lập kế hoạch/Đang mở tuyển sinh), InProgress (Đang diễn ra khóa học), Completed (Đã kết thúc khóa học) và Cancelled (Đã hủy lớp).",
+    "rids": []
+  },
+  {
+    "i": 215,
+    "style": "Heading 3",
+    "text": " Kiến trúc phân quyền đa cấp bậc trong hệ thống",
+    "rids": []
+  },
+  {
+    "i": 216,
+    "style": "Normal",
+    "text": "Hệ thống quản lý trung tâm áp dụng mô hình phân quyền dựa trên vai trò (Role-Based Access Control - RBAC) với 4 cấp bậc rõ ràng:\t",
+    "rids": []
+  },
+  {
+    "i": 217,
+    "style": "Normal",
+    "text": "Khách vãng lai (Guest): Tiếp cận thông tin công khai (lộ trình, học phí, lịch khai giảng) và gửi form tư vấn trực tuyến.",
+    "rids": []
+  },
+  {
+    "i": 218,
+    "style": "Normal",
+    "text": "Học viên (Student): Quản lý hồ sơ cá nhân, thi xếp lớp trực tuyến, đăng ký ca học, thanh toán học phí qua mã VietQR, xem thời khóa biểu và in biên lai.",
+    "rids": []
+  },
+  {
+    "i": 219,
+    "style": "Normal",
+    "text": "Giáo viên (Teacher): Xem danh sách lớp phụ trách, theo dõi danh sách học viên, xem thời khóa biểu giảng dạy, tải lên tài liệu học tập và chấm bài thi xếp lớp.",
+    "rids": []
+  },
+  {
+    "i": 220,
+    "style": "Normal",
+    "text": "Quản trị viên (Admin): Nắm toàn quyền quản trị hệ thống (CRUD chương trình học, mở lớp, xếp thời khóa biểu, phân công giảng viên, duyệt đơn ghi danh, xử lý tư vấn tuyển sinh và xem biểu đồ doanh thu tài chính).",
+    "rids": []
+  },
+  {
+    "i": 221,
+    "style": "Heading 2",
+    "text": "Khảo sát và đánh giá các hệ thống thực tế tại Việt Nam",
+    "rids": []
+  },
+  {
+    "i": 222,
+    "style": "List Paragraph",
+    "text": "Để có cái nhìn toàn diện và rút ra bài học kinh nghiệm cho việc thiết kế hệ thống, nhóm đã tiến hành khảo sát hai website trung tâm ngoại ngữ lớn và phổ biến hiện nay: VUS (Anh văn Hội Việt Mỹ) và I LA (ILA Vietnam).",
+    "rids": []
+  },
+  {
+    "i": 223,
+    "style": "Heading 3",
+    "text": "Website 1: Anh văn Hội Việt Mỹ (VUS) - vus.edu.vn",
+    "rids": []
+  },
+  {
+    "i": 224,
+    "style": "List Paragraph",
+    "text": "Ảnh chụp màn hình (Trang chủ)",
+    "rids": []
+  },
+  {
+    "i": 225,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId13"
+    ]
+  },
+  {
+    "i": 226,
+    "style": "HITCFigureCaption",
+    "text": "Hình 1: trang chủ VUS",
+    "rids": []
+  },
+  {
+    "i": 227,
+    "style": "Normal",
+    "text": "Mô tả hình ảnh: Trang chủ VUS sử dụng tông màu xanh dương và đỏ đặc trưng của thương hiệu. Layout hiện đại với Banner lớn hiển thị các chương trình ưu đãi nổi bật, thanh điều hướng (Navbar) phân loại khóa học theo độ tuổi (Trẻ em, Thiếu niên, Luyện thi chứng chỉ, Người lớn) và tích hợp nút \"Đăng ký tư vấn\" nhanh.",
+    "rids": []
+  },
+  {
+    "i": 228,
+    "style": "Normal",
+    "text": "b) Ưu điểm",
+    "rids": []
+  },
+  {
+    "i": 229,
+    "style": "List Paragraph",
+    "text": "Giao diện hiện đại, chuẩn SEO: Thiết kế bắt mắt, bố cục rõ ràng, hình ảnh chất lượng cao và tốc độ tải trang nhanh.",
+    "rids": []
+  },
+  {
+    "i": 230,
+    "style": "List Paragraph",
+    "text": "Phân loại khóa học khoa học: Khóa học được chia theo độ tuổi và mục tiêu học tập giúp người dùng dễ dàng định hình lộ trình phù hợp.",
+    "rids": []
+  },
+  {
+    "i": 231,
+    "style": "List Paragraph",
+    "text": "Trải nghiệm người dùng (UX) tốt: Đặt các nút kêu gọi hành động (Call to Action - CTA) như \"Đăng ký ngay\", \"Tư vấn miễn phí\" ở các vị trí dễ nhìn.",
+    "rids": []
+  },
+  {
+    "i": 232,
+    "style": "List Paragraph",
+    "text": "Tích hợp tiện ích đa dạng: Có hệ thống kiểm tra trình độ trực tuyến (Placement Test) và liên kết ứng dụng học tập nội bộ.",
+    "rids": []
+  },
+  {
+    "i": 233,
+    "style": "Normal",
+    "text": "c) Nhược điểm",
+    "rids": []
+  },
+  {
+    "i": 234,
+    "style": "List Paragraph",
+    "text": "Thông tin học phí chưa công khai: Học viên phải điền form đăng ký tư vấn mới nhận được báo giá chi tiết, gây bất tiện cho người muốn so sánh giá nhanh.",
+    "rids": []
+  },
+  {
+    "i": 235,
+    "style": "List Paragraph",
+    "text": "Cấu trúc menu nhiều tầng: Khối lượng thông tin lớn khiến menu điều hướng đôi khi phức tạp đối với người dùng mới.",
+    "rids": []
+  },
+  {
+    "i": 236,
+    "style": "Normal",
+    "text": "1.3.2 Website 2: ILA Vietnam (ILA) - ila.edu.vn",
+    "rids": []
+  },
+  {
+    "i": 237,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId14"
+    ]
+  },
+  {
+    "i": 238,
+    "style": "Normal",
+    "text": "a) Ảnh chụp màn hình (Trang chủ)",
+    "rids": []
+  },
+  {
+    "i": 239,
+    "style": "HITCFigureCaption",
+    "text": "Hình 2: trang chủ ILA Vietnam",
+    "rids": []
+  },
+  {
+    "i": 240,
+    "style": "Normal",
+    "text": "\tMô tả hình ảnh: Trang chủ ILA mang phong cách thiết kế chuẩn quốc tế với tông màu trắng và đỏ chủ đạo. Thiết kế tập trung vào video/hình ảnh thực tế tại lớp học, tích hợp thanh tìm kiếm khóa học và danh sách các trung tâm/cơ sở trên toàn quốc.",
+    "rids": []
+  },
+  {
+    "i": 241,
+    "style": "Normal",
+    "text": "\t b) Ưu điểm",
+    "rids": []
+  },
+  {
+    "i": 242,
+    "style": "Normal",
+    "text": "Hình ảnh và Video thương hiệu ấn tượng: Sử dụng nhiều tư liệu hình ảnh chất lượng cao, tạo cảm giác chuyên nghiệp và uy tín.",
+    "rids": []
+  },
+  {
+    "i": 243,
+    "style": "Normal",
+    "text": "Tính năng tìm kiếm trung tâm theo khu vực (Center Locator): Giúp người dùng dễ dàng tìm thấy cơ sở gần nhất thông qua bản đồ tích hợp.",
+    "rids": []
+  },
+  {
+    "i": 244,
+    "style": "Normal",
+    "text": "Nội dung phong phú: Cung cấp chi tiết phương pháp giảng dạy (Chuẩn quốc tế, 21st Century Learning) giúp phụ huynh tin tưởng vào chất lượng đào tạo.",
+    "rids": []
+  },
+  {
+    "i": 245,
+    "style": "Normal",
+    "text": "c) Nhược điểm",
+    "rids": []
+  },
+  {
+    "i": 246,
+    "style": "Normal",
+    "text": "Thiếu tính năng mua/đăng ký khóa học trực tiếp: Hầu hết các luồng thao tác đều dẫn về form để lại thông tin liên hệ chứ chưa cho phép đăng ký chọn lớp chi tiết trên web.",
+    "rids": []
+  },
+  {
+    "i": 247,
+    "style": "Normal",
+    "text": "Chưa tích hợp cổng thanh toán trực tuyến: Người học vẫn cần qua sự hỗ trợ của tư vấn viên hoặc đến trung tâm để hoàn tất thủ tục tài chính.",
+    "rids": []
+  },
+  {
+    "i": 248,
+    "style": "Heading 2",
+    "text": "Những vấn đề tồn tại và Giải pháp đề xuất của đề tài",
+    "rids": []
+  },
+  {
+    "i": 249,
+    "style": "Heading 3",
+    "text": "Những vấn đề còn tồn tại",
+    "rids": []
+  },
+  {
+    "i": 250,
+    "style": "Normal",
+    "text": "Tỷ lệ bỏ sót khách hàng có nhu cầu học do không có quy trình lưu trữ và xử lý yêu cầu tư vấn tập trung.",
+    "rids": []
+  },
+  {
+    "i": 251,
+    "style": "Normal",
+    "text": "Nguy cơ xếp trùng lịch dạy của giảng viên và trùng phòng học khi mở nhiều lớp đồng thời.",
+    "rids": []
+  },
+  {
+    "i": 252,
+    "style": "Normal",
+    "text": "Học viên không chủ động biết được năng lực tiếng Anh hiện tại của mình để chọn khóa học đúng trình độ.",
+    "rids": []
+  },
+  {
+    "i": 253,
+    "style": "Heading 3",
+    "text": "Giải pháp công nghệ và Nghiệp vụ đề xuất của đồ án",
+    "rids": []
+  },
+  {
+    "i": 254,
+    "style": "Normal",
+    "text": "Công nghệ: Xây dựng hệ thống web trên nền tảng ASP.NET Core .NET 8, ORM Entity Framework Core (Code-First), cơ sở dữ liệu Microsoft SQL Server, giao diện chuẩn Bootstrap 5 Responsive, thư viện Chart.js vẽ biểu đồ thống kê.",
+    "rids": []
+  },
+  {
+    "i": 255,
+    "style": "Normal",
+    "text": "Nghiệp vụ: ",
+    "rids": []
+  },
+  {
+    "i": 256,
+    "style": "Normal",
+    "text": "Xây dựng module Thi xếp lớp trực tuyến (Placement Test) tự động tính điểm hai kỹ năng Nghe/Đọc và gợi ý khóa học ngay tức thì.",
+    "rids": []
+  },
+  {
+    "i": 257,
+    "style": "Normal",
+    "text": "Tích hợp cổng thanh toán VietQR tự động theo chuẩn Napas247, sinh mã QR kèm chính xác số tiền và mã hóa đơn giúp thanh toán chuẩn xác 100%.",
+    "rids": []
+  },
+  {
+    "i": 258,
+    "style": "Normal",
+    "text": "Cung cấp tính năng In biên lai học phí điện tử (PrintReceipt) đạt chuẩn mẫu kế toán.",
+    "rids": []
+  },
+  {
+    "i": 259,
+    "style": "Normal",
+    "text": "Tách biệt các phân hệ chuyên biệt thông qua Areas (/Admin, /Teacher).",
+    "rids": []
+  },
+  {
+    "i": 260,
+    "style": "Heading 2",
+    "text": "Mục tiêu, Đối tượng sử dụng và Phạm vi đề tài",
+    "rids": []
+  },
+  {
+    "i": 261,
+    "style": "Heading 3",
+    "text": "Đối tượng người dùng mục tiêu",
+    "rids": []
+  },
+  {
+    "i": 262,
+    "style": "Heading 3",
+    "text": "Phạm vi đề tài: ",
+    "rids": []
+  },
+  {
+    "i": 263,
+    "style": "Normal",
+    "text": "Quản lý 5 chương trình học mũi nhọn: IELTS Master, TOEIC Cấp tốc, Tiếng Anh Giao tiếp, Business English, Cambridge B1/B2.",
+    "rids": []
+  },
+  {
+    "i": 264,
+    "style": "Normal",
+    "text": "Quản lý lớp học, phân công giảng viên và kiểm tra xung đột thời khóa biểu 29 ca học trong tuần.",
+    "rids": []
+  },
+  {
+    "i": 265,
+    "style": "Normal",
+    "text": "Quản trị 11 bảng dữ liệu liên kết chuẩn hóa dạng chuẩn 3 (3NF).",
+    "rids": []
+  },
+  {
+    "i": 266,
+    "style": "Heading 2",
+    "text": "Ý nghĩa thực tiễn của đề tài",
+    "rids": []
+  },
+  {
+    "i": 267,
+    "style": "Normal",
+    "text": "Đề tài mang tính ứng dụng thực tiễn cao, giúp trung tâm ngoại ngữ số hóa 100% quy trình đào tạo, giảm thiểu 80% thời gian xử lý thủ tục nhập học thủ công, minh bạch tài chính và nâng cao trải nghiệm của học viên thời đại số.",
+    "rids": []
+  },
+  {
+    "i": 268,
+    "style": "Heading 2",
+    "text": "KẾT CHƯƠNG 1",
+    "rids": []
+  },
+  {
+    "i": 269,
+    "style": "Normal",
+    "text": "Chương 1 đã hoàn thành việc phác thảo bức tranh toàn cảnh về nhu cầu chuyển đổi số trong công tác quản trị và đào tạo tại các trung tâm ngoại ngữ trong giai đoạn hiện nay.",
+    "rids": []
+  },
+  {
+    "i": 270,
+    "style": "Normal",
+    "text": "Cụ thể, các nội dung trọng tâm đã đạt được trong chương bao gồm:",
+    "rids": []
+  },
+  {
+    "i": 271,
+    "style": "List Paragraph",
+    "text": "Khái quát thực trạng và Sự chuyển dịch mô hình vận hành:",
+    "rids": []
+  },
+  {
+    "i": 272,
+    "style": "List Paragraph",
+    "text": " Phân tích rõ những bất cập, sai sót dữ liệu và chi phí nhân sự tốn kém của mô hình quản lý thủ công truyền thống (sổ sách, file Excel rời rạc); từ đó khẳng định tính cấp thiết của việc xây dựng một nền tảng số hóa tập trung (E-Management & E-Learning Portal) có khả năng đồng bộ dữ liệu theo thời gian thực (giữ chỗ lớp học, chống vượt sĩ số overbooking, cập nhật lịch học và điểm danh).",
+    "rids": []
+  },
+  {
+    "i": 273,
+    "style": "List Paragraph",
+    "text": "Khảo sát và Đánh giá hệ thống thực tế tại Việt Nam: ",
+    "rids": []
+  },
+  {
+    "i": 274,
+    "style": "List Paragraph",
+    "text": "Nghiên cứu ưu điểm và hạn chế trong các mô hình vận hành của các trung tâm lớn (như VUS, ILA, PASAL,...), nhận diện các bài toán còn tồn tại ở các trung tâm vừa và nhỏ về mặt trải nghiệm người dùng, khả năng phân quyền quản trị đa cấp bậc và tính linh hoạt trong quy trình ghi danh.",
+    "rids": []
+  },
+  {
+    "i": 275,
+    "style": "List Paragraph",
+    "text": "Xác định Vấn đề tồn tại và Đề xuất giải pháp: ",
+    "rids": []
+  },
+  {
+    "i": 276,
+    "style": "List Paragraph",
+    "text": "Đề xuất giải pháp xây dựng ứng dụng web quản lý và đăng ký học tại trung tâm ngoại ngữ (HITC English) ứng dụng nền tảng công nghệ hiện đại, tự động hóa toàn diện quy trình từ khâu tư vấn tuyển sinh kiểm tra đầu vào xếp lớp thanh toán học phí quản lý lịch dạy và điểm danh chuyên cần.",
+    "rids": []
+  },
+  {
+    "i": 277,
+    "style": "List Paragraph",
+    "text": "Làm rõ Mục tiêu, Đối tượng và Ý nghĩa thực tiễn:",
+    "rids": []
+  },
+  {
+    "i": 278,
+    "style": "List Paragraph",
+    "text": " Định vị rõ 4 nhóm đối tượng thụ hưởng trực tiếp của đề tài (Khách vãng lai, Học viên, Giảng viên và Quản trị viên); khẳng định ý nghĩa thực tiễn trong việc tối ưu hóa chi phí vận hành cho trung tâm, mang lại sự minh bạch, tiện lợi và trải nghiệm học tập hiện đại, chuyên nghiệp cho người học.",
+    "rids": []
+  },
+  {
+    "i": 279,
+    "style": "Heading 1",
+    "text": "CHƯƠNG 2. CƠ SỞ LÝ THUYẾT VÀ CÔNG CỤ SỬ DỤNG",
+    "rids": []
+  },
+  {
+    "i": 280,
+    "style": "Heading 2",
+    "text": "2.1 Kiến trúc hệ thống Client - Server và Mô hình Kết hợp ASP.NET Core MVC & Web API",
+    "rids": []
+  },
+  {
+    "i": 281,
+    "style": "Heading 3",
+    "text": "2.1.1 Kiến trúc Client - Server",
+    "rids": []
+  },
+  {
+    "i": 282,
+    "style": "Normal",
+    "text": "Hệ thống vận hành theo kiến trúc Client - Server tiêu chuẩn kết hợp linh hoạt giữa phương thức Server-Side Rendering (SSR) và Client-Side Rendering (CSR):",
+    "rids": []
+  },
+  {
+    "i": 283,
+    "style": "Normal",
+    "text": "Phía Client: Trình duyệt web sử dụng mã HTML/CSS/JS thuần cho giao diện MVC, kết hợp với các ứng dụng di động (Mobile App) hoặc các thành phần Dynamic UI gửi yêu cầu xử lý dữ liệu.",
+    "rids": []
+  },
+  {
+    "i": 284,
+    "style": "Normal",
+    "text": "Phía Server: Máy chủ web Kestrel / IIS tiếp nhận các HTTP Request (GET, POST, PUT, DELETE). Máy chủ xử lý logic nghiệp vụ, truy vấn CSDL SQL Server và phản hồi HTTP Response dưới dạng mã HTML đã được render sẵn (đối với Razor View) hoặc dữ liệu chuẩn JSON (đối với RESTful Web API).",
+    "rids": []
+  },
+  {
+    "i": 285,
+    "style": "Heading 3",
+    "text": "2.1.2 Mô hình kiến trúc ASP.NET Core MVC",
+    "rids": []
+  },
+  {
+    "i": 286,
+    "style": "Normal",
+    "text": "Hệ thống được thiết kế đa dạng phương thức cung cấp dịch vụ để tối ưu hóa trải nghiệm người dùng trên cả nền tảng Web và Mobile:",
+    "rids": []
+  },
+  {
+    "i": 287,
+    "style": "Normal",
+    "text": "Mô hình MVC (Model - View - Controller): Phân tách ứng dụng Web thành 3 thành phần độc lập:",
+    "rids": []
+  },
+  {
+    "i": 288,
+    "style": "Normal",
+    "text": "Model: Đại diện cho dữ liệu và quy tắc nghiệp vụ. Bao gồm các Entity ánh xạ trực tiếp với CSDL (Student, Teacher, Class, Payment...) và các ViewModel truyền dữ liệu hiển thị (LoginViewModel, RegisterViewModel, AdminDashboardViewModel).",
+    "rids": []
+  },
+  {
+    "i": 289,
+    "style": "Normal",
+    "text": "View: Giao diện người dùng sử dụng Razor View Engine (.cshtml), kết hợp cú pháp C# @ với mã HTML để hiển thị dữ liệu động một cách trực quan.",
+    "rids": []
+  },
+  {
+    "i": 290,
+    "style": "Normal",
+    "text": "Controller: Bộ điều phối tiếp nhận yêu cầu từ người dùng (HomeController, ProgramController, EnrollmentController, PlacementTestController...), tương tác với ApplicationDbContext để xử lý logic và trả về View tương ứng.",
+    "rids": []
+  },
+  {
+    "i": 291,
+    "style": "Normal",
+    "text": "Mô hình RESTful Web API (API Controllers):",
+    "rids": []
+  },
+  {
+    "i": 292,
+    "style": "List Paragraph",
+    "text": "Đóng vai trò cung cấp các Endpoint giao tiếp dữ liệu chuẩn JSON cho ứng dụng di động (React Native) và các tác vụ Ajax/Fetch dữ liệu bất đồng bộ phía Client.",
+    "rids": []
+  },
+  {
+    "i": 293,
+    "style": "List Paragraph",
+    "text": "Các ApiController (như AuthApiController, ScheduleApiController, ReservationApiController...) được phân tách rõ ràng với MVC Controller, xử lý xác thực theo cơ chế Token/Session và trả về HTTP Status Codes chuẩn (200 OK, 400 Bad Request, 401 Unauthorized, 404 Not Found).",
+    "rids": []
+  },
+  {
+    "i": 294,
+    "style": "Heading 2",
+    "text": "2.2 Công nghệ phát triển phía Backend (ASP.NET Core .NET 8 & C#)",
+    "rids": []
+  },
+  {
+    "i": 295,
+    "style": "Normal",
+    "text": "Ngôn ngữ lập trình C#: Ngôn ngữ hiện đại, hướng đối tượng hoàn toàn, kiểu dữ liệu tĩnh mạnh mẽ, hỗ trợ cơ chế bất đồng bộ async/await giúp tối ưu tài nguyên máy chủ khi xử lý hàng loạt truy vấn CSDL.",
+    "rids": []
+  },
+  {
+    "i": 296,
+    "style": "Normal",
+    "text": "ASP.NET Core .NET 8: Framework web mã nguồn mở đa nền tảng có hiệu năng hàng đầu thế giới. Tích hợp sẵn cơ chế Dependency Injection (DI) trong tệp cấu hình Program.cs, quản lý vòng đời dịch vụ (AddScoped, AddTransient, AddSingleton) một cách chặt chẽ.",
+    "rids": []
+  },
+  {
+    "i": 297,
+    "style": "Normal",
+    "text": "Entity Framework Core 8 (EF Core Code-First): Lập trình viên định nghĩa các thực thể C# thuần túy (POCO Classes), EF Core tự động tạo sinh lược đồ CSDL thông qua Migration (Add-Migration InitialCreate Update-Database). Sử dụng LINQ to Entities với các phương thức eager loading (.Include(), .ThenInclude()) giúp tối ưu số lượng câu lệnh truy vấn SQL.",
+    "rids": []
+  },
+  {
+    "i": 298,
+    "style": "Heading 2",
+    "text": "2.3 Công nghệ phát triển phía Frontend & Giao tiếp API (Razor View, Bootstrap 5, JavaScript & Axios/Fetch)",
+    "rids": []
+  },
+  {
+    "i": 299,
+    "style": "Normal",
+    "text": "Razor View Engine: Hỗ trợ cú pháp @model, vòng lặp @foreach, câu lệnh rẽ nhánh @if, kết hợp bố cục trang dùng chung thông qua Views/Shared/_Layout.cshtml giúp mã nguồn gọn gàng, tái sử dụng tối đa.",
+    "rids": []
+  },
+  {
+    "i": 300,
+    "style": "Normal",
+    "text": "Bootstrap 5 & Tailwind CSS / NativeWind: Hệ thống lưới Grid System 12 cột linh hoạt cùng các thành phần UI cao cấp (Navbar, Card, Modal, Badge, Alert, Table) giúp giao diện tương thích hoàn hảo trên mọi kích thước màn hình (Desktop, Tablet, Mobile).",
+    "rids": []
+  },
+  {
+    "i": 301,
+    "style": "Normal",
+    "text": "JavaScript / jQuery & Thư viện Chart.js: ",
+    "rids": []
+  },
+  {
+    "i": 302,
+    "style": "Normal (Web)",
+    "text": " Xử lý xác thực dữ liệu ngay tại Client với jquery.validate.unobtrusive.min.js.",
+    "rids": []
+  },
+  {
+    "i": 303,
+    "style": "Normal (Web)",
+    "text": "Tích hợp thư viện Chart.js tại trang Quản trị viên để trực quan hóa biểu đồ doanh thu theo các tháng trong năm (Biểu đồ cột Bar) và biểu đồ phân bố học viên theo từng khóa học (Biểu đồ tròn Doughnut).",
+    "rids": []
+  },
+  {
+    "i": 304,
+    "style": "Normal (Web)",
+    "text": "Sử dụng Axios / Fetch API để gọi các tuyến RESTful API từ Server xử lý chuyển đổi dữ liệu thời gian thực (Real-time data update) mà không cần làm mới toàn bộ trang.",
+    "rids": []
+  },
+  {
+    "i": 305,
+    "style": "Heading 2",
+    "text": "2.4 Hệ quản trị cơ sở dữ liệu và Giải pháp thanh toán",
+    "rids": []
+  },
+  {
+    "i": 306,
+    "style": "Normal",
+    "text": "Microsoft SQL Server (MS SQL Server / LocalDB): Hệ quản trị CSDL quan hệ cấp doanh nghiệp, bảo đảm 4 tính chất ACID (Atomicity, Consistency, Isolation, Durability) trong giao dịch. Cấu trúc bảng được chuẩn hóa đạt chuẩn 3 (3NF) với đầy đủ các ràng buộc PRIMARY KEY, FOREIGN KEY, UNIQUE, CASCADE DELETE.",
+    "rids": []
+  },
+  {
+    "i": 307,
+    "style": "Normal",
+    "text": "Giải pháp thanh toán tự động VietQR (Napas247): Thay vì tích hợp cổng thanh toán phức tạp yêu cầu pháp nhân doanh nghiệp, hệ thống áp dụng API sinh mã VietQR động chuẩn Napas247 theo cấu trúc chuỗi định dạng tiêu chuẩn (VietQR Format). Học viên chỉ cần mở ứng dụng ngân hàng quét mã QR, mọi thông tin về số tiền và nội dung chuyển khoản (chứa mã hóa đơn/học viên) được điền tự động chính xác tuyệt đối.",
+    "rids": []
+  },
+  {
+    "i": 308,
+    "style": "Heading 2",
+    "text": "2.5 Kiến trúc bảo mật và Phân quyền người dùng",
+    "rids": []
+  },
+  {
+    "i": 309,
+    "style": "Normal",
+    "text": "Xác thực Cookie Authentication: Cấu hình trong Program.cs thông qua dịch vụ AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme). Khi người dùng đăng nhập thành công, hệ thống mã hóa thông tin vào Cookie bảo mật lưu ở trình duyệt.",
+    "rids": []
+  },
+  {
+    "i": 310,
+    "style": "Normal",
+    "text": "Claims-based Identity & Role-Based Authorization: Gắn các Claim định danh (ClaimTypes.NameIdentifier, ClaimTypes.Name, ClaimTypes.Role). Bảo vệ các Controller/Action thông qua thuộc tính: ",
+    "rids": []
+  },
+  {
+    "i": 311,
+    "style": "Normal",
+    "text": "[Authorize(Roles = \"Admin\")] cho toàn bộ thư mục Areas/Admin.",
+    "rids": []
+  },
+  {
+    "i": 312,
+    "style": "Normal",
+    "text": "[Authorize(Roles = \"Teacher\")] cho toàn bộ thư mục Areas/Teacher.",
+    "rids": []
+  },
+  {
+    "i": 313,
+    "style": "Normal",
+    "text": "[Authorize(Roles = \"Student\")] cho các chức năng cá nhân của học viên.",
+    "rids": []
+  },
+  {
+    "i": 314,
+    "style": "Normal",
+    "text": "Mã hóa mật khẩu an toàn với BCrypt: Không lưu mật khẩu dạng bản rõ (plain-text) trong CSDL. Mật khẩu được băm một chiều với Salt ngẫu nhiên bằng thư viện BCrypt.Net-Next: ",
+    "rids": []
+  },
+  {
+    "i": 315,
+    "style": "Normal",
+    "text": "Tạo mã băm: BCrypt.Net.BCrypt.HashPassword(password)",
+    "rids": []
+  },
+  {
+    "i": 316,
+    "style": "Normal",
+    "text": "Xác thực mật khẩu: BCrypt.Net.BCrypt.Verify(password, user.PasswordHash)",
+    "rids": []
+  },
+  {
+    "i": 317,
+    "style": "Normal",
+    "text": "Phòng chống các lỗ hổng bảo mật phổ biến: ",
+    "rids": []
+  },
+  {
+    "i": 318,
+    "style": "Normal",
+    "text": "Chống tấn công CSRF: Sử dụng Tag Helper <form asp-action=\"...\"> tự động tạo token ẩn và kiểm tra tại Controller bằng thuộc tính [ValidateAntiForgeryToken].",
+    "rids": []
+  },
+  {
+    "i": 319,
+    "style": "Normal",
+    "text": "Chống SQL Injection: 100% các câu truy vấn thông qua EF Core đều được tự động tham số hóa (Parameterized Queries).",
+    "rids": []
+  },
+  {
+    "i": 320,
+    "style": "Heading 2",
+    "text": "2.6 Kiểm soát sĩ số & Kiểm tra xung đột lịch học (Schedule Conflict Check)",
+    "rids": []
+  },
+  {
+    "i": 321,
+    "style": "Normal",
+    "text": "Hệ thống cài đặt thuật toán kiểm tra tính hợp lệ trước khi xếp một ca học mới (ClassSchedule):",
+    "rids": []
+  },
+  {
+    "i": 322,
+    "style": "Normal",
+    "text": "Điều kiện 1 (Trùng phòng học): Không tồn tại ca học nào khác tại cùng phòng (Room), cùng thứ trong tuần (DayOfWeek) mà khoảng thời gian bị giao nhau.",
+    "rids": []
+  },
+  {
+    "i": 323,
+    "style": "Normal",
+    "text": "Điều kiện 2 (Trùng lịch giảng viên): Không tồn tại ca dạy nào khác của cùng giảng viên (TeacherId), cùng thứ trong tuần mà khoảng thời gian giảng dạy bị giao nhau.",
+    "rids": []
+  },
+  {
+    "i": 324,
+    "style": "Heading 2",
+    "text": "2.7 Mô hình phân tầng trong ứng dụng (Three-Tier Architecture)",
+    "rids": []
+  },
+  {
+    "i": 325,
+    "style": "Normal",
+    "text": "Mã nguồn dự án được tổ chức khoa học theo 3 tầng:",
+    "rids": []
+  },
+  {
+    "i": 326,
+    "style": "Normal",
+    "text": "Tầng giao diện (Presentation Tier): Gồm Razor Views (Views/, Areas/.../Views) và Controllers đóng vai trò tiếp nhận, điều hướng yêu cầu.",
+    "rids": []
+  },
+  {
+    "i": 327,
+    "style": "Normal",
+    "text": "Tầng nghiệp vụ (Business Logic Tier): Các Service xử lý tính toán điểm thi xếp lớp, sinh mã VietQR, xác thực đăng ký và thống kê số liệu doanh thu.",
+    "rids": []
+  },
+  {
+    "i": 328,
+    "style": "Normal",
+    "text": "Tầng dữ liệu (Data Access Tier): ApplicationDbContext kế thừa từ DbContext của EF Core, quản lý kết nối và thực thi các thao tác CRUD với CSDL SQL Server.",
+    "rids": []
+  },
+  {
+    "i": 329,
+    "style": "Heading 2",
+    "text": "KẾT CHƯƠNG 2",
+    "rids": []
+  },
+  {
+    "i": 330,
+    "style": "Normal",
+    "text": "Chương 2 đã hoàn thành việc hệ thống hóa toàn bộ cơ sở lý thuyết, kiến trúc phần mềm và các công nghệ cốt lõi được lựa chọn làm nền tảng phát triển cho hệ thống website quản lý và đăng ký học tại trung tâm ngoại ngữ.",
+    "rids": []
+  },
+  {
+    "i": 331,
+    "style": "Normal",
+    "text": "Cụ thể, các nội dung trọng tâm được tổng kết trong chương bao gồm:",
+    "rids": []
+  },
+  {
+    "i": 332,
+    "style": "Normal",
+    "text": "Kiến trúc hệ thống và Mô hình phát triển ứng dụng: ",
+    "rids": []
+  },
+  {
+    "i": 333,
+    "style": "Normal",
+    "text": "Làm rõ nguyên lý vận hành của kiến trúc Client - Server và mô hình Model - View - Controller (MVC) trong việc phân tách rạch ròi giữa tầng dữ liệu (Model), tầng biểu diễn giao diện (View) và tầng điều hướng logic nghiệp vụ (Controller), giúp mã nguồn có tính module hóa cao, dễ mở rộng và kiểm thử.",
+    "rids": []
+  },
+  {
+    "i": 334,
+    "style": "Normal",
+    "text": "Nghiên cứu nguyên lý giao tiếp dữ liệu qua giao thức HTTP/HTTPS và các tiêu chuẩn thiết kế RESTful API, làm tiền đề cho việc tích hợp các dịch vụ bên ngoài và mở rộng ứng dụng di động trong tương lai.",
+    "rids": []
+  },
+  {
+    "i": 335,
+    "style": "Normal",
+    "text": "Nền tảng công nghệ phía Backend và Cơ sở dữ liệu: ",
+    "rids": []
+  },
+  {
+    "i": 336,
+    "style": "Normal",
+    "text": "Nắm vững các ưu điểm vượt trội của nền tảng ASP.NET Core (.NET 8 LTS) và ngôn ngữ lập trình C# 12: Hiệu năng xử lý yêu cầu cao, cơ chế Dependency Injection (DI) tích hợp sẵn và hệ thống phân vùng chức năng (Areas) mạnh mẽ.",
+    "rids": []
+  },
+  {
+    "i": 337,
+    "style": "Normal",
+    "text": "Khai thác hiệu quả sức mạnh của Entity Framework Core 8 (Code-First / Reverse Engineering) kết hợp hệ quản trị cơ sở dữ liệu quan hệ Microsoft SQL Server, cho phép thao tác dữ liệu thông qua truy vấn hướng đối tượng LINQ, tối ưu hóa giao dịch (Transactions) và quản lý chặt chẽ các ràng buộc toàn vẹn khóa ngoại.",
+    "rids": []
+  },
+  {
+    "i": 338,
+    "style": "Normal",
+    "text": "Công nghệ giao diện và Trải nghiệm người dùng (Frontend & UI/UX): ",
+    "rids": []
+  },
+  {
+    "i": 339,
+    "style": "Normal",
+    "text": "Vận dụng cơ chế kết xuất mã nguồn phía máy chủ (Server-Side Rendering - SSR) thông qua Razor Engine (.cshtml), giúp tối ưu tốc độ phản hồi và hỗ trợ chuẩn SEO.",
+    "rids": []
+  },
+  {
+    "i": 340,
+    "style": "Normal",
+    "text": "Ứng dụng hệ thống lưới bố cục linh hoạt của Bootstrap 5, thư viện biểu tượng Font Awesome 6 và phông chữ Plus Jakarta Sans, mang lại giao diện hiện đại, trực quan và tương thích co giãn hoàn hảo trên mọi kích thước màn hình (Responsive Design).",
+    "rids": []
+  },
+  {
+    "i": 341,
+    "style": "Normal",
+    "text": "Kiến trúc Bảo mật, Xác thực và Dịch vụ tích hợp: ",
+    "rids": []
+  },
+  {
+    "i": 342,
+    "style": "Normal",
+    "text": "Nghiên cứu cơ chế Xác thực phiên làm việc dựa trên Cookie (Cookie Authentication) và mô hình Phân quyền dựa trên vai trò (Role-Based Access Control - RBAC), làm cơ sở để thiết kế giải pháp định tuyến đa Cookie (RoleCookieRouter) tách biệt hoàn toàn phiên làm việc của từng nhóm người dùng.",
+    "rids": []
+  },
+  {
+    "i": 343,
+    "style": "Normal",
+    "text": "Áp dụng thuật toán băm mật khẩu một chiều có muối ngẫu nhiên BCrypt chống tấn công từ điển, cơ chế bảo vệ biểu mẫu chống tấn công CSRF, dịch vụ gửi thư điện tử tự động qua giao thức SMTP (MailKit) và phương thức thanh toán chuyển khoản nhanh bằng mã quét VietQR.",
+    "rids": []
+  },
+  {
+    "i": 344,
+    "style": "Heading 1",
+    "text": "CHƯƠNG 3. PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG",
+    "rids": []
+  },
+  {
+    "i": 345,
+    "style": "Heading 2",
+    "text": "3.1 Biểu đồ Use Case tổng quan hệ thống",
+    "rids": []
+  },
+  {
+    "i": 346,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId15"
+    ]
+  },
+  {
+    "i": 347,
+    "style": "HITCFigureCaption",
+    "text": "Hình 1: Biểu đồ Use Case tổng quan hệ thống Dang ky khoa hc",
+    "rids": []
+  },
+  {
+    "i": 348,
+    "style": "Heading 3",
+    "text": "3.1.1 Phân tích và mô tả logic cấu trúc Use Case",
+    "rids": []
+  },
+  {
+    "i": 349,
+    "style": "Normal",
+    "text": "Hệ thống gồm 4 tác nhân chính: Khách (Guest), Học viên (Student), Giáo viên (Teacher) và Quản trị viên (Admin).",
+    "rids": []
+  },
+  {
+    "i": 350,
+    "style": "Normal",
+    "text": "Tác nhân Học viên có quan hệ kế thừa với Khách, nghĩa là học viên có toàn bộ quyền tra cứu khóa học của khách, đồng thời được mở rộng thêm các chức năng dành riêng cho người học.",
+    "rids": []
+  },
+  {
+    "i": 351,
+    "style": "Normal",
+    "text": "Mọi thao tác làm thay đổi trạng thái cá nhân (Đăng ký lớp, thanh toán, làm bài test, nhập điểm) đều có mối quan hệ phụ thuộc bắt buộc <<include>> tới Use Case Đăng nhập hệ thống.",
+    "rids": []
+  },
+  {
+    "i": 352,
+    "style": "Normal",
+    "text": "Nghiệp vụ Thanh toán học phí VietQR và In biên lai có mối quan hệ mở rộng <<extend>> từ Use Case Đăng ký lớp học.",
+    "rids": []
+  },
+  {
+    "i": 353,
+    "style": "Heading 3",
+    "text": "Phân rã 4 phân hệ Use Case cốt lõi",
+    "rids": []
+  },
+  {
+    "i": 354,
+    "style": "Heading 2",
+    "text": "3.2 Phân rã use case theo từng tác nhân",
+    "rids": []
+  },
+  {
+    "i": 355,
+    "style": "Normal",
+    "text": "Các sơ đồ phân rã bổ sung làm rõ những mục tiêu sử dụng của từng nhóm. Website có bốn tác nhân nhưng chỉ có ba vai trò tài khoản được lưu trong UserAccount là Student, Teacher và Admin. Khách là người chưa đăng nhập. Mỗi sơ đồ sử dụng khung hệ thống, tác nhân và các use case tương ứng; các chức năng công khai vẫn có thể được truy cập khi người dùng đã đăng nhập.",
+    "rids": []
+  },
+  {
+    "i": 356,
+    "style": "Heading 3",
+    "text": "3.2.1 Tác nhân khách",
+    "rids": []
+  },
+  {
+    "i": 357,
+    "style": "Normal",
+    "text": "Khách xem trang chủ, chương trình đào tạo, thông tin lớp mở và liên hệ. Tìm kiếm, lọc theo cấp độ hoặc mức học phí giúp thu hẹp lựa chọn. Khách có thể gửi yêu cầu tư vấn và đăng ký tài khoản; tài khoản mới được gán vai trò Student. Các chức năng này được hiện thực tại HomeController, ProgramController, ConsultationController và AccountController.",
+    "rids": []
+  },
+  {
+    "i": 358,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId16"
+    ]
+  },
+  {
+    "i": 359,
+    "style": "HITCFigureCaption",
+    "text": "Hình 3.2: Sơ đồ use case khách chưa đăng nhập",
+    "rids": []
+  },
+  {
+    "i": 360,
+    "style": "Heading 3",
+    "text": "3.2.2 Tài khoản học viên",
+    "rids": []
+  },
+  {
+    "i": 361,
+    "style": "Normal",
+    "text": "Học viên đăng nhập để cập nhật hồ sơ, đăng ký lớp, xem lịch học, học phí và biên lai. Khi ghi danh, học viên có thể cung cấp ảnh hồ sơ, giáo viên mong muốn và ghi chú. Học viên đặt lịch kiểm tra đầu vào, xem điểm cùng cấp độ được đề xuất và gửi đánh giá khóa học. Các thao tác cá nhân xác định người dùng thông qua thông tin định danh trong cookie.",
+    "rids": []
+  },
+  {
+    "i": 362,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId17"
+    ]
+  },
+  {
+    "i": 363,
+    "style": "HITCFigureCaption",
+    "text": "Hình 3.3: Sơ đồ use case tài khoản học viên",
+    "rids": []
+  },
+  {
+    "i": 364,
+    "style": "Heading 3",
+    "text": "3.2.3 Tài khoản giáo viên",
+    "rids": []
+  },
+  {
+    "i": 365,
+    "style": "Normal",
+    "text": "Giáo viên theo dõi bảng điều khiển, lớp phụ trách, danh sách học viên và lịch giảng dạy. Giáo viên quản lý tài liệu lớp học, chấm các bài kiểm tra được phân công và nhập cấp độ đề xuất. Phân hệ còn cung cấp phản hồi của học viên, cập nhật ảnh hồ sơ và bảng lương theo kỳ. Chức năng được tổ chức trong Area Teacher.",
+    "rids": []
+  },
+  {
+    "i": 366,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId18"
+    ]
+  },
+  {
+    "i": 367,
+    "style": "HITCFigureCaption",
+    "text": "Hình 3.4: Sơ đồ use case tài khoản giáo viên",
+    "rids": []
+  },
+  {
+    "i": 368,
+    "style": "Heading 3",
+    "text": "3.2.4 Tài khoản quản trị viên",
+    "rids": []
+  },
+  {
+    "i": 369,
+    "style": "Normal",
+    "text": "Admin quản lý chương trình, lớp học, hồ sơ học viên và giáo viên; điều phối ghi danh, phân công giảng dạy và lịch kiểm tra. Admin xác nhận học phí, quản lý bảng lương, thống kê, banner, tư vấn và thùng rác. Các thao tác cùng mục tiêu được gộp trong sơ đồ để giữ khả năng đọc; chi tiết được thể hiện qua các Controller thuộc Area Admin.",
+    "rids": []
+  },
+  {
+    "i": 370,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId19"
+    ]
+  },
+  {
+    "i": 371,
+    "style": "HITCFigureCaption",
+    "text": "Hình 3.5: Sơ đồ use case tài khoản quản trị viên",
+    "rids": []
+  },
+  {
+    "i": 372,
+    "style": "Heading 2",
+    "text": "3.3 Đặc tả các use case tiêu biểu",
+    "rids": []
+  },
+  {
+    "i": 373,
+    "style": "Heading 3",
+    "text": "3.3.1 Đăng ký tài khoản và đăng nhập",
+    "rids": []
+  },
+  {
+    "i": 374,
+    "style": "Normal",
+    "text": "Tác nhân: Khách hoặc người dùng có tài khoản.",
+    "rids": []
+  },
+  {
+    "i": 375,
+    "style": "Normal",
+    "text": "Điều kiện trước: Email chưa được sử dụng khi đăng ký; tài khoản phải hoạt động khi đăng nhập.",
+    "rids": []
+  },
+  {
+    "i": 376,
+    "style": "Normal",
+    "text": "Luồng xử lý: Người dùng nhập thông tin biểu mẫu. Hệ thống kiểm tra tính hợp lệ, kiểm tra email và băm mật khẩu khi đăng ký. Khi đăng nhập, mật khẩu được đối chiếu bằng BCrypt; thông tin định danh và vai trò được lưu trong phiên cookie.",
+    "rids": []
+  },
+  {
+    "i": 377,
+    "style": "Normal",
+    "text": "Kết quả: Đăng ký tạo UserAccount và Student. Đăng nhập thành công điều hướng đến khu vực tương ứng; thông tin không hợp lệ được thông báo trên biểu mẫu.",
+    "rids": []
+  },
+  {
+    "i": 378,
+    "style": "Heading 3",
+    "text": "3.3.2 Đăng ký lớp học",
+    "rids": []
+  },
+  {
+    "i": 379,
+    "style": "Normal",
+    "text": "Tác nhân: Học viên.",
+    "rids": []
+  },
+  {
+    "i": 380,
+    "style": "Normal",
+    "text": "Điều kiện trước: Có phiên Student và chọn lớp tồn tại; có ảnh hồ sơ hoặc tải ảnh hợp lệ.",
+    "rids": []
+  },
+  {
+    "i": 381,
+    "style": "Normal",
+    "text": "Luồng xử lý: Học viên xem Checkout, cung cấp nguyện vọng giáo viên và ghi chú, chọn phương thức thanh toán rồi xác nhận. Hệ thống tạo Registration và bản ghi Payment tương ứng với học phí của chương trình.",
+    "rids": []
+  },
+  {
+    "i": 382,
+    "style": "Normal",
+    "text": "Kết quả: Đơn mới có trạng thái Pending. Với VietQR, học phí chờ đối soát; học viên theo dõi đơn tại Lớp học của tôi.",
+    "rids": []
+  },
+  {
+    "i": 383,
+    "style": "Heading 3",
+    "text": "3.3.3 Xác nhận học phí",
+    "rids": []
+  },
+  {
+    "i": 384,
+    "style": "Normal",
+    "text": "Tác nhân: Quản trị viên.",
+    "rids": []
+  },
+  {
+    "i": 385,
+    "style": "Normal",
+    "text": "Điều kiện trước: Có phiên Admin; bản ghi học phí tồn tại và đã được kiểm tra chứng từ thu tiền.",
+    "rids": []
+  },
+  {
+    "i": 386,
+    "style": "Normal",
+    "text": "Luồng xử lý: Admin mở danh sách học phí, kiểm tra khoản thu và thực hiện xác nhận. Hệ thống cập nhật trạng thái thanh toán và trạng thái đơn ghi danh liên quan theo logic nghiệp vụ.",
+    "rids": []
+  },
+  {
+    "i": 387,
+    "style": "Normal",
+    "text": "Kết quả: Học phí được ghi nhận Paid; thông tin được sử dụng để xem hoặc in biên lai nội bộ.",
+    "rids": []
+  },
+  {
+    "i": 388,
+    "style": "Heading 3",
+    "text": "3.3.4 Đặt lịch và chấm kiểm tra xếp lớp",
+    "rids": []
+  },
+  {
+    "i": 389,
+    "style": "Normal",
+    "text": "Tác nhân: Học viên, Admin và giáo viên.",
+    "rids": []
+  },
+  {
+    "i": 390,
+    "style": "Normal",
+    "text": "Điều kiện trước: Học viên có tài khoản; lịch kiểm tra được tạo và giáo viên được phân công trước khi chấm.",
+    "rids": []
+  },
+  {
+    "i": 391,
+    "style": "Normal",
+    "text": "Luồng xử lý: Học viên chọn ngày và ca. Admin điều chỉnh lịch, phòng và phân công giáo viên. Giáo viên xem bài được giao, nhập điểm và cấp độ đề xuất. Hệ thống cập nhật kết quả để học viên tra cứu.",
+    "rids": []
+  },
+  {
+    "i": 392,
+    "style": "Normal",
+    "text": "Kết quả: Bài kiểm tra chuyển Completed khi nhập kết quả; điểm và cấp độ được hiển thị trong lịch sử kiểm tra.",
+    "rids": []
+  },
+  {
+    "i": 393,
+    "style": "Heading 3",
+    "text": "3.3.5 Quản lý tài liệu lớp học",
+    "rids": []
+  },
+  {
+    "i": 394,
+    "style": "Normal",
+    "text": "Tác nhân: Giáo viên.",
+    "rids": []
+  },
+  {
+    "i": 395,
+    "style": "Normal",
+    "text": "Điều kiện trước: Có phiên Teacher; xác định lớp, tiêu đề và tệp tài liệu.",
+    "rids": []
+  },
+  {
+    "i": 396,
+    "style": "Normal",
+    "text": "Luồng xử lý: Giáo viên mở phân hệ tài liệu, chọn lớp và tải tệp lên. Tệp được lưu trong thư mục uploads/documents và đường dẫn được ghi vào ClassDocument. Danh sách cung cấp liên kết tải về và thao tác xóa.",
+    "rids": []
+  },
+  {
+    "i": 397,
+    "style": "Normal",
+    "text": "Kết quả: Tài liệu gắn với lớp được lưu để quản lý; quyền sở hữu lớp và tệp cần được kiểm tra ở mọi thao tác thay đổi.",
+    "rids": []
+  },
+  {
+    "i": 398,
+    "style": "Heading 3",
+    "text": "3.3.6 Xóa mềm và khôi phục dữ liệu",
+    "rids": []
+  },
+  {
+    "i": 399,
+    "style": "Normal",
+    "text": "Tác nhân: Quản trị viên.",
+    "rids": []
+  },
+  {
+    "i": 400,
+    "style": "Normal",
+    "text": "Điều kiện trước: Có phiên Admin; đối tượng thuộc nhóm dữ liệu hỗ trợ xóa mềm.",
+    "rids": []
+  },
+  {
+    "i": 401,
+    "style": "Normal",
+    "text": "Luồng xử lý: Thao tác xóa mềm cập nhật IsDeleted và DeletedAt. Admin xem mục đã xóa trong thùng rác, chọn khôi phục hoặc xóa vĩnh viễn. Việc xóa vĩnh viễn cần kiểm tra các liên kết còn phụ thuộc.",
+    "rids": []
+  },
+  {
+    "i": 402,
+    "style": "Normal",
+    "text": "Kết quả: Khôi phục đưa bản ghi trở lại danh sách. Xóa vĩnh viễn loại bỏ bản ghi và không có thao tác khôi phục thông thường.",
+    "rids": []
+  },
+  {
+    "i": 403,
+    "style": "Heading 2",
+    "text": "3.4 Thiết kế cơ sở dữ liệu",
+    "rids": []
+  },
+  {
+    "i": 404,
+    "style": "Normal",
+    "text": "Đối chiếu ApplicationDbContext cho thấy mô hình hiện tại khai báo 14 tập thực thể: UserAccount, Student, Teacher, Program, Class, Registration, Payment, PlacementTest, Consultation, ClassSchedule, ClassDocument, CourseFeedback, Banner và TeacherSalary. Hình dưới tổng hợp các bảng và trường khóa, còn quan hệ giữa chúng được mô tả ở mục tiếp theo.",
+    "rids": []
+  },
+  {
+    "i": 405,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId20"
+    ]
+  },
+  {
+    "i": 406,
+    "style": "HITCFigureCaption",
+    "text": "Hình 3.6: Mô hình các bảng dữ liệu và trường khóa",
+    "rids": []
+  },
+  {
+    "i": 407,
+    "style": "Heading 3",
+    "text": "3.4.1 Nhóm tài khoản và hồ sơ",
+    "rids": []
+  },
+  {
+    "i": 408,
+    "style": "Normal",
+    "text": "UserAccount lưu AccountId, họ tên, email, mật khẩu băm, vai trò và trạng thái tài khoản. Student và Teacher có khóa chính riêng và liên kết tới tài khoản bằng AccountId. Email có chỉ mục duy nhất. Student bổ sung thông tin liên hệ, ngày sinh và ảnh hồ sơ; Teacher bổ sung chuyên môn, bằng cấp, tiểu sử và ảnh. Quan hệ tài khoản–hồ sơ là quan hệ dữ liệu một–một tùy chọn theo vai trò.",
+    "rids": []
+  },
+  {
+    "i": 409,
+    "style": "Heading 3",
+    "text": "3.4.2 Nhóm đào tạo và ghi danh",
+    "rids": []
+  },
+  {
+    "i": 410,
+    "style": "Normal",
+    "text": "Một Program có nhiều Class; mỗi lớp thuộc một chương trình và có thể chưa có giáo viên phụ trách. ClassSchedule lưu các ca của lớp và ClassDocument lưu tài liệu. Registration liên kết Student với Class, đồng thời lưu giáo viên mong muốn, ngày đăng ký, ghi chú và trạng thái. Payment có khóa ngoại duy nhất RegistrationId để gắn tối đa một bản ghi học phí với mỗi đơn.",
+    "rids": []
+  },
+  {
+    "i": 411,
+    "style": "Heading 3",
+    "text": "3.4.3 Nhóm hỗ trợ và quản trị",
+    "rids": []
+  },
+  {
+    "i": 412,
+    "style": "Normal",
+    "text": "PlacementTest liên kết học viên với lịch, điểm, cấp độ đề xuất và giáo viên chấm có thể để trống trước khi phân công. CourseFeedback gắn đánh giá học viên với lớp. TeacherSalary ghi nhận các kỳ lương và trạng thái chi trả của giáo viên. Consultation lưu yêu cầu tư vấn; Banner quản lý hình ảnh quảng bá và thứ tự hiển thị. ClassStatus là thuộc tính trạng thái của lớp trong phiên bản hiện tại, không phải bảng độc lập.",
+    "rids": []
+  },
+  {
+    "i": 413,
+    "style": "Heading 2",
+    "text": "3.5 Ràng buộc và luồng dữ liệu",
+    "rids": []
+  },
+  {
+    "i": 414,
+    "style": "Normal",
+    "text": "Các khóa ngoại bảo đảm dữ liệu ghi danh tham chiếu đúng học viên và lớp, học phí tham chiếu đúng đơn, lịch học và tài liệu tham chiếu đúng lớp. ApplicationDbContext sử dụng Restrict ở các liên kết cần tránh xóa đối tượng cha khi còn dữ liệu con; một số liên kết tùy chọn đến giáo viên dùng SetNull. Những dữ liệu hỗ trợ thùng rác có IsDeleted và DeletedAt để theo dõi xóa mềm.",
+    "rids": []
+  },
+  {
+    "i": 415,
+    "style": "Normal",
+    "text": "Luồng ghi danh kết nối các bước tra cứu chương trình, chọn lớp, tạo đăng ký, tạo học phí và theo dõi trạng thái. Luồng kiểm tra đầu vào kết nối đặt lịch, phân công, nhập kết quả và tra cứu. Luồng lương tách khỏi học phí học viên, gồm lập kỳ lương, tính các thành phần và xác nhận chi trả. Các luồng cần kiểm tra dữ liệu đầu vào và quyền của người đang thao tác trước khi ghi dữ liệu.",
+    "rids": []
+  },
+  {
+    "i": 416,
+    "style": "Heading 2",
+    "text": "3.6 Đối chiếu thiết kế với phạm vi hiện thực",
+    "rids": []
+  },
+  {
+    "i": 417,
+    "style": "Normal",
+    "text": "Phần phân tích nghiệp vụ xác định mục tiêu của hệ thống; mức độ hiện thực phải đối chiếu với mã nguồn. Trong phiên bản hiện tại, PlacementTest thực hiện đặt lịch và nhập kết quả bởi người chấm, chưa có bộ câu hỏi Listening/Reading tự chấm. Checkbox điểm danh chưa có thao tác lưu chuyên cần theo buổi. EmailService và các lớp VnPayService còn trống; VNPay/MoMo được mô phỏng trong luồng ghi danh, còn VietQR hiển thị ảnh chuyển khoản và chờ xác nhận nội bộ.",
+    "rids": []
+  },
+  {
+    "i": 418,
+    "style": "Normal",
+    "text": "Cần hoàn thiện kiểm tra sĩ số, chống đăng ký trùng ở bước Confirm, kiểm tra xung đột lịch và quyền sở hữu bản ghi đối với tài liệu hoặc phản hồi. Việc tạo đơn và học phí nên được xử lý trong một giao dịch dữ liệu. Chức năng tải tài liệu riêng cho học viên, gửi thư tư vấn và khóa/mở tài khoản giáo viên chưa có luồng hoàn chỉnh tương ứng trong mã nguồn hiện tại.",
+    "rids": []
+  },
+  {
+    "i": 419,
+    "style": "Normal",
+    "text": "Các sơ đồ bổ sung mô tả đăng nhập như một chức năng riêng và điều kiện trước của nghiệp vụ được bảo vệ. Đường nối tác nhân với use case không thể hiện thứ tự thao tác; các quan hệ include hoặc extend chỉ phù hợp khi có hành vi bắt buộc dùng lại hoặc mở rộng được xác định rõ. Cách biểu diễn này giúp phân biệt mục tiêu nghiệp vụ, điều kiện truy cập và mức độ đã triển khai.",
+    "rids": []
+  },
+  {
+    "i": 420,
+    "style": "Heading 2",
+    "text": "3.7 Kết chương 3",
+    "rids": []
+  },
+  {
+    "i": 421,
+    "style": "Normal",
+    "text": "Chương 3 bổ sung sơ đồ use case tổng quát và sơ đồ cho từng tác nhân, đặc tả các luồng chính, mô hình bảng dữ liệu và các ràng buộc. Thiết kế tạo cơ sở liên kết nội dung lý thuyết với các màn hình ở Chương 4, đồng thời xác định những phần cần tiếp tục hoàn thiện trước khi triển khai thực tế.",
+    "rids": []
+  },
+  {
+    "i": 422,
+    "style": "Heading 1",
+    "text": "CHƯƠNG 4. HIỆN THỰC HÓA VÀ KIỂM THỬ HỆ THỐNG",
+    "rids": []
+  },
+  {
+    "i": 423,
+    "style": "Heading 2",
+    "text": "4.1 Môi trường triển khai và Công nghệ sử dụng",
+    "rids": []
+  },
+  {
+    "i": 424,
+    "style": "Heading 3",
+    "text": "4.1.1 Môi trường phát triển và vận hành hệ thống",
+    "rids": []
+  },
+  {
+    "i": 425,
+    "style": "Normal",
+    "text": "Quá trình xây dựng và vận hành hệ thống website quản lý và đăng ký học tại trung tâm ngoại ngữ (HITC English - WedEnglishApp) đòi hỏi sự kết hợp chặt chẽ giữa các công cụ phát triển phần mềm, máy chủ web nội bộ, hệ quản trị cơ sở dữ liệu và cấu hình phần cứng đạt tiêu chuẩn. Việc lựa chọn môi trường được tối ưu hóa nhằm đảm bảo tính ổn định, tốc độ biên dịch nhanh chóng và tính tương thích cao khi triển khai từ máy phát triển (Development) sang môi trường chạy thử nghiệm/sản xuất (Staging/Production).",
+    "rids": []
+  },
+  {
+    "i": 426,
+    "style": "Normal",
+    "text": "1. Môi trường phát triển phần mềm (Development Environment)",
+    "rids": []
+  },
+  {
+    "i": 427,
+    "style": "Normal",
+    "text": "Để hiện thực hóa ứng dụng theo mô hình kiến trúc MVC (Model - View - Controller), môi trường phát triển được trang bị các phần mềm và công cụ lập trình hiện đại:",
+    "rids": []
+  },
+  {
+    "i": 428,
+    "style": "Normal",
+    "text": "Hệ điều hành phát triển: ",
+    "rids": []
+  },
+  {
+    "i": 429,
+    "style": "Normal",
+    "text": "Microsoft Windows 11 64-bit (hỗ trợ nền tảng Windows PowerShell, terminal tích hợp và dịch vụ chứng chỉ bảo mật SSL Localhost).",
+    "rids": []
+  },
+  {
+    "i": 430,
+    "style": "Normal",
+    "text": "Môi trường thực thi & SDK: ",
+    "rids": []
+  },
+  {
+    "i": 431,
+    "style": "Normal",
+    "text": ".NET 8.0 SDK (LTS - Long Term Support): Phiên bản dài hạn mới nhất của Microsoft, hỗ trợ công nghệ biên dịch C# 12, tối ưu hiệu năng xử lý HTTP Pipeline và cung cấp thư viện cốt lõi Microsoft.NET.Sdk.Web.",
+    "rids": []
+  },
+  {
+    "i": 432,
+    "style": "Normal",
+    "text": "Môi trường phát triển tích hợp (IDE / Code Editor): ",
+    "rids": []
+  },
+  {
+    "i": 433,
+    "style": "Normal",
+    "text": "Microsoft Visual Studio 2022 / Visual Studio Insiders (v17.x): Cung cấp bộ công cụ gỡ lỗi (Debugging), công cụ quản trị Nuget Packages, trình giám sát SQL Server Object Explorer và hỗ trợ Hot Reload trong quá trình thiết kế giao diện.",
+    "rids": []
+  },
+  {
+    "i": 434,
+    "style": "Normal",
+    "text": "Visual Studio Code: Hỗ trợ kiểm tra cú pháp nhanh, chỉnh sửa giao diện giao diện tĩnh và chạy lệnh command line CLI.",
+    "rids": []
+  },
+  {
+    "i": 435,
+    "style": "Normal",
+    "text": "Máy chủ ứng dụng nội bộ (Local Web Server): ",
+    "rids": []
+  },
+  {
+    "i": 436,
+    "style": "Normal",
+    "text": "Kestrel Server & IIS Express Worker Process: Máy chủ web nội bộ siêu nhẹ của .NET Core, hỗ trợ phân luồng đa luồng (multi-threaded request processing), quản lý cổng mạng bảo mật HTTPS (cổng mặc định https://localhost:44317 hoặc https://localhost:7198) thông qua chứng chỉ tự ký dotnet dev-certs https.",
+    "rids": []
+  },
+  {
+    "i": 437,
+    "style": "Normal",
+    "text": "Công cụ kiểm thử & Tài liệu hóa API: ",
+    "rids": []
+  },
+  {
+    "i": 438,
+    "style": "Normal",
+    "text": "Swagger UI / OpenAPI (Swashbuckle.AspNetCore v6.6.2): Tự động phát sinh tài liệu giao diện kiểm thử API tương tác trực tiếp trên trình duyệt tại đường dẫn /swagger, hỗ trợ kiểm tra các luồng dữ liệu trả về cho Client.",
+    "rids": []
+  },
+  {
+    "i": 439,
+    "style": "Normal",
+    "text": "Hệ thống quản lý phiên bản mã nguồn: ",
+    "rids": []
+  },
+  {
+    "i": 440,
+    "style": "Normal",
+    "text": "Git & GitHub: Theo dõi lịch sử thay đổi mã nguồn, phân nhánh tính năng (feature branches) và bảo đảm an toàn dữ liệu dự án.",
+    "rids": []
+  },
+  {
+    "i": 441,
+    "style": "Normal",
+    "text": "2. Môi trường hệ quản trị cơ sở dữ liệu (Database Environment)",
+    "rids": []
+  },
+  {
+    "i": 442,
+    "style": "Normal",
+    "text": "Hệ thống lưu trữ và đồng bộ toàn bộ dữ liệu quản lý trung tâm (tài khoản, khóa học, lớp học, đăng ký, hóa đơn, bài thi, banner và thùng rác) trên hệ quản trị cơ sở dữ liệu quan hệ mạnh mẽ:",
+    "rids": []
+  },
+  {
+    "i": 443,
+    "style": "Normal",
+    "text": "Hệ quản trị CSDL: Microsoft SQL Server (phiên bản LocalDB / SQL Server Express 2022).",
+    "rids": []
+  },
+  {
+    "i": 444,
+    "style": "Normal",
+    "text": "Chuỗi kết nối (Connection String):",
+    "rids": []
+  },
+  {
+    "i": 445,
+    "style": "List Paragraph",
+    "text": "Cơ chế tương tác dữ liệu (ORM - Object Relational Mapping): ",
+    "rids": []
+  },
+  {
+    "i": 446,
+    "style": "Normal",
+    "text": "Entity Framework Core 8.0 (Microsoft.EntityFrameworkCore.SqlServer v8.0.10): Đóng vai trò cầu nối ánh xạ giữa các Model C# (CourseProgram, CourseClass, UserAccount, Registration, Payment, Banner,...) và bảng CSDL vật lý (Programs, Classes, UserAccounts, Registrations, Payments, Banners,...).",
+    "rids": []
+  },
+  {
+    "i": 447,
+    "style": "Normal",
+    "text": "Entity Framework Core Tools (Microsoft.EntityFrameworkCore.Tools v8.0.10): Thực thi các câu lệnh CLI quản lý lược đồ CSDL (Add-Migration, Update-Database).",
+    "rids": []
+  },
+  {
+    "i": 448,
+    "style": "List Paragraph",
+    "text": "Cơ chế nạp dữ liệu khởi tạo tự động (Data Seeding Engine): ",
+    "rids": []
+  },
+  {
+    "i": 449,
+    "style": "List Paragraph",
+    "text": "Sử dụng module DbInitializer.cs được gọi trực tiếp trong đường ống khởi động Program.cs (app.Services.CreateScope()), tự động kiểm tra bảng dữ liệu và nạp sẵn tài khoản Admin, Giảng viên, Học viên, lịch học và các chương trình mẫu ngay khi ứng dụng khởi chạy lần đầu tiên.",
+    "rids": []
+  },
+  {
+    "i": 450,
+    "style": "Normal",
+    "text": "3. Yêu cầu cấu hình phần cứng vận hành hệ thống",
+    "rids": []
+  },
+  {
+    "i": 451,
+    "style": "Normal",
+    "text": "Để ứng dụng vận hành trơn tru và đảm bảo thời gian phản hồi (Response Time) dưới 500ms đối với các tác vụ lọc lớp và truy xuất dữ liệu, cấu hình phần cứng khuyến nghị như sau:",
+    "rids": []
+  },
+  {
+    "i": 452,
+    "style": "Normal",
+    "text": "Cấu hình máy chủ phát triển và triển khai thử nghiệm (Server Requirements): ",
+    "rids": []
+  },
+  {
+    "i": 453,
+    "style": "Normal",
+    "text": "Bộ vi xử lý (CPU): Tối thiểu Intel Core i3 / AMD Ryzen 3 trở lên (Khuyến nghị: Intel Core i5 / AMD Ryzen 5 đa nhân đa luồng).",
+    "rids": []
+  },
+  {
+    "i": 454,
+    "style": "Normal",
+    "text": "Bộ nhớ truy xuất ngẫu nhiên (RAM): Tối thiểu 8 GB RAM (Khuyến nghị: 16 GB RAM để chạy đồng thời Visual Studio, SQL Server LocalDB và IIS Express/Kestrel).",
+    "rids": []
+  },
+  {
+    "i": 455,
+    "style": "Normal",
+    "text": "Dung lượng lưu trữ (Disk Space): Tối thiểu 10 GB dung lượng khả dụng trên ổ cứng SSD (giúp tốc độ đọc/ghi dữ liệu của SQL Server và file tĩnh wwwroot đạt hiệu năng cao nhất).",
+    "rids": []
+  },
+  {
+    "i": 456,
+    "style": "Normal",
+    "text": "Kết nối mạng (Network): Băng thông Internet ổn định, mở cổng HTTP (80/5000), HTTPS (443/7198) và cấu hình phân giải tên miền nội bộ localhost.",
+    "rids": []
+  },
+  {
+    "i": 457,
+    "style": "Normal",
+    "text": "Cấu hình máy trạm phía người dùng (Client Requirements): ",
+    "rids": []
+  },
+  {
+    "i": 458,
+    "style": "Normal",
+    "text": "Các thiết bị máy tính, máy tính xách tay hoặc điện thoại thông minh có kết nối Internet.",
+    "rids": []
+  },
+  {
+    "i": 459,
+    "style": "Normal",
+    "text": "Trình duyệt web hiện đại hỗ trợ HTML5/CSS3 và JavaScript: Google Chrome (phiên bản 100+), Microsoft Edge, Mozilla Firefox hoặc Safari.",
+    "rids": []
+  },
+  {
+    "i": 460,
+    "style": "Heading 3",
+    "text": "4.1.2 Các công nghệ và thư viện phần mềm sử dụng",
+    "rids": []
+  },
+  {
+    "i": 461,
+    "style": "Normal",
+    "text": "Toàn bộ hệ thống được xây dựng trên nền tảng kiến trúc phần mềm phân tầng rõ ràng, kết hợp giữa các công nghệ phía Server-side và Client-side nhằm đảm bảo trải nghiệm người dùng mượt mà và an toàn thông tin:",
+    "rids": []
+  },
+  {
+    "i": 462,
+    "style": "Heading 3",
+    "text": "4.1.3 Quy trình khởi tạo đường ống xử lý HTTP (Middleware Pipeline)",
+    "rids": []
+  },
+  {
+    "i": 463,
+    "style": "Normal",
+    "text": "Để đảm bảo hiệu năng và tính an toàn thông tin khi tiếp nhận từng Request từ Client, đường ống xử lý yêu cầu HTTP trong Program.cs được cấu hình theo thứ tự nghiêm ngặt:",
+    "rids": []
+  },
+  {
+    "i": 464,
+    "style": "Normal",
+    "text": "Routing Middleware (app.UseRouting()): Phân tích URL và đối sánh tuyến đường tới đúng Controller và Action mục tiêu.",
+    "rids": []
+  },
+  {
+    "i": 465,
+    "style": "Normal",
+    "text": "Security & Static Files Middleware (app.UseHttpsRedirection(), app.UseStaticFiles()): Ép buộc mọi kết nối phải qua kênh mã hóa HTTPS và phục vụ trực tiếp các tệp tĩnh (hình ảnh banner, style CSS) mà không cần đi qua tầng xử lý C#.",
+    "rids": []
+  },
+  {
+    "i": 466,
+    "style": "Normal",
+    "text": "Authentication Middleware (app.UseAuthentication()): Kích hoạt cơ chế xác thực thông qua bộ định tuyến RoleCookieRouter, trích xuất thông tin định danh và vai trò của người dùng từ Cookie phiên tương ứng.",
+    "rids": []
+  },
+  {
+    "i": 467,
+    "style": "Normal",
+    "text": "Authorization Middleware (app.UseAuthorization()): Kiểm tra quyền truy cập của người dùng đối với các tài nguyên được bảo vệ bằng các thuộc tính phân quyền [Authorize(Roles = \"Admin\")] hoặc [Authorize(Roles = \"Teacher\")].",
+    "rids": []
+  },
+  {
+    "i": 468,
+    "style": "Normal",
+    "text": "Endpoint Routing Middleware (app.MapControllerRoute()): Điều hướng tới phân hệ phân vùng Areas tương ứng hoặc tuyến đường mặc định của hệ thống.",
+    "rids": []
+  },
+  {
+    "i": 469,
+    "style": "Heading 2",
+    "text": "4.2 GIAO DIỆN VÀ HIỆN THỰC HÓA CHỨC NĂNG HỆ THỐNG",
+    "rids": []
+  },
+  {
+    "i": 470,
+    "style": "Normal",
+    "text": "Giao diện hệ thống HITC English (WedEnglishApp) được xây dựng theo tiêu chuẩn Web Responsive trên nền tảng Bootstrap 5.3.3, kết hợp phông chữ hiện đại Plus Jakarta Sans, thư viện biểu tượng Font Awesome 6.5 và màu sắc nhận diện chủ đạo (Xanh dương đậm #1e3a8a, Xanh Cyan #0284c7, Trắng #ffffff và Xám nhạt #f8fafc).",
+    "rids": []
+  },
+  {
+    "i": 471,
+    "style": "Normal",
+    "text": "Hệ thống được tổ chức thành 4 phân hệ chính:",
+    "rids": []
+  },
+  {
+    "i": 472,
+    "style": "Normal",
+    "text": "Phân hệ Khách hàng & Trang chủ công khai (Public & Student Portal)",
+    "rids": []
+  },
+  {
+    "i": 473,
+    "style": "Normal",
+    "text": "Phân hệ Xác thực và Quản lý tài khoản (Authentication & Account Management)",
+    "rids": []
+  },
+  {
+    "i": 474,
+    "style": "Normal",
+    "text": "Phân hệ Giảng viên (Teacher Portal - Area: Teacher)",
+    "rids": []
+  },
+  {
+    "i": 475,
+    "style": "Normal",
+    "text": "Phân hệ Quản trị viên (Admin Portal - Area: Admin)",
+    "rids": []
+  },
+  {
+    "i": 476,
+    "style": "Heading 3",
+    "text": "4.2.1 Phân hệ dành cho Khách hàng (Học viên & Khách vãng lai)",
+    "rids": []
+  },
+  {
+    "i": 477,
+    "style": "Normal",
+    "text": "A. Giao diện Trang chủ tập trung khi chưa đăng nhập và Hệ thống Tin tức tự động",
+    "rids": []
+  },
+  {
+    "i": 478,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId21"
+    ]
+  },
+  {
+    "i": 479,
+    "style": "HITCFigureCaption",
+    "text": " Hình 4.1: Giao diện Trang chủ tập trung khi Khách hàng chưa đăng nhập",
+    "rids": []
+  },
+  {
+    "i": 480,
+    "style": "Normal",
+    "text": "1. Phân tích cấu trúc giao diện và trải nghiệm người dùng (UI/UX):",
+    "rids": []
+  },
+  {
+    "i": 481,
+    "style": "Normal",
+    "text": "Thanh điều hướng công khai (Header / Navbar): Tích hợp logo trung tâm, các liên kết nhanh (Trang chủ, Khóa học, Thi xếp lớp, Tư vấn & Liên hệ) cùng cặp nút bấm CTA: Đăng nhập (nút viền mỏng thanh lịch) và Đăng ký (nút xanh nổi bật #0284c7).",
+    "rids": []
+  },
+  {
+    "i": 482,
+    "style": "Normal",
+    "text": "Trình chiếu Banner quảng bá động (Hero Carousel Slider): Trình diễn các chương trình đào tạo quốc tế, ưu đãi học phí thông qua Bootstrap Carousel tự động chuyển slide sau 5 giây. Từng banner tích hợp nút bấm điều hướng trực tiếp (LinkUrl) tới khóa học hoặc đăng ký thi.",
+    "rids": []
+  },
+  {
+    "i": 483,
+    "style": "Normal",
+    "text": "Biểu mẫu Tiếp nhận Tư vấn Nhanh (Lead Capture Form): Tọa lạc ở vị trí trung tâm nửa phải màn hình, cho phép khách hàng chỉ cần nhập Họ và tên, Số điện thoại, Email và Nguyện vọng học tập là có thể gửi yêu cầu hỗ trợ mà không bắt buộc tạo tài khoản trước.",
+    "rids": []
+  },
+  {
+    "i": 484,
+    "style": "Normal",
+    "text": "Luồng Khóa học nổi bật & Lịch khai giảng tự động: Hệ thống hiển thị 3 chương trình học trọng điểm và 4 lớp học sắp khai giảng gần nhất kèm đầy đủ thông tin: Mã lớp, ngày bắt đầu, ca học, phòng học, học phí niêm yết và giáo viên phụ trách.",
+    "rids": []
+  },
+  {
+    "i": 485,
+    "style": "Normal",
+    "text": "Thanh chỉ số độ uy tín (Social Proof Stats): Hiển thị tự động tổng số học viên đã tốt nghiệp, số giảng viên quốc tế và số khóa đào tạo nhằm tạo lập niềm tin đối với phụ huynh và người học mới.",
+    "rids": []
+  },
+  {
+    "i": 486,
+    "style": "Normal",
+    "text": "2. Cơ chế hiện thực hóa chức năng và Luồng xử lý ngầm (Under-the-hood):",
+    "rids": []
+  },
+  {
+    "i": 487,
+    "style": "Normal",
+    "text": "Truy vấn nạp dữ liệu động từ SQL Server: ",
+    "rids": []
+  },
+  {
+    "i": 488,
+    "style": "Normal",
+    "text": "Khi Client gửi yêu cầu HTTP GET tới /, HomeController.cs thực thi các truy vấn LINQ bất đồng bộ thông qua Entity Framework Core.",
+    "rids": []
+  },
+  {
+    "i": 489,
+    "style": "Normal",
+    "text": "Lọc danh sách banner kích hoạt và chưa bị xóa mềm: _context.Banners.Where(b => b.IsActive && !b.IsDeleted).OrderBy(b => b.DisplayOrder).",
+    "rids": []
+  },
+  {
+    "i": 490,
+    "style": "Normal",
+    "text": "Truy vấn kết hợp bảng (Eager Loading) danh sách lớp học: .Include(c => c.Program).Include(c => c.Teacher).ThenInclude(t => t.UserAccount).",
+    "rids": []
+  },
+  {
+    "i": 491,
+    "style": "Normal",
+    "text": "Dữ liệu được đóng gói toàn diện vào đối tượng HomeViewModel trước khi render ra tệp Views/Home/Index.cshtml.",
+    "rids": []
+  },
+  {
+    "i": 492,
+    "style": "Normal",
+    "text": "Luồng xử lý Tiếp nhận Tư vấn (ConsultationController): ",
+    "rids": []
+  },
+  {
+    "i": 493,
+    "style": "Normal",
+    "text": "Biểu mẫu gửi dữ liệu qua phương thức HTTP POST kèm mã băm chống giả mạo @Html.AntiForgeryToken().",
+    "rids": []
+  },
+  {
+    "i": 494,
+    "style": "Normal",
+    "text": "Bản ghi mới được lưu vào bảng Consultations với trạng thái mặc định \"Pending\". Sau đó hệ thống thiết lập TempData[\"SuccessMessage\"] và phản hồi thông báo Toast Alert thành công.",
+    "rids": []
+  },
+  {
+    "i": 495,
+    "style": "Normal",
+    "text": "B. Giao diện Trang chủ sau khi Đăng nhập thành công",
+    "rids": []
+  },
+  {
+    "i": 496,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId22"
+    ]
+  },
+  {
+    "i": 497,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.2: Giao diện Trang chủ và Menu tiện ích sau khi Học viên đăng nhập",
+    "rids": []
+  },
+  {
+    "i": 498,
+    "style": "Normal",
+    "text": "1. Phân tích cấu trúc giao diện và trải nghiệm cá nhân hóa:",
+    "rids": []
+  },
+  {
+    "i": 499,
+    "style": "Normal",
+    "text": "Chuyển đổi Header thông minh (User Dropdown Menu): Cụm nút \"Đăng nhập / Đăng ký\" biến mất, thay vào đó là nút hồ sơ dạng viên thuốc (Pill-badge) hiển thị ảnh đại diện và Họ và tên thực tế của học viên trích xuất từ User Identity Claims.",
+    "rids": []
+  },
+  {
+    "i": 500,
+    "style": "Normal",
+    "text": "Trình đơn cá nhân học viên: Khi nhấp vào tên, menu xổ xuống cung cấp các liên kết điều hướng chuyên biệt: Hồ sơ của tôi, Lớp học của tôi, Lịch sử học phí, Đổi mật khẩu và Đăng xuất.",
+    "rids": []
+  },
+  {
+    "i": 501,
+    "style": "Normal",
+    "text": "Ghi danh khóa học 1 chạm (1-Click Enrollment): Tại các thẻ lớp học trên trang chủ, nút \"Đăng ký ngay\" nhận diện phiên đăng nhập của học viên, chuyển thẳng sang trang thanh toán mà không yêu cầu điền lại thông tin cá nhân.",
+    "rids": []
+  },
+  {
+    "i": 502,
+    "style": "Normal",
+    "text": "2. Cơ chế hiện thực hóa chức năng và Luồng xử lý ngầm:",
+    "rids": []
+  },
+  {
+    "i": 503,
+    "style": "Normal",
+    "text": "Quản lý Phiên bằng Cookie Authentication: Hệ thống kiểm tra User.Identity.IsAuthenticated. Thông tin người dùng được giải mã an toàn từ Cookie WedEnglishApp.StudentAuth có thời hạn 7 ngày (SlidingExpiration = true).",
+    "rids": []
+  },
+  {
+    "i": 504,
+    "style": "Normal",
+    "text": "Cơ chế định tuyến Cookie đa lược đồ (RoleCookieRouter): Cấu hình PolicyScheme trong Program.cs đảm bảo tài khoản học viên không bị xung đột phiên làm việc ngay cả khi người quản trị mở đồng thời tab Admin trên cùng một trình duyệt.",
+    "rids": []
+  },
+  {
+    "i": 505,
+    "style": "Normal",
+    "text": "C. Giao diện Danh mục và Chi tiết Khóa học (ProgramController)",
+    "rids": []
+  },
+  {
+    "i": 506,
+    "style": "Normal",
+    "text": "1. Giao diện Danh mục Khóa học (Views/Program/Index.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 507,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 508,
+    "style": "Normal",
+    "text": "Bố cục dạng lưới (Grid System) hiển thị danh sách thẻ khóa học trực quan. Mỗi thẻ gồm ảnh bìa đại diện, nhãn phân loại cấp độ (Beginner, Intermediate, Advanced) màu sắc riêng biệt, tóm tắt lộ trình, thời lượng học (tuần) và học phí VNĐ.",
+    "rids": []
+  },
+  {
+    "i": 509,
+    "style": "Normal",
+    "text": "Tích hợp thanh tìm kiếm theo từ khóa và bộ lọc nhanh theo cấp độ giúp người học dễ dàng chọn đúng chương trình mong muốn.",
+    "rids": []
+  },
+  {
+    "i": 510,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 511,
+    "style": "Normal",
+    "text": "Action Index nhận tham số truy vấn searchString và level.",
+    "rids": []
+  },
+  {
+    "i": 512,
+    "style": "Normal",
+    "text": "Truy vấn LINQ thực thi lọc dữ liệu động: _context.Programs.Where(p => p.IsActive && !p.IsDeleted). Nếu có từ khóa, bổ sung điều kiện .Where(p => p.ProgramName.Contains(searchString)).",
+    "rids": []
+  },
+  {
+    "i": 513,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId23"
+    ]
+  },
+  {
+    "i": 514,
+    "style": "HITCFigureCaption",
+    "text": " Hình 4.3: Giao diện Danh mục Khóa học và Bộ lọc cấp độ",
+    "rids": []
+  },
+  {
+    "i": 515,
+    "style": "Normal",
+    "text": "2. Giao diện Chi tiết Khóa học (Views/Program/Detail.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 516,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 517,
+    "style": "Normal",
+    "text": "Trình bày chuyên sâu về mục tiêu khóa học, cấu trúc giáo trình, chuẩn đầu ra theo thang điểm quốc tế (IELTS Band 6.5+, TOEIC 800+).",
+    "rids": []
+  },
+  {
+    "i": 518,
+    "style": "Normal",
+    "text": "Bảng danh sách các lớp học cụ thể đang mở thuộc khóa học: Thể hiện rõ ngày khai giảng, ca học trong tuần, phòng học, giảng viên phụ trách và nút bấm \"Chọn lớp này để đăng ký\".",
+    "rids": []
+  },
+  {
+    "i": 519,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 520,
+    "style": "Normal",
+    "text": "Action Detail(int id) truy vấn khóa học theo ID, kết hợp nạp danh sách lớp học liên kết: .Include(p => p.Classes.Where(c => !c.IsDeleted && c.Status == \"Planning\")).",
+    "rids": []
+  },
+  {
+    "i": 521,
+    "style": "Normal",
+    "text": "Nếu không tìm thấy khóa học hợp lệ, hệ thống trả về mã lỗi NotFound().",
+    "rids": []
+  },
+  {
+    "i": 522,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId24"
+    ]
+  },
+  {
+    "i": 523,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.4: Giao diện Chi tiết Khóa học và Danh sách lớp đang mở",
+    "rids": []
+  },
+  {
+    "i": 524,
+    "style": "Normal",
+    "text": "D. Giao diện Đăng ký Kiểm tra Trình độ đầu vào (PlacementTestController)",
+    "rids": []
+  },
+  {
+    "i": 525,
+    "style": "Normal",
+    "text": "1. Giao diện Đặt lịch thi xếp lớp (Views/PlacementTest/BookTest.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 526,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 527,
+    "style": "Normal",
+    "text": "Mẫu biểu đăng ký thi được thiết kế thân thiện, giải thích rõ quy trình kiểm tra 4 kỹ năng Nghe - Nói - Đọc - Viết cùng giảng viên bản ngữ.",
+    "rids": []
+  },
+  {
+    "i": 528,
+    "style": "Normal",
+    "text": "Học viên được tự do chọn: Ngày dự thi (Date picker giới hạn ngày tương lai) và Khung giờ thi thuận tiện (09:00 AM, 02:00 PM, 06:00 PM).",
+    "rids": []
+  },
+  {
+    "i": 529,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 530,
+    "style": "Normal",
+    "text": "Khi học viên nhấn gửi form, Action BookTest (POST) kiểm tra tính hợp lệ của dữ liệu đầu vào.",
+    "rids": []
+  },
+  {
+    "i": 531,
+    "style": "Normal",
+    "text": "Tạo bản ghi mới trong bảng PlacementTests với trạng thái \"Pending\".",
+    "rids": []
+  },
+  {
+    "i": 532,
+    "style": "Normal",
+    "text": "Hệ thống tích hợp dịch vụ IEmailService gửi thư điện tử xác nhận lịch hẹn tự động thông qua giao thức SMTP (MailKit), đính kèm hướng dẫn phòng thi trực tuyến/trực tiếp.",
+    "rids": []
+  },
+  {
+    "i": 533,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId25"
+    ]
+  },
+  {
+    "i": 534,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.5: Giao diện Đặt lịch thi xếp lớp và kiểm tra năng lực đầu vào",
+    "rids": []
+  },
+  {
+    "i": 535,
+    "style": "Normal",
+    "text": "E. Giao diện Đăng ký lớp học và Thanh toán học phí (EnrollmentController & PaymentController)",
+    "rids": []
+  },
+  {
+    "i": 536,
+    "style": "Normal",
+    "text": "1. Giao diện Xác nhận giữ chỗ & Thanh toán VietQR (Views/Enrollment/Checkout.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 537,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 538,
+    "style": "Normal",
+    "text": "Giao diện chia làm 2 cột: Cột trái tóm tắt chi tiết lớp học đã chọn (tên lớp, học phí, ngày khai giảng), cột phải là cổng thanh toán điện tử.",
+    "rids": []
+  },
+  {
+    "i": 539,
+    "style": "Normal",
+    "text": "Tích hợp mã quét VietQR tự động: Hiển thị hình ảnh mã QR ngân hàng có gắn sẵn Số tiền học phí chính xác và Cú pháp chuyển khoản tiêu chuẩn (ví dụ: HITC ENROLL REG105), giúp học viên quét mã qua ứng dụng ngân hàng trong 5 giây mà không lo chuyển nhầm số tài khoản.",
+    "rids": []
+  },
+  {
+    "i": 540,
+    "style": "Normal",
+    "text": "Cung cấp tùy chọn thanh toán tiền mặt tại quầy dành cho học viên có nhu cầu.",
+    "rids": []
+  },
+  {
+    "i": 541,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 542,
+    "style": "Normal",
+    "text": "Kiểm tra xung đột sĩ số lớp học (Concurrency & Seat Limit): Trước khi tạo đơn, hệ thống kiểm tra số học viên đã đăng ký so với MaxStudents. Nếu lớp đã đủ sĩ số, hệ thống thông báo lỗi và từ chối tạo đăng ký.",
+    "rids": []
+  },
+  {
+    "i": 543,
+    "style": "Normal",
+    "text": "Khởi tạo bản ghi Registration với trạng thái \"Pending\" và tạo bản ghi hóa đơn tương ứng trong bảng Payments.",
+    "rids": []
+  },
+  {
+    "i": 544,
+    "style": "Normal",
+    "text": "Sinh chuỗi mã VietQR theo chuẩn Napas 247 và render động ra màn hình.",
+    "rids": []
+  },
+  {
+    "i": 545,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId26"
+    ]
+  },
+  {
+    "i": 546,
+    "style": "HITCFigureCaption",
+    "text": " Hình 4.6: Giao diện Thanh toán học phí bằng mã quét VietQR tự động",
+    "rids": []
+  },
+  {
+    "i": 547,
+    "style": "Normal",
+    "text": "2. Giao diện Xuất & In Biên lai học phí điện tử (Views/Student/PrintReceipt.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 548,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 549,
+    "style": "Normal",
+    "text": "Được thiết kế chuẩn hóa theo khuôn mẫu phiếu thu tài chính A5/A4: Có đầy đủ tiêu ngữ, Logo trung tâm HITC English, Mã hóa đơn #PAY-{id}, họ tên học viên, khóa học ghi danh, số tiền nộp bằng số và bằng chữ, ngày thu tiền và con dấu mộc điện tử của trung tâm.",
+    "rids": []
+  },
+  {
+    "i": 550,
+    "style": "Normal",
+    "text": "Tích hợp nút \"In biên lai\" kích hoạt trực tiếp hàm window.print() của trình duyệt (tự động ẩn các thành phần thừa, chỉ in nội dung phiếu thu).",
+    "rids": []
+  },
+  {
+    "i": 551,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 552,
+    "style": "Normal",
+    "text": "Action PrintReceipt(int id) truy vấn hóa đơn có ID tương ứng, kiểm tra quyền sở hữu của học viên (hoặc quyền Admin) để ngăn chặn việc người khác xem trộm hóa đơn.",
+    "rids": []
+  },
+  {
+    "i": 553,
+    "style": "Normal",
+    "text": "Render giao diện phiếu thu với định dạng CSS @media print.",
+    "rids": []
+  },
+  {
+    "i": 554,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId27"
+    ]
+  },
+  {
+    "i": 555,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.7: Giao diện Biên lai thu tiền học phí điện tử",
+    "rids": []
+  },
+  {
+    "i": 556,
+    "style": "Normal",
+    "text": "F. Giao diện Không gian học tập cá nhân học viên (StudentController)",
+    "rids": []
+  },
+  {
+    "i": 557,
+    "style": "Normal",
+    "text": "1. Giao diện Lớp học của tôi (Views/Student/MyClasses.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 558,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 559,
+    "style": "Normal",
+    "text": "Danh sách các lớp học mà học viên đã được duyệt tham gia: Phân loại theo thẻ trạng thái (Đang học, Đã hoàn thành).",
+    "rids": []
+  },
+  {
+    "i": 560,
+    "style": "Normal",
+    "text": "Hiển thị chi tiết: Tên khóa học, tên lớp, phòng học, giảng viên phụ trách, thời khóa biểu các ca học trong tuần và đường dẫn tải tài liệu bài giảng.",
+    "rids": []
+  },
+  {
+    "i": 561,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 562,
+    "style": "Normal",
+    "text": "Action MyClasses trích xuất AccountId của học viên đang đăng nhập, truy vấn bảng Registrations có trạng thái \"Confirmed\" liên kết với Classes, Programs và Schedules.",
+    "rids": []
+  },
+  {
+    "i": 563,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId28"
+    ]
+  },
+  {
+    "i": 564,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.8a: Các lớp học viên đã đăng ký",
+    "rids": []
+  },
+  {
+    "i": 565,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId29"
+    ]
+  },
+  {
+    "i": 566,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.8b: Lịch học và lịch thi theo tuần",
+    "rids": []
+  },
+  {
+    "i": 567,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.8: Giao diện Lớp học của tôi và Lịch học tuần",
+    "rids": []
+  },
+  {
+    "i": 568,
+    "style": "Normal",
+    "text": "2. Giao diện Lịch sử thanh toán học phí (Views/Student/MyPayments.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 569,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 570,
+    "style": "Normal",
+    "text": "Bảng thống kê toàn bộ các giao dịch đóng học phí của học viên: Mã giao dịch, ngày thanh toán, phương thức đóng tiền (VietQR, Tiền mặt), số tiền và trạng thái hóa đơn (Paid, Pending).",
+    "rids": []
+  },
+  {
+    "i": 571,
+    "style": "Normal",
+    "text": "Có nút \"Xem biên lai\" dẫn đến phiếu thu điện tử đối với các hóa đơn đã thanh toán thành công.",
+    "rids": []
+  },
+  {
+    "i": 572,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId30"
+    ]
+  },
+  {
+    "i": 573,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.9: Giao diện Lịch sử nộp học phí học viên",
+    "rids": []
+  },
+  {
+    "i": 574,
+    "style": "Normal",
+    "text": "3. Giao diện Hồ sơ cá nhân học viên (Views/Student/Profile.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 575,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 576,
+    "style": "Normal",
+    "text": "Cho phép học viên cập nhật thông tin cá nhân: Tải ảnh đại diện mới, cập nhật số điện thoại, ngày sinh, địa chỉ cư trú.",
+    "rids": []
+  },
+  {
+    "i": 577,
+    "style": "Normal",
+    "text": "Hiển thị bảng Kết quả thi kiểm tra trình độ đầu vào (Điểm số 4 kỹ năng, ngày thi và cấp độ khóa học được hội đồng chuyên môn khuyến nghị).",
+    "rids": []
+  },
+  {
+    "i": 578,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 579,
+    "style": "Normal",
+    "text": "Khi cập nhật ảnh đại diện, tệp ảnh được lưu trữ vào thư mục vật lý wwwroot/uploads/avatars/ và cập nhật đường dẫn URL vào bảng UserAccounts.",
+    "rids": []
+  },
+  {
+    "i": 580,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId31"
+    ]
+  },
+  {
+    "i": 581,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.10: Giao diện Hồ sơ cá nhân và Kết quả thi xếp lớp của học viên",
+    "rids": []
+  },
+  {
+    "i": 582,
+    "style": "Heading 3",
+    "text": "4.2.2 Phân hệ Quản trị viên hệ thống (Admin Portal - Area: Admin)",
+    "rids": []
+  },
+  {
+    "i": 583,
+    "style": "Normal",
+    "text": "Phân hệ quản trị vận hành trên phân vùng Areas/Admin, yêu cầu bắt buộc quyền hạn [Authorize(Roles = \"Admin\")]. Giao diện sử dụng bố cục Dashboard chuẩn mực với thanh Sidebar điều hướng phân tầng rõ ràng.",
+    "rids": []
+  },
+  {
+    "i": 584,
+    "style": "Normal",
+    "text": "1. Bảng điều khiển Quản trị & Thống kê (Areas/Admin/Views/Dashboard/Index.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 585,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 586,
+    "style": "Normal",
+    "text": "Hệ thống các thẻ thống kê trực quan (KPI Metric Cards): Tổng doanh thu học phí thực tế, số lớp học đang hoạt động, số học viên mới ghi danh, số yêu cầu tư vấn đang chờ xử lý.",
+    "rids": []
+  },
+  {
+    "i": 587,
+    "style": "Normal",
+    "text": "Biểu đồ trực quan hóa dữ liệu (Chart.js): Biểu đồ cột phản ánh doanh thu từng tháng và biểu đồ tròn thể hiện cơ cấu phân bổ học viên theo các chương trình đào tạo (IELTS, TOEIC, Giao tiếp).",
+    "rids": []
+  },
+  {
+    "i": 588,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 589,
+    "style": "Normal",
+    "text": "Controller tổng hợp số liệu từ các bảng Payments, Classes, Students, Consultations.",
+    "rids": []
+  },
+  {
+    "i": 590,
+    "style": "Normal",
+    "text": "Dữ liệu biểu đồ được serialize thành chuỗi JSON và truyền xuống View để thư viện Chart.js vẽ lên phần tử <canvas>.",
+    "rids": []
+  },
+  {
+    "i": 591,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId32"
+    ]
+  },
+  {
+    "i": 592,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.11: Giao diện Bảng điều khiển Quản trị Dashboard và Biểu đồ Doanh thu",
+    "rids": []
+  },
+  {
+    "i": 593,
+    "style": "Normal",
+    "text": "2. Phân hệ Quản lý Banner Quảng bá (BannerManagerController)",
+    "rids": []
+  },
+  {
+    "i": 594,
+    "style": "Normal",
+    "text": "Màn hình Danh sách Banner (Index.cshtml): ",
+    "rids": []
+  },
+  {
+    "i": 595,
+    "style": "Normal",
+    "text": "Bảng dữ liệu hiển thị ảnh thu nhỏ (thumbnail), tiêu đề, liên kết đích (LinkUrl), thứ tự ưu tiên hiển thị (DisplayOrder), trạng thái hiển thị (Đang hiện / Tạm ẩn).",
+    "rids": []
+  },
+  {
+    "i": 596,
+    "style": "Normal",
+    "text": "Nút bật/tắt hiển thị nhanh (ToggleActive) chỉ với 1 click và nút chuyển banner vào thùng rác.",
+    "rids": []
+  },
+  {
+    "i": 597,
+    "style": "Normal",
+    "text": "Màn hình Thêm mới / Chỉnh sửa Banner (Create.cshtml / Edit.cshtml): ",
+    "rids": []
+  },
+  {
+    "i": 598,
+    "style": "Normal",
+    "text": "Hỗ trợ 2 phương thức nhập hình ảnh: Tải tệp từ máy tính (lưu trữ tự động vào wwwroot/uploads/banners) hoặc nhập URL ảnh trực tuyến.",
+    "rids": []
+  },
+  {
+    "i": 599,
+    "style": "Normal",
+    "text": "Cho phép tùy biến chữ trên nút bấm CTA (Call to Action) và liên kết điều hướng đến trang đích tương ứng.",
+    "rids": []
+  },
+  {
+    "i": 600,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId33"
+    ]
+  },
+  {
+    "i": 601,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.12: Giao diện Quản lý và Thêm mới Banner quảng bá trang chủ",
+    "rids": []
+  },
+  {
+    "i": 602,
+    "style": "Normal",
+    "text": "3. Phân hệ Quản lý Đào tạo: Chương trình học & Lớp học",
+    "rids": []
+  },
+  {
+    "i": 603,
+    "style": "Normal",
+    "text": "Quản lý Chương trình học (ProgramManager): ",
+    "rids": []
+  },
+  {
+    "i": 604,
+    "style": "Normal",
+    "text": "Thêm, sửa, đóng/mở tuyển sinh các khóa đào tạo.",
+    "rids": []
+  },
+  {
+    "i": 605,
+    "style": "Normal",
+    "text": "Cập nhật thời lượng học (tuần), định mức học phí, chuẩn đầu ra và ảnh bìa khóa học.",
+    "rids": []
+  },
+  {
+    "i": 606,
+    "style": "Normal",
+    "text": "Quản lý Lớp học (ClassManager): ",
+    "rids": []
+  },
+  {
+    "i": 607,
+    "style": "Normal",
+    "text": "Lập kế hoạch mở lớp, chỉ định giảng viên đứng lớp, phân bổ phòng học, ấn định ngày khai giảng/bế giảng.",
+    "rids": []
+  },
+  {
+    "i": 608,
+    "style": "Normal",
+    "text": "Thiết lập sĩ số trần (MaxStudents) nhằm ngăn chặn việc tuyển sinh vượt quá quy mô lớp học.",
+    "rids": []
+  },
+  {
+    "i": 609,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId34"
+    ]
+  },
+  {
+    "i": 610,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.13a: Chương trình đào tạo",
+    "rids": []
+  },
+  {
+    "i": 611,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId35"
+    ]
+  },
+  {
+    "i": 612,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.13b: Lớp học và phân công",
+    "rids": []
+  },
+  {
+    "i": 613,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.13: Giao diện Quản trị Chương trình học và Lớp học",
+    "rids": []
+  },
+  {
+    "i": 614,
+    "style": "Normal",
+    "text": "4. Phân hệ Quản lý Tài chính, Đăng ký và Tư vấn",
+    "rids": []
+  },
+  {
+    "i": 615,
+    "style": "Normal",
+    "text": "Quản lý Thanh toán (PaymentAdmin): Đối soát các giao dịch chuyển khoản VietQR hoặc xác nhận thu học phí bằng tiền mặt tại quầy; tự động phát sinh mã giao dịch chuẩn MANUAL{yyyyMMddHHmmss} và chuyển trạng thái đơn sang \"Paid\".",
+    "rids": []
+  },
+  {
+    "i": 616,
+    "style": "Normal",
+    "text": "Quản lý Đăng ký (RegistrationAdmin): Theo dõi danh sách học viên đăng ký theo thời gian thực; hỗ trợ chuyển trạng thái ghi danh (Pending, Confirmed, Cancelled).",
+    "rids": []
+  },
+  {
+    "i": 617,
+    "style": "Normal",
+    "text": "Quản lý Tư vấn (ConsultationManager): Tiếp nhận thông tin từ form trang chủ; hỗ trợ chuyên viên tuyển sinh đánh dấu \"Replied\" sau khi đã gọi điện tư vấn lộ trình học cho khách hàng.",
+    "rids": []
+  },
+  {
+    "i": 618,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId36"
+    ]
+  },
+  {
+    "i": 619,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.14a: Đăng ký và xếp lớp",
+    "rids": []
+  },
+  {
+    "i": 620,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId37"
+    ]
+  },
+  {
+    "i": 621,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.14b: Quản lý học phí",
+    "rids": []
+  },
+  {
+    "i": 622,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.14: Giao diện Quản trị Đăng ký và Xác nhận Thanh toán học phí",
+    "rids": []
+  },
+  {
+    "i": 623,
+    "style": "Normal",
+    "text": "5. Phân hệ Quản trị Nhân sự: Giảng viên & Học viên",
+    "rids": []
+  },
+  {
+    "i": 624,
+    "style": "Normal",
+    "text": "Quản lý Giảng viên (TeacherManager): Thêm mới tài khoản giảng viên với mật khẩu được mã hóa tự động bằng BCrypt; cập nhật bằng cấp quốc tế, chuyên môn đào tạo; hỗ trợ khóa hoặc kích hoạt tài khoản giảng viên tức thì (ToggleStatus).",
+    "rids": []
+  },
+  {
+    "i": 625,
+    "style": "Normal",
+    "text": "Quản lý Học viên (StudentManager): Theo dõi danh sách học viên toàn trung tâm, lịch sử ghi danh, tổng học phí đã nộp và thông tin liên hệ phụ huynh.",
+    "rids": []
+  },
+  {
+    "i": 626,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId38"
+    ]
+  },
+  {
+    "i": 627,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.15a: Hồ sơ giáo viên",
+    "rids": []
+  },
+  {
+    "i": 628,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId39"
+    ]
+  },
+  {
+    "i": 629,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.15b: Hồ sơ học viên",
+    "rids": []
+  },
+  {
+    "i": 630,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.15: Giao diện Quản lý Hồ sơ Giảng viên và Học viên",
+    "rids": []
+  },
+  {
+    "i": 631,
+    "style": "Normal",
+    "text": "6. Phân hệ Thùng rác hệ thống & Cơ chế Xóa mềm an toàn (TrashController)",
+    "rids": []
+  },
+  {
+    "i": 632,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: ",
+    "rids": []
+  },
+  {
+    "i": 633,
+    "style": "Normal",
+    "text": "Được thiết kế dạng Giao diện đa Tab (Tabbed Navigation) phân loại rõ ràng: Tất cả, Banner, Chương trình, Lớp học, Tư vấn, Đăng ký, Thi xếp lớp, Tài khoản.",
+    "rids": []
+  },
+  {
+    "i": 634,
+    "style": "Normal",
+    "text": "Cung cấp nút bấm thao tác chuyên biệt trên từng dòng: Khôi phục (Màu xanh lá) và Xóa hẳn (Màu đỏ cảnh báo).",
+    "rids": []
+  },
+  {
+    "i": 635,
+    "style": "Normal",
+    "text": "Nút chức năng cấp cao: Dọn sạch thùng rác (Hộp thoại xác nhận 2 lớp ngăn chặn sơ suất).",
+    "rids": []
+  },
+  {
+    "i": 636,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa (Soft Delete Pattern): ",
+    "rids": []
+  },
+  {
+    "i": 637,
+    "style": "Normal",
+    "text": "Khi người quản trị nhấn \"Xóa\" tại bất kỳ trang quản lý nào, hệ thống không thực hiện lệnh DELETE khỏi CSDL mà cập nhật thuộc tính: IsDeleted = true và DeletedAt = DateTime.Now.",
+    "rids": []
+  },
+  {
+    "i": 638,
+    "style": "Normal",
+    "text": "Mọi trang hiển thị danh sách hoạt động đều tự động lọc bỏ các bản ghi đã xóa mềm: .Where(x => !x.IsDeleted).",
+    "rids": []
+  },
+  {
+    "i": 639,
+    "style": "Normal",
+    "text": "Khôi phục (Restore): Cập nhật lại IsDeleted = false, đưa bản ghi quay trở lại danh sách quản lý bình thường ngay lập tức.",
+    "rids": []
+  },
+  {
+    "i": 640,
+    "style": "Normal",
+    "text": "Xóa vĩnh viễn (PermanentDelete): Thực thi lệnh xóa triệt để khỏi SQL Server khi người quản trị chắc chắn không còn nhu cầu lưu trữ.",
+    "rids": []
+  },
+  {
+    "i": 641,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId40"
+    ]
+  },
+  {
+    "i": 642,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.16: Giao diện Thùng rác hệ thống với cơ chế Khôi phục và Xóa vĩnh viễn",
+    "rids": []
+  },
+  {
+    "i": 643,
+    "style": "Heading 3",
+    "text": "4.2.3 Phân hệ Giảng viên (Teacher Portal - Area: Teacher)",
+    "rids": []
+  },
+  {
+    "i": 644,
+    "style": "Normal",
+    "text": "Phân hệ dành riêng cho đội ngũ giảng viên tại phân vùng Areas/Teacher, sử dụng layout _TeacherLayout.cshtml:",
+    "rids": []
+  },
+  {
+    "i": 645,
+    "style": "Normal",
+    "text": "1. Bảng điều khiển Giảng viên (TeacherDashboard)",
+    "rids": []
+  },
+  {
+    "i": 646,
+    "style": "Normal",
+    "text": "Chức năng: Tổng hợp nhanh các chỉ số công tác giảng dạy: Số lượng lớp học đang đứng lớp, tổng số học viên trong các lớp phụ trách, lịch dạy trong tuần và số bài thi xếp lớp được phân công chấm điểm.",
+    "rids": []
+  },
+  {
+    "i": 647,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId41"
+    ]
+  },
+  {
+    "i": 648,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.17: Giao diện Bảng điều khiển công tác đào tạo của Giảng viên",
+    "rids": []
+  },
+  {
+    "i": 649,
+    "style": "Normal",
+    "text": "2. Quản lý Lớp dạy & Điểm danh chuyên cần (TeachingClass & Attendance)",
+    "rids": []
+  },
+  {
+    "i": 650,
+    "style": "Normal",
+    "text": "Chức năng: Giảng viên theo dõi danh sách lớp học được phân công; mở danh sách học viên để thực hiện điểm danh chuyên cần từng buổi học (Đánh dấu trạng thái: Có mặt, Đi trễ, Vắng có phép, Vắng không phép).",
+    "rids": []
+  },
+  {
+    "i": 651,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId42"
+    ]
+  },
+  {
+    "i": 652,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.18a: Các lớp được phân công",
+    "rids": []
+  },
+  {
+    "i": 653,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId43"
+    ]
+  },
+  {
+    "i": 654,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.18b: Danh sách học viên của lớp",
+    "rids": []
+  },
+  {
+    "i": 655,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.18: Giao diện Danh sách lớp dạy và Điểm danh học viên",
+    "rids": []
+  },
+  {
+    "i": 656,
+    "style": "Normal",
+    "text": "3. Chấm điểm bài thi xếp lớp đầu vào (TeacherTest)",
+    "rids": []
+  },
+  {
+    "i": 657,
+    "style": "Normal",
+    "text": "Chức năng: Giảng viên truy cập danh sách các bài thi được chỉ định, thực hiện chấm điểm 4 kỹ năng (thang điểm 10 hoặc IELTS Band), nhập lời nhận xét chi tiết và chọn cấp độ lớp học đề xuất (RecommendedLevel) trước khi chuyển trạng thái bài thi thành \"Completed\".",
+    "rids": []
+  },
+  {
+    "i": 658,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId44"
+    ]
+  },
+  {
+    "i": 659,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.19: Giao diện Chấm thi xếp lớp và Đề xuất cấp độ học",
+    "rids": []
+  },
+  {
+    "i": 660,
+    "style": "Normal",
+    "text": "4. Quản lý Tài liệu học tập & Phản hồi (Document & Feedback)",
+    "rids": []
+  },
+  {
+    "i": 661,
+    "style": "Normal",
+    "text": "Chức năng: Giảng viên tải lên giáo trình, slide bài giảng, bài tập ngữ pháp (PDF, Word) cho từng lớp học; đồng thời tiếp nhận các nhận xét đánh giá chất lượng tiết dạy từ phía học viên để nâng cao năng lực sư phạm.",
+    "rids": []
+  },
+  {
+    "i": 662,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId45"
+    ]
+  },
+  {
+    "i": 663,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.20a: Quản lý tài liệu lớp",
+    "rids": []
+  },
+  {
+    "i": 664,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId46"
+    ]
+  },
+  {
+    "i": 665,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.20b: Phản hồi của học viên",
+    "rids": []
+  },
+  {
+    "i": 666,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.20: Giao diện Quản lý kho học liệu số và Đánh giá giờ dạy",
+    "rids": []
+  },
+  {
+    "i": 667,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId47"
+    ]
+  },
+  {
+    "i": 668,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.20a: Bảng lương của giáo viên",
+    "rids": []
+  },
+  {
+    "i": 669,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId48"
+    ]
+  },
+  {
+    "i": 670,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.20b: Quản lý lương tại trang Admin",
+    "rids": []
+  },
+  {
+    "i": 671,
+    "style": "Heading 3",
+    "text": "4.2.4 Phân hệ Xác thực và Quản lý tài khoản (Authentication System)",
+    "rids": []
+  },
+  {
+    "i": 672,
+    "style": "Normal",
+    "text": "Được điều khiển bởi AccountController.cs kết hợp cơ chế RoleCookieRouter đa vai trò trong Program.cs:",
+    "rids": []
+  },
+  {
+    "i": 673,
+    "style": "Normal",
+    "text": "1. Giao diện Đăng nhập hệ thống (Views/Account/Login.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 674,
+    "style": "Normal",
+    "text": "Phân tích UI/UX: Form đăng nhập gồm trường nhập Email và Mật khẩu, liên kết \"Quên mật khẩu\" và nút chuyển sang trang Đăng ký.",
+    "rids": []
+  },
+  {
+    "i": 675,
+    "style": "Normal",
+    "text": "Cơ chế hiện thực hóa: ",
+    "rids": []
+  },
+  {
+    "i": 676,
+    "style": "Normal",
+    "text": "Tiếp nhận dữ liệu, tìm kiếm tài khoản theo Email: _context.UserAccounts.FirstOrDefaultAsync(u => u.Email == model.Email).",
+    "rids": []
+  },
+  {
+    "i": 677,
+    "style": "Normal",
+    "text": "So khớp mật khẩu đã băm bằng thư viện BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash).",
+    "rids": []
+  },
+  {
+    "i": 678,
+    "style": "Normal",
+    "text": "Khi đăng nhập thành công, hệ thống cấp phát Cookie phiên tương ứng (WedEnglishApp.AdminAuth, TeacherAuth, hoặc StudentAuth) và chuyển hướng chính xác về phân hệ của người dùng.",
+    "rids": []
+  },
+  {
+    "i": 679,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId49"
+    ]
+  },
+  {
+    "i": 680,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.21: Giao diện Đăng nhập hệ thống phân quyền đa vai trò",
+    "rids": []
+  },
+  {
+    "i": 681,
+    "style": "Normal",
+    "text": "2. Giao diện Đăng ký tài khoản (Views/Account/Register.cshtml)",
+    "rids": []
+  },
+  {
+    "i": 682,
+    "style": "Normal",
+    "text": "Chức năng: Cho phép học viên mới đăng ký tài khoản trực tuyến (Họ tên, Email, Mật khẩu, Số điện thoại). Mật khẩu được băm an toàn 1 chiều bằng BCrypt trước khi lưu vào CSDL, đồng thời tự động kích hoạt tạo mới một bản ghi hồ sơ trong bảng Students.",
+    "rids": []
+  },
+  {
+    "i": 683,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId50"
+    ]
+  },
+  {
+    "i": 684,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.22: Giao diện Đăng ký tài khoản học viên",
+    "rids": []
+  },
+  {
+    "i": 685,
+    "style": "Normal",
+    "text": "3. Giao diện Đổi mật khẩu & Cảnh báo an ninh 403",
+    "rids": []
+  },
+  {
+    "i": 686,
+    "style": "Normal",
+    "text": "Đổi mật khẩu (ChangePassword.cshtml): Kiểm tra mật khẩu cũ hợp lệ trước khi cho phép băm và cập nhật mật khẩu mới.",
+    "rids": []
+  },
+  {
+    "i": 687,
+    "style": "Normal",
+    "text": "Từ chối truy cập (AccessDenied.cshtml): Giao diện thông báo chuẩn HTTP 403 Forbidden khi người dùng cố tình nhập URL can thiệp vào các phân vùng vượt quá quyền hạn của mình.",
+    "rids": []
+  },
+  {
+    "i": 688,
+    "style": "Normal",
+    "text": "",
+    "rids": [
+      "rId51"
+    ]
+  },
+  {
+    "i": 689,
+    "style": "HITCFigureCaption",
+    "text": "Hình 4.23: Giao diện Đổi mật khẩu và Thông báo từ chối truy cập 403",
+    "rids": []
+  },
+  {
+    "i": 690,
+    "style": "Heading 2",
+    "text": "4.3 KIỂM THỬ HỆ THỐNG (SYSTEM TESTING)",
+    "rids": []
+  },
+  {
+    "i": 691,
+    "style": "Normal",
+    "text": "Kiểm thử hệ thống là giai đoạn mang tính quyết định nhằm rà soát toàn bộ các chức năng, đảm bảo phần mềm vận hành chính xác theo đúng đặc tả yêu cầu nghiệp vụ, đạt hiệu năng ổn định và ngăn ngừa các lỗ hổng an ninh trước khi đưa vào khai thác thực tế.",
+    "rids": []
+  },
+  {
+    "i": 692,
+    "style": "Heading 3",
+    "text": "4.3.1 Mục tiêu và Phương pháp kiểm thử",
+    "rids": []
+  },
+  {
+    "i": 693,
+    "style": "Normal",
+    "text": "1. Mục tiêu kiểm thử",
+    "rids": []
+  },
+  {
+    "i": 694,
+    "style": "Normal",
+    "text": "Đảm bảo tính đúng đắn về mặt chức năng: Kiểm tra toàn bộ các chu trình nghiệp vụ cốt lõi (Đăng ký tài khoản, Đặt lịch thi xếp lớp, Giữ chỗ lớp học, Thanh toán VietQR, Điểm danh, Chấm thi, Quản lý banner và Thùng rác).",
+    "rids": []
+  },
+  {
+    "i": 695,
+    "style": "Normal",
+    "text": "Xác thực an toàn thông tin & phân quyền: Đảm bảo cơ chế phân quyền đa vai trò (Admin, Teacher, Student, Guest) vận hành nghiêm ngặt; kiểm tra khả năng cô lập phiên làm việc đa Cookie (RoleCookieRouter) không bị xung đột khi đăng nhập nhiều tài khoản trên cùng một trình duyệt.",
+    "rids": []
+  },
+  {
+    "i": 696,
+    "style": "Normal",
+    "text": "Kiểm tra tính toàn vẹn dữ liệu (Data Integrity): Xác nhận các ràng buộc toàn vẹn khóa ngoại, thuật toán băm mật khẩu BCrypt, tính toán sĩ số tối đa của lớp học và cơ chế xóa mềm (Soft Delete Pattern).",
+    "rids": []
+  },
+  {
+    "i": 697,
+    "style": "Normal",
+    "text": "2. Phương pháp kiểm thử áp dụng",
+    "rids": []
+  },
+  {
+    "i": 698,
+    "style": "Normal",
+    "text": "Kiểm thử hộp đen (Black-box Testing): Kiểm thử viên chỉ dựa vào các kịch bản sử dụng (Use Cases) và đặc tả giao diện để nhập dữ liệu đầu vào và kiểm tra kết quả đầu ra thực tế mà không cần can thiệp vào mã nguồn nội bộ.",
+    "rids": []
+  },
+  {
+    "i": 699,
+    "style": "Normal",
+    "text": "Kiểm thử tích hợp (Integration Testing): Kiểm tra sự kết hợp đồng bộ giữa tầng Controller, tầng Data Access Entity Framework Core và hệ quản trị cơ sở dữ liệu SQL Server.",
+    "rids": []
+  },
+  {
+    "i": 700,
+    "style": "Normal",
+    "text": "Môi trường kiểm thử: ",
+    "rids": []
+  },
+  {
+    "i": 701,
+    "style": "Normal",
+    "text": "Máy chủ: Kestrel / IIS Express Worker Process (.NET 8.0, ASP.NET Core MVC).",
+    "rids": []
+  },
+  {
+    "i": 702,
+    "style": "Normal",
+    "text": "Cơ sở dữ liệu: Microsoft SQL Server LocalDB (EnglishCenterDb).",
+    "rids": []
+  },
+  {
+    "i": 703,
+    "style": "Normal",
+    "text": "Trình duyệt kiểm thử: Google Chrome (v120+), Microsoft Edge (v120+) trên hệ điều hành Windows 11.",
+    "rids": []
+  },
+  {
+    "i": 704,
+    "style": "Heading 3",
+    "text": "4.3.2 Kịch bản kiểm thử chi tiết các phân hệ chức năng (Test Cases)",
+    "rids": []
+  },
+  {
+    "i": 705,
+    "style": "Normal",
+    "text": "Dưới đây là bảng tổng hợp các ca kiểm thử tiêu biểu đại diện cho 4 phân hệ chính của website:",
+    "rids": []
+  },
+  {
+    "i": 706,
+    "style": "List Paragraph",
+    "text": "Kiểm thử Phân hệ Xác thực & Bảo mật tài khoản (Authentication & Security)",
+    "rids": []
+  },
+  {
+    "i": 707,
+    "style": "Normal",
+    "text": "2. Kiểm thử Phân hệ Khách hàng & Học viên (Public & Student Portal)",
+    "rids": []
+  },
+  {
+    "i": 708,
+    "style": "List Paragraph",
+    "text": "Kiểm thử Phân hệ Khách hàng & Học viên (Public & Student Portal)",
+    "rids": []
+  },
+  {
+    "i": 709,
+    "style": "List Paragraph",
+    "text": "Kiểm thử Phân hệ Quản trị viên (Admin Portal)",
+    "rids": []
+  },
+  {
+    "i": 710,
+    "style": "Heading 2",
+    "text": "KẾT CHƯƠNG 4",
+    "rids": []
+  },
+  {
+    "i": 711,
+    "style": "Normal",
+    "text": "Chương 4 đã trình bày toàn diện và chi tiết quá trình hiện thực hóa kỹ thuật cũng như công tác kiểm thử chất lượng cho website quản lý và đăng ký học tại trung tâm ngoại ngữ (HITC English - WedEnglishApp).",
+    "rids": []
+  },
+  {
+    "i": 712,
+    "style": "Normal",
+    "text": "Cụ thể, những nội dung trọng tâm đã đạt được trong chương bao gồm:",
+    "rids": []
+  },
+  {
+    "i": 713,
+    "style": "Normal",
+    "text": "Thiết lập môi trường và nền tảng công nghệ vững chắc: Ứng dụng đã được xây dựng thành công trên nền tảng ASP.NET Core (.NET 8 LTS) theo mô hình kiến trúc MVC, kết hợp ORM Entity Framework Core 8, hệ quản trị cơ sở dữ liệu Microsoft SQL Server, dịch vụ gửi thư điện tử tự động MailKit, giải pháp thanh toán quét mã VietQR và thuật toán băm mật khẩu chuẩn hóa BCrypt. Cấu trúc thư mục dự án và đường ống xử lý HTTP Middleware Pipeline được tổ chức khoa học, tối ưu hiệu năng và bảo đảm an toàn thông tin.",
+    "rids": []
+  },
+  {
+    "i": 714,
+    "style": "Normal",
+    "text": "Hiện thực hóa trọn vẹn các phân hệ giao diện người dùng: Toàn bộ hệ thống giao diện với hơn 30 trang màn hình thuộc 4 phân hệ chính (Khách vãng lai, Học viên, Giảng viên và Quản trị viên) đã được hoàn thiện đồng bộ, đảm bảo tính thẩm mỹ hiện đại và khả năng co giãn linh hoạt trên mọi kích thước thiết bị (Responsive Design). Đặc biệt, hệ thống đã giải quyết triệt để hai bài toán kỹ thuật phức tạp: ",
+    "rids": []
+  },
+  {
+    "i": 715,
+    "style": "Normal",
+    "text": "Cơ chế định tuyến Cookie đa vai trò (RoleCookieRouter): Cho phép đăng nhập và vận hành song song nhiều tài khoản (Admin, Giáo viên, Học viên) trên cùng một trình duyệt mà không bị xung đột hay ghi đè phiên làm việc.",
+    "rids": []
+  },
+  {
+    "i": 716,
+    "style": "Normal",
+    "text": "Phân hệ Thùng rác hệ thống (Soft Delete Pattern): Áp dụng cơ chế xóa mềm an toàn trên toàn bộ 7 bảng dữ liệu, cung cấp tính năng khôi phục tức thì hoặc xóa vĩnh viễn, bảo vệ tối đa tính toàn vẹn dữ liệu.",
+    "rids": []
+  },
+  {
+    "i": 717,
+    "style": "Normal",
+    "text": "Đánh giá và kiểm thử hệ thống nghiêm ngặt: Thông qua việc áp dụng phương pháp kiểm thử hộp đen và kiểm thử tích hợp trên 20 ca kiểm thử (Test Cases) đại diện cho toàn bộ các luồng nghiệp vụ cốt lõi, hệ thống đạt tỷ lệ thành công tuyệt đối (100% Pass), phản hồi nhanh chóng (< 350ms), vận hành ổn định và không phát sinh lỗi nghiêm trọng.",
+    "rids": []
+  },
+  {
+    "i": 718,
+    "style": "Heading 1",
+    "text": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
+    "rids": []
+  },
+  {
+    "i": 719,
+    "style": "Normal",
+    "text": "1. Kết luận",
+    "rids": []
+  },
+  {
+    "i": 720,
+    "style": "Normal",
+    "text": "Sau thời gian nghiên cứu lý thuyết, khảo sát nghiệp vụ thực tế và trực tiếp triển khai lập trình, đề tài “Xây dựng ứng dụng web quản lý và đăng ký học tại trung tâm ngoại ngữ (HITC English)” đã hoàn thành đầy đủ các mục tiêu đề ra ban đầu cả về mặt lý thuyết lẫn sản phẩm thực nghiệm.",
+    "rids": []
+  },
+  {
+    "i": 721,
+    "style": "Normal",
+    "text": "1.1 Những kết quả đã đạt được của đề tài:",
+    "rids": []
+  },
+  {
+    "i": 722,
+    "style": "Normal",
+    "text": "Về mặt công nghệ và kiến trúc hệ thống:",
+    "rids": []
+  },
+  {
+    "i": 723,
+    "style": "Normal",
+    "text": "Làm chủ và ứng dụng thành công nền tảng ASP.NET Core (.NET 8 LTS) theo mô hình kiến trúc Model - View - Controller (MVC) kết hợp ORM Entity Framework Core 8, giúp mã nguồn được module hóa rõ ràng, dễ bảo trì và có khả năng mở rộng linh hoạt.",
+    "rids": []
+  },
+  {
+    "i": 724,
+    "style": "Normal",
+    "text": "Thiết kế cơ sở dữ liệu quan hệ hoàn chỉnh trên Microsoft SQL Server, chuẩn hóa các mối quan hệ thực thể (1-1, 1-N), thiết lập các ràng buộc toàn vẹn dữ liệu chặt chẽ giữa các bảng tài khoản, chương trình học, lớp học, thời khóa biểu, đăng ký và hóa đơn thanh toán.",
+    "rids": []
+  },
+  {
+    "i": 725,
+    "style": "Normal",
+    "text": "Xây dựng thành công cơ chế xác thực phân quyền đa vai trò (Multi-Role Cookie Authentication Router - RoleCookieRouter), giải quyết triệt để bài toán xung đột phiên làm việc khi người dùng hoặc kiểm thử viên đăng nhập đồng thời nhiều tài khoản (Admin, Giáo viên, Học viên) trên cùng một trình duyệt.",
+    "rids": []
+  },
+  {
+    "i": 726,
+    "style": "Normal",
+    "text": "Tích hợp thành công thuật toán băm mật khẩu một chiều BCrypt chống tấn công từ điển/dò mật khẩu, áp dụng mã xác thực token chống giả mạo CSRF, dịch vụ gửi email tự động MailKit và cổng thanh toán quét mã VietQR tự động.",
+    "rids": []
+  },
+  {
+    "i": 727,
+    "style": "Normal",
+    "text": "Về mặt nghiệp vụ và giao diện người dùng (UI/UX):",
+    "rids": []
+  },
+  {
+    "i": 728,
+    "style": "Normal",
+    "text": "Xây dựng hoàn chỉnh 4 phân hệ nghiệp vụ độc lập: Khách vãng lai, Học viên, Giảng viên và Quản trị viên hệ thống với hơn 30 trang màn hình đáp ứng chuẩn Responsive đa thiết bị.",
+    "rids": []
+  },
+  {
+    "i": 729,
+    "style": "Normal",
+    "text": "Phân hệ Học viên & Tuyển sinh: Tự động hóa quy trình từ khâu tiếp nhận tư vấn đăng ký thi thử xếp lớp chọn lớp giữ chỗ sĩ số thanh toán VietQR xuất và in biên lai điện tử chuẩn quy cách.",
+    "rids": []
+  },
+  {
+    "i": 730,
+    "style": "Normal",
+    "text": "Phân hệ Giảng viên: Cung cấp công cụ quản lý lớp phụ trách, điểm danh chuyên cần trực tiếp theo từng buổi học, chấm thi xếp lớp đầu vào và tải lên kho học liệu số cho học viên.",
+    "rids": []
+  },
+  {
+    "i": 731,
+    "style": "Normal",
+    "text": "Phân hệ Quản trị viên: Giám sát doanh thu và cơ cấu học viên qua biểu đồ số liệu trực quan (Chart.js); quản lý danh mục đào tạo, nhân sự và truyền thông (Banner quảng bá trang chủ).",
+    "rids": []
+  },
+  {
+    "i": 732,
+    "style": "Normal",
+    "text": "Cơ chế Thùng rác hệ thống (Soft Delete Pattern): Hiện thực hóa tính năng xóa an toàn trên toàn bộ 7 bảng dữ liệu, cho phép khôi phục dữ liệu tức thì hoặc xóa vĩnh viễn, ngăn ngừa tối đa rủi ro mất mát dữ liệu do thao tác nhầm lẫn.",
+    "rids": []
+  },
+  {
+    "i": 733,
+    "style": "Normal",
+    "text": "Về kết quả kiểm thử:",
+    "rids": []
+  },
+  {
+    "i": 734,
+    "style": "Normal",
+    "text": "Hệ thống đã trải qua quá trình kiểm thử hộp đen và kiểm thử tích hợp với 100% ca kiểm thử (20/20 Test Cases) đạt yêu cầu, đảm bảo độ tin cậy cao, tốc độ phản hồi nhanh (< 350ms) và không phát sinh lỗi nghiêm trọng.",
+    "rids": []
+  },
+  {
+    "i": 735,
+    "style": "Normal",
+    "text": "1.2 Những hạn chế còn tồn tại:",
+    "rids": []
+  },
+  {
+    "i": 736,
+    "style": "Normal",
+    "text": "Hệ thống thanh toán trực tuyến hiện tại chủ yếu thông qua quét mã VietQR và đối soát nội bộ; chưa kích hoạt kết nối API trực tiếp với cổng thanh toán VNPay Sandbox hoặc MoMo để nhận phản hồi kết quả tức thì qua Webhook IPN.",
+    "rids": []
+  },
+  {
+    "i": 737,
+    "style": "Normal",
+    "text": "Chưa tích hợp tính năng phòng học ảo trực tuyến (như tích hợp Zoom API, Google Meet API) đối với các lớp học từ xa.",
+    "rids": []
+  },
+  {
+    "i": 738,
+    "style": "Normal",
+    "text": "Chưa có ứng dụng di động bản địa (Native Mobile App trên iOS/Android) dành cho học viên và phụ huynh theo dõi điểm danh chuyên cần qua thông báo đẩy (Push Notification).",
+    "rids": []
+  },
+  {
+    "i": 739,
+    "style": "Normal",
+    "text": "2. Hướng phát triển trong tương lai",
+    "rids": []
+  },
+  {
+    "i": 740,
+    "style": "Normal",
+    "text": "Để nâng cao hơn nữa giá trị thực tiễn và sẵn sàng triển khai vận hành thương mại cho các chuỗi trung tâm ngoại ngữ quy mô lớn, hệ thống định hướng tiếp tục nghiên cứu và mở rộng các tính năng sau:",
+    "rids": []
+  },
+  {
+    "i": 741,
+    "style": "Normal",
+    "text": "Hoàn thiện Cổng thanh toán trực tuyến tự động (Payment Gateway): ",
+    "rids": []
+  },
+  {
+    "i": 742,
+    "style": "Normal",
+    "text": "Tích hợp sâu cổng thanh toán VNPay / MoMo API với cơ chế xác thực IPN (Instant Payment Notification), tự động chuyển trạng thái đơn hàng sang Paid ngay khi giao dịch thành công mà không cần nhân viên kế toán đối soát thủ công.",
+    "rids": []
+  },
+  {
+    "i": 743,
+    "style": "Normal",
+    "text": "Tích hợp Lớp học trực tuyến và Phòng học ảo (Virtual Classroom): ",
+    "rids": []
+  },
+  {
+    "i": 744,
+    "style": "Normal",
+    "text": "Tích hợp các SDK hội nghị truyền hình (Zoom SDK, Jitsi Meet hoặc WebRTC) trực tiếp vào website để hỗ trợ mô hình giảng dạy kết hợp (Blended Learning / Hybrid Learning), cho phép học sinh học trực tiếp từ xa trên nền tảng.",
+    "rids": []
+  },
+  {
+    "i": 745,
+    "style": "Normal",
+    "text": "Ứng dụng Trí tuệ nhân tạo (AI & Chatbot): ",
+    "rids": []
+  },
+  {
+    "i": 746,
+    "style": "Normal",
+    "text": "Tích hợp AI Chatbot (sử dụng Gemini API / OpenAI API) trên trang chủ để tư vấn lộ trình học, giải đáp câu hỏi thường gặp (FAQ) tự động 24/7 cho khách hàng.",
+    "rids": []
+  },
+  {
+    "i": 747,
+    "style": "Normal",
+    "text": "Xây dựng tính năng tự động chấm phát âm tiếng Anh (AI Speech Assessment) trong bài thi xếp lớp đầu vào của học viên.",
+    "rids": []
+  },
+  {
+    "i": 748,
+    "style": "Normal",
+    "text": "Phát triển Ứng dụng di động (Mobile Application): ",
+    "rids": []
+  },
+  {
+    "i": 749,
+    "style": "Normal",
+    "text": "Sử dụng nền tảng đa nền tảng (Flutter / React Native) để phát triển ứng dụng di động cho Học viên và Phụ huynh, hỗ trợ nhận thông báo lịch học, xem điểm danh, nhận xét của giáo viên và thanh toán học phí tiện lợi ngay trên điện thoại.",
+    "rids": []
+  },
+  {
+    "i": 750,
+    "style": "Normal",
+    "text": "Nâng cấp Hệ thống Báo cáo và Phân tích thông minh (Business Intelligence): ",
+    "rids": []
+  },
+  {
+    "i": 751,
+    "style": "Normal",
+    "text": "Xây dựng phân hệ báo cáo chuyên sâu dự báo xu hướng tuyển sinh, tỷ lệ duy trì học viên (Retention Rate) và tính toán tự động lương/thù lao giờ dạy cho đội ngũ giảng viên theo từng tháng.",
+    "rids": []
+  },
+  {
+    "i": 752,
+    "style": "Heading 1",
+    "text": "TÀI LIỆU THAM KHẢO",
+    "rids": []
+  },
+  {
+    "i": 753,
+    "style": "Normal",
+    "text": "[1] VUS. Website Anh văn Hội Việt Mỹ. https://vus.edu.vn/. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 754,
+    "style": "Normal",
+    "text": "[2] ILA Vietnam. Website trung tâm Anh ngữ ILA. https://ila.edu.vn/. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 755,
+    "style": "Normal",
+    "text": "[3] Microsoft. Overview of ASP.NET Core MVC. https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-8.0. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 756,
+    "style": "Normal",
+    "text": "[4] Microsoft. Entity Framework Core. https://learn.microsoft.com/en-us/ef/core/. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 757,
+    "style": "Normal",
+    "text": "[5] Microsoft. Use cookie authentication without ASP.NET Core Identity. https://learn.microsoft.com/en-us/aspnet/core/security/authentication/cookie?view=aspnetcore-8.0. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 758,
+    "style": "Normal",
+    "text": "[6] Microsoft. Role based authorization in ASP.NET Core. https://learn.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-8.0. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 759,
+    "style": "Normal",
+    "text": "[7] Bootstrap. Bootstrap 5.3 Documentation. https://getbootstrap.com/docs/5.3/getting-started/introduction/. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 760,
+    "style": "Normal",
+    "text": "[8] Chart.js. Documentation. https://www.chartjs.org/docs/latest/. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 761,
+    "style": "Normal",
+    "text": "[9] BCrypt.Net. Source and documentation. https://github.com/BcryptNet/bcrypt.net. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 762,
+    "style": "Normal",
+    "text": "[10] Casso. VietQR Payment Kit. https://www.vietqr.io/. Truy cập ngày 03/11/2026.",
+    "rids": []
+  },
+  {
+    "i": 763,
+    "style": "Normal",
+    "text": "Nguồn nội bộ: mã nguồn dự án WedEnglishApp; báo cáo doanketthucmonWeb.docx; ảnh khảo sát VUS, ILA trong tài liệu ban đầu. Các hình giao diện bổ sung được chụp từ website HITC English chạy cục bộ; sơ đồ bổ sung được xây dựng từ các chức năng và mô hình dữ liệu của dự án.",
+    "rids": []
+  }
+]

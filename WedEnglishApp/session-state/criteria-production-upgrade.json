@@ -1,0 +1,14 @@
+{
+  "after": {
+    "payments": "C1A46D619363AE4F31B6B99934EEED70DEE43FE55331245698C416831BEE759B",
+    "registrations": "0FC2A8F9CC1429B12BAFCC21BADB679DE7A3A98E762C2283A2CBBBBB470A9BC0"
+  },
+  "database": "EnglishCenterDb",
+  "old_registration_rows_unchanged": true,
+  "old_payment_rows_unchanged": true,
+  "backup": "before-criteria-20261105.bak",
+  "before": {
+    "payments": "C1A46D619363AE4F31B6B99934EEED70DEE43FE55331245698C416831BEE759B",
+    "registrations": "0FC2A8F9CC1429B12BAFCC21BADB679DE7A3A98E762C2283A2CBBBBB470A9BC0"
+  }
+}

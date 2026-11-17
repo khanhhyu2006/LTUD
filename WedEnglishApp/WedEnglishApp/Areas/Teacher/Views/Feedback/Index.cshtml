@@ -1,0 +1,73 @@
+@model List<WedEnglishApp.Models.CourseFeedback>
+@{
+    ViewData["Title"] = "Đánh Giá & Phản Hồi Từ Học Viên";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h3 class="fw-bold mb-1">Phản Hồi & Đánh Giá Của Học Viên</h3>
+        <p class="text-muted small mb-0">Theo dõi nhận xét, mức độ hài lòng và xếp hạng sao từ học viên các lớp giảng dạy</p>
+    </div>
+</div>
+
+<div class="teacher-card overflow-hidden">
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th class="ps-4">Học Viên</th>
+                    <th>Lớp Học / Khóa Học</th>
+                    <th>Xếp Hạng (Rating)</th>
+                    <th>Nội Dung Nhận Xét</th>
+                    <th>Ngày Phản Hồi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!Model.Any())
+                {
+                    <tr>
+                        <td colspan="5" class="text-center py-4 text-muted">Chưa có phản hồi nào từ học viên.</td>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var fb in Model)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                <div class="fw-bold text-dark">@fb.Student.UserAccount.FullName</div>
+                                <div class="small text-muted">@fb.Student.UserAccount.Email</div>
+                            </td>
+                            <td>
+                                <div class="fw-semibold">@fb.Class.ClassName</div>
+                                <div class="small text-muted">@fb.Class.Program.ProgramName</div>
+                            </td>
+                            <td>
+                                <span class="text-warning fs-6">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (i <= fb.Rating)
+                                        {
+                                            <i class="fa-solid fa-star"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="fa-regular fa-star text-muted"></i>
+                                        }
+                                    }
+                                </span>
+                                <span class="fw-bold ms-1">(@fb.Rating/5)</span>
+                            </td>
+                            <td>
+                                <div class="p-2 bg-light rounded text-dark fst-italic" style="max-width: 400px;">
+                                    "@fb.Comment"
+                                </div>
+                            </td>
+                            <td class="small text-muted">@fb.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

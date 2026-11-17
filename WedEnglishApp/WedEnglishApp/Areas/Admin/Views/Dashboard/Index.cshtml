@@ -1,0 +1,271 @@
+@{
+    ViewData["Title"] = "Trung Tâm Điều Hành";
+    var topClasses = ViewBag.TopClasses as List<WedEnglishApp.Models.CourseClass> ?? new();
+    var recentRegistrations = ViewBag.RecentRegistrations as List<WedEnglishApp.Models.Registration> ?? new();
+    var report = (WedEnglishApp.ViewModels.Reports.AdminReportViewModel)ViewBag.Report;
+    decimal totalRevenue = ViewBag.TotalRevenue != null ? (decimal)ViewBag.TotalRevenue : 0;
+}
+
+<!-- HEADER & BOARDS SUMMARY -->
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <div>
+        <h3 class="fw-bold text-dark mb-1"><i class="fa-solid fa-gauge-high text-primary me-2"></i>Trung Tâm Điều Hành Quản Trị</h3>
+        <p class="text-secondary small mb-0">Quy mô đào tạo, sĩ số lớp và học phí đã xác nhận theo dữ liệu hiện tại</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2">
+        <a asp-controller="Report" asp-action="Index" asp-route-year="@report.Year" class="btn btn-outline-primary btn-sm">Báo cáo / Xuất dữ liệu</a>
+        <button class="btn btn-white border shadow-sm btn-sm fw-semibold text-secondary" onclick="window.location.reload()">
+            <i class="fa-solid fa-rotate me-1"></i> Làm mới
+        </button>
+        <a asp-area="Admin" asp-controller="RegistrationAdmin" asp-action="Index" class="btn btn-primary shadow-sm btn-sm fw-semibold">
+            <i class="fa-solid fa-plus me-1"></i> Ghi danh mới
+        </a>
+    </div>
+</div>
+
+<form method="get" class="d-flex flex-wrap align-items-center gap-2 mb-3"><label for="dashboardYear">Năm báo cáo</label><input id="dashboardYear" type="number" min="2000" max="2100" name="year" value="@report.Year" class="form-control" style="max-width:140px"/><button class="btn btn-outline-primary">Áp dụng</button><span class="small text-muted">Khoản thu cũ dùng PaymentDate; khoản mới dùng ngày xác nhận.</span></form>
+<!-- TOP PERFORMANCE METRICS BAR (Thanh KPI Tổng Quan Đột Phá) -->
+<div class="card border-0 shadow-sm rounded-4 mb-4 bg-white overflow-hidden">
+    <div class="card-body p-0">
+        <div class="row g-0 divide-x text-center text-md-start">
+            <!-- Doanh thu nổi bật -->
+            <div class="col-lg-3 col-md-6 p-4 border-end bg-primary-subtle bg-opacity-25">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span class="text-primary fw-bold small text-uppercase tracking-wider">Tổng Doanh Thu</span>
+                    <span class="badge bg-primary rounded-pill"><i class="fa-solid fa-arrow-trend-up me-1"></i>@report.Year</span>
+                </div>
+                <h3 class="fw-extrabold text-primary mb-1">@totalRevenue.ToString("N0") <span class="fs-6">VNĐ</span></h3>
+                <span class="text-muted x-small"><i class="fa-solid fa-circle-check text-success me-1"></i>Đã xác nhận thanh toán</span>
+            </div>
+
+            <!-- Tổng Học viên & Đăng ký -->
+            <div class="col-lg-3 col-md-6 p-4 border-end">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span class="text-secondary fw-semibold small text-uppercase">Quy Mô Học Viên</span>
+                    <div class="p-2 rounded-3 bg-success-subtle text-success"><i class="fa-solid fa-user-graduate"></i></div>
+                </div>
+                <h3 class="fw-bold text-dark mb-1">@ViewBag.TotalStudents <span class="fs-6 text-muted">người</span></h3>
+                <span class="text-muted x-small">Tổng lượt đăng ký: <strong class="text-dark">@ViewBag.TotalRegistrations</strong></span>
+            </div>
+
+            <!-- Lớp học & Tỷ lệ lấp đầy -->
+            <div class="col-lg-3 col-md-6 p-4 border-end">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span class="text-secondary fw-semibold small text-uppercase">Vận Hành Lớp Học</span>
+                    <div class="p-2 rounded-3 bg-info-subtle text-info"><i class="fa-solid fa-chalkboard-user"></i></div>
+                </div>
+                <h3 class="fw-bold text-dark mb-1">@ViewBag.TotalClasses <span class="fs-6 text-muted">lớp</span></h3>
+                <span class="text-muted x-small">Chương trình đào tạo: <strong class="text-dark">@ViewBag.TotalPrograms</strong></span>
+            </div>
+
+            <!-- Nhân sự giảng dạy -->
+            <div class="col-lg-3 col-md-6 p-4">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                    <span class="text-secondary fw-semibold small text-uppercase">Đội Ngũ Giảng Viên</span>
+                    <div class="p-2 rounded-3 bg-warning-subtle text-warning"><i class="fa-solid fa-user-tie"></i></div>
+                </div>
+                <h3 class="fw-bold text-dark mb-1">@ViewBag.TotalTeachers <span class="fs-6 text-muted">nhân sự</span></h3>
+                <span class="text-muted x-small"><i class="fa-solid fa-certificate me-1 text-warning"></i>Theo hồ sơ giáo viên trong hệ thống</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MIDDLE SECTION: BIỂU ĐỒ & TIẾN ĐỘ ĐÀO TẠO -->
+<div class="row g-4 mb-4">
+    <!-- Biểu đồ doanh thu xu hướng -->
+    <div class="col-lg-8">
+        <div class="card border-0 shadow-sm rounded-4 h-100 p-4 bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <h5 class="fw-bold text-dark mb-0">Xu Hướng Tăng Trưởng Doanh Thu</h5>
+                    <span class="text-muted x-small">Học phí đã xác nhận trong 12 tháng năm @report.Year</span>
+                </div>
+                <span class="badge bg-light text-secondary border px-3 py-2 rounded-pill">Theo Tháng</span>
+            </div>
+            <div class="chart-container position-relative" style="min-height: 260px;">
+                <canvas id="revenueTrendChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tiến độ lấp đầy sỉ số các lớp nổi bật -->
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm rounded-4 h-100 p-4 bg-white">
+            <h5 class="fw-bold text-dark mb-1"><i class="fa-solid fa-chart-line text-primary me-2"></i>Tỷ Lệ Lấp Đầy Lớp Học</h5>
+            <p class="text-muted x-small mb-3">Tiến độ chiêu sinh của các lớp học hàng đầu</p>
+
+            <div class="d-flex flex-column gap-3 mt-2">
+                @foreach (var c in topClasses.Take(4))
+                {
+                    int percent = c.MaxStudents > 0 ? (c.Registrations.Count * 100 / c.MaxStudents) : 0;
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <span class="fw-bold text-dark small">@c.ClassName</span>
+                            <span class="small fw-semibold text-primary">@c.Registrations.Count / @c.MaxStudents HV (@percent%)</span>
+                        </div>
+                        <div class="progress rounded-pill" style="height: 8px;">
+                            <div class="progress-bar @(percent >= 90 ? "bg-danger" : percent >= 60 ? "bg-success" : "bg-primary")"
+                                 role="progressbar" style="width: @percent%" aria-valuenow="@percent" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BOTTOM SECTION: ĐĂNG KÝ GẦN ĐÂY & PHÂN BỔ KHÓA HỌC -->
+<div class="row g-4">
+    <!-- Danh sách đăng ký vừa xong -->
+    <div class="col-lg-8">
+        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <h5 class="fw-bold text-dark mb-0"><i class="fa-solid fa-bolt text-warning me-2"></i>Ghi Danh &amp; Đăng Ký Mới Nhất</h5>
+                    <span class="text-muted x-small">Danh sách học viên vừa đăng ký vào hệ thống</span>
+                </div>
+                <a asp-area="Admin" asp-controller="RegistrationAdmin" asp-action="Index" class="btn btn-light btn-sm fw-semibold text-primary rounded-3">
+                    Xem tất cả <i class="fa-solid fa-arrow-right ms-1"></i>
+                </a>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table table-borderless table-hover align-middle small mb-0">
+                    <thead class="table-light rounded-3">
+                        <tr class="text-secondary">
+                            <th class="py-2">Học Viên</th>
+                            <th class="py-2">Lớp Đăng Ký</th>
+                            <th class="py-2">Ngày Ghi Danh</th>
+                            <th class="py-2 text-end">Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var r in recentRegistrations)
+                        {
+                            <tr class="border-bottom">
+                                <td class="py-3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <div class="rounded-circle bg-primary bg-opacity-10 text-primary fw-bold d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                                            @r.Student.UserAccount.FullName.Substring(0, 1)
+                                        </div>
+                                        <span class="fw-bold text-dark">@r.Student.UserAccount.FullName</span>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-light text-dark border font-monospace">@(r.Class?.ClassName ?? $"{r.Program.ProgramName} · Chờ xếp lớp")</span></td>
+                                <td class="text-muted">@r.RegistrationDate.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td class="text-end">
+                                    <span class="badge @(r.Payment?.Status == "Paid" ? "bg-success-subtle text-success border border-success-subtle" : "bg-warning-subtle text-warning-emphasis border border-warning-subtle") px-3 py-1 rounded-pill">
+                                        <i class="fa-solid @(r.Payment?.Status == "Paid" ? "fa-circle-check" : "fa-clock") me-1"></i>
+                                        @(r.Payment?.Status == "Paid" ? "Đã đóng phí" : "Chờ học phí")
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biểu đồ tròn tỷ lệ khóa học -->
+    <div class="col-lg-4">
+        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
+            <h5 class="fw-bold text-dark mb-1"><i class="fa-solid fa-chart-pie text-info me-2"></i>Phân Bổ Ghi Danh</h5>
+            <p class="text-muted x-small mb-3">Số đơn chưa hủy, chưa xóa theo chương trình trong năm @report.Year</p>
+            <div class="chart-container position-relative d-flex justify-content-center">
+                <canvas id="courseRadarChart" style="max-height: 230px;"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // @@ts-nocheck
+        /* global Chart */
+        const ChartLib = window['Chart'];
+
+        // 1. Biểu đồ Đường mượt (Spline Area) thể hiện doanh thu
+        const trendCanvas = document.getElementById('revenueTrendChart');
+        if (trendCanvas instanceof HTMLCanvasElement && ChartLib) {
+            const ctxTrend = trendCanvas.getContext('2d');
+            if (ctxTrend) {
+                // Gradient fill cho biểu đồ
+                let gradient = ctxTrend.createLinearGradient(0, 0, 0, 300);
+                gradient.addColorStop(0, 'rgba(2, 132, 199, 0.35)');
+                gradient.addColorStop(1, 'rgba(2, 132, 199, 0.0)');
+
+                new ChartLib(ctxTrend, {
+                    type: 'line',
+                    data: {
+                        labels: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(report.Months.Select(m => "Tháng " + m.Month))),
+                        datasets: [{
+                            label: 'Doanh thu nhận được',
+                            data: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(report.Months.Select(m => m.Amount))),
+                            borderColor: '#0284c7',
+                            borderWidth: 3,
+                            backgroundColor: gradient,
+                            fill: true,
+                            tension: 0.4, // Đường cong mượt mà
+                            pointBackgroundColor: '#0284c7',
+                            pointRadius: 5,
+                            pointHoverRadius: 7
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            x: { grid: { display: false } },
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    /**
+                                     * @@param {any} value
+                                     */
+                                    callback: function (/** @@type {any} */ value) {
+                                        return (Number(value) / 1000000) + ' tr đ';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // 2. Biểu đồ Tròn Doughnut mới
+        const courseCanvas = document.getElementById('courseRadarChart');
+        if (courseCanvas instanceof HTMLCanvasElement && ChartLib) {
+            const ctxCourse = courseCanvas.getContext('2d');
+            if (ctxCourse) {
+                new ChartLib(ctxCourse, {
+                    type: 'doughnut',
+                    data: {
+                        labels: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(report.Programs.Select(p => p.Name))),
+                        datasets: [{
+                            data: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(report.Programs.Select(p => p.Count))),
+                            backgroundColor: ['#0284c7', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'],
+                            borderWidth: 2,
+                            borderColor: '#ffffff'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        cutout: '70%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { boxWidth: 12, padding: 15, font: { size: 11 } }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+}

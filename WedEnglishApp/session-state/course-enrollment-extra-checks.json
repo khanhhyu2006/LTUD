@@ -1,0 +1,20 @@
+[
+  "Can register a course with no existing class",
+  "/Enrollment/Confirm?authRole=Student returns success",
+  "Cannot forge automatic paid payment",
+  "/Enrollment/Confirm?authRole=Student returns success",
+  "QR request remains awaiting assignment",
+  "Server price overrides submitted price",
+  "QR uses unique registration reference",
+  "/Enrollment/Confirm?authRole=Student returns success",
+  "Second course gets own pending request",
+  "/Admin/RegistrationAdmin/AssignClass returns success",
+  "Cannot assign overlapping class",
+  "/Admin/ClassManager/AddStudentToClass returns success",
+  "Alternate assignment route enforces same course",
+  "Admin receipt supports unassigned course",
+  "Student receipt supports unassigned course",
+  "Admin layout stays within viewport 1366",
+  "Admin layout stays within viewport 1024",
+  "Admin layout stays within viewport 390"
+]

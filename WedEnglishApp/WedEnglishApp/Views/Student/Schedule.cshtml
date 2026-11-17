@@ -1,0 +1,297 @@
+@model List<WedEnglishApp.Models.Registration>
+@{
+    ViewData["Title"] = "Thời Khóa Biểu - Lịch Học & Lịch Thi Của Tôi";
+    var placementTests = ViewBag.PlacementTests as List<WedEnglishApp.Models.PlacementTest> ?? new();
+    int weekOffset = ViewBag.WeekOffset != null ? (int)ViewBag.WeekOffset : 0;
+    DateTime startOfWeek = ViewBag.StartOfWeek != null ? (DateTime)ViewBag.StartOfWeek : DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + 1);
+    DateTime endOfWeek = ViewBag.EndOfWeek != null ? (DateTime)ViewBag.EndOfWeek : startOfWeek.AddDays(6);
+
+    var dayNames = new Dictionary<int, string>
+    {
+        { 2, "Thứ Hai" },
+        { 3, "Thứ Ba" },
+        { 4, "Thứ Tư" },
+        { 5, "Thứ Năm" },
+        { 6, "Thứ Sáu" },
+        { 7, "Thứ Bảy" },
+        { 8, "Chủ Nhật" }
+    };
+
+    var upcomingTests = placementTests
+        .Where(t => t.Status != "Completed" && t.TestDate.Date >= DateTime.Today)
+        .OrderBy(t => t.TestDate)
+        .ToList();
+}
+
+<div class="container py-5">
+    <!-- Tiêu đề trang & hành động -->
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <div>
+            <h3 class="fw-bold mb-1"><i class="fa-solid fa-calendar-week text-primary me-2"></i> Thời Khóa Biểu & Lịch Học</h3>
+            <p class="text-muted small mb-0">Theo dõi chi tiết các ca học và lịch thi xếp lớp do Admin phân bổ theo ngày tháng năm cụ thể</p>
+        </div>
+        <div class="d-flex gap-2">
+            <a asp-action="MyClasses" class="btn btn-outline-secondary fw-semibold">
+                <i class="fa-solid fa-chalkboard me-1"></i> Danh sách lớp
+            </a>
+            <a asp-controller="Program" asp-action="Index" asp-route-authRole="Student" class="btn btn-primary-custom fw-semibold">
+                <i class="fa-solid fa-plus me-1"></i> Đăng ký thêm khóa
+            </a>
+        </div>
+    </div>
+
+    <!-- KHỐI THÔNG BÁO NỔI BẬT: LỊCH THI SẮP DIỄN RA (ĐÃ ĐƯỢC ADMIN XẾP PHÒNG & GIÁO VIÊN) -->
+    @if (upcomingTests.Any())
+    {
+        @foreach (var upTest in upcomingTests)
+        {
+            <div class="alert alert-warning border-start border-warning border-4 shadow-sm rounded-4 p-3 mb-4 d-flex align-items-center justify-content-between flex-wrap gap-3">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                        <i class="fa-solid fa-bell fs-4"></i>
+                    </div>
+                    <div>
+                        <div class="fw-bold text-dark fs-6">
+                            <i class="fa-solid fa-clipboard-check text-warning me-1"></i> THÔNG BÁO LỊCH THI XẾP LỚP: #TEST-@upTest.TestId
+                        </div>
+                        <div class="text-muted small">
+                            <span class="fw-semibold text-danger me-3"><i class="fa-regular fa-calendar-days me-1"></i> Ngày thi: @upTest.TestDate.ToString("dd/MM/yyyy") (@upTest.TestTime)</span>
+                            <span class="fw-semibold text-dark me-3"><i class="fa-solid fa-door-open me-1 text-primary"></i> Phòng thi: @(string.IsNullOrEmpty(upTest.Room) ? "Phòng Khảo Thí 101" : upTest.Room)</span>
+                            <span class="fw-semibold text-secondary"><i class="fa-solid fa-user-tie me-1 text-primary"></i> GV Khảo thí: @(upTest.EvaluatedByTeacher?.UserAccount.FullName ?? "Admin đang chỉ định")</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="badge bg-danger px-3 py-2 rounded-pill">Sắp diễn ra</span>
+                </div>
+            </div>
+        }
+    }
+
+    <!-- THANH ĐIỀU HƯỚNG THEO TUẦN / NGÀY THÁNG NĂM CỤ THỂ -->
+    <div class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-2">
+                <a asp-action="Schedule" asp-route-weekOffset="@(weekOffset - 1)" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                    <i class="fa-solid fa-chevron-left me-1"></i> Tuần trước
+                </a>
+                @if (weekOffset != 0)
+                {
+                    <a asp-action="Schedule" asp-route-weekOffset="0" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+                        <i class="fa-solid fa-rotate-right me-1"></i> Tuần hiện tại
+                    </a>
+                }
+                <a asp-action="Schedule" asp-route-weekOffset="@(weekOffset + 1)" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                    Tuần tới <i class="fa-solid fa-chevron-right ms-1"></i>
+                </a>
+            </div>
+            <div class="text-center">
+                <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 fs-6 rounded-pill">
+                    <i class="fa-regular fa-calendar-days me-1"></i>
+                    Tuần: <strong>@startOfWeek.ToString("dd/MM/yyyy")</strong> - <strong>@endOfWeek.ToString("dd/MM/yyyy")</strong>
+                </span>
+            </div>
+            <div class="text-muted small">
+                <i class="fa-solid fa-circle-info text-info me-1"></i> Lịch hiển thị chuẩn xác theo ngày thực tế
+            </div>
+        </div>
+    </div>
+
+    <!-- KHỐI TOÀN BỘ CÁC ĐỢT THI XẾP LỚP CỦA HỌC VIÊN -->
+    @if (placementTests.Any())
+    {
+        <div class="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-white border-start border-warning border-4">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                <h5 class="fw-bold text-dark mb-0">
+                    <i class="fa-solid fa-clipboard-check text-warning me-2"></i> Hồ Sơ Các Đợt Thi Xếp Lớp & Đánh Giá Năng Lực
+                </h5>
+                <span class="badge bg-warning-subtle text-dark border border-warning-subtle px-3 py-1 rounded-pill">
+                    @placementTests.Count đợt thi
+                </span>
+            </div>
+            <div class="row g-3">
+                @foreach (var pt in placementTests)
+                {
+                    <div class="col-md-6 col-lg-4">
+                        <div class="p-3 rounded-3 border bg-light h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge bg-primary px-2 py-1">#TEST-@pt.TestId</span>
+                                <span class="badge @(pt.Status == "Completed" ? "bg-success" : "bg-warning text-dark")">
+                                    @(pt.Status == "Completed" ? "Đã có kết quả" : "Lịch thi sắp tới")
+                                </span>
+                            </div>
+                            <div class="fw-bold text-danger fs-6 mb-1">
+                                <i class="fa-regular fa-calendar-days me-1"></i> @pt.TestDate.ToString("dd/MM/yyyy") - @pt.TestTime
+                            </div>
+                            <div class="small text-muted mb-1">
+                                <i class="fa-solid fa-door-open me-1 text-primary"></i> Phòng thi: 
+                                <strong class="text-dark">@(string.IsNullOrEmpty(pt.Room) ? "Phòng Khảo Thí 101" : pt.Room)</strong>
+                            </div>
+                            <div class="small text-muted mb-1">
+                                <i class="fa-solid fa-user-tie me-1 text-primary"></i> GV Khảo thí: 
+                                <strong class="text-dark">@(pt.EvaluatedByTeacher?.UserAccount.FullName ?? "Admin đang phân công")</strong>
+                            </div>
+                            @if (pt.Score.HasValue)
+                            {
+                                <div class="small text-success fw-bold border-top pt-2 mt-2">
+                                    <i class="fa-solid fa-star me-1"></i> Điểm đạt: @pt.Score.Value điểm | @pt.RecommendedLevel
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+    <!-- KHỐI LƯỚI THỜI KHÓA BIỂU TUẦN THEO NGÀY THÁNG NĂM CỤ THỂ -->
+    <div class="row g-3 mb-5">
+        @for (int dayIndex = 0; dayIndex < 7; dayIndex++)
+        {
+            DateTime dayDate = startOfWeek.AddDays(dayIndex);
+            int scheduleDayOfWeek = dayIndex == 6 ? 8 : (dayIndex + 2); // 0 (Mon) -> 2, 6 (Sun) -> 8
+
+            // Ca học của các lớp mà học viên đăng ký, đang active vào ngày dayDate này
+            var dayClasses = Model
+                .Where(r => r.Class.StartDate.Date <= dayDate.Date && dayDate.Date <= r.Class.EndDate.Date)
+                .SelectMany(r => r.Class.Schedules.Where(s => s.DayOfWeek == scheduleDayOfWeek).Select(s => new { Schedule = s, Class = r.Class, Program = r.Class.Program, Reg = r }))
+                .OrderBy(x => x.Schedule.StartTime)
+                .ToList();
+
+            // Lịch thi kiểm tra năng lực diễn ra đúng ngày dayDate này
+            var dayTests = placementTests
+                .Where(pt => pt.TestDate.Date == dayDate.Date)
+                .OrderBy(pt => pt.TestTime)
+                .ToList();
+
+            bool isToday = dayDate.Date == DateTime.Today;
+            bool hasEvents = dayClasses.Any() || dayTests.Any();
+
+            <div class="col-lg col-md-4 col-sm-6">
+                <div class="card h-100 border-0 shadow-sm rounded-4 bg-white overflow-hidden @(isToday ? "border border-2 border-primary" : "")">
+                    <div class="p-3 text-center @(hasEvents ? "bg-primary text-white" : "bg-light text-muted border-bottom")">
+                        <h6 class="fw-bold mb-0">@dayNames[scheduleDayOfWeek]</h6>
+                        <div class="x-small @(hasEvents ? "text-white" : "text-primary fw-semibold")">
+                            @dayDate.ToString("dd/MM/yyyy")
+                        </div>
+                        <span class="x-small @(hasEvents ? "text-white-50" : "text-muted")">
+                            @(hasEvents ? $"{dayClasses.Count + dayTests.Count} sự kiện" : "Nghỉ")
+                        </span>
+                    </div>
+                    <div class="p-3 d-flex flex-column gap-2 flex-grow-1">
+                        @if (!hasEvents)
+                        {
+                            <div class="text-center text-muted small my-auto py-3 opacity-50">
+                                <i class="fa-regular fa-calendar-check d-block mb-1"></i> Trống lịch
+                            </div>
+                        }
+                        else
+                        {
+                            <!-- Thẻ Lịch thi xếp lớp (nếu có vào ngày này) -->
+                            @foreach (var pt in dayTests)
+                            {
+                                <div class="p-2 rounded-3 border border-warning bg-warning-subtle small mb-1 shadow-sm">
+                                    <div class="badge bg-warning text-dark w-100 mb-1 py-1 fw-bold">
+                                        <i class="fa-solid fa-pen-nib me-1"></i> THI XẾP LỚP: @pt.TestTime
+                                    </div>
+                                    <div class="fw-bold text-dark">#TEST-@pt.TestId</div>
+                                    <div class="x-small text-danger fw-semibold">
+                                        <i class="fa-solid fa-door-open me-1"></i> @(string.IsNullOrEmpty(pt.Room) ? "Phòng Khảo Thí 101" : pt.Room)
+                                    </div>
+                                    <div class="x-small text-muted">
+                                        GV: @(pt.EvaluatedByTeacher?.UserAccount.FullName ?? "Admin phân công")
+                                    </div>
+                                    <span class="badge @(pt.Status == "Completed" ? "bg-success" : "bg-danger") x-small mt-1">
+                                        @(pt.Status == "Completed" ? "Đã thi xong" : "Sắp diễn ra")
+                                    </span>
+                                </div>
+                            }
+
+                            <!-- Thẻ Ca học của lớp vào ngày này -->
+                            @foreach (var item in dayClasses)
+                            {
+                                <div class="p-2 rounded-3 border bg-light small">
+                                    <div class="badge bg-primary-subtle text-primary border border-primary-subtle w-100 mb-1 py-1">
+                                        <i class="fa-regular fa-clock me-1"></i> @item.Schedule.StartTime.ToString(@"hh\:mm") - @item.Schedule.EndTime.ToString(@"hh\:mm")
+                                    </div>
+                                    <div class="fw-bold text-dark text-truncate" title="@item.Class.ClassName">@item.Class.ClassName</div>
+                                    <div class="text-muted x-small text-truncate mb-1">@item.Program.ProgramName</div>
+                                    <div class="d-flex justify-content-between align-items-center x-small text-secondary border-top pt-1">
+                                        <span><i class="fa-solid fa-door-open me-1"></i> Phòng @item.Class.Room</span>
+                                    </div>
+                                    @if (item.Class.Teacher != null)
+                                    {
+                                        <div class="x-small text-primary mt-1 text-truncate" title="@item.Class.Teacher.UserAccount.FullName">
+                                            <i class="fa-solid fa-user-tie me-1"></i> @item.Class.Teacher.UserAccount.FullName
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Bảng danh sách chi tiết các lớp đang tham gia -->
+    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+        <h5 class="fw-bold text-dark mb-3">
+            <i class="fa-solid fa-clipboard-list text-primary me-2"></i> Chi Tiết Các Lớp Đang Học
+        </h5>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tên Lớp Học</th>
+                        <th>Khóa Học</th>
+                        <th>Phòng Học</th>
+                        <th>Lịch Học Trong Tuần</th>
+                        <th>Giảng Viên</th>
+                        <th>Thời Gian Khóa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var reg in Model)
+                    {
+                        <tr>
+                            <td class="fw-bold text-dark">@reg.Class.ClassName</td>
+                            <td>@reg.Class.Program.ProgramName</td>
+                            <td><span class="badge bg-light text-dark border">@reg.Class.Room</span></td>
+                            <td>
+                                @if (reg.Class.Schedules.Any())
+                                {
+                                    <div class="d-flex flex-wrap gap-1">
+                                        @foreach (var s in reg.Class.Schedules.OrderBy(x => x.DayOfWeek))
+                                        {
+                                            <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                                                @(s.DayOfWeek == 8 ? "CN" : $"T{s.DayOfWeek}") (@s.StartTime.ToString(@"hh\:mm")-@s.EndTime.ToString(@"hh\:mm"))
+                                            </span>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <span class="text-muted small">Chưa xếp lịch</span>
+                                }
+                            </td>
+                            <td>
+                                @if (reg.Class.Teacher != null)
+                                {
+                                    <span class="text-primary fw-semibold"><i class="fa-solid fa-user-tie me-1"></i> @reg.Class.Teacher.UserAccount.FullName</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-light text-secondary border">Admin đang phân bổ</span>
+                                }
+                            </td>
+                            <td class="small text-muted">
+                                @reg.Class.StartDate.ToString("dd/MM/yyyy") - @reg.Class.EndDate.ToString("dd/MM/yyyy")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,646 @@
+{
+  "actors": {
+    "Guest": {
+      "x": 105,
+      "y": 495,
+      "label": "Khách"
+    },
+    "Student": {
+      "x": 105,
+      "y": 1790,
+      "label": "Học viên"
+    },
+    "Teacher": {
+      "x": 1795,
+      "y": 490,
+      "label": "Giáo viên"
+    },
+    "Admin": {
+      "x": 1795,
+      "y": 1790,
+      "label": "Quản trị viên"
+    }
+  },
+  "nodes": [
+    {
+      "id": "g1",
+      "x": 580,
+      "y": 200,
+      "lines": [
+        "Tra cứu, tìm kiếm",
+        "và lọc khóa học"
+      ],
+      "role": "Guest",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "g2",
+      "x": 580,
+      "y": 400,
+      "lines": [
+        "Xem chi tiết, học phí",
+        "và lớp học tham khảo"
+      ],
+      "role": "Guest",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "g3",
+      "x": 580,
+      "y": 600,
+      "lines": [
+        "Đăng ký tài khoản học viên"
+      ],
+      "role": "Guest",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "g4",
+      "x": 580,
+      "y": 800,
+      "lines": [
+        "Gửi và theo dõi tư vấn",
+        "Trao đổi riêng với Admin"
+      ],
+      "role": "Guest",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "t0",
+      "x": 1320,
+      "y": 150,
+      "lines": [
+        "Cập nhật hồ sơ và ảnh"
+      ],
+      "role": "Teacher",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "t1",
+      "x": 1320,
+      "y": 250,
+      "lines": [
+        "Xem lớp, danh sách học viên"
+      ],
+      "role": "Teacher",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "t2",
+      "x": 1320,
+      "y": 350,
+      "lines": [
+        "Xem lịch dạy và lịch thi"
+      ],
+      "role": "Teacher",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "t3",
+      "x": 1320,
+      "y": 450,
+      "lines": [
+        "Quản lý tài liệu lớp học"
+      ],
+      "role": "Teacher",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "t4",
+      "x": 1320,
+      "y": 550,
+      "lines": [
+        "Chấm bài kiểm tra xếp lớp"
+      ],
+      "role": "Teacher",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "t5",
+      "x": 1320,
+      "y": 650,
+      "lines": [
+        "Nhập điểm và đề xuất cấp độ"
+      ],
+      "role": "Teacher",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "t6",
+      "x": 1320,
+      "y": 750,
+      "lines": [
+        "Xem phản hồi học viên"
+      ],
+      "role": "Teacher",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "t7",
+      "x": 1320,
+      "y": 850,
+      "lines": [
+        "Xem bảng lương cá nhân"
+      ],
+      "role": "Teacher",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s1",
+      "x": 580,
+      "y": 1220,
+      "lines": [
+        "Cập nhật hồ sơ và ảnh"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s2",
+      "x": 580,
+      "y": 1360,
+      "lines": [
+        "Đăng ký khóa học"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s3",
+      "x": 580,
+      "y": 1500,
+      "lines": [
+        "Gửi nguyện vọng lịch học",
+        "Ngày bắt đầu, buổi, 246 / 357"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s4",
+      "x": 580,
+      "y": 1640,
+      "lines": [
+        "Theo dõi đơn đăng ký",
+        "và lớp được Admin xếp"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s5",
+      "x": 580,
+      "y": 1780,
+      "lines": [
+        "Xem hướng dẫn học phí",
+        "Lịch sử và in biên lai"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s6",
+      "x": 580,
+      "y": 1920,
+      "lines": [
+        "Đăng ký kiểm tra xếp lớp"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s7",
+      "x": 580,
+      "y": 2060,
+      "lines": [
+        "Xem thời khóa biểu",
+        "Lịch thi, điểm và cấp độ"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s8",
+      "x": 580,
+      "y": 2200,
+      "lines": [
+        "Đánh giá lớp học"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "s9",
+      "x": 580,
+      "y": 2340,
+      "lines": [
+        "Trao đổi tư vấn với Admin",
+        "và xem lịch sử hội thoại"
+      ],
+      "role": "Student",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a1",
+      "x": 1320,
+      "y": 1140,
+      "lines": [
+        "Quản lý chương trình đào tạo"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a2",
+      "x": 1320,
+      "y": 1250,
+      "lines": [
+        "Tạo và chỉnh sửa lớp học"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a3",
+      "x": 1320,
+      "y": 1360,
+      "lines": [
+        "Thiết lập lịch tuần",
+        "246 / 357 và giờ học"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a0",
+      "x": 1320,
+      "y": 1470,
+      "lines": [
+        "Phân công giáo viên giảng dạy"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a4",
+      "x": 1320,
+      "y": 1580,
+      "lines": [
+        "Xếp và chuyển lớp học viên"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a5",
+      "x": 1320,
+      "y": 1690,
+      "lines": [
+        "Kiểm tra điều kiện xếp lớp",
+        "Khóa, ngày, chỗ và lịch trùng"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a6",
+      "x": 1320,
+      "y": 1800,
+      "lines": [
+        "Tạo phòng thi, xếp thí sinh",
+        "và phân công người chấm"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a7",
+      "x": 1320,
+      "y": 1910,
+      "lines": [
+        "Đối soát học phí",
+        "Xác nhận thu và in biên lai"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a8",
+      "x": 1320,
+      "y": 2020,
+      "lines": [
+        "Quản lý tài khoản, hồ sơ",
+        "học viên và giáo viên"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a9",
+      "x": 1320,
+      "y": 2130,
+      "lines": [
+        "Lập bảng lương",
+        "và xác nhận chi trả"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a10",
+      "x": 1320,
+      "y": 2240,
+      "lines": [
+        "Trả lời, kết thúc / mở lại",
+        "cuộc tư vấn"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a11",
+      "x": 1320,
+      "y": 2350,
+      "lines": [
+        "Xem thống kê",
+        "và quản lý banner"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "a12",
+      "x": 1320,
+      "y": 2460,
+      "lines": [
+        "Khôi phục dữ liệu",
+        "và dọn thùng rác"
+      ],
+      "role": "Admin",
+      "rx": 300,
+      "ry": 47
+    },
+    {
+      "id": "login",
+      "x": 950,
+      "y": 1000,
+      "lines": [
+        "Đăng nhập hệ thống"
+      ],
+      "role": null,
+      "rx": 222,
+      "ry": 47
+    },
+    {
+      "id": "password",
+      "x": 510,
+      "y": 1010,
+      "lines": [
+        "Đổi mật khẩu"
+      ],
+      "role": null,
+      "rx": 170,
+      "ry": 47
+    },
+    {
+      "id": "logout",
+      "x": 1390,
+      "y": 1010,
+      "lines": [
+        "Đăng xuất"
+      ],
+      "role": null,
+      "rx": 160,
+      "ry": 47
+    }
+  ],
+  "links": [
+    [
+      "Guest",
+      "g1"
+    ],
+    [
+      "Guest",
+      "g2"
+    ],
+    [
+      "Guest",
+      "g3"
+    ],
+    [
+      "Guest",
+      "g4"
+    ],
+    [
+      "Teacher",
+      "t0"
+    ],
+    [
+      "Teacher",
+      "t1"
+    ],
+    [
+      "Teacher",
+      "t2"
+    ],
+    [
+      "Teacher",
+      "t3"
+    ],
+    [
+      "Teacher",
+      "t4"
+    ],
+    [
+      "Teacher",
+      "t5"
+    ],
+    [
+      "Teacher",
+      "t6"
+    ],
+    [
+      "Teacher",
+      "t7"
+    ],
+    [
+      "Student",
+      "s1"
+    ],
+    [
+      "Student",
+      "s2"
+    ],
+    [
+      "Student",
+      "s3"
+    ],
+    [
+      "Student",
+      "s4"
+    ],
+    [
+      "Student",
+      "s5"
+    ],
+    [
+      "Student",
+      "s6"
+    ],
+    [
+      "Student",
+      "s7"
+    ],
+    [
+      "Student",
+      "s8"
+    ],
+    [
+      "Student",
+      "s9"
+    ],
+    [
+      "Admin",
+      "a1"
+    ],
+    [
+      "Admin",
+      "a2"
+    ],
+    [
+      "Admin",
+      "a3"
+    ],
+    [
+      "Admin",
+      "a0"
+    ],
+    [
+      "Admin",
+      "a4"
+    ],
+    [
+      "Admin",
+      "a5"
+    ],
+    [
+      "Admin",
+      "a6"
+    ],
+    [
+      "Admin",
+      "a7"
+    ],
+    [
+      "Admin",
+      "a8"
+    ],
+    [
+      "Admin",
+      "a9"
+    ],
+    [
+      "Admin",
+      "a10"
+    ],
+    [
+      "Admin",
+      "a11"
+    ],
+    [
+      "Admin",
+      "a12"
+    ],
+    [
+      "Guest",
+      "login"
+    ],
+    [
+      "Student",
+      "login"
+    ],
+    [
+      "Teacher",
+      "login"
+    ],
+    [
+      "Admin",
+      "login"
+    ],
+    [
+      "Student",
+      "password"
+    ],
+    [
+      "Student",
+      "logout"
+    ],
+    [
+      "Teacher",
+      "password"
+    ],
+    [
+      "Teacher",
+      "logout"
+    ],
+    [
+      "Admin",
+      "password"
+    ],
+    [
+      "Admin",
+      "logout"
+    ]
+  ],
+  "includes": [
+    [
+      "s2",
+      "s3"
+    ],
+    [
+      "t4",
+      "t5"
+    ],
+    [
+      "a2",
+      "a3"
+    ],
+    [
+      "a4",
+      "a5"
+    ]
+  ]
+}

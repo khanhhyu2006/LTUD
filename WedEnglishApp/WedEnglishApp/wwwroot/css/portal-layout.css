@@ -1,0 +1,87 @@
+/* Shared sizing for the admin and teacher portals. Wide tables scroll locally. */
+.portal-shell { width: 100%; align-items: stretch; }
+.portal-shell #sidebar { flex: 0 0 250px; width: 250px; min-width: 250px; }
+.portal-shell .main-content { flex: 1 1 0; min-width: 0; }
+.portal-body { min-width: 0; }
+.portal-shell .admin-header,
+.portal-shell .teacher-header { flex-wrap: wrap; gap: 1rem; }
+.portal-shell header > .d-flex { min-width: 0; flex-wrap: wrap; }
+.portal-body > .d-flex { flex-wrap: wrap; gap: 1rem; }
+.portal-body > .d-flex > .btn { flex-shrink: 0; }
+.portal-body .table-responsive { max-width: 100%; overflow-x: auto; }
+.portal-body .table { font-size: .875rem; width: 100%; table-layout: fixed; }
+.portal-body .table th,
+.portal-body .table td { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+.portal-body .table th,
+.portal-body .table td { padding-top: .875rem; padding-bottom: .875rem; }
+.portal-body .table .badge { white-space: normal; line-height: 1.45; max-width: 22rem; }
+.portal-body .table .btn { white-space: normal; max-width: 100%; overflow-wrap: anywhere; }
+.portal-body .table .btn-group { display: inline-flex; flex-wrap: wrap; max-width: 100%; gap: .25rem; }
+.portal-body .table .btn-group > .btn { flex: 0 1 auto; border-radius: .25rem !important; }
+.portal-body .table td > .d-flex { min-width: 0; flex-wrap: wrap; }
+.portal-body .table td .d-flex > div { min-width: 0; }
+.portal-body .table td img { flex-shrink: 0; }
+.portal-body .table td > form.d-inline { display: inline-block !important; max-width: 100%; margin-block: .125rem; }
+.portal-body .table td.text-end > .btn { margin-block: .125rem; }
+.portal-body .table .badge { max-width: 100%; overflow-wrap: anywhere; }
+.portal-body .table td code { overflow-wrap: anywhere; }
+.portal-body .table input,
+.portal-body .table select { min-width: 0; max-width: 100%; }
+.portal-body .table select.w-auto { width: 100% !important; }
+.portal-body .table th.ps-4,
+.portal-body .table td.ps-4 { padding-left: .75rem !important; }
+.portal-body .table th.pe-4,
+.portal-body .table td.pe-4 { padding-right: .75rem !important; }
+/* Give names and email addresses room without sacrificing the action column. */
+.portal-body .table-people th:nth-child(1) { width: 20%; }
+.portal-body .table-people th:nth-child(2) { width: 23%; }
+.portal-body .table-people th:nth-child(3) { width: 17%; }
+.portal-body .table-people th:nth-child(4) { width: 17%; }
+.portal-body .table-people th:nth-child(5) { width: 8%; }
+.portal-body .table-people th:nth-child(6) { width: 15%; }
+.portal-body img { max-width: 100%; }
+@media (max-width: 1199.98px) {
+    .portal-shell #sidebar { flex-basis: 220px; width: 220px; min-width: 220px; }
+    .portal-shell .sidebar-brand { padding: 1.25rem; }
+    .portal-shell .sidebar-link { padding: .75rem; margin-inline: .5rem; }
+    .portal-body { padding: 1rem !important; }
+}
+@media (max-width: 767.98px) {
+    .portal-body .table { min-width: 760px; }
+    .portal-shell { flex-direction: column; }
+    .portal-shell #sidebar { flex: 0 0 auto; width: 100%; min-width: 0; min-height: 0; }
+    .portal-shell #sidebar > .py-3 { display: flex; flex-wrap: wrap; padding: .5rem !important; }
+    .portal-shell #sidebar > .py-3 > div { display: none; }
+    .portal-shell .sidebar-link { margin: .2rem; padding: .5rem .75rem; font-size: .875rem; }
+    .portal-shell .admin-header,
+    .portal-shell .teacher-header { padding: 1rem; }
+    .portal-body .d-flex.gap-2 { flex-wrap: wrap; }
+}
+
+/* Keep the full center name readable in both portal sidebars. */
+.portal-shell .sidebar-brand > div { min-width: 0; }
+.portal-shell .sidebar-brand .fw-bold { line-height: 1.35; overflow-wrap: anywhere; }
+
+/* A resizing chart must not widen the portal while Chart.js updates its canvas. */
+.portal-body .chart-container { min-width: 0; max-width: 100%; overflow: hidden; }
+.portal-body .chart-container canvas { max-width: 100%; }
+.portal-body .table-people-accounts th:nth-child(1) { width: 20%; }
+.portal-body .table-people-accounts th:nth-child(2) { width: 22%; }
+.portal-body .table-people-accounts th:nth-child(3) { width: 14%; }
+.portal-body .table-people-accounts th:nth-child(4) { width: 15%; }
+.portal-body .table-people-accounts th:nth-child(5) { width: 7%; }
+.portal-body .table-people-accounts th:nth-child(6) { width: 8%; }
+.portal-body .table-people-accounts th:nth-child(7) { width: 14%; }
+
+@media print {
+    body { background: white !important; }
+    .portal-shell #sidebar, .portal-shell .admin-header, .portal-shell .teacher-header, .portal-shell footer, .no-print { display: none !important; }
+    .portal-shell, .portal-shell .main-content, .portal-shell .portal-body { width: 100% !important; max-width: 100% !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; }
+    .portal-shell { display: block !important; }
+    .portal-body .table { min-width: 0 !important; width: 100% !important; table-layout: fixed !important; font-size: 9pt; }
+    .portal-body .table th, .portal-body .table td { padding: 6px !important; white-space: normal !important; overflow-wrap: anywhere; }
+    .portal-body .table-responsive { overflow: visible !important; }
+    .portal-body .admin-card, .portal-body .teacher-card { box-shadow: none !important; }
+    tr { break-inside: avoid; }
+    thead { display: table-header-group; }
+}

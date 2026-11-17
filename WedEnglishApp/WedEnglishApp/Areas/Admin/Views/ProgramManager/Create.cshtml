@@ -1,0 +1,64 @@
+@model WedEnglishApp.Models.CourseProgram
+@{
+    ViewData["Title"] = "Thêm Chương Trình Mới";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="admin-card p-4">
+            <h4 class="fw-bold mb-3 text-primary"><i class="fa-solid fa-plus-circle me-2"></i> Thêm Chương Trình Đào Tạo Mới</h4>
+            <form asp-action="Create" method="post">
+                @Html.AntiForgeryToken()
+                <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="ProgramName" class="form-label fw-semibold">Tên chương trình học <span class="text-danger">*</span></label>
+                    <input asp-for="ProgramName" class="form-control" placeholder="Ví dụ: IELTS Khởi Động 5.0 - 6.0" />
+                    <span asp-validation-for="ProgramName" class="text-danger small"></span>
+                </div>
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-4">
+                        <label asp-for="Level" class="form-label fw-semibold">Cấp độ (Level)</label>
+                        <select asp-for="Level" class="form-select">
+                            <option value="Beginner">Beginner (Cơ bản)</option>
+                            <option value="Intermediate">Intermediate (Trung cấp)</option>
+                            <option value="Advanced">Advanced (Nâng cao)</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="DurationWeeks" class="form-label fw-semibold">Thời lượng (Số tuần)</label>
+                        <input asp-for="DurationWeeks" type="number" class="form-control" value="10" />
+                        <span asp-validation-for="DurationWeeks" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="TuitionFee" class="form-label fw-semibold">Học phí (VNĐ)</label>
+                        <input asp-for="TuitionFee" type="number" class="form-control" value="3500000" />
+                        <span asp-validation-for="TuitionFee" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label fw-semibold">Mô tả chương trình học</label>
+                    <textarea asp-for="Description" rows="3" class="form-control" placeholder="Mô tả mục tiêu, đối tượng người học..."></textarea>
+                    <span asp-validation-for="Description" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="LearningOutcomes" class="form-label fw-semibold">Chuẩn đầu ra (Cam kết sau khóa học)</label>
+                    <textarea asp-for="LearningOutcomes" rows="2" class="form-control" placeholder="Chứng chỉ đạt được, kỹ năng hoàn thiện..."></textarea>
+                </div>
+
+                <div class="form-check mb-4">
+                    <input asp-for="IsActive" class="form-check-input" checked />
+                    <label asp-for="IsActive" class="form-check-label fw-semibold">Kích hoạt tuyển sinh ngay</label>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-outline-secondary">Hủy bỏ</a>
+                    <button type="submit" class="btn btn-primary px-4 fw-bold">Lưu Chương Trình</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
